@@ -1,0 +1,24 @@
+{
+  "name": "YesCampus - Innovación para emprendedores",
+  "shortName": "YesCampus",
+  "description": "Somos un ecosistema virtual que integra experiencias de aprendizaje, networking y financiamiento para emprendedores, pymes y ongs, mediante programas de formación, preincubación, incubación y aceleración de emprendimientos.",
+  "author": {
+    "name": "Marketing Shakers",
+    "email": "",
+    "url": ""
+  },
+  "collections": [
+    {
+      "name": "posts",
+      "path": "src/pages/blog",
+      "url": "/blog",
+      "markdown": true
+    }
+  ],
+  "hostname": "https://yes-campus.netlify.app",
+  "sitemapUrls": [
+  ],
+  "routifyRuntimeConfig": {
+    "useHash": false
+  }
+}

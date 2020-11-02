@@ -1,0 +1,106 @@
+@import 'tailwindcss/base.css';
+@import 'tailwindcss/components.css';
+@import 'tailwindcss/utilities.css';
+
+html {
+	@apply duration-200;
+	@apply transition-colors;
+}
+
+html.dark {
+	background: #222;
+}
+
+pre, code {
+	@apply text-gray-700;
+}
+
+.dark pre, .dark code {
+	@apply text-gray-400;
+}
+
+.content {
+	@apply px-6;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@screen lg {
+	.content {
+		width: 80%;
+	}
+}
+
+.btn-secondary-gray {
+	@apply px-3;
+	@apply py-2;
+	@apply rounded-lg;
+	@apply text-yes-gray-700;
+	@apply transform;
+	@apply duration-200;
+	border-color: transparent;
+	border-width: 2px;
+}
+
+.btn-secondary-gray:hover {
+	@apply -translate-y-px;
+	@apply shadow;
+	@apply border-yes-gray-700;
+}
+
+.dark .btn-secondary-gray {
+	@apply text-yes-gray-200;
+}
+
+.dark .btn-secondary-gray:hover {
+	@apply text-yes-gray-700;
+	border-color: transparent;
+	border-width: 2px;
+}
+
+.btn-primary-gray {
+	@apply px-3;
+	@apply py-2;
+	@apply rounded-lg;
+	@apply text-white;
+	@apply transform;
+	@apply duration-200;
+	@apply bg-yes-gray-700;
+	@apply border-yes-gray-700;
+	border-width: 2px;
+}
+
+.btn-secondary {
+	@apply px-3;
+	@apply py-2;
+	@apply rounded-lg;
+	@apply text-yes-blue-500;
+	@apply transform;
+	@apply duration-200;
+	border-color: transparent;
+	border-width: 2px;
+}
+
+.btn-secondary:hover {
+	@apply -translate-y-px;
+	@apply shadow;
+	@apply border-yes-blue-500;
+}
+
+.btn-primary {
+	@apply px-3;
+	@apply py-2;
+	@apply rounded-lg;
+	@apply text-white;
+	@apply transform;
+	@apply duration-200;
+	@apply bg-yes-blue-500;
+	@apply border-yes-blue-500;
+	border-width: 2px;
+}
+
+.btn-primary:hover, .btn-primary-gray:hover {
+	@apply -translate-y-px;
+	@apply shadow;
+}
