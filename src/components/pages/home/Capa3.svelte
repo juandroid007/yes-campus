@@ -28,7 +28,7 @@
     <div class="flex content-lg">
       <h2
         class:observing={intersecting}
-        class="px-4 mb-12 text-3xl font-bold leading-none animation md:text-4xl font-title"
+        class="px-4 mb-12 text-4xl font-bold leading-none leading-tight animation md:text-4xl font-title"
         >Cursos y experiencias de aprendizaje <br>en las diferentes categorías</h2
       >
     </div>
@@ -42,7 +42,7 @@
           <div class="transform hover:-translate-y-4 duration-200">
             <div class="w-64 h-64 shadow-md rounded-2xl hover:shadow-lg duration-200" style="background: {m.bkg}">
             </div>
-            <p class="mt-2 text-2xl font-title">{m.titulo} {i + 1}</p>
+            <p class="mt-2 text-2xl font-bold font-title">{m.titulo} {i + 1}</p>
           </div>
         </div>
       {/each}

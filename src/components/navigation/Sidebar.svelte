@@ -34,7 +34,7 @@
         <!--span class={separatorClass}></span-->
         {#each elements as el, i}
           <a
-            class="block py-1 my-4 mr-auto nav-link"
+            class="block py-1 my-4 lg:text-right nav-link"
             href={$url(el.href)}
             class:selected-nav={$isActive(el.href)}
             in:fly={{ x: 100, duration: 500, delay: 100 + (i * 500 / elements.length)}}
@@ -42,29 +42,31 @@
           >
         {/each}
       </div>
-      <div
-        class="pt-8 -m-4 buttons"
-        in:fly={{ x: 100, duration: 500, delay: 100 + (elements.length * 500 / elements.length)}}
-      >
-        <button
-          title="Change theme"
-          on:click={() => $preferences.darkMode = !$preferences.darkMode}
-          class="focus:outline-none mx-4 uppercase cursor-pointer nav-link i jam:{$preferences.darkMode ? 'sun' : 'moon'}"
-          ></button
+      <div class="flex flex-col lg:flex-col-reverse lg:items-end">
+        <div
+          class="py-6 pt-8 -m-4 buttons"
+          in:fly={{ x: 100, duration: 500, delay: 100 + (elements.length * 500 / elements.length)}}
         >
-      </div>
-      <div
-        class="flex flex-row-reverse justify-end w-full mt-12 text-base"
-        in:fly={{ x: 100, duration: 500, delay: 100 + ((elements.length + 1) * 500 / elements.length)}}
-      >
-        <button
-          class="mx-2 btn-secondary-gray"
-          >Iniciar sesión</button
+          <button
+            title="Change theme"
+            on:click={() => $preferences.darkMode = !$preferences.darkMode}
+            class="focus:outline-none mx-4 uppercase cursor-pointer i jam:{$preferences.darkMode ? 'sun' : 'moon'}"
+            ></button
+          >
+        </div>
+        <div
+          class="flex my-4 text-base"
+          in:fly={{ x: 100, duration: 500, delay: 100 + ((elements.length + 1) * 500 / elements.length)}}
         >
-        <button
-          class="mx-2 btn-primary-gray"
-          >Regístrate</button
-        >
+          <button
+            class="mx-2 btn-secondary-gray"
+            >Iniciar sesión</button
+          >
+          <button
+            class="mx-2 btn-primary-gray"
+            >Regístrate</button
+          >
+        </div>
       </div>
     </div>
     <nav class="p-12 pt-20 -my-4 text-xl">
