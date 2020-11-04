@@ -66,7 +66,7 @@
         {isTransparent ? 'shadow-md glass' : ''}
       "
     >
-      {#if top}
+      {#if top && !sidebar}
         <div class="items-center hidden lg:flex" transition:fly|local={{ x: -50, duration: 400 }}>
         {#each navigation as n}
           {#if n.childrens}

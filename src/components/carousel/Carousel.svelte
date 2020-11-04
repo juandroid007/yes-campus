@@ -94,7 +94,7 @@
             class="shadow-2xl slide"
             style="
               background-image:
-                linear-gradient(rgba(10,10,10,0.7), rgba(10,10,10,0.7)), {slide.bg}, linear-gradient(rgba(10,10,10,0.7), rgba(10,10,10,0.7));
+                {slide.bg}, linear-gradient(rgba(10,10,10,0.7), rgba(10,10,10,0.7));
             "
           >
             <h1
