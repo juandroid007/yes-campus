@@ -11,6 +11,7 @@
   import { url, isActive } from '@roxi/routify/runtime'
   import { isChangingPage } from '@roxi/routify'
   import { preferences } from '../../stores/preferences'
+  import { fly } from 'svelte/transition'
 
   $: dark = $preferences.darkMode
 
@@ -29,7 +30,7 @@
     $height = n ? n.offsetHeight : 0
   }
 
-  $: top = y <= 0 || y === undefined
+  $: top = y <= $height || y === undefined
   $: isTransparent = $transparent && top
   $: setHeight(navbar)
 </script>
@@ -38,63 +39,71 @@
 
 <header
   class="
-    fixed z-10 w-full duration-200 {!isTransparent && top ? 'bg' : ''}
+    fixed z-10 w-full duration-200 {!isTransparent && top ? 'bg' : ''} pointer-events-none
   "
-  class:shadow-md={y > 0 && !isTransparent}
-  class:glass={!top}
+  class:shadow-md={y > 0 && top}
 >
-  <Sidebar bind:open={sidebar}/>
-  <div class="flex items-center justify-between p-4 px-6 m-auto duration-200" bind:this={navbar}>
-    <nav class="flex">
-      <a href="/" title="Home" class="duration-100 rounded-xl">
-        <img
-          src="/images/logo{dark ? '-white' : ''}.svg"
-          class="h-16 transform hover:scale-105 duration-200"
-          alt="logo"
-        />
-      </a>
-    </nav>
-
-    <div class="lg:hidden">
-      <Hamburger bind:open={sidebar} white={isTransparent}/>
-    </div>
+  <div class="pointer-events-auto">
+    <Sidebar bind:open={sidebar}/>
+  </div>
+  <div class="flex items-center justify-between h-24 p-4 px-6 m-auto pointer-events-none duration-200" bind:this={navbar}>
+    {#if top || sidebar}
+      <nav class="flex pointer-events-auto" transition:fly|local={{ x: -50, duration: 400 }}>
+        <a href="/" title="Home" class="duration-100 rounded-xl">
+          <img
+            src="/images/logo{dark ? '-white' : ''}.svg"
+            class="h-16 transform hover:scale-110 duration-200"
+            alt="logo"
+          />
+        </a>
+      </nav>
+    {/if}
     <div
       class="
-        items-center hidden px-2 py-6 -mx-4 text-base lg:flex duration-100 rounded-xl font-title text-yes-gray-500 dark:text-yes-gray-300
+        pointer-events-auto
+        ml-auto
+        items-center px-2 -mx-4 text-base flex font-title text-yes-gray-500 dark:text-yes-gray-300
         {isTransparent ? 'shadow-md glass' : ''}
       "
     >
-      {#each navigation as n}
-        {#if n.childrens}
-        <div
-          class="flex items-center mx-4"
-          ><span>{n.titulo}</span><span class="ml-2 i jam:chevron-down"></span></div
-        >
-        {:else}
-          <a
-            href={$url(n.href)}
-            class="mx-4 nav-link"
-            class:selected-nav={$isActive(n.href)}>{n.titulo}</a
+      {#if top}
+        <div class="items-center hidden lg:flex" transition:fly|local={{ x: -50, duration: 400 }}>
+        {#each navigation as n}
+          {#if n.childrens}
+          <div
+            class="flex items-center mx-4"
+            ><span>{n.titulo}</span><span class="ml-2 i jam:chevron-down"></span></div
           >
-        {/if}
-      {/each}
-      <div class="flex text-base">
+          {:else}
+            <a
+              href={$url(n.href)}
+              class="mx-4 nav-link"
+              class:selected-nav={$isActive(n.href)}>{n.titulo}</a
+            >
+          {/if}
+        {/each}
+        <div class="flex text-base">
+          <button
+            class="mx-2 btn-secondary"
+            >Iniciar sesión</button
+          >
+          <button
+            class="mx-2 btn-primary"
+            >Regístrate</button
+          >
+        </div>
+        <div class="h-4 mx-2 border-l border-yes-gray-500 dark:border-yes-gray-300 dark:border-white duration-800"></div>
         <button
-          class="mx-2 btn-secondary"
-          >Iniciar sesión</button
+          on:click={() => $preferences.darkMode = !$preferences.darkMode}
+          title="Change theme"
+          class="focus:outline-none mx-4 cursor-pointer nav-link i jam:{$preferences.darkMode ? 'sun' : 'moon'}"
+          ></button
         >
-        <button
-          class="mx-2 btn-primary"
-          >Regístrate</button
-        >
+        </div>
+      {/if}
+      <div class="{ top && !sidebar ? 'lg:hidden' : '' } my-auto pointer-events-auto ml-auto" transition:fly|local={{ x: -50, duration: 400 }}>
+        <Hamburger bind:open={sidebar} white={isTransparent}/>
       </div>
-      <div class="h-4 mx-2 border-l border-yes-gray-500 dark:border-yes-gray-300 dark:border-white duration-800"></div>
-      <button
-        on:click={() => $preferences.darkMode = !$preferences.darkMode}
-        title="Change theme"
-        class="focus:outline-none mx-4 cursor-pointer nav-link i jam:{$preferences.darkMode ? 'sun' : 'moon'}"
-        ></button
-      >
     </div>
   </div>
 </header>

@@ -23,7 +23,7 @@
   <aside
     on:mouseenter={() => inside = true}
     on:mouseleave={() => inside = false}
-    class="absolute w-screen h-screen font-bold shadow lg:hidden font-title text-yes-gray-700 dark:text-yes-gray-200"
+    class="absolute w-screen h-screen font-bold shadow font-title text-yes-gray-700 dark:text-yes-gray-200"
     class:open
     transition:fly={{ x: 100, duration: 500 }}
   >
@@ -34,7 +34,7 @@
         <!--span class={separatorClass}></span-->
         {#each elements as el, i}
           <a
-            class="block py-1 my-4 nav-link"
+            class="block py-1 my-4 mr-auto nav-link"
             href={$url(el.href)}
             class:selected-nav={$isActive(el.href)}
             in:fly={{ x: 100, duration: 500, delay: 100 + (i * 500 / elements.length)}}
