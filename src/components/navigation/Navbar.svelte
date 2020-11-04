@@ -25,12 +25,16 @@
   let isTransparent = $transparent
   let top = true
 
+  const setHeight = (n) => {
+    $height = n ? n.offsetHeight : 0
+  }
+
   $: top = y <= 0 || y === undefined
   $: isTransparent = $transparent && top
-  $: $height = navbar ? navbar.offsetHeight : 0
+  $: setHeight(navbar)
 </script>
 
-<svelte:window bind:scrollY={y}/>
+<svelte:window bind:scrollY={y} on:resize={() => setHeight(navbar)}/>
 
 <header
   class="
