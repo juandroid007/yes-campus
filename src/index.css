@@ -32,6 +32,19 @@ pre, code {
 	}
 }
 
+.content-lg {
+	@apply px-6;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@screen lg {
+	.content-lg {
+		width: 90%;
+	}
+}
+
 .btn-secondary-gray {
 	@apply px-3;
 	@apply py-2;
