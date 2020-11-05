@@ -17,7 +17,7 @@
 
   <ParallaxContainer
     class="relative py-12 mt-6 overflow-hidden from-yes-orange-500 to-yes-orange-400 bg-gradient-to-br dark:to-yes-orange-700 dark:from-yes-orange-800"
-    style="background: #FC643F; height: 90vh; border-top-left-radius: 3rem; border-top-right-radius: 3rem;"
+    style="bbackground: #FC643F; height: 90vh; border-top-left-radius: 3rem; border-top-right-radius: 3rem;"
     let:offset
   >
     <div class="absolute hidden w-full h-full lg:block">
@@ -27,7 +27,7 @@
       <Viewport class="flex m-auto" let:intersecting once>
         <div class="m-auto text-center md:w-6/10 animation" class:intersecting>
           <p class="text-3xl font-bold leading-none text-center text-white md:text-4xl font-title">
-          Forma parte del increible ecosistema de emprendimientooo
+          Forma parte del increible ecosistema de emprendimiento
           </p>
           <p class="mt-4 text-xl text-yes-gray-700 dark:text-yes-gray-300">
           Desarrolla habilidades y despréndete de tus límites

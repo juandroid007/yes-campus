@@ -1,6 +1,6 @@
 <script>
   import { height } from '../../navigation/Navbar.svelte'
-  import { fly } from 'svelte/transition'
+  import { fly, scale } from 'svelte/transition'
   import MouseParallax from '../../motion/MouseParallax.svelte'
 </script>
 
@@ -8,7 +8,7 @@
   class="relative h-screen py-12 overflow-hidden from-yes-blue-200 to-white bg-gradient-to-b dark:to-transparent dark:from-yes-blue-800"
   style="height: calc(100vh - {$height}px); color: #939BB4;"
 >
-  <div class="absolute hidden w-full h-full lg:block">
+  <div class="absolute hidden w-full h-full lg:block" in:fly={{x: 100, duration: 800}}>
     <MouseParallax
       class="absolute w-64 h-64" style=" top: 10%; right: 20%"
       scaleFactor={5}
