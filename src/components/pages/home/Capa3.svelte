@@ -1,26 +1,5 @@
 <script>
   import Viewport from '../../IntersectingViewport.svelte'
-  import { fly } from 'svelte/transition'
-
-
-  let modulos = [
-    {
-      titulo: 'Eleva tu</br>capacidad',
-      texto: 'El 90% de nuestra comunidad reporta haber superado sus limites para alcanzar el éxito.',
-    },
-    {
-      titulo: 'Viaja a</br>tu ritmo',
-      texto: 'Administras tu tiempo para aprender donde, cuando y como quieras.',
-    },
-    {
-      titulo: 'Explota tu</br>creatividad',
-      texto: 'Explora al maximo tus sentidos y aprende de manera experiencial',
-    },
-    {
-      titulo: 'Ecosistema</br>dinámico',
-      texto: 'Explora al maximo tus sentidos y aprende de manera experiencial',
-    },
-  ]
 </script>
 
 <div class="my-12">
@@ -32,6 +11,8 @@
         >Cursos y experiencias de aprendizaje <br>en las diferentes categorías</h2
       >
     </div>
+  </Viewport>
+  <Viewport let:intersecting once={true}>
     <div class="flex flex-wrap m-auto lg:w-9/10 content-lg">
       {#each new Array(8).fill().map(() => ({ bkg: 'gray', titulo: 'Categoría' })) as m, i}
         <div
@@ -57,12 +38,18 @@
 <style>
   .animation {
     transition: all 0.5s;
-    opacity: 0;
-    transform: translateY(-5%);
     transition-delay: var(--delay);
   }
-  .animation.observing {
-    opacity: 1;
-    transform: translateY(0%) scale(1, 1);
+
+  .animation:not(.observing) {
+    opacity: 0;
+    transform: translateX(-5%);
+  }
+
+  @screen md {
+    .animation:not(.observing) {
+      opacity: 0;
+      transform: translateY(-10%);
+    }
   }
 </style>

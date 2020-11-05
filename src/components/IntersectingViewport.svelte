@@ -1,5 +1,9 @@
 <script>
   import { onMount } from 'svelte'
+
+  let _class = ''
+  let _style = ''
+  export { _class as class, _style as style }
    
   export let once = false
   export let top = 0
@@ -31,13 +35,10 @@
   })
 </script>
  
-<style>
-  div {
-    width: 100%;
-    height: 100%;
-  }
-</style>
- 
-<div bind:this={container}>
+<div
+  class="{_class}"
+  style="{_style}"
+  bind:this={container}
+>
   <slot {intersecting}></slot>
 </div>

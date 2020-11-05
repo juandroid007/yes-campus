@@ -1,7 +1,5 @@
 <script>
   import Viewport from '../../IntersectingViewport.svelte'
-  import { fly } from 'svelte/transition'
-
 
   let modulos = [
     {
@@ -46,12 +44,18 @@
 <style>
   .animation {
     transition: all 0.5s;
-    opacity: 0;
-    transform: translateY(-60%) scale(0.8, 0.8);
     transition-delay: var(--delay);
   }
-  .animation.observing {
-    opacity: 1;
-    transform: translateY(0%) scale(1, 1);
+
+  .animation:not(.observing) {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+
+  @screen md {
+    .animation:not(.observing) {
+      opacity: 0;
+      transform: translateY(-40%) scale(0.9, 0.9);
+    }
   }
 </style>
