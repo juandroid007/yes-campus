@@ -20,7 +20,7 @@
     style="bbackground: #FC643F; height: 90vh; border-top-left-radius: 3rem; border-top-right-radius: 3rem;"
     let:offset
   >
-    <div class="absolute hidden w-full h-full lg:block">
+    <div class="absolute w-full h-full lg:block">
       <Parallaxes offset={offset} />
     </div>
     <div class="z-20 flex items-center w-screen h-full transform content">
