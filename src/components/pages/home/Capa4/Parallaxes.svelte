@@ -23,8 +23,8 @@
     position: absolute;
     top: -20%;
     left: 10%;
-    @apply w-64;
-    @apply h-64;
+    @apply w-48;
+    @apply h-48;
   }
 
 
@@ -32,6 +32,8 @@
     :global(.letter-c) {
       top: 30%;
       left: 10%;
+      @apply w-64;
+      @apply h-64;
     }
   }
 
