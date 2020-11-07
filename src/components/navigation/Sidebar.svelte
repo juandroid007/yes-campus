@@ -3,7 +3,6 @@
   import elements from './navigation'
   import { url, isActive } from '@roxi/routify/runtime'
   import { preferences } from '../../stores/preferences'
-  import { count, loaded } from '../../stores/snipcart'
   export let open = true
 
   let inside
