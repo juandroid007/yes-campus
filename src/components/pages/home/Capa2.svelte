@@ -28,7 +28,7 @@
         <div
           class="md:w-1/4 animation"
           class:observing={intersecting}
-          style="--delay: {i * 100}ms"
+          style="--delay: {i * 200}ms"
         >
           <div class="p-12 transform hover:-translate-y-2 duration-200">
             <span class="ml-auto text-6xl text-right i jam:moon"></span>
@@ -43,7 +43,7 @@
 
 <style>
   .animation {
-    transition: all 0.5s;
+    transition: all 0.8s;
     transition-delay: var(--delay);
   }
 
@@ -55,7 +55,7 @@
   @screen md {
     .animation:not(.observing) {
       opacity: 0;
-      transform: translateY(-40%) scale(0.9, 0.9);
+      transform: translateY(-20%) scale(0.9, 0.9) rotate(5deg);
     }
   }
 </style>

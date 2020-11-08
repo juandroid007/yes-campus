@@ -22,7 +22,5 @@
   <TerceraCapa/>
   <CuartaCapa/>
 
-  <Carousel height="70vh"/>
-
   <SextaCapa/>
 </div>

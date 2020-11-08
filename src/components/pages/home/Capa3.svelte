@@ -20,7 +20,7 @@
           class:observing={intersecting}
           style="--delay: {i * 100}ms"
         >
-          <div class="transform hover:-translate-y-4 duration-200">
+          <div class="transform hover:-translate-y-4 duration-200 hover:-rotate-2">
             <div class="w-64 h-64 shadow-md rounded-2xl hover:shadow-lg duration-200" style="background: {m.bkg}">
             </div>
             <p class="mt-2 text-2xl font-bold font-title">{m.titulo} {i + 1}</p>
@@ -28,7 +28,7 @@
         </div>
       {/each}
 
-      <a href={null} class="flex items-center m-auto mt-6 text-2xl text-center">
+      <a href="/something" class="flex items-center m-auto mt-6 text-2xl text-center">
         <span class="mr-4 hover:underline">Ver todas las categorías</span> <span class="i jam:chevron-right"></span>
       </a>
     </div>
@@ -37,7 +37,7 @@
 
 <style>
   .animation {
-    transition: all 0.5s;
+    transition: all 0.8s;
     transition-delay: var(--delay);
   }
 
@@ -49,7 +49,7 @@
   @screen md {
     .animation:not(.observing) {
       opacity: 0;
-      transform: translateY(-10%);
+      transform: translateY(-10%) rotate(-5deg);
     }
   }
 </style>

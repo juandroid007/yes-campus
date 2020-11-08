@@ -4,19 +4,50 @@
   import { hslide } from './hslide.js'
   import { beforeUrlChange } from '@roxi/routify'
   import { preferences } from '../../stores/preferences'
+  import MouseParallax from '../motion/MouseParallax.svelte'
 
   export let slides = [
     {
-      content: '1',
-      bg: 'linear-gradient(yellow, yellow)',
+      img: 'yescamp.svg',
+      title: 'Yes Campus',
+      content: 'Blah blah blah blah',
+      firstColor: '#333131',
+      secondColor: '#030303',
     },
     {
-      content: '2',
-      bg: 'linear-gradient(blue, blue)',
+      img: 'young.svg',
+      title: 'Young Entrepeneur',
+      content: 'Blah blah blah blah blaaah',
+      firstColor: '#F8A03F',
+      secondColor: '#ED7A23',
     },
     {
-      content: '3',
-      bg: 'linear-gradient(red, red)',
+      img: 'kids-e.svg',
+      title: 'Kids-E',
+      content: 'Blaaah blah blah blah blaaah',
+      firstColor: '#EC526F',
+      secondColor: '#EC244A',
+    },
+    {
+      img: 'girl-e.svg',
+      title: 'Girl-E',
+      content: 'Blaaah blah blah blah blaaah',
+      firstColor: '#CEDD6F',
+      secondColor: '#BDD430',
+    },
+    {
+      img: 'full.svg',
+      title: 'YE Full Inclusion',
+      content: 'Blaaah blah blah blah blaaah',
+      firstColor: '#4D4E4E',
+      secondColor: '#221F1F',
+    },
+    {
+      img: 'young.svg',
+      title: 'Young Leaders',
+      content: 'Blaaah blah blah blah blaaah',
+      firstColor: '#008E92',
+      secondColor: '#008E92',
     },
   ]
 
@@ -32,7 +63,7 @@
 
   const clamp = (number, min, max) => Math.min(Math.max(number, min), max)
   const transition_args = {
-    duration: 1000,
+    duration: 800,
   }
 
   $beforeUrlChange(() => {
@@ -64,7 +95,7 @@
 
   let interval
   onMount(() => {
-    interval = () => setInterval(next, 5000)
+    interval = () => setInterval(next, 3000)
   })
   $: if (interval) interval();
 
@@ -92,33 +123,81 @@
             in:hslide={transition_args}
             out:hslide={transition_args}
             class="shadow-2xl slide"
-            style="
-              background-image:
-                {slide.bg}, linear-gradient(rgba(10,10,10,0.7), rgba(10,10,10,0.7));
-            "
+            style="background-image: linear-gradient(128deg, {slide.firstColor}, {slide.secondColor})"
           >
-            <h1
-              in:fly={{y: 100, duration: 500, delay: 400}}
-              out:fly|local={{y: -100, duration: 200}}
-              class="w-full p-6 m-auto text-5xl md:text-6xl lg:w-7/10 font-handwritten"
-              >
-              {#each slide.content as char, i}
-                {#if char === '\n'}
-                  <br/>
-                {:else}
-                  <span
-                    in:fly={{
-                      y: 100,
-                      delay: i * (1000 / slide.content.length),
-                      duration: 1000
-                    }}
-                  >{char}</span>
-                {/if}
-              {/each}
-            </h1>
           </div>
         {/if}
       {/each}
+      <div class="absolute slide">
+        <div class="flex flex-col items-center justify-center w-full lg:flex-row lg:justify-between content-lg">
+          <div class="relative flex w-full px-6 mx-auto lg:w-1/2 lg:h-full">
+            {#each slides as slide, id}
+              {#if id === cur}
+                <div
+                  class="w-full m-auto mb-12 lg:w-6/10 lg:absolute lg:mb-0 img"
+                >
+                  <MouseParallax
+                    scaleFactor={80}
+                  >
+                  <img
+                    src="/images/carousel/{slide.img}"
+                    class="m-auto"
+                    in:fly|local={{x: 100, duration: 500}}
+                    alt={slide.title}
+                  >
+                  </MouseParallax>
+                </div>
+              {:else}
+                <div class="absolute"></div>
+              {/if}
+            {/each}
+          </div>
+          <div class="flex flex-col w-full mx-auto text-4xl leading-tight lg:h-auto lg:w-1/2 md:text-5xl font-title">
+            <p class="px-6 mb-2 text-3xl text-white">Bootcamp</p>
+            <div class="h-24">
+              {#each slides as slide, id}
+                {#if id === cur}
+                  <h1
+                    in:fly|local={{y: 100, duration: 500, delay: 400}}
+                    out:fly|local={{y: -100, duration: 200}}
+                    class="px-6 leading-none"
+                  >
+                    {#each slide.title as char, i}
+                      {#if char === '\n'}
+                        <br/>
+                      {:else}
+                        <span
+                          in:fade={{
+                            y: 100,
+                            delay: i * (1000 / slide.title.length),
+                            duration: 1000
+                          }}
+                        >{char}</span>
+                      {/if}
+                    {/each}
+                  </h1>
+                {:else}
+                  <div class="absolute"></div>
+                {/if}
+              {/each}
+            </div>
+            <div class="h-12">
+              {#each slides as slide, id}
+                {#if id === cur}
+                  <p
+                    in:fly|local={{x: 20, duration: 500, delay: 500}}
+                    out:fly|local={{x: -20, duration: 500}}
+                    class="px-6 mt-2 font-sans text-lg"
+                    >{slide.content}</p
+                  >
+                {:else}
+                  <div class="absolute"></div>
+                {/if}
+              {/each}
+            </div>
+          </div>
+        </div>
+      </div>
       {#if waves}
         <div
           style="
@@ -159,6 +238,11 @@
 </div>
 
 <style>
+  @screen lg {
+    .img {
+      top: 50%; left: 50%; transform: translate(-50%, -50%);
+    }
+  }
 
   .main {
     width: 100%;
