@@ -12,7 +12,7 @@
   export let right = 0
    
   let container
-  let intersecting = false
+  export let intersecting = false
    
   onMount(() => {
     function handler() {

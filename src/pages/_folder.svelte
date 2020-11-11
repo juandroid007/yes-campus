@@ -5,7 +5,9 @@
 </script>
 
 <div class="flex flex-col w-full min-h-screen">
-  <Navbar/>
+  <div class="z-50">
+    <Navbar/>
+  </div>
   <main class="flex justify-center flex-grow h-full duration-100" style="margin-top: {!$transparent ? $height : 0}px">
     <slot/>
   </main>

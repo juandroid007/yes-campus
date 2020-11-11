@@ -12,6 +12,7 @@
   import { isChangingPage } from '@roxi/routify'
   import { preferences } from '../../stores/preferences'
   import { fly } from 'svelte/transition'
+  import { inZone } from '../pages/home/ZonaOscura.svelte'
 
   $: dark = $preferences.darkMode
 
@@ -102,7 +103,7 @@
         </div>
       {/if}
       <div class="{ top && !sidebar ? 'lg:hidden' : '' } my-auto pointer-events-auto ml-auto" transition:fly|local={{ x: -50, duration: 400 }}>
-        <Hamburger bind:open={sidebar} white={isTransparent}/>
+        <Hamburger bind:open={sidebar} white={isTransparent || $inZone}/>
       </div>
     </div>
   </div>

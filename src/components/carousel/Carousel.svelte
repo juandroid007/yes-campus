@@ -129,12 +129,12 @@
         {/if}
       {/each}
       <div class="absolute slide">
-        <div class="flex flex-col items-center justify-center w-full lg:flex-row lg:justify-between content-lg">
-          <div class="relative flex w-full px-6 mx-auto lg:w-1/2 lg:h-full">
+        <div class="flex flex-col items-center justify-center w-full md:flex-row md:justify-between content-md">
+          <div class="relative flex w-full px-6 mx-auto md:w-1/2 md:h-full">
             {#each slides as slide, id}
               {#if id === cur}
                 <div
-                  class="w-full m-auto mb-12 lg:w-6/10 lg:absolute lg:mb-0 img"
+                  class="w-full m-auto mb-12 md:w-6/10 md:absolute md:mb-0 img"
                 >
                   <MouseParallax
                     scaleFactor={80}
@@ -152,7 +152,7 @@
               {/if}
             {/each}
           </div>
-          <div class="flex flex-col w-full mx-auto text-4xl leading-tight lg:h-auto lg:w-1/2 md:text-5xl font-title">
+          <div class="flex flex-col w-full mx-auto text-4xl leading-tight md:h-auto md:w-1/2 md:text-5xl font-title">
             <p class="px-6 mb-2 text-3xl text-white">Bootcamp</p>
             <div class="h-24">
               {#each slides as slide, id}
