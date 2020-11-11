@@ -18,7 +18,7 @@
 
   .animate:not(.inZone) {
     opacity: 0;
-    transform: translate(-10%);
+    transform: translateX(-5%);
   }
 </style>
 
