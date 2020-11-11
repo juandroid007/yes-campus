@@ -12,7 +12,7 @@
 
 <style>
   .animate {
-    transition: 0.5s;
+    transition: 0.8s;
     transition-delay: 0.4s;
   }
 
@@ -22,10 +22,21 @@
   }
 </style>
 
-<div class="mt-16">
-  <Viewport bind:intersecting={$inZone}>
-    <div class="h-screen text-white content-lg animate" class:inZone={$inZone}>
+<div class="mt-48">
+  <Viewport
+    bind:intersecting={$inZone}
+    class="pt-12"
+    on:top={
+      (evt) => window.scrollTo({
+        top: evt.detail.offset,
+        behavior: 'smooth'
+      })
+    }
+  >
+    <div class="h-screen text-white content-lg animate inZone">
       <h2 class="h-16 mb-6 text-4xl font-bold leading-none font-title">Aprende con profesionales<br>disruptivos y de alto impacto</h2>
     </div>
   </Viewport>
 </div>
+
+<div class="flex w-full h-screen mt-4"></div>

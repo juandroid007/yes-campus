@@ -1,5 +1,6 @@
 <script>
   import { onMount } from 'svelte'
+  import { createEventDispatcher } from 'svelte'
 
   let _class = ''
   let _style = ''
@@ -13,10 +14,21 @@
    
   let container
   export let intersecting = false
+
+  const distpatch = createEventDispatcher()
    
   onMount(() => {
+
     function handler() {
       const bcr = container.getBoundingClientRect()
+
+      if (
+        (bcr.top - top) < window.innerHeight &&
+        (bcr.bottom + bottom) > window.innerHeight &&
+        !intersecting
+      ) {
+        distpatch('top', { offset: container.offsetTop })
+      }
        
       intersecting = (
         (bcr.bottom + bottom) > 0 &&
