@@ -1,5 +1,6 @@
 <script lang="ts">
   import { spring } from 'svelte/motion'
+  import { styles } from '../../lib/styles'
 
   let _class = ''
   let _style = ''
@@ -25,13 +26,15 @@
 
   $: yoffset.set(translate ? translate : 0)
   $: final = negative ? $yoffset - ($yoffset * 2) : $yoffset
+  $: css = { y:  final.toFixed(2) + 'px' }
 </script>
 
 <svelte:window bind:scrollY={y} />
 
 <div
   class="{_class} {screen}:parallax"
-  style="--parallax-transform: translate(0, {final.toFixed(2)}px); {_style ? `${_style}` : ''} "
+  use:styles={css}
+  style="{_style}"
 >
   <slot translate={translate}></slot>
 </div>
@@ -39,7 +42,7 @@
 <style>
   .parallax {
     will-change: transform;
-    transform: var(--parallax-transform);
+    transform: translate(0, var(--y));
   }
 
   .all\:parallax{

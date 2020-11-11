@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte'
   import { spring } from 'svelte/motion'
+  import { styles } from '../../lib/styles'
 
   let _class = ''
   let _style = ''
@@ -42,7 +43,8 @@
 
 <div
   class="{_class} {screen}:parallax"
-  style="--parallax-transform: translate({final.x.toFixed(2)}px, {final.y.toFixed(2)}px); {_style ? `${_style}` : ''} "
+  use:styles={{ x: `${final.x.toFixed(2)}px`, y: `${final.y.toFixed(2)}px`}}
+  style="{_style}"
 >
   <slot translate={translate}></slot>
 </div>
@@ -50,7 +52,7 @@
 <style>
   .parallax {
     will-change: transform;
-    transform: var(--parallax-transform);
+    transform: translate(var(--x), var(--y));
   }
 
   .all\:parallax{
