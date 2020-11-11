@@ -22,7 +22,7 @@
   }
 </style>
 
-<div class="mt-12">
+<div class="mt-16">
   <Viewport bind:intersecting={$inZone}>
     <div class="h-screen text-white content-lg animate" class:inZone={$inZone}>
       <h2 class="h-16 mb-6 text-4xl font-bold leading-none font-title">Aprende con profesionales<br>disruptivos y de alto impacto</h2>
