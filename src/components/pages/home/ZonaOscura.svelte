@@ -25,7 +25,7 @@
 <div class="mt-48">
   <Viewport
     bind:intersecting={$inZone}
-    class="pt-12"
+    class="pt-16"
     on:top={
       (evt) => window.scrollTo({
         top: evt.detail.offset,
