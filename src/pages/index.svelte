@@ -7,7 +7,7 @@
   import TerceraCapa from '../components/pages/home/Capa3.svelte'
   import CuartaCapa from '../components/pages/home/Capa4'
   import SextaCapa from '../components/pages/home/Capa6.svelte'
-  import ZonaOscura, { inZone } from '../components/pages/home/ZonaOscura.svelte'
+  import ZonaOscura, { inZoneMask } from '../components/pages/home/ZonaOscura.svelte'
 
   import { height } from '../components/navigation/Navbar.svelte'
 
@@ -20,17 +20,23 @@
   metatags.title = svitsConfig.name
 </script>
 
+<style>
+  .darkMask {
+    background-color: #3E3E3E;
+  }
+</style>
+
 <div class="w-full min-h-screen">
-  {#if $inZone}
+  {#if $inZoneMask}
     <div
-      class="fixed flex w-full h-screen"
-      style="z-index: -10; margin-top: -{$height}px; background: #3E3E3E"
+      class="fixed flex w-full h-screen darkMask"
+      style="z-index: -10; margin-top: -{$height}px;"
       transition:fade|local={{duration: 400}}
     >
     </div>
   {/if}
 
-  <div class:opacity-0={$inZone} class="duration-300">
+  <div class:opacity-0={$inZoneMask} class="duration-300">
     <PrimeraCapa/>
     <SegundaCapa/>
     <TerceraCapa/>

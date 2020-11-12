@@ -16,6 +16,7 @@ let config = {
   //   svite(sviteConfig),
   // ],
   optimizeDeps: {
+    include: ['paper/dist/paper-core'],
     exclude: ['@roxi/routify'],
   },
 }
