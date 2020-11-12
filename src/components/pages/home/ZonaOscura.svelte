@@ -10,7 +10,10 @@
   import Viewport from '../../IntersectingViewport.svelte'
   import Wave from '../../motion/Wave.svelte'
 
-  onDestroy(() => ($inZone = false))
+  onDestroy(() => {
+    $inZone = false
+    $inZoneMask = false
+  })
 </script>
 
 <style>
