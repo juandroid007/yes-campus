@@ -10,6 +10,7 @@
   import Viewport from '../../IntersectingViewport.svelte'
   import Wave from '../../motion/Wave.svelte'
 
+  import Videos from './Videos.svelte'
   import Testimonio from './Testimonio.svelte'
   import Bussines from './Bussines.svelte'
 
@@ -66,6 +67,7 @@
       </div>
     </Viewport>
     <div class="min-h-screen bg-black">
+      <Videos/>
     </div>
   </Viewport>
   <div class="transform rotate-180">
