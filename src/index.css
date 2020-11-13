@@ -101,6 +101,25 @@ pre, code {
 	@apply border-yes-blue-500;
 }
 
+.btn-fill {
+	@apply px-3;
+	@apply py-2;
+	@apply rounded-lg;
+	@apply text-yes-blue-500;
+	@apply transform;
+	@apply duration-200;
+	border-color: transparent;
+	border-width: 2px;
+	@apply border-yes-blue-500;
+}
+
+.btn-fill:hover {
+	@apply -translate-y-px;
+	@apply shadow;
+	@apply text-white;
+	@apply bg-yes-blue-500;
+}
+
 .btn-primary {
 	@apply px-3;
 	@apply py-2;

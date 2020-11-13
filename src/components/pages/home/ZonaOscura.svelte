@@ -10,6 +10,9 @@
   import Viewport from '../../IntersectingViewport.svelte'
   import Wave from '../../motion/Wave.svelte'
 
+  import Testimonio from './Testimonio.svelte'
+  import Bussines from './Bussines.svelte'
+
   onDestroy(() => {
     $inZone = false
     $inZoneMask = false
@@ -64,10 +67,11 @@
     </Viewport>
     <div class="min-h-screen bg-black">
     </div>
-    <div class="transform rotate-180">
-      <Wave color="#000" time="15s"/>
-    </div>
   </Viewport>
+  <div class="transform rotate-180">
+    <Wave color="#000" time="15s"/>
+  </div>
 </div>
 
-<div class="flex w-full h-screen"></div>
+<Testimonio/>
+<Bussines/>
