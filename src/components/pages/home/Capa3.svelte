@@ -1,5 +1,32 @@
 <script>
   import Viewport from '../../IntersectingViewport.svelte'
+
+  const categorias = [
+    {
+      title: 'Creatividad e Innovación',
+    },
+    {
+      title: 'Emprendimiento y negocios',
+    },
+    {
+      title: 'Liderazgo y Empoderamiento',
+    },
+    {
+      title: 'Sostenibilidad',
+    },
+    {
+      title: 'Marketing',
+    },
+    {
+      title: 'Finanzas',
+    },
+    {
+      title: 'Legales',
+    },
+    {
+      title: 'Bienestar',
+    },
+  ]
 </script>
 
 <div class="my-12">
@@ -14,16 +41,17 @@
   </Viewport>
   <Viewport let:intersecting once={true}>
     <div class="flex flex-wrap m-auto lg:w-9/10 content-lg">
-      {#each new Array(8).fill().map(() => ({ bkg: 'gray', titulo: 'Categoría' })) as m, i}
+      {#each categorias.map(e => ({ bkg: 'gray', ...e })) as c, i}
         <div
           class="p-4 m-auto md:w-1/4 animation"
           class:observing={intersecting}
           style="--delay: {i * 100}ms"
         >
-          <div class="transform hover:-translate-y-4 duration-200 hover:-rotate-2">
-            <div class="w-64 h-64 shadow-md rounded-2xl hover:shadow-lg duration-200" style="background: {m.bkg}">
+          <div class="m-auto transform hover:-translate-y-4 duration-200 hover:-rotate-2">
+            <div class="w-64 h-64 overflow-hidden shadow-md rounded-2xl hover:shadow-lg duration-200" style="background: {c.bkg}">
+              <img src="https://source.unsplash.com/random/236x236" alt="" class="object-cover w-full h-full">
             </div>
-            <p class="mt-2 text-2xl font-bold font-title">{m.titulo} {i + 1}</p>
+            <p class="w-64 mt-2 mr-2 text-2xl font-bold leading-tight lg:h-24 font-title">{c.title}</p>
           </div>
         </div>
       {/each}

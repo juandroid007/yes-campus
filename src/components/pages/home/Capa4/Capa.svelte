@@ -16,7 +16,7 @@
 </style>
 
 <ParallaxContainer
-  class="relative py-12 mt-6 overflow-hidden from-yes-orange-500 to-yes-orange-400 bg-gradient-to-br dark:to-yes-orange-700 dark:from-yes-orange-800"
+  class="relative py-12 mt-6 overflow-hidden from-yes-orange-500 to-yes-orange-400 bg-gradient-to-b dark:to-yes-orange-700 dark:from-yes-orange-800"
   style="bbackground: #FC643F; height: 90vh; border-top-left-radius: 3rem; border-top-right-radius: 3rem;"
   let:offset
 >

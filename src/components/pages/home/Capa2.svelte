@@ -3,18 +3,22 @@
 
   let modulos = [
     {
+      icon: 'capacidad',
       titulo: 'Eleva tu</br>capacidad',
       texto: 'El 90% de nuestra comunidad reporta haber superado sus limites para alcanzar el éxito.',
     },
     {
+      icon: 'ritmo',
       titulo: 'Viaja a</br>tu ritmo',
       texto: 'Administras tu tiempo para aprender donde, cuando y como quieras.',
     },
     {
+      icon: 'creatividad',
       titulo: 'Explota tu</br>creatividad',
       texto: 'Explora al maximo tus sentidos y aprende de manera experiencial',
     },
     {
+      icon: 'ecosistema',
       titulo: 'Ecosistema</br>dinámico',
       texto: 'Explora al maximo tus sentidos y aprende de manera experiencial',
     },
@@ -30,8 +34,8 @@
           class:observing={intersecting}
           style="--delay: {i * 200}ms"
         >
-          <div class="p-12 transform hover:-translate-y-2 duration-200">
-            <span class="ml-auto text-6xl text-right i jam:moon"></span>
+          <div class="p-12 transform hover:-translate-y-4 duration-200 hover:scale-110">
+            <img class="h-24 mb-4 mr-auto" src="/images/icons/{m.icon}.svg" alt="">
             <h2 class="h-16 mb-6 text-4xl font-bold leading-none font-title">{@html m.titulo}</h2>
             <p>{m.texto}</p>
           </div>
