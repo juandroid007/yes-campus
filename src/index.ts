@@ -11,7 +11,7 @@ const app = new App({
 
 wf.load({
   google: {
-    families: ['Oxygen', 'Ubuntu', 'Inconsolata']
+    families: ['Oxygen:300,400', 'Ubuntu', 'Inconsolata']
   }
 })
 

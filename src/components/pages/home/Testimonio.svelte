@@ -18,10 +18,10 @@
   }
 </style>
 
-<V class="flex flex-wrap items-center w-full min-h-screen py-6 -m-4 text-xl content-lg font-title" let:intersecting once>
+<V class="flex flex-wrap items-center w-full min-h-screen py-12 -m-4 text-xl content-lg font-title" let:intersecting once>
   <div class="w-full h-full p-4 lg:w-1/2">
     <div class="flex flex-col w-full h-full a1" class:intersecting>
-      <p class="italic">
+      <p class="italic font-light">
       "This required very tight collaboration and
       incremental deliveries over many months until final
       delivery. We are extremely pleased with the
@@ -34,6 +34,6 @@
     </div>
   </div>
   <div class="w-full p-4 lg:w-1/2">
-    <img src="https://source.unsplash.com/random/600x480" alt="" class="shadow-2xl rounded-3xl a2" class:intersecting>
+    <img src="https://source.unsplash.com/random/600x480" alt="" class="m-auto shadow-2xl rounded-3xl a2" class:intersecting>
   </div>
 </V>

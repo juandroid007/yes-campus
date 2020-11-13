@@ -29,15 +29,15 @@
 </style>
 
 <div class="bg-gray-100 dark:bg-yes-gray-800 dark:bg-opacity-25">
-  <div class="flex flex-wrap-reverse items-center w-full py-6 -m-12 text-xl main md:flex-wrap content-lg font-title">
-    <V class="flex flex-wrap items-center w-full p-12 m-auto lg:w-1/2" let:intersecting once>
+  <div class="flex flex-wrap items-center w-full py-6 -m-12 text-xl main content-lg font-title">
+    <V class="flex flex-wrap items-center w-full px-12 m-auto lg:w-1/2" let:intersecting once>
       {#each new Array(8) as _, i}
         <div class="w-1/2 p-2 p-6 m-auto sm:w-1/4 animate" class:intersecting style="transition-delay: {50 * i}ms">
           <img src="/images/logo.svg" alt="" class="m-auto hover:scale-110 transform duration-200 hover:-rotate-6">
         </div>
       {/each}
     </V>
-    <V class="w-full p-12 lg:w-1/2" let:intersecting once>
+    <V class="w-full p-12 text-base lg:w-1/2" let:intersecting once>
       <div class="flex flex-col w-full animate2" class:intersecting>
         <h2 class="mb-6 text-4xl font-extrabold leading-none uppercase">Yes Campus<br>for Business</h2>
         <p>
@@ -47,7 +47,7 @@
         sintonía con la visión de desarrollo de la empresa y sus
         </p>
 
-        <a href="" class="mt-6 mr-auto btn-fill">Descúbrelo</a>
+        <a href="" class="mt-6 mr-auto font-light btn-fill">Descúbrelo</a>
       </div>
     </V>
   </div>

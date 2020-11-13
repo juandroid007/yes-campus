@@ -53,7 +53,7 @@
     >
       <div class="relative h-screen">
         {#if $inZone}
-          <div class="absolute w-full h-full" in:fade|local={{delay: 800, duration: 10}} style="background: #3E3E3E">
+          <div class="absolute w-full h-full bg-yes-gray-800" in:fade|local={{delay: 800, duration: 10}}>
           </div>
         {/if}
         <div class="absolute flex w-full h-full animate inZone">
@@ -62,7 +62,7 @@
           </div>
         </div>
       </div>
-      <div style="background: #3E3E3E">
+      <div style="background: #2B2B2B">
         <Wave color="#000" time="15s"/>
       </div>
     </Viewport>

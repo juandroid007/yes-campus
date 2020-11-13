@@ -22,7 +22,7 @@
 
 <style>
   .darkMask {
-    background-color: #3E3E3E;
+    @apply bg-yes-gray-800;
   }
 </style>
 
