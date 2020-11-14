@@ -75,8 +75,7 @@
             <li class="glide__slide">
               <div class="mx-auto w-60">
                 <div
-                  class="flex w-full overflow-hidden bg-gray-700 border border-white shadow-2xl h-72 rounded-2xl"
-                  style="border: 2px solid white"
+                  class="flex w-full overflow-hidden bg-gray-700 shadow-2xl h-72 rounded-2xl"
                 >
                   <img src={p.imagen} alt={p.nombre} class="object-cover w-full h-full">
                 </div>
