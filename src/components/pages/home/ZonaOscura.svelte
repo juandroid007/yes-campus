@@ -33,12 +33,16 @@
   }
 </style>
 
-<div class="flex flex-col items-center w-full leading-none">
-  <span class="text-6xl i jam:chevron-down animate-bounce duration-300" class:opacity-0={$inZoneMask}></span>
-  <span class="-mt-12 text-6xl i jam:chevron-down animate-bounce duration-300" class:opacity-0={$inZoneMask}></span>
+<div class="flex flex-col items-center w-full leading-none" class:opacity-0={$inZoneMask}>
+    <span class="text-6xl i jam:chevron-down animate-bounce"></span>
+    <span class="-mt-12 text-6xl i jam:chevron-down animate-bounce"></span>
 </div>
 
 <div class="mt-48 mb-4">
+  <div class="flex flex-col items-center w-full leading-none text-white duration-300 transform rotate-180" class:opacity-0={!$inZoneMask}>
+    <span class="text-6xl i jam:chevron-down animate-bounce"></span>
+    <span class="-mt-12 text-6xl i jam:chevron-down animate-bounce"></span>
+  </div>
   <Viewport
     bind:intersecting={$inZone}
     class="pt-16"
@@ -52,7 +56,7 @@
     <Viewport
       bind:intersecting={$inZoneMask}
     >
-      <div class="relative h-screen">
+      <div class="relative" style="min-height: 95vh">
         {#if $inZone}
           <div class="absolute w-full h-full bg-yes-gray-800" in:fade|local={{delay: 800, duration: 10}}>
           </div>
