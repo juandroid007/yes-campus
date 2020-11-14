@@ -17,6 +17,8 @@
 
   $: dark = $preferences.darkMode
 
+  let outOffset
+
   metatags.title = svitsConfig.name
 </script>
 
@@ -42,10 +44,12 @@
     <TerceraCapa/>
     <CuartaCapa/>
 
-    <SextaCapa/>
+    <div bind:this={outOffset}>
+      <SextaCapa/>
+    </div>
   </div>
 
   <div style="z-index: 50">
-    <ZonaOscura/>
+    <ZonaOscura outOffset={outOffset?.offsetTop} />
   </div>
 </div>

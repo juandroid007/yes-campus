@@ -38,7 +38,7 @@
 <style>
   .animate {
     transition: 1s;
-    transition-delay: 0.3s;
+    transition-delay: 0.4s;
   }
 
   .animate:not(.intersecting) {

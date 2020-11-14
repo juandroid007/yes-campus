@@ -29,7 +29,7 @@
 </style>
 
 <div class="overflow-hidden bg-gray-100 dark:bg-yes-gray-800 dark:bg-opacity-25">
-  <div class="flex flex-wrap items-center w-full py-6 -m-12 text-xl main content-lg font-title">
+  <div class="flex flex-wrap items-center w-full py-6 text-xl main content-lg font-title">
     <V class="flex flex-wrap items-center w-full px-12 m-auto lg:w-1/2" let:intersecting once>
       {#each new Array(8) as _, i}
         <div class="w-1/2 p-2 p-6 m-auto sm:w-1/4 animate" class:intersecting style="transition-delay: {50 * i}ms">

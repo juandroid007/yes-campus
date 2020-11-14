@@ -19,7 +19,7 @@
   }
 </style>
 
-<Viewport let:intersecting>
+<Viewport let:intersecting once>
   <div class="flex flex-col-reverse items-center px-6 py-12 lg:flex-row lg:h-screen content-lg">
     <div class="lg:w-1/2 a1" class:intersecting>
       <div class="text-4xl font-bold leading-tight lg:leading-none lg:text-5xl font-title">Desarrollamos competencias personales y organizacionales</div>

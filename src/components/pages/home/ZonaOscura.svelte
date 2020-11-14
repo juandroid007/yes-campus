@@ -14,6 +14,7 @@
   import Videos from './Videos.svelte'
   import Testimonio from './Testimonio.svelte'
   import Bussines from './Bussines.svelte'
+  export let outOffset
 
   onDestroy(() => {
     $inZone = false
@@ -38,8 +39,19 @@
     <span class="-mt-12 text-6xl i jam:chevron-down animate-bounce"></span>
 </div>
 
-<div class="mt-48 mb-4">
-  <div class="flex flex-col items-center w-full leading-none text-white duration-300 transform rotate-180" class:opacity-0={!$inZoneMask}>
+<Viewport
+  class="mt-48 mb-4"
+>
+  <div
+    class="flex flex-col items-center w-full leading-none text-white cursor-pointer duration-300 transform rotate-180"
+    class:opacity-0={!$inZoneMask}
+    on:click={
+      () => outOffset ? window.scrollTo({
+        top: outOffset,
+        behavior: 'smooth'
+      }) : null
+    }
+  >
     <span class="text-6xl i jam:chevron-down animate-bounce"></span>
     <span class="-mt-12 text-6xl i jam:chevron-down animate-bounce"></span>
   </div>
@@ -61,9 +73,17 @@
           <div class="absolute w-full h-full bg-yes-gray-800" in:fade|local={{delay: 800, duration: 10}}>
           </div>
         {/if}
-        <div class="absolute flex w-full h-full animate inZone">
+        <Viewport
+          class="absolute flex w-full h-full animate inZone"
+          on:out={
+            () => outOffset ? window.scrollTo({
+              top: outOffset,
+              behavior: 'smooth'
+            }) : null
+          }
+        >
           <Profesores/>
-        </div>
+        </Viewport>
       </div>
       <div style="background: #2B2B2B">
         <Wave color="#000" time="12s"/>
@@ -76,7 +96,7 @@
   <div class="transform rotate-180">
     <Wave color="#000" time="12s"/>
   </div>
-</div>
+</Viewport>
 
 <Testimonio/>
 <Bussines/>
