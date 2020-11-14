@@ -28,7 +28,7 @@
   }
 </style>
 
-<div class="bg-gray-100 dark:bg-yes-gray-800 dark:bg-opacity-25">
+<div class="overflow-hidden bg-gray-100 dark:bg-yes-gray-800 dark:bg-opacity-25">
   <div class="flex flex-wrap items-center w-full py-6 -m-12 text-xl main content-lg font-title">
     <V class="flex flex-wrap items-center w-full px-12 m-auto lg:w-1/2" let:intersecting once>
       {#each new Array(8) as _, i}

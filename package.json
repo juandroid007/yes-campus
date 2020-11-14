@@ -24,6 +24,7 @@
     "prod": "run-s build start"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
     "@iconify/icons-jam": "^1.0.5",
     "@iconify/svelte": "^1.0.2",
     "@roxi/routify": "^2.0.2",

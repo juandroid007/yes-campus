@@ -10,6 +10,7 @@
   import Viewport from '../../IntersectingViewport.svelte'
   import Wave from '../../motion/Wave.svelte'
 
+  import Profesores from './Profesores.svelte'
   import Videos from './Videos.svelte'
   import Testimonio from './Testimonio.svelte'
   import Bussines from './Bussines.svelte'
@@ -57,9 +58,7 @@
           </div>
         {/if}
         <div class="absolute flex w-full h-full animate inZone">
-          <div class="flex flex-col w-full h-full text-white content-lg">
-            <h2 class="h-16 mb-6 text-4xl font-bold leading-none font-title">Aprende con profesionales<br>disruptivos y de alto impacto</h2>
-          </div>
+          <Profesores/>
         </div>
       </div>
       <div style="background: #2B2B2B">

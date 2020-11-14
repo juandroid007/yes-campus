@@ -1,6 +1,8 @@
 import './index.css'
 import './icons.css'
 import './nprogress.css'
+import '@glidejs/glide/dist/css/glide.core.min.css'
+import '@glidejs/glide/dist/css/glide.theme.min.css'
 import 'prismjs-tomorrow-theme/prism-tomorrow.css'
 import App from './App.svelte'
 import wf from 'webfontloader'

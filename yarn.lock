@@ -67,6 +67,11 @@
     postcss "7.0.32"
     purgecss "^2.3.0"
 
+"@glidejs/glide@^3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@glidejs/glide/-/glide-3.4.1.tgz#8ad21f3169076e32bbfd75ed0753807662c25e90"
+  integrity sha512-C34AEcK1HjSyxilRToUL54I6KAoodojUbeRlXoruobZuG0eGm8xfDL+3kgkWj7AJK4EZtunSOYfoqMp70eDtwg==
+
 "@iconify/core@^1.0.0-beta.4":
   version "1.0.0-rc.1"
   resolved "https://registry.yarnpkg.com/@iconify/core/-/core-1.0.0-rc.1.tgz#21f152d834d22a1e1c22b39b531b85d71047276f"
