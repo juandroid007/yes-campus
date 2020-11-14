@@ -1,5 +1,7 @@
 <script>
   import Viewport from '../../IntersectingViewport.svelte'
+  import Categoria from './Categoria.svelte'
+  import Slider from './CategoriasSlider.svelte'
 
   const categorias = [
     {
@@ -40,26 +42,26 @@
     </div>
   </Viewport>
   <Viewport let:intersecting once={true}>
-    <div class="flex flex-wrap m-auto lg:w-9/10 content-lg">
-      {#each categorias.map(e => ({ bkg: 'gray', ...e })) as c, i}
+    <div
+      class="flex w-full h-full lg:hidden"
+    >
+      <Slider categorias={categorias} />
+    </div>
+    <div class="flex-wrap hidden m-auto lg:w-9/10 content-lg lg:flex">
+      {#each categorias as c, i}
         <div
-          class="p-4 m-auto md:w-1/4 animation"
+          class="p-4 m-auto md:w-1/2 lg:w-1/4 animation"
           class:observing={intersecting}
           style="--delay: {i * 100}ms"
         >
-          <div class="m-auto transform hover:-translate-y-4 duration-200 hover:-rotate-2">
-            <div class="w-64 h-64 overflow-hidden shadow-md rounded-2xl hover:shadow-lg duration-200" style="background: {c.bkg}">
-              <img src="https://source.unsplash.com/random/236x236" alt="" class="object-cover w-full h-full">
-            </div>
-            <p class="w-64 mt-2 mr-2 text-2xl font-bold leading-tight lg:h-24 font-title">{c.title}</p>
-          </div>
+          <Categoria c={c} />
         </div>
       {/each}
 
-      <a href="/something" class="flex items-center m-auto mt-6 text-2xl text-center">
-        <span class="mr-4 hover:underline">Ver todas las categorías</span> <span class="i jam:chevron-right"></span>
-      </a>
     </div>
+    <a href="/something" class="flex items-center justify-center m-auto mt-6 text-2xl text-center">
+      <span class="mr-4 hover:underline">Ver todas las categorías</span> <span class="i jam:chevron-right"></span>
+    </a>
   </Viewport>
 </div>
 
