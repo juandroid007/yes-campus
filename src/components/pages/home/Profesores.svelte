@@ -8,9 +8,15 @@
       descripcion: 'Cantante',
       imagen: 'https://assets.eleconomista.com.mx/__export/1594074936885/sites/eleconomista/img/2020/07/06/kanye-west-reuters.jpg_2144533222.jpg',
     },
+    {
+      nombre: 'Kanye West',
+      descripcion: 'Cantante',
+      imagen: 'https://assets.eleconomista.com.mx/__export/1594074936885/sites/eleconomista/img/2020/07/06/kanye-west-reuters.jpg_2144533222.jpg',
+    },
   ]
 
   let glide
+  let intersecting
 
   const mountGlide = node => {
     glide = new Glide(node, {
@@ -24,7 +30,6 @@
           perView: 1
         }
       },
-      autoplay: 5000,
     })
     glide.mount()
   }
@@ -58,15 +63,22 @@
 
 <div class="flex flex-col w-full h-full text-white content-lg">
   <h2 class="h-16 text-4xl font-bold leading-none font-title">Aprende con profesionales<br>disruptivos y de alto impacto</h2>
-  <V class="my-auto" let:intersecting once>
+  <V class="my-auto" bind:intersecting on:top={() => {
+    glide.update({
+      autoplay: 2000,
+    })
+  }}>
     <div class="glide animate" use:mountGlide class:intersecting>
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
           {#each profesores as p, i}
             <li class="glide__slide">
               <div class="mx-auto w-60">
-                <div class="flex w-full overflow-hidden bg-gray-700 shadow-2xl h-72 rounded-2xl">
-                  <img src={p.imagen} alt={p.nombre} class="object-cover w-full h-full" style="opacity: 0.95">
+                <div
+                  class="flex w-full overflow-hidden bg-gray-700 border border-white shadow-2xl h-72 rounded-2xl"
+                  style="border: 2px solid white"
+                >
+                  <img src={p.imagen} alt={p.nombre} class="object-cover w-full h-full">
                 </div>
                 <p class="mt-6 text-2xl font-bold leading-none font-title">{p.nombre}</p>
                 <p class="mt-2 text-lg font-light leading-none font-title">{p.descripcion}</p>
