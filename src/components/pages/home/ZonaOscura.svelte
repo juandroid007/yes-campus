@@ -66,7 +66,7 @@
         </div>
       </div>
       <div style="background: #2B2B2B">
-        <Wave color="#000" time="15s"/>
+        <Wave color="#000" time="12s"/>
       </div>
     </Viewport>
     <div class="min-h-screen bg-black">
@@ -74,7 +74,7 @@
     </div>
   </Viewport>
   <div class="transform rotate-180">
-    <Wave color="#000" time="15s"/>
+    <Wave color="#000" time="12s"/>
   </div>
 </div>
 
