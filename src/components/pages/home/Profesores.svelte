@@ -38,7 +38,7 @@
 <style>
   .animate {
     transition: 1s;
-    transition-delay: 0.4s;
+    transition-delay: 0.2s;
   }
 
   .animate:not(.intersecting) {
@@ -61,8 +61,8 @@
   }
 </style>
 
-<div class="flex flex-col w-full h-full text-white content-lg">
-  <h2 class="h-16 text-4xl font-bold leading-none font-title">Aprende con profesionales<br>disruptivos y de alto impacto</h2>
+<div class="z-10 flex flex-col w-full h-full text-white content-lg">
+  <h2 class="mb-12 text-4xl font-bold leading-none font-title">Aprende con profesionales<br>disruptivos y de alto impacto</h2>
   <V class="my-auto" bind:intersecting on:top={() => {
     glide.update({
       autoplay: 2000,
