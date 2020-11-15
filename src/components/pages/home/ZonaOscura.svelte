@@ -84,9 +84,9 @@
         >
           <Profesores/>
         </Viewport>
-      </div>
-      <div style="background: #2B2B2B">
-        <Wave color="#000" time="12s"/>
+        <div class="z-10">
+          <Wave color="#000" time="12s"/>
+        </div>
       </div>
     </Viewport>
     <div class="min-h-screen bg-black">
