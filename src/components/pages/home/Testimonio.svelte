@@ -30,7 +30,7 @@
     </div>
   </div>
   <div class="w-full p-12 lg:w-1/2">
-    <div class="w-full overflow-hidden bg-gray-500 shadow-2xl min-w-min-content rounded-3xl a2" class:intersecting>
+    <div class="w-full overflow-hidden bg-gray-500 shadow-2xl h-96 rounded-3xl a2" class:intersecting>
       <img src="/images/testimonio.webp" alt="" class="object-cover w-full h-full">
     </div>
   </div>
