@@ -1,14 +1,41 @@
 export default [
   {
     titulo: 'Explora',
-    href: '/explora',
+    childrens: [
+      {
+        titulo: 'Explora',
+        href: '/explora',
+      },
+      {
+        titulo: 'Membresías',
+        href: '/membresías',
+      },
+    ],
   },
   {
     titulo: 'Comunidad',
-    childrens: [],
+    childrens: [
+      {
+        titulo: 'Explora',
+        href: '/explora',
+      },
+      {
+        titulo: 'Membresías',
+        href: '/membresías',
+      },
+    ],
   },
   {
     titulo: 'Membresías',
-    href: '/membresías',
+    childrens: [
+      {
+        titulo: 'Explora',
+        href: '/explora',
+      },
+      {
+        titulo: 'Membresías',
+        href: '/membresías',
+      },
+    ],
   },
 ]

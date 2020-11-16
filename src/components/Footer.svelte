@@ -1,58 +1,46 @@
-<footer class="py-8 text-gray-500 footer-bg">
-  <div class="flex flex-col justify-between -m-4 md:flex-row content">
-    <div class="m-4 section">
-      <p class="title">Follow us</p>
-      <div class="flex items-center mx-auto text-2xl">
-        <a
-          href="https://www.youtube.com/channel/UC15qcqtEc4H8I1sFQxVwobw"
-          class="mx-2 hover:text-gray-300 duration-200"
-          rel="noopener"
-          target="_blank"
-          ><span class="i jam:youtube"></span></a
-        >
-        <a
-          href="https://www.facebook.com/BoxLunchesSeattle/"
-          class="mx-2 hover:text-gray-300 duration-200"
-          rel="noopener"
-          target="_blank"
-          ><span class="i jam:facebook"></span></a
-        >
-        <a
-          href="https://www.instagram.com/box_lunches_seattle/"
-          class="mx-2 hover:text-gray-300 duration-200"
-          rel="noopener"
-          target="_blank"
-          ><span class="i jam:instagram"></span></a
-        >
+<script>
+  import navs from './navigation/navigation'
+</script>
+
+<footer class="py-8">
+  <div class="flex flex-col justify-between -my-4 md:flex-row content">
+    {#each navs as n, i}
+      <div
+        class="
+               my-4
+               w-full section
+               { i == navs.length - 1 ? 'md:text-right' : '' }
+               { n.childrens && i > 0 && i < navs.length - 1 ? 'md:mx-auto' : '' }
+               "
+      >
+        {#if n.childrens}
+          <p
+            class="
+                   flex items-center title
+                   { n.childrens && i == navs.length - 1 ? 'md:justify-end' : '' }
+                  "
+            ><span>{n.titulo}</span> <span class="i jam:chevron-down"></span></p
+          >
+          {#if n.childrens.length}
+            <div class="flex flex-col w-full mt-2 font-title">
+              {#each n.childrens as c}
+                <a href={c.href} class="my-1 hover:underline">{c.titulo}</a>
+              {/each}
+            </div>
+          {/if}
+          {:else}
+            <a href={n.href} class="title hover:underline">{n.titulo}</a>
+        {/if}
       </div>
-    </div>
-    <div class="m-4 section">
-      <p class="title">Contact us</p>
-      <a href="mailto:info@box-lunches.com" class="mx-auto my-1 hover:underline">info@box-lunches.com</a>
-      <a href="tel:+1-877-538-5888" class="mx-auto my-1 hover:underline">(206)258-3778</a>
-    </div>
-    <div class="m-4 section">
-      <p class="title">Address</p>
-      <p>1920 Dexter Ave. N Suite 100 Seattle, WA 98109</p>
-    </div>
+    {/each}
+  </div>
+  <div class="flex justify-between mt-6 text-gray-400 content">
+    <p class="text-sm">Desarrollado por Marketing Shakers</p>
+    <p class="text-sm"><strong>YES CAMPUS</strong>© 2020. Todos los derechos reservados</p>
   </div>
 </footer>
 
 <style>
-  .footer-bg {
-    background-color: #222;
-  }
-
-  :global(.dark .footer-bg) {
-    background-color: rgb(10, 10, 10);
-  }
-
-  .section {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-
   @screen md {
     .section {
       width: 25%;
@@ -61,9 +49,7 @@
 
   .title {
     @apply text-xl;
-    @apply text-center;
     @apply uppercase;
     @apply font-title;
-    @apply text-white;
   }
 </style>
