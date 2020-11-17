@@ -29,10 +29,7 @@
     <Viewport class="flex m-auto" let:intersecting once>
       <div class="m-auto text-center md:w-6/10 animation" class:intersecting style="transition-delay: 0.2s">
         <p class="text-3xl font-bold leading-none text-center text-white md:text-4xl font-title">
-        Forma parte del increible ecosistema de emprendimiento
-        </p>
-        <p class="mt-4 text-xl text-yes-gray-700 dark:text-yes-gray-300">
-        Desarrolla habilidades y despréndete de tus límites
+        Conoce y forma parte de nuestros campamentos especializados
         </p>
       </div>
     </Viewport>
