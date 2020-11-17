@@ -64,7 +64,7 @@
         <ul class="glide__slides">
           {#each categorias as c, i}
             <li class="glide__slide">
-              <div class="flex w-full pt-6">
+              <div class="flex w-full pt-24">
                 <div class="mx-auto">
                   <Categoria c={c} />
                 </div>

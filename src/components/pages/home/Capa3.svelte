@@ -1,42 +1,7 @@
 <script>
   import Viewport from '../../IntersectingViewport.svelte'
-  import Categoria from './Categoria.svelte'
+  import Categoria, { categorias } from './Categoria.svelte'
   import Slider from './CategoriasSlider.svelte'
-
-  const categorias = [
-    {
-      img: 'creatividad',
-      title: 'Creatividad e Innovación',
-    },
-    {
-      img: 'emprendimiento',
-      title: 'Emprendimiento y negocios',
-    },
-    {
-      img: 'liderazgo',
-      title: 'Liderazgo y Empoderamiento',
-    },
-    {
-      img: 'sostenibilidad',
-      title: 'Sostenibilidad',
-    },
-    {
-      img: 'marketing',
-      title: 'Marketing',
-    },
-    {
-      img: 'finanzas',
-      title: 'Finanzas',
-    },
-    {
-      img: 'legales',
-      title: 'Legales',
-    },
-    {
-      img: 'bienestar',
-      title: 'Bienestar',
-    },
-  ]
 </script>
 
 <div class="my-12">

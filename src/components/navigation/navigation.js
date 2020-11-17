@@ -1,27 +1,24 @@
+import { categorias } from '../pages/home/Categoria.svelte'
+
 export default [
   {
     titulo: 'Explora',
-    childrens: [
-      {
-        titulo: 'Explora',
-        href: '/explora',
-      },
-      {
-        titulo: 'Membresías',
-        href: '/membresías',
-      },
-    ],
+    childrens: [ ...categorias ],
   },
   {
     titulo: 'Comunidad',
     childrens: [
       {
-        titulo: 'Explora',
-        href: '/explora',
+        titulo: 'YES Campus for Business',
+        href: '/business',
       },
       {
-        titulo: 'Membresías',
-        href: '/membresías',
+        titulo: 'Historias',
+        href: '/historias',
+      },
+      {
+        titulo: 'Blog',
+        href: '/blog',
       },
     ],
   },

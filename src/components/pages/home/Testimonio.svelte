@@ -16,7 +16,7 @@
   const testimonios = [
     {
       imagen: 'testimonio',
-      cita: 'El apoyo de aprendo y emprendo, en especial de Mauricio, ha sido clave en la manera de entender mi negocio de una forma integral. Me han aportado una perspectiva más amplia y eficiente. También hemos compartido como aliados estratégicos y ha sido un placer trabajar con un equipo tan capaz, innovador, estratégico, en donde la excelencia y la amistad son parte de los encuentros.',
+      cita: 'El apoyo de Aprendo y Emprendo ha sido clave en la manera de entender mi negocio de una forma integral. Me han aportado una perspectiva más amplia y eficiente. También hemos compartido como aliados estratégicos y ha sido un placer trabajar con un equipo tan capaz, innovador, estratégico, en donde la excelencia y la amistad son parte de los encuentros.',
       autor: 'Lucía Galota - CEO de Planning RH',
     },
     {
