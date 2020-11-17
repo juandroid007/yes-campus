@@ -24,15 +24,6 @@ export default [
   },
   {
     titulo: 'Membresías',
-    childrens: [
-      {
-        titulo: 'Explora',
-        href: '/explora',
-      },
-      {
-        titulo: 'Membresías',
-        href: '/membresías',
-      },
-    ],
+    href: '/membresías',
   },
 ]

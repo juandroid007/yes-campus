@@ -4,7 +4,7 @@
   import Slider from './CategoriasSlider.svelte'
 </script>
 
-<div class="my-12">
+<div class="my-12 overflow-hidden">
   <Viewport let:intersecting once={true}>
     <div class="flex content-lg">
       <h2

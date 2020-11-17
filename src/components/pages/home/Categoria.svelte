@@ -72,6 +72,18 @@
     @apply duration-300;
   }
 
+  .title {
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    background-repeat: no-repeat;
+    background-size: 0% 30%;
+    background-position: 0 100%;
+    transition: background-size 0.3s ease-in;
+  }
+
+  .categoria:hover .title {
+    background-size: 100% 40%;
+  }
+
   .wave {
     @apply transform;
     @apply scale-90;
@@ -137,5 +149,7 @@
       <img src="/images/categorias/{c.img}.jpg" alt={c.titulo} class="img">
     </div>
   </div>
-  <p class="w-64 mt-2 mr-2 text-2xl font-bold leading-tight lg:h-24 font-titulo">{c.titulo}</p>
+  <div class="w-64 mt-2 mr-2 lg:h-24">
+    <span class="text-2xl font-bold leading-tight font-title title">{c.titulo}</span>
+  </div>
 </div>
