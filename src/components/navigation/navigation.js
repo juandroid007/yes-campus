@@ -17,13 +17,13 @@ export default [
         href: '/historias',
       },
       {
+        titulo: 'Membresías',
+        href: '/membresías',
+      },
+      {
         titulo: 'Blog',
         href: '/blog',
       },
     ],
-  },
-  {
-    titulo: 'Membresías',
-    href: '/membresías',
   },
 ]

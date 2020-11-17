@@ -3,6 +3,7 @@
   import elements from './navigation'
   import { url, isActive } from '@roxi/routify/runtime'
   import { preferences } from '../../stores/preferences'
+  import { hoverable } from '../Cursor.svelte'
   export let open = true
 
   let inside
@@ -33,6 +34,7 @@
         <!--span class={separatorClass}></span-->
         {#each elements as el, i}
           <a
+            use:hoverable
             class="block py-1 my-4 lg:text-right nav-link"
             href={$url(el.href)}
             class:selected-nav={$isActive(el.href)}
@@ -47,6 +49,7 @@
           in:fly={{ x: 100, duration: 500, delay: 100 + (elements.length * 500 / elements.length)}}
         >
           <button
+            use:hoverable
             title="Change theme"
             on:click={() => $preferences.darkMode = !$preferences.darkMode}
             class="focus:outline-none mx-4 uppercase cursor-pointer i jam:{$preferences.darkMode ? 'sun' : 'moon'}"
@@ -58,10 +61,12 @@
           in:fly={{ x: 100, duration: 500, delay: 100 + ((elements.length + 1) * 500 / elements.length)}}
         >
           <button
+            use:hoverable
             class="mx-2 btn-secondary-gray"
             >Iniciar sesión</button
           >
           <button
+            use:hoverable
             class="mx-2 btn-primary-gray"
             >Regístrate</button
           >

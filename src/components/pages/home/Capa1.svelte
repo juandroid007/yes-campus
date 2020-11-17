@@ -4,6 +4,7 @@
   import MouseParallax from '../../motion/MouseParallax.svelte'
   import C from '../../motion/ParallaxContainer.svelte'
   import P from '../../motion/ParallaxObject.svelte'
+  import { hoverable } from '../../Cursor.svelte'
 </script>
 
 <div
@@ -117,6 +118,7 @@
       Desarrolla habilidades y despréndete de tus límites
       </p>
       <button
+        use:hoverable
         class="flex mt-4 btn-primary"
         in:fly={{x: -20, duration: 800, delay: 200}}
         >Inicia el viaje con nosotros</button

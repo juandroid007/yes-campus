@@ -32,7 +32,7 @@
   {#if $inZoneMask}
     <div
       class="fixed flex w-full h-screen darkMask"
-      style="z-index: -10; margin-top: -{$height}px;"
+      style="margin-top: -{$height}px;"
       transition:fade|local={{duration: 400}}
     >
     </div>

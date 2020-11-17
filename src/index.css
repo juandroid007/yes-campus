@@ -2,13 +2,21 @@
 @import 'tailwindcss/components.css';
 @import 'tailwindcss/utilities.css';
 
+* {
+	cursor:  none;
+}
+
 html {
 	@apply duration-200;
 	@apply transition-colors;
 }
 
-html.dark {
-	background: rgb(30, 30, 30);
+html, .blend {
+	background-color: #fff;
+}
+
+html.dark, .dark .blend {
+	background-color: rgb(30, 30, 30);
 }
 
 pre, code {

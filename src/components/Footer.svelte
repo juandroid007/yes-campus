@@ -1,5 +1,6 @@
 <script>
   import navs from './navigation/navigation'
+  import { hoverable } from './Cursor.svelte'
 </script>
 
 <footer class="py-8">
@@ -24,12 +25,12 @@
           {#if n.childrens.length}
             <div class="flex flex-col w-full mt-2 font-title">
               {#each n.childrens as c}
-                <a href={c.href} class="my-1 hover:underline">{c.titulo}</a>
+                <a use:hoverable href={c.href} class="my-1 hover:underline">{c.titulo}</a>
               {/each}
             </div>
           {/if}
           {:else}
-            <a href={n.href} class="title hover:underline">{n.titulo}</a>
+            <a use:hoverable href={n.href} class="title hover:underline">{n.titulo}</a>
         {/if}
       </div>
     {/each}

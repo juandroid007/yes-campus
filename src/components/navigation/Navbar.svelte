@@ -13,6 +13,7 @@
   import { preferences } from '../../stores/preferences'
   import { fly } from 'svelte/transition'
   import { inZone } from '../pages/home/ZonaOscura.svelte'
+  import { hoverable } from '../Cursor.svelte'
 
   $: dark = $preferences.darkMode
 
@@ -72,11 +73,13 @@
         {#each navigation as n}
           {#if n.childrens}
           <div
+            use:hoverable
             class="flex items-center mx-4"
             ><span>{n.titulo}</span><span class="ml-2 i jam:chevron-down"></span></div
           >
           {:else}
             <a
+              use:hoverable
               href={$url(n.href)}
               class="mx-4 nav-link"
               class:selected-nav={$isActive(n.href)}>{n.titulo}</a
@@ -85,16 +88,19 @@
         {/each}
         <div class="flex text-base">
           <button
+            use:hoverable
             class="mx-2 btn-secondary"
             >Iniciar sesión</button
           >
           <button
+            use:hoverable
             class="mx-2 btn-primary"
             >Regístrate</button
           >
         </div>
         <div class="h-4 mx-2 border-l border-yes-gray-500 dark:border-yes-gray-300 dark:border-white duration-800"></div>
         <button
+          use:hoverable
           on:click={() => $preferences.darkMode = !$preferences.darkMode}
           title="Change theme"
           class="focus:outline-none mx-4 cursor-pointer nav-link i jam:{$preferences.darkMode ? 'sun' : 'moon'}"
@@ -102,7 +108,7 @@
         >
         </div>
       {/if}
-      <div class="{ top && !sidebar ? 'lg:hidden' : '' } my-auto pointer-events-auto ml-auto" transition:fly|local={{ x: -50, duration: 400 }}>
+      <div use:hoverable class="{ top && !sidebar ? 'lg:hidden' : '' } my-auto pointer-events-auto ml-auto" transition:fly|local={{ x: -50, duration: 400 }}>
         <Hamburger bind:open={sidebar} white={isTransparent || $inZone}/>
       </div>
     </div>

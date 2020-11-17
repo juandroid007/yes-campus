@@ -1,4 +1,5 @@
 <script>
+  import { hoverable } from '../../Cursor.svelte'
   import Glide from '@glidejs/glide'
   import V from '../../IntersectingViewport.svelte'
 
@@ -69,7 +70,7 @@
     })
   }}>
     <div class="glide animate" use:mountGlide class:intersecting>
-      <div class="glide__track" data-glide-el="track">
+      <div class="glide__track" data-glide-el="track" use:hoverable>
         <ul class="glide__slides">
           {#each profesores as p, i}
             <li class="glide__slide">
@@ -89,7 +90,7 @@
       <div class="flex w-full">
         <div class="mx-auto glide__bullets" data-glide-el="controls[nav]">
           {#each profesores as _, i}
-            <button class="glide__bullet" data-glide-dir="={i}"></button>
+            <button class="glide__bullet" data-glide-dir="={i}" use:hoverable></button>
           {/each}
         </div>
       </div>

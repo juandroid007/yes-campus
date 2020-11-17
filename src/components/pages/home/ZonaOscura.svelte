@@ -89,7 +89,7 @@
         </div>
       </div>
     </Viewport>
-    <div class="min-h-screen bg-black">
+    <div class="z-10 min-h-screen bg-black transform">
       <Videos/>
     </div>
   </Viewport>
