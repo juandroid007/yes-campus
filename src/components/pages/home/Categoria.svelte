@@ -45,6 +45,26 @@
 
 <script>
   export let c
+
+  function hexToRGB (h, a) {
+    let r = 0, g = 0, b = 0
+
+    // 3 digits
+    if (h.length == 4) {
+      r = '0x' + h[1] + h[1]
+      g = '0x' + h[2] + h[2]
+      b = '0x' + h[3] + h[3]
+
+      // 6 digits
+    } else if (h.length == 7) {
+      r = '0x' + h[1] + h[2]
+      g = '0x' + h[3] + h[4]
+      b = '0x' + h[5] + h[6]
+    }
+
+    return 'rgba('+ +r + ',' + +g + ',' + +b + ','+ +a +')'
+  }
+
 </script>
 
 <style>
@@ -69,15 +89,30 @@
     z-index: -999;
     width: 100%;
     height: 100%;
-    @apply duration-300;
+    @apply duration-500;
+    transition: transform 0.3s;
   }
 
   .title {
-    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    background-image: linear-gradient(120deg, var(--wave-color) 0%, var(--wave-color) 100%);
     background-repeat: no-repeat;
-    background-size: 0% 30%;
+    background-size: 0% 40%;
     background-position: 0 100%;
-    transition: background-size 0.3s ease-in;
+    transition: background-size 0.3s;
+    mix-blend-mode: screen;
+  }
+
+  .categoria:hover .title {
+    background-size: 100% 40%;
+  }
+
+  .title {
+    background-image: linear-gradient(120deg, var(--underline-color) 0%, var(--underline-color) 100%);
+    background-repeat: no-repeat;
+    background-size: 0% 40%;
+    background-position: 0 100%;
+    transition: background-size 0.3s;
+    mix-blend-mode: exclusion;
   }
 
   .categoria:hover .title {
@@ -127,7 +162,7 @@
   }
 </style>
 
-<div class="categoria" style="--wave-color: {c.waveColor || '#ef7a22'}">
+<div class="m-auto categoria" style="--wave-color: {c.waveColor}; --underline-color: {hexToRGB(c.waveColor, 0.4)}">
   <div class="img-wrapper">
     <div class="wave">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 166.12 135.01">
@@ -150,6 +185,6 @@
     </div>
   </div>
   <div class="w-64 mt-2 mr-2 lg:h-24">
-    <span class="text-2xl font-bold leading-tight font-title title">{c.titulo}</span>
+    <p class="text-2xl font-bold leading-tight font-title"><span class="title">{c.titulo}</span></p>
   </div>
 </div>

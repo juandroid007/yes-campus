@@ -65,14 +65,14 @@
             <li class="py-12 glide__slide">
               <div class="flex flex-wrap-reverse items-center w-full mx-auto -m-12 text-xl md:flex-wrap font-title">
                 <div class="w-full h-full p-12 lg:w-1/2">
-                  <div class="flex flex-col w-full h-full">
+                  <blockquote class="flex flex-col w-full h-full">
                     <p class="text-lg italic font-light">
-                    {t.cita}
+                    &ldquo;{t.cita}&rdquo;
                     </p>
-                    <p class="mt-6 font-bold">
+                    <cite class="mt-6 font-bold">
                     {t.autor}
-                    </p>
-                  </div>
+                    </cite>
+                  </blockquote>
                 </div>
                 <div class="w-full px-12 lg:w-1/2">
                   <div class="w-full overflow-hidden bg-gray-500 shadow-xl md:my-12 h-96 rounded-3xl">
