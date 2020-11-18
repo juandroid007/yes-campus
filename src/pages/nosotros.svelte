@@ -9,6 +9,7 @@
   import { hoverable } from '../components/Cursor.svelte'
   import PC from '../components/motion/ParallaxContainer.svelte'
   import P from '../components/motion/ParallaxObject.svelte'
+  import { fly } from 'svelte/transition'
 
   metatags.title = 'Nosotros | ' + svitsConfig.name
 </script>
@@ -21,10 +22,14 @@
 </style>
 
 <div class="w-full overflow-x-hidden" style="perspective: 4px">
-  <div class="flex py-16 content-lg" style="min-height: calc(60vh - {$height}px)">
+  <div
+    class="flex py-16 content-lg"
+    style="min-height: calc(70vh - {$height}px)"
+    in:fly={{x: -100, duration: 1000, delay: 200}}
+  >
     <div class="my-auto">
       <h1 class="mb-6 text-5xl leading-none md:text-6xl font-title">Acerca de YES Campus</h1>
-      <h1 class="text-3xl leading-none md:text-4xl font-title">Innovación para emprendedores</h1>
+      <p class="text-3xl leading-none md:text-4xl font-title">Innovación para emprendedores</p>
     </div>
   </div>
   <PC let:offset class="relative overflow-hidden">
@@ -42,7 +47,7 @@
       motion={false}
       scaleFactor={5}
     >
-      <div class="w-full h-full parallax" style="background-image: url(/images/bg.jpg)"></div>
+      <div class="w-full h-full parallax" style="background-image: url(/images/bg.jpg), linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))"></div>
     </P>
   </PC>
   <div class="flex flex-col py-16 mt-24 md:flex-row content">

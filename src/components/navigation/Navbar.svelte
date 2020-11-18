@@ -131,7 +131,7 @@
   }
 
   :global(.dark .bg) {
-    background-color: #222;
+    background-color: rgb(30, 30, 30);
   }
 
   :global(.dark .glass) {
