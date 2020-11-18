@@ -121,15 +121,11 @@
   }
 
   .wave {
-    @apply transform;
-    @apply scale-90;
-    @apply rotate-12;
+    transform: scale(0.9, 0.9) rotate(12deg);
   }
 
   .categoria:hover .wave {
-    @apply scale-125;
-    @apply rotate-45;
-    @apply translate-y-6;
+    transform: scale(1.25, 1.25) rotate(12deg) translate3d(1rem, 1.5rem, 0);
   }
 
   .wave2 {
@@ -137,7 +133,7 @@
   }
 
   .categoria:hover .wave2 {
-    transform: scale(-1.25, -1.25) rotate(12deg) translate(2rem, 1rem);
+    transform: scale(-1.25, -1.25) rotate(12deg) translate3d(1.5rem, 1rem, 0);
   }
 
   .img-box {

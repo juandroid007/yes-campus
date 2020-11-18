@@ -52,7 +52,7 @@
 <style>
   .parallax {
     will-change: transform;
-    transform: translate(var(--x), var(--y));
+    transform: translate3d(var(--x), var(--y), 0);
   }
 
   .all\:parallax{

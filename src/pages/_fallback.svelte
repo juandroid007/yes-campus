@@ -36,9 +36,9 @@
       <div class="leading-none text-gray-500 i jam:cactus huge" in:fly={{y: -20, duration: 800}}></div>
     {/if}
     <div class="flex flex-col items-center big">
-      Page not found.
+      Oops, página no encontrada.
       <!-- link to the parent folder of _fallback.svelte -->
-      <a class="text-blue-600 hover:underline" href={$url('/index')}>Go to home -&gt</a>
+      <a class="text-blue-600 hover:underline" href={$url('/index')}>Ir al inicio</a>
     </div>
   </div>
 </div>

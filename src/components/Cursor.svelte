@@ -4,7 +4,7 @@
 
   export const coords = spring({ x: 0, y: 0 }, {
     stiffness: 0.12,
-    damping: 1
+    damping: 1,
   })
 
   export const origSize = 30
@@ -17,6 +17,10 @@
 
   const expand = (mul = 4) => {
     size.set(origSize * mul)
+  }
+
+  const divide = (mul = 4) => {
+    size.set(origSize / mul)
   }
 
   export const hoverable = node => {
@@ -44,11 +48,9 @@
   .cursor-blend {
     pointer-events: none;
     position: fixed;
-    top: var(--y);
-    left: var(--x);
     width: var(--size);
     height: var(--size);
-    transform: translate(var(--offset), var(--offset));
+    transform: translate3d(var(--x), var(--y), 0);
     background-color: white;
     backface-visibility: hidden;
     border-radius: 50%;
@@ -67,7 +69,9 @@
     coordsAbs.x = e.clientX
     coordsAbs.y = e.clientY
   }}
-  on:mousedown={() => expand(2)}
+  on:mousedown={() => {
+    expand(2)
+  }}
   on:mouseup={() => {
     if ($hovering) {
       expand()
@@ -81,8 +85,7 @@
   class:hidden
   class="cursor-blend"
   use:styles={{
-    x: $coords.x+'px', y: $coords.y+'px',
-    offset: `-${Math.floor($size / 2)}px`,
+    x: ($coords.x  - $size / 2)+'px', y: ($coords.y  - $size / 2)+'px',
     size: Math.floor($size)+'px'
   }}
 >
@@ -91,8 +94,7 @@
   class:hidden
   class="cursor-blend"
   use:styles={{
-    x: coordsAbs.x+'px', y: coordsAbs.y+'px',
-    offset: `-${Math.floor($size / 8)}px`,
+    x: (coordsAbs.x  - $size / 8)+'px', y: (coordsAbs.y  - $size / 8)+'px',
     size: Math.floor($size / 4)+'px'
   }}
 >
