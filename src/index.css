@@ -44,13 +44,13 @@ button {
 	cursor: not-allowed;
 }
 
-.glide--swipeable {
+.glide--swipeable * {
   cursor: grab !important;
   cursor: -moz-grab !important;
   cursor: -webkit-grab !important;
 }
 
-.glide--dragging {
+.glide--dragging * {
   cursor: grabbing !important;
   cursor: -moz-grabbing !important;
   cursor: -webkit-grabbing !important;
