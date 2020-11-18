@@ -32,7 +32,6 @@
     width: var(--size);
     height: var(--size);
     transform: translate(var(--offset), var(--offset));
-    transition: transform 0.2s;
     background-color: white;
     backface-visibility: hidden;
     border-radius: 50%;
@@ -53,8 +52,8 @@
   class="hidden cursor-blend md:block"
   use:styles={{
     x: $coords.x+'px', y: $coords.y+'px',
-    offset: `-${Math.round($size / 2)}px`,
-    size: Math.round($size)+'px'
+    offset: `-${Math.floor($size / 2)}px`,
+    size: Math.floor($size)+'px'
   }}
 >
 </div>
@@ -62,8 +61,8 @@
   class="hidden cursor-blend md:block"
   use:styles={{
     x: coordsAbs.x+'px', y: coordsAbs.y+'px',
-    offset: `-${Math.round($size / 8)}px`,
-    size: Math.round($size / 4)+'px'
+    offset: `-${Math.floor($size / 8)}px`,
+    size: Math.floor($size / 4)+'px'
   }}
 >
 </div>
