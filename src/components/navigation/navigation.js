@@ -26,4 +26,8 @@ export default [
       },
     ],
   },
+  {
+    titulo: 'Nosotros',
+    href: '/nosotros',
+  }
 ]

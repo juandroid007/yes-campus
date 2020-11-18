@@ -9,7 +9,7 @@
   <Cursor/>
 </div>
 
-<div class="flex flex-col w-full min-h-screen blend">
+<div class="flex flex-col w-full min-h-screen blend duration-200">
   <div class="z-40">
     <Navbar/>
   </div>
