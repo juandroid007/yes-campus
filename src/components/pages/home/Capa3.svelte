@@ -34,7 +34,7 @@
 
     </div>
     <a href="/something" class="flex items-center justify-center m-auto mt-6 text-2xl text-center">
-      <span use:hoverable class="mr-4 hover:underline">Ver todas las categorías</span> <span class="i jam:chevron-right"></span>
+      <span use:hoverable class="mr-4 cursor-pointer hover:underline">Ver todas las categorías</span> <span class="i jam:chevron-right"></span>
     </a>
   </Viewport>
 </div>
