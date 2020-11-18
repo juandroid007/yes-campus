@@ -86,7 +86,7 @@
   class="cursor-blend"
   use:styles={{
     x: ($coords.x  - $size / 2)+'px', y: ($coords.y  - $size / 2)+'px',
-    size: Math.floor($size)+'px'
+    size: $size+'px'
   }}
 >
 </div>

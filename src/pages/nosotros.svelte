@@ -28,8 +28,8 @@
     in:fly={{x: -100, duration: 1000, delay: 200}}
   >
     <div class="my-auto">
-      <h1 class="mb-6 text-5xl leading-none md:text-6xl font-title">Acerca de YES Campus</h1>
-      <p class="text-3xl leading-none md:text-4xl font-title">Innovación para emprendedores</p>
+      <h1 class="mb-6 text-5xl font-bold leading-none md:text-6xl font-title">Acerca de YES Campus</h1>
+      <p class="text-3xl font-bold leading-none md:text-4xl font-title">Innovación para emprendedores</p>
     </div>
   </div>
   <PC let:offset class="relative overflow-hidden">
@@ -43,11 +43,16 @@
     >
     <P
       offset={offset}
-      class="flex w-full h-screen"
+      class="flex w-full"
+      style="height: 120vh"
       motion={false}
       scaleFactor={5}
     >
-      <div class="w-full h-full parallax" style="background-image: url(/images/bg.jpg), linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))"></div>
+      <div
+        class="w-full h-full parallax"
+        style="background-image: url(/images/bg.jpg), linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))"
+        ></div
+      >
     </P>
   </PC>
   <div class="flex flex-col py-16 mt-24 md:flex-row content">

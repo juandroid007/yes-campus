@@ -113,7 +113,6 @@
     background-size: 0% 40%;
     background-position: 0 100%;
     transition: background-size 0.3s;
-    mix-blend-mode: exclusion;
   }
 
   .categoria:hover .title {
@@ -121,19 +120,19 @@
   }
 
   .wave {
-    transform: scale(0.9, 0.9) rotate(12deg);
+    transform: scale3d(0.9, 0.9, 1) rotate(12deg);
   }
 
   .categoria:hover .wave {
-    transform: scale(1.25, 1.25) rotate(12deg) translate3d(1rem, 1.5rem, 0);
+    transform: scale3d(1.25, 1.25, 1) rotate(12deg) translate3d(1rem, 1.5rem, 0);
   }
 
   .wave2 {
-    transform: scale(-0.9, -0.9) rotate(-12deg);
+    transform: scale3d(-0.9, -0.9, 1) rotate(-12deg);
   }
 
   .categoria:hover .wave2 {
-    transform: scale(-1.25, -1.25) rotate(12deg) translate3d(1.5rem, 1rem, 0);
+    transform: scale3d(-1.25, -1.25, 1) rotate(12deg) translate3d(1.5rem, 1rem, 0);
   }
 
   .img-box {

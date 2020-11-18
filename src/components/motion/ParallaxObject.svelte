@@ -36,7 +36,6 @@
 <svelte:window bind:scrollY={y} />
 
 <div
-  class:motion
   class="{_class} {screen}:parallax"
   use:styles={css}
   style="{_style}"
@@ -47,10 +46,6 @@
 <style>
   .parallax {
     will-change: transform;
-    transform: translate(0, var(--y));
-  }
-
-  .parallax:not(.motion) {
     transform: translate3d(0, var(--y), 0);
   }
 
