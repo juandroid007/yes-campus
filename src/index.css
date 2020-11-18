@@ -20,11 +20,32 @@ html.dark, .dark .blend {
 }
 
 pre, code {
+	cursor: auto;
 	@apply text-gray-700;
 }
 
 .dark pre, .dark code {
 	@apply text-gray-400;
+}
+
+a, p, span, h1, h2, h3, h4, h5, h6 {
+	cursor: text;
+}
+
+span.i {
+	cursor: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+[disabled] {
+	cursor: not-allowed;
+}
+
+.glide__track {
+	cursor: grab;
 }
 
 .content {
