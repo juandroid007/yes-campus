@@ -21,18 +21,31 @@
 </style>
 
 <div class="w-full overflow-x-hidden" style="perspective: 4px">
-  <div class="flex content-lg" style="height: calc(90vh - {$height}px)">
+  <div class="flex py-16 content-lg" style="min-height: calc(60vh - {$height}px)">
     <div class="my-auto">
-      <h1 class="text-6xl font-title">Acerca de YES Campus</h1>
-      <h1 class="text-3xl md:text-4xl font-title">Innovación para emprendedores</h1>
+      <h1 class="mb-6 text-5xl leading-none md:text-6xl font-title">Acerca de YES Campus</h1>
+      <h1 class="text-3xl leading-none md:text-4xl font-title">Innovación para emprendedores</h1>
     </div>
   </div>
-  <PC let:offset class="overflow-hidden">
-    <P offset={offset} class="flex w-full h-screen" motion={false} >
-      <div class="w-full h-full parallax" style="background-image: url(https://cuberto.com/assets/img/about/1.jpg)"></div>
+  <PC let:offset class="relative overflow-hidden">
+    <div
+      class="absolute z-10 w-full h-full shadow-inner"
+      ></div
+    >
+    <div
+      class="absolute z-10 w-full h-full shadow-inner transform rotate-180"
+      ></div
+    >
+    <P
+      offset={offset}
+      class="flex w-full h-screen"
+      motion={false}
+      scaleFactor={5}
+    >
+      <div class="w-full h-full parallax" style="background-image: url(/images/bg.jpg)"></div>
     </P>
   </PC>
-  <div class="flex flex-col py-16 md:flex-row content">
+  <div class="flex flex-col py-16 mt-24 md:flex-row content">
     <div class="w-full mb-6 md:w-1/2">
       <h2 class="text-2xl font-bold font-title">Nuestra visión</h2>
     </div>
