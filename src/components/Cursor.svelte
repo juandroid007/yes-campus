@@ -7,7 +7,10 @@
   })
 
   export const origSize = 30
-  export const size = spring(origSize)
+  export const size = spring(origSize, {
+    stiffness: 0.12,
+    damping: 1
+  })
 
   export const hoverable = node => {
       node.addEventListener('mouseenter', () => { size.set(origSize * 4) })
