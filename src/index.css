@@ -2,10 +2,6 @@
 @import 'tailwindcss/components.css';
 @import 'tailwindcss/utilities.css';
 
-* {
-	cursor:  none;
-}
-
 html {
 	@apply duration-200;
 	@apply transition-colors;
@@ -26,6 +22,10 @@ pre, code {
 
 .dark pre, .dark code {
 	@apply text-gray-400;
+}
+
+div {
+	cursor:  none;
 }
 
 a, p, span, h1, h2, h3, h4, h5, h6 {
