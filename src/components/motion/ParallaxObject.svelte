@@ -24,9 +24,13 @@
     translate = y / scaleFactor
   }
 
-  $: yoffset.set(translate ? translate : 0)
+  export let motion = true
+
+  $: ensure = translate ? translate : 0
+  $: finalFixed = negative ? ensure - (ensure * 2) : ensure
+  $: yoffset.set(ensure)
   $: final = negative ? $yoffset - ($yoffset * 2) : $yoffset
-  $: css = { y:  final.toFixed(2) + 'px' }
+  $: css = { y:  ( motion ? final.toFixed(2) : finalFixed.toFixed(2) ) + 'px' }
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -42,7 +46,7 @@
 <style>
   .parallax {
     will-change: transform;
-    transform: translate(0, var(--y));
+    transform: translate3d(0, var(--y), 0);
   }
 
   .all\:parallax{

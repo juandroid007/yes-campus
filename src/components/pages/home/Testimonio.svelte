@@ -26,6 +26,9 @@
       autor: 'Juan Camilo Restrepo - Trapiche Cacao',
     },
   ]
+
+  export let image = true
+  export let padded = true
 </script>
 
 <style>
@@ -53,8 +56,8 @@
   }
 </style>
 
-<div class="py-12 testimonios-slider content-lg">
-  <V class="w-full my-auto" on:top={() => {
+<div class="testimonios-slider content-lg" class:py-12={padded}>
+  <V class="w-full {padded ? 'my-auto' : ''}" on:top={() => {
     glide.update({
       autoplay: 5000,
     })
@@ -63,9 +66,9 @@
       <div class="glide__track" data-glide-el="track" use:hoverable>
         <ul class="glide__slides">
           {#each testimonios as t, i}
-            <li class="py-12 glide__slide">
-              <div class="flex flex-wrap-reverse items-center w-full mx-auto -m-12 text-xl md:flex-wrap font-title">
-                <div class="w-full h-full p-12 lg:w-1/2">
+            <li class="glide__slide" class:py-12={image}>
+              <div class="flex flex-wrap-reverse items-center w-full mx-auto text-xl md:flex-wrap font-title" class:-m-12={image}>
+                <div class="w-full h-full { image ? 'p-12 lg:w-1/2' : '' }">
                   <blockquote class="flex flex-col w-full h-full">
                     <p class="text-lg italic font-light">
                     &ldquo;{t.cita}&rdquo;
@@ -75,11 +78,13 @@
                     </cite>
                   </blockquote>
                 </div>
-                <div class="w-full px-12 lg:w-1/2">
-                  <div class="w-full overflow-hidden bg-gray-500 shadow-xl md:my-12 h-96 rounded-3xl">
-                    <img src="/images/{t.imagen}.webp" alt={t.autor} class="object-cover w-full h-full">
+                {#if image}
+                  <div class="w-full px-12 lg:w-1/2">
+                    <div class="w-full overflow-hidden bg-gray-500 shadow-xl md:my-12 h-96 rounded-3xl">
+                      <img src="/images/{t.imagen}.webp" alt={t.autor} class="object-cover w-full h-full">
+                    </div>
                   </div>
-                </div>
+                {/if}
               </div>
             </li>
           {/each}

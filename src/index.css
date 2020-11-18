@@ -181,3 +181,19 @@ button {
 	@apply -translate-y-px;
 	@apply shadow;
 }
+
+.input {
+	@apply p-2;
+	@apply border-b;
+	@apply border-gray-400;
+	@apply bg-transparent;
+}
+
+.input:focus {
+	outline: none;
+	@apply border-black;
+}
+
+.dark .input:focus {
+	@apply border-white;
+}
