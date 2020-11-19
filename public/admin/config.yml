@@ -31,7 +31,7 @@ collections:
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     format: "json"
     fields: # The fields for each document, usually in front matter
-      - {label: "Cita", name: "cita", widget: "string"}
+      - {label: "Cita", name: "cita", widget: "text"}
       - {label: "Autor", name: "autor", widget: "string"}
       - {label: "Imagen", name: "imagen", widget: "image"}
 

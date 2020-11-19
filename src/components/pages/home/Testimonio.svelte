@@ -2,6 +2,10 @@
   import Glide from '@glidejs/glide'
   import V from '../../IntersectingViewport.svelte'
   import { hoverable } from '../../Cursor.svelte'
+  import Image from '../../Image.svelte'
+  import { getCollection } from '../../../collections'
+
+  $: testimonios = getCollection('testimonios').elements
 
   let glide
 
@@ -14,18 +18,18 @@
     glide.mount()
   }
 
-  const testimonios = [
-    {
-      imagen: 'testimonio',
-      cita: 'El apoyo de Aprendo y Emprendo ha sido clave en la manera de entender mi negocio de una forma integral. Me han aportado una perspectiva más amplia y eficiente. También hemos compartido como aliados estratégicos y ha sido un placer trabajar con un equipo tan capaz, innovador, estratégico, en donde la excelencia y la amistad son parte de los encuentros.',
-      autor: 'Lucía Galota - CEO de Planning RH',
-    },
-    {
-      imagen: 'juan-camilo',
-      cita: 'Aprendo y Emprendo ha sido una gran familia para el crecimiento de mi negocio, acompañándonos desde la creación de nuestra marca Trapiche Cacao hasta la exclente empresa que somos hoy en día. Sin duda alguna programas como el Young Entrepreneur, y el Cazón Tank  han sido de apoyo fundamental para el crecimiento emprendedor de jóvenes a lo largo del territorio nacional ayudando a transformar ideas e iniciativas a negocios, fundaciones y marcas con un norte y un crecimiento. Desde el estado Táchira, Venezuela un gran Saludo de la familia Tapiche Cacao y mi persona Juan Camilo Restrepo Malavé apoyado este nuevo proyecto Yes Campus.',
-      autor: 'Juan Camilo Restrepo - Trapiche Cacao',
-    },
-  ]
+  // const testimonios = [
+  //   {
+  //     imagen: 'testimonio',
+  //     cita: 'El apoyo de Aprendo y Emprendo ha sido clave en la manera de entender mi negocio de una forma integral. Me han aportado una perspectiva más amplia y eficiente. También hemos compartido como aliados estratégicos y ha sido un placer trabajar con un equipo tan capaz, innovador, estratégico, en donde la excelencia y la amistad son parte de los encuentros.',
+  //     autor: 'Lucía Galota - CEO de Planning RH',
+  //   },
+  //   {
+  //     imagen: 'juan-camilo',
+  //     cita: 'Aprendo y Emprendo ha sido una gran familia para el crecimiento de mi negocio, acompañándonos desde la creación de nuestra marca Trapiche Cacao hasta la exclente empresa que somos hoy en día. Sin duda alguna programas como el Young Entrepreneur, y el Cazón Tank  han sido de apoyo fundamental para el crecimiento emprendedor de jóvenes a lo largo del territorio nacional ayudando a transformar ideas e iniciativas a negocios, fundaciones y marcas con un norte y un crecimiento. Desde el estado Táchira, Venezuela un gran Saludo de la familia Tapiche Cacao y mi persona Juan Camilo Restrepo Malavé apoyado este nuevo proyecto Yes Campus.',
+  //     autor: 'Juan Camilo Restrepo - Trapiche Cacao',
+  //   },
+  // ]
 
   export let image = true
   export let padded = true
@@ -81,7 +85,7 @@
                 {#if image}
                   <div class="w-full px-12 lg:w-1/2">
                     <div class="w-full overflow-hidden bg-gray-500 shadow-xl md:my-12 h-96 rounded-3xl">
-                      <img src="/images/{t.imagen}.webp" alt={t.autor} class="object-cover w-full h-full">
+                      <Image src={t.imagen} alt={t.autor} class="object-cover w-full h-full"/>
                     </div>
                   </div>
                 {/if}
