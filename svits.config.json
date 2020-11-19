@@ -10,6 +10,7 @@
   "collections": [
     {
       "name": "profesores",
+      "url": "/profesores",
       "path": "src/content/profesores"
     },
     {
