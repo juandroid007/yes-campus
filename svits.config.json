@@ -9,6 +9,10 @@
   },
   "collections": [
     {
+      "name": "profesores",
+      "path": "src/content/profesores"
+    },
+    {
       "name": "posts",
       "path": "src/pages/blog",
       "url": "/blog",
