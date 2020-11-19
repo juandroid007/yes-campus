@@ -13,8 +13,9 @@
         Microlearning como recurso<br>de aprendizaje
         </p>
         <p class="mt-6 font-light font-title">
-        Microlearning como recurso<br>de aprendizaje
-        Microlearning como recurso<br>de aprendizaje
+        Obtén los conocimientos y herramientas
+        necesarios para superar los retos del día a día
+        a través de videos corta duración
         </p>
       </div>
     </div>
@@ -27,8 +28,9 @@
         Aprendemos en redes y a través del trabajo colaborativo
         </p>
         <p class="mt-6 font-title">
-        Microlearning como recurso<br>de aprendizaje
-        Microlearning como recurso<br>de aprendizaje
+        Contamos con espacios de co-creación para
+        Vivir experiencias de aprendizaje colaborativo
+        que impulsan la conexión como comunidad
         </p>
       </div>
     </div>
@@ -37,12 +39,11 @@
       <img src="https://source.unsplash.com/random/480x600" alt="" class="mb-12 media rounded-tr-3xl rounded-br-3xl lg:rounded-3xl">
       <div class="ml-6 lg:ml-0">
         <p class="text-2xl font-bold leading-none md:text-3xl font-title">
-        Formación en tiempo real y con
-        atención centrada en la experiencia
+        Dispara tu potencial gracias a una atención centrada en la experiencia
         </p>
         <p class="mt-6 font-title">
-        Microlearning como recurso<br>de aprendizaje
-        Microlearning como recurso<br>de aprendizaje
+        Formaciones especialmente diseñadas para
+        disparar la creatividad y la innovación en tiempo real
         </p>
       </div>
     </div>

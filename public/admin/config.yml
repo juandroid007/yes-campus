@@ -26,14 +26,13 @@ collections:
   - name: "testimonios" # Used in routes, e.g., /admin/collections/blog
     label: "Testimonios" # Used in the UI
     folder: "src/content/testimonios" # The path to the folder where the documents are stored
-    identifier_field: "id"
+    identifier_field: "autor"
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     format: "json"
     fields: # The fields for each document, usually in front matter
-      - {label: "Id", name: "id", widget: "hidden", default: "{{uuid}}"}
       - {label: "Cita", name: "cita", widget: "string"}
-      - {label: "Autor", name: "ocupacion", widget: "string"}
+      - {label: "Autor", name: "autor", widget: "string"}
       - {label: "Imagen", name: "imagen", widget: "image"}
 
 #  - name: "blog" # Used in routes, e.g., /admin/collections/blog

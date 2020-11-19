@@ -27,10 +27,10 @@
 
 <div class="my-12">
   <Viewport let:intersecting once={true}>
-    <div class="flex flex-col w-full m-auto md:w-9/10 md:flex-row">
+    <div class="flex flex-col w-full m-auto lg:w-9/10 md:flex-row">
       {#each modulos as m, i}
         <div
-          class="md:w-1/4 animation"
+          class="lg:w-1/4 animation"
           class:observing={intersecting}
           style="--delay: {i * 200}ms"
         >

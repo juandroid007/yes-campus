@@ -115,7 +115,7 @@
       Ecosistema de emprendimiento
       </p>
       <p class="mt-4 text-xl">
-      Desarrolla habilidades y despréndete de tus límites
+      Desarrolla habilidades y despréndete de tus límites gracias a nuestros cursos y programas especializados
       </p>
       <button
         use:hoverable
