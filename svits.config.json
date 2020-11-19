@@ -9,8 +9,11 @@
   },
   "collections": [
     {
+      "name": "testimonios",
+      "path": "src/content/testimonios"
+    },
+    {
       "name": "profesores",
-      "url": "/profesores",
       "path": "src/content/profesores"
     },
     {

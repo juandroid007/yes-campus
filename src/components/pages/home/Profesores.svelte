@@ -3,18 +3,9 @@
   import Glide from '@glidejs/glide'
   import V from '../../IntersectingViewport.svelte'
 
-  const profesores = [
-    {
-      nombre: 'Kanye West',
-      descripcion: 'Cantante',
-      imagen: 'https://assets.eleconomista.com.mx/__export/1594074936885/sites/eleconomista/img/2020/07/06/kanye-west-reuters.jpg_2144533222.jpg',
-    },
-    {
-      nombre: 'Kanye West',
-      descripcion: 'Cantante',
-      imagen: 'https://assets.eleconomista.com.mx/__export/1594074936885/sites/eleconomista/img/2020/07/06/kanye-west-reuters.jpg_2144533222.jpg',
-    },
-  ]
+  import { getCollection } from '../../../collections'
+
+  $: profesores = getCollection('profesores').elements
 
   let glide
   let intersecting
@@ -78,10 +69,11 @@
                 <div
                   class="flex w-full overflow-hidden bg-gray-700 shadow-2xl h-72 rounded-2xl"
                 >
-                  <img src={p.imagen} alt={p.nombre} class="object-cover w-full h-full">
+                  <img src="/images/{p.thumbnail}" alt={p.nombre} class="object-cover w-full h-full">
                 </div>
                 <p class="mt-6 text-2xl font-bold leading-none font-title">{p.nombre}</p>
-                <p class="mt-2 text-lg font-light leading-none font-title">{p.descripcion}</p>
+                <p class="mt-2 text-lg font-light leading-none font-title">{p.ocupacion}</p>
+                {@debug p}
               </div>
             </li>
           {/each}
