@@ -8,30 +8,55 @@
   })
 
   export const origSize = 30
+  export const origSize2 = origSize / 4
   export const size = spring(origSize, {
     stiffness: 0.12,
     damping: 1
   })
+  export const size2 = spring(origSize2, {
+    stiffness: 0.12,
+    damping: 1
+  })
 
-  const hovering = writable(false)
+  const hovering = writable({
+    status: false,
+    primary: false,
+    sticky: false,
+    node: null,
+    mul: 4
+  })
 
   const expand = (mul = 4) => {
     size.set(origSize * mul)
   }
 
-  const divide = (mul = 4) => {
-    size.set(origSize / mul)
+  const trigger = (options = { primary: false, mul: 4 }) => {
+    expand(options.mul)
+    if (options.primary) {
+      size2.set(0, { hard: true })
+    } else {
+      size2.set((origSize2 * options.mul))
+    }
   }
 
-  export const hoverable = node => {
-      node.addEventListener('mouseenter', () => {
-        hovering.set(true)
-        expand()
-      })
-      node.addEventListener('mouseleave', () => {
-        hovering.set(false)
-        expand(1)
-      })
+  const normalize = () => {
+    expand(1)
+    size2.set(origSize2)
+  }
+
+  const mouseEnter = (node, options) => () => {
+    trigger(options)
+    hovering.set({status: true, ...options, node })
+  }
+
+  const mouseLeave = () => {
+    normalize()
+    hovering.set({status: false, primary: false, node: false, sticky: false, mul: 4})
+  }
+
+  export const hoverable = (node, options = { primary: false, mul: 4, sticky: false }) => {
+    node.addEventListener('mouseenter', mouseEnter(node, options))
+    node.addEventListener('mouseleave', mouseLeave)
   }
 </script>
 
@@ -42,6 +67,41 @@
     y: 50,
   }
   let hidden = true
+
+  const mouseMove = e => {
+    let hard = hidden
+    hidden = false
+    if ($hovering.status && $hovering.sticky) {
+      const rect = $hovering.node.getBoundingClientRect()
+      const { x, y } = {
+        x: rect.left + ($hovering.node.clientWidth / 2),
+        y: rect.top + ($hovering.node.clientHeight / 2),
+      }
+      coords.set({ x, y }, { hard })
+      coordsAbs.x = x
+      coordsAbs.y = y
+    } else {
+      coords.set({ x: e.clientX, y: e.clientY }, { hard })
+      coordsAbs.x = e.clientX
+      coordsAbs.y = e.clientY
+    }
+  }
+
+  const mouseDown = () => {
+    trigger({primary: $hovering.primary, mul: 2})
+  }
+
+  const mouseUp = () => {
+    if ($hovering.status) {
+        if ($hovering.primary) {
+          trigger({primary: true, mul: $hovering.mul})
+        } else {
+          trigger()
+        }
+    } else {
+      normalize()
+    }
+  }
 </script>
 
 <style>
@@ -63,22 +123,9 @@
   on:touchmove|pasive={() => {
     hidden = true
   }}
-  on:mousemove|pasive={e => {
-    hidden = false
-    coords.set({ x: e.clientX, y: e.clientY })
-    coordsAbs.x = e.clientX
-    coordsAbs.y = e.clientY
-  }}
-  on:mousedown={() => {
-    expand(2)
-  }}
-  on:mouseup={() => {
-    if ($hovering) {
-      expand()
-    } else {
-      expand(1)
-    }
-  }}
+  on:mousemove|pasive={mouseMove}
+  on:mousedown={mouseDown}
+  on:mouseup={mouseUp}
 />
 
 <div
@@ -94,8 +141,8 @@
   class:hidden
   class="cursor-blend"
   use:styles={{
-    x: (coordsAbs.x  - $size / 8)+'px', y: (coordsAbs.y  - $size / 8)+'px',
-    size: Math.floor($size / 4)+'px'
+    x: (coordsAbs.x  - $size2 / 2)+'px', y: (coordsAbs.y  - $size2 / 2)+'px',
+    size: Math.floor($size2)+'px'
   }}
 >
 </div>

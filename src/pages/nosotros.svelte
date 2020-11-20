@@ -6,7 +6,6 @@
   import { inZone } from '../components/pages/home/ZonaOscura.svelte'
   import V from '../components/IntersectingViewport.svelte'
   import Testimonios from '../components/pages/home/Testimonio.svelte'
-  import { hoverable } from '../components/Cursor.svelte'
   import PC from '../components/motion/ParallaxContainer.svelte'
   import P from '../components/motion/ParallaxObject.svelte'
   import { fly } from 'svelte/transition'
@@ -28,8 +27,8 @@
     in:fly={{x: -100, duration: 1000, delay: 200}}
   >
     <div class="my-auto">
-      <h1 class="mb-6 text-5xl font-bold leading-none md:text-6xl font-title">Acerca de YES Campus</h1>
-      <p class="text-3xl font-bold leading-none md:text-4xl font-title">Innovación para emprendedores</p>
+      <h1 class="mb-6 text-5xl font-bold leading-none md:text-6xl font-title">Innovation for Entrepeneurs</h1>
+      <p class="text-3xl font-bold leading-none md:text-4xl font-title">Acerca de YES Campus</p>
     </div>
   </div>
   <PC let:offset class="relative overflow-hidden">
@@ -80,7 +79,7 @@
     <p class="mb-6 text-2xl font-light md:text-justify font-title">
     Somos una comunidad de profesionales creativos que trabajamos bajo el concepto de ecosistema y te invitamos  a aprender y emprender junto a nosotros de manera agil, divertida, innovadora y con impacto.
     </p>
-    <h3 class="text-xl italic font-light md:text-right font-title">
+    <h3 class="text-2xl italic font-light md:text-right font-title">
       Aprendizaje Acelerado para personas y organizaciones emprendedoras
     </h3>
   </div>
@@ -119,7 +118,7 @@
   <V bind:intersecting={$inZone}>
     <div class="min-h-screen text-white bg-black">
       <div class="py-32 content">
-        <h2 class="mb-6 text-4xl font-bold font-title">Tenemos un Manifiesto:<br>El Manifiesto YES Campus</h2>
+        <h2 class="mb-6 text-4xl font-bold font-title">El Manifiesto YES Campus</h2>
         <p class="mt-12 mb-6 text-2xl italic font-light md:text-justify font-title">
         &ldquo;Pertenezco a una comunidad donde me reconozco y me reconocen, valoramos el compartir ameno y entretenido, donde la creatividad nos lleva a desafíos individuales y colectivos para lograr un mundo mas humano, participativo e igualitario.
         </p>
@@ -158,11 +157,12 @@
     </p>
     <div class="flex mt-32 mb-16">
       <div class="flex flex-col w-full m-auto md:w-4/10 font-title">
+        <h2 class="mb-6 text-2xl font-bold font-title">Formulario de contacto</h2>
         <div class="input-label">Nombre y apellido</div>
-        <input type="text" class="mb-6 input" placeholder="Ej. Jesús Bauza">
+        <input type="text" class="mb-6 input" placeholder="Ej. Pedro Pérez">
 
         <div class="input-label">Correo electrónico</div>
-        <input type="text" class="mb-6 input" placeholder="Ej. laika.la.perrita.espacial@gmail.com">
+        <input type="text" class="mb-6 input" placeholder="Ej. pedroperez@gmail.com">
 
         <div class="input-label">Whatsapp de contacto</div>
         <input type="text" class="mb-6 input" placeholder="Ej. +584123456789">
@@ -170,7 +170,7 @@
         <div class="input-label">Mensaje</div>
         <textarea class="mb-6 input" rows="4"></textarea>
 
-        <button use:hoverable class="btn-primary-gray">Enviar</button>
+        <button class="btn-primary-gray">Enviar</button>
       </div>
     </div>
   </div>

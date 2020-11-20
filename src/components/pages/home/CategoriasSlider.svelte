@@ -2,6 +2,7 @@
   import Categoria from './Categoria.svelte'
   import Glide from '@glidejs/glide'
   import V from '../../IntersectingViewport.svelte'
+  import { hoverable } from '../../Cursor.svelte'
 
   export let categorias
 
@@ -60,7 +61,7 @@
     })
   }}>
     <div class="m-auto glide animate" use:mountGlide class:intersecting>
-      <div class="glide__track" data-glide-el="track">
+      <div use:hoverable class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
           {#each categorias as c, i}
             <li class="glide__slide">

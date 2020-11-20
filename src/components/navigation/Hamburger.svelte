@@ -1,23 +1,24 @@
 <script>
   export let white = false
+  import { hoverable } from '../Cursor.svelte'
 
   let color
-  let hoverColor
 
   export let open = false
 
   $: color = white ? 'white' : 'black'
-  $: hoverColor = white ? 'gray-200' : 'gray-600'
 </script>
 
 <button
+  use:hoverable={{ primary: true, sticky: true, mul: 4 }}
   aria-label="Menu"
   title="Menu"
   class="
-    {!open ? `text-${color} hover:text-${hoverColor}` : 'text-black hover:text-gray-600'}
+    {!open ? `text-${color}` : 'text-black'}
     cursor-pointer mr-4 border-none focus:outline-none z-10
     dark:text-white
   "
+
   class:open on:click={() => open = !open}
 >
   <svg width=32 height=32>
@@ -41,14 +42,17 @@
   button {
     z-index: 20;
     transition: color 0.2s ease-in-out;
+    width: 32px;
+    height: 32px;
+    cursor: none;
   }
 
   .open svg {
-    transform: scale(0.7)
+    transform: scale(0.7) translate(1px, -4px)
   }
 
   .open #top {
-    transform: translate(12px, 1px) rotate(45deg)
+    transform: translate(13px, 1px) rotate(45deg)
   }
 
   .open #middle {
@@ -56,6 +60,6 @@
   }
 
   .open #bottom {
-    transform: translate(-12px, 16px) rotate(-45deg)
+    transform: translate(-11px, 16px) rotate(-45deg)
   }
 </style>
