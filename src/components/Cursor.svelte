@@ -123,6 +123,9 @@
   on:touchmove|pasive={() => {
     hidden = true
   }}
+  on:touchdown={() => {
+    hidden = true
+  }}
   on:mousemove|pasive={mouseMove}
   on:mousedown={mouseDown}
   on:mouseup={mouseUp}
