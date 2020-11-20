@@ -43,7 +43,7 @@
     <P
       offset={offset}
       class="flex w-full"
-      style="height: 120vh"
+      style="height: 90vh"
       motion={false}
       scaleFactor={5}
     >
