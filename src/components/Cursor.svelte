@@ -61,6 +61,7 @@
 </script>
 
 <script>
+  import { onMount } from 'svelte'
   import { styles } from '../lib/styles'
   let coordsAbs = {
     x: 50,
@@ -69,6 +70,9 @@
   let hidden = true
 
   const mouseMove = e => {
+    if (touches) {
+      return
+    }
     let hard = hidden
     hidden = false
     if ($hovering.status && $hovering.sticky) {
@@ -78,16 +82,19 @@
         y: rect.top + ($hovering.node.clientHeight / 2),
       }
       coords.set({ x, y }, { hard })
-      coordsAbs.x = x
-      coordsAbs.y = y
+      coordsAbs = { x, y }
     } else {
-      coords.set({ x: e.clientX, y: e.clientY }, { hard })
-      coordsAbs.x = e.clientX
-      coordsAbs.y = e.clientY
+      const { x, y } = {
+        x: e.clientX,
+        y: e.clientY,
+      }
+      coords.set({ x, y }, { hard })
+      coordsAbs = { x, y }
     }
   }
 
   const mouseDown = () => {
+    touches = null
     trigger({primary: $hovering.primary, mul: 2})
   }
 
@@ -102,6 +109,18 @@
       normalize()
     }
   }
+
+  let touches
+
+  onMount(() => {
+    window.addEventListener('touchstart', e => {
+      hidden = true
+      touches = e.touches
+    })
+    window.addEventListener('touchend', e => {
+      hidden = true
+    })
+  })
 </script>
 
 <style>
@@ -120,13 +139,7 @@
 </style>
 
 <svelte:window
-  on:touchmove|pasive={() => {
-    hidden = true
-  }}
-  on:touchdown={() => {
-    hidden = true
-  }}
-  on:mousemove|pasive={mouseMove}
+  on:mousemove={mouseMove}
   on:mousedown={mouseDown}
   on:mouseup={mouseUp}
 />
