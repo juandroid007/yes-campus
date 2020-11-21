@@ -75,22 +75,18 @@
     }
     let hard = hidden
     hidden = false
+    let x
+    let y
     if ($hovering.status && $hovering.sticky) {
       const rect = $hovering.node.getBoundingClientRect()
-      const { x, y } = {
-        x: rect.left + ($hovering.node.clientWidth / 2),
-        y: rect.top + ($hovering.node.clientHeight / 2),
-      }
-      coords.set({ x, y }, { hard })
-      coordsAbs = { x, y }
+      x = rect.left + ($hovering.node.clientWidth / 2)
+      y = rect.top + ($hovering.node.clientHeight / 2)
     } else {
-      const { x, y } = {
-        x: e.clientX,
-        y: e.clientY,
-      }
-      coords.set({ x, y }, { hard })
-      coordsAbs = { x, y }
+      x = e.clientX
+      y = e.clientY
     }
+    coords.set({ x, y }, { hard })
+    coordsAbs = { x, y }
   }
 
   const mouseDown = () => {
