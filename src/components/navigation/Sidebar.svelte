@@ -36,7 +36,7 @@
             {#if el.childrens}
               <div
                 class="flex justify-between w-full py-1 my-4 cursor-pointer nav-link"
-                on:click={() => menu = el.childrens}
+                on:click={() => menu = el}
                 in:fly={{ x: 100, duration: 500, delay: 100 + (i * 500 / elements.length)}}
               >
                 <p
@@ -96,13 +96,24 @@
           </div>
         </div>
       {:else}
+        <button
+          class="flex my-1 text-xl font-bold lg:ml-auto lg:text-right nav-link"
+          in:fly={{ x: -100, duration: 500}}
+          on:click={() => menu = null}
+          ><span class="i jam:chevron-left"></span><span>Atrás</span></button
+        >
+        <p
+          class="block w-full py-1 my-2 lg:text-right"
+          in:fly={{ x: -100, duration: 500}}
+          >{menu.titulo}</p
+        >
         <div class="mb-6 overflow-x-hidden overflow-y-auto">
-          {#each menu as el, i}
+          {#each menu.childrens as el, i}
               <a
                 class="block w-full py-1 my-2 text-xl lg:text-right nav-link"
                 href={$url(el.href)}
                 class:selected-nav={$isActive(el.href)}
-                in:fly={{ x: 100, duration: 500, delay: 100 + (i * 500 / elements.length)}}
+                in:fly={{ x: -100, duration: 500, delay: 100 + (i * 500 / elements.length)}}
                 >{el.titulo}</a
               >
           {/each}
