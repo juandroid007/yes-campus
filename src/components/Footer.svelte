@@ -34,8 +34,8 @@
       </div>
     {/each}
   </div>
-  <div class="flex justify-between mt-6 text-gray-400 content">
-    <p class="text-sm">Desarrollado por Marketing Shakers</p>
+  <div class="flex justify-between mt-6 text-gray-600 content" style="mix-blend-mode: difference">
+    <p class="text-sm">Desarrollado por <strong>Marketing Shakers</strong> y <strong>Bisual Media</strong></p>
     <p class="text-sm"><strong>YES CAMPUS</strong>© 2020. Todos los derechos reservados</p>
   </div>
 </footer>
@@ -44,6 +44,13 @@
   @screen md {
     .section {
       width: 25%;
+    }
+
+    footer {
+      background: url(/images/footer.svg);
+      background-position: bottom right;
+      background-size: 30%;
+      background-repeat: no-repeat;
     }
   }
 

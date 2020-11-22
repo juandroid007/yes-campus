@@ -25,7 +25,7 @@
   ]
 </script>
 
-<div class="my-12 overflow-x-hidden">
+<div class="my-12 overflow-hidden">
   <Viewport let:intersecting once={true}>
     <div class="flex flex-col w-full m-auto lg:w-9/10 md:flex-row">
       {#each modulos as m, i}

@@ -3,10 +3,12 @@ import { categorias } from '../pages/home/Categoria.svelte'
 export default [
   {
     titulo: 'Explora',
+    alt: 'Explora',
     childrens: [ ...categorias ],
   },
   {
     titulo: 'Comunidad',
+    alt: 'Comunidad',
     childrens: [
       {
         titulo: 'YES Campus for Business',
@@ -28,6 +30,7 @@ export default [
   },
   {
     titulo: 'Nosotros',
+    alt: 'Acerca de YES Campus',
     href: '/nosotros',
   }
 ]

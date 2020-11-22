@@ -16,11 +16,11 @@
   </Viewport>
   <Viewport let:intersecting once={true}>
     <div
-      class="flex w-full h-full lg:hidden"
+      class="flex w-full h-full xl:hidden"
     >
       <Slider categorias={categorias} />
     </div>
-    <div class="flex-wrap hidden m-auto lg:w-9/10 content-lg lg:flex">
+    <div class="flex-wrap hidden m-auto lg:w-9/10 content-lg xl:flex">
       {#each categorias as c, i}
         <div
           class="p-4 m-auto md:w-1/2 lg:w-1/4 animation"
