@@ -21,10 +21,10 @@
 </span>
 <span slot="message">
   <span class="md:font-bold">
-    A new version is available.
+    Una nueva versión está disponible.
   </span>
   <span class="hidden md:inline">
-    You can refresh now or wait until your next launch.
+    Puedes refrescar ahora la página o esperar a la próxima visita.
   </span>
 </span>
 <div slot="button">

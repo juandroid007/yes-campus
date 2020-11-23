@@ -19,6 +19,6 @@
     </svg>
   </span>
   <span slot="message" class="font-bold">
-    You are offline, viewing cached content
+    No tienes conexión, puedes navegar a través de la caché.
   </span>
 </Banner>
