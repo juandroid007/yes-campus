@@ -14,6 +14,7 @@
   import { fly } from 'svelte/transition'
   import { inZone } from '../pages/home/ZonaOscura.svelte'
   import { hoverable } from '../Cursor.svelte'
+  import Dropdown from './Dropdown.svelte'
 
   $: dark = $preferences.darkMode
 
@@ -72,10 +73,7 @@
         <div class="items-center hidden lg:flex" transition:fly|local={{ x: -50, duration: 400 }}>
         {#each navigation as n}
           {#if n.childrens}
-          <div
-            class="flex items-center mx-4"
-            ><span>{n.titulo}</span><span class="ml-2 i jam:chevron-down"></span></div
-          >
+            <Dropdown titulo={n.titulo} links={n.childrens} />
           {:else}
             <a
               href={n.href}

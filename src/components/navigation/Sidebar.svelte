@@ -40,14 +40,13 @@
                 in:fly={{ x: 100, duration: 500, delay: 100 + (i * 500 / elements.length)}}
               >
                 <p
-                  class="self-end hidden text-lg cursor-pointer lg:block alt-title"
+                  class="self-end hidden text-lg font-light cursor-pointer lg:block alt-title"
                   >{el.alt}</p
                 >
                 <p
                   class="flex items-center cursor-pointer"
                 >
                 <span class="cursor-pointer">{el.titulo}</span>
-                <span class="cursor-pointer i jam:chevron-right"></span>
                 </p>
               </div>
             {:else}
@@ -58,7 +57,7 @@
                 in:fly={{ x: 100, duration: 500, delay: 100 + (i * 500 / elements.length)}}
               >
                 <p
-                  class="self-end hidden text-lg cursor-pointer lg:block alt-title"
+                  class="self-end hidden text-lg font-light cursor-pointer lg:block alt-title"
                   >{el.alt}</p
                 >
                 <p
@@ -97,10 +96,10 @@
         </div>
       {:else}
         <button
-          class="flex my-1 text-xl font-bold lg:ml-auto lg:text-right nav-link"
+          class="flex my-1 ml-0 mr-auto text-xl font-bold cursor-pointer lg:ml-auto lg:mr-0 lg:text-right nav-link"
           in:fly={{ x: -100, duration: 500}}
           on:click={() => menu = null}
-          ><span class="i jam:chevron-left"></span><span>Atrás</span></button
+          ><span class="mr-2 cursor-pointer i jam:chevron-left"></span><span class="cursor-pointer">Atrás</span></button
         >
         <p
           class="block w-full py-1 my-2 lg:text-right"
@@ -113,7 +112,7 @@
                 class="block w-full py-1 my-2 text-xl lg:text-right nav-link"
                 href={$url(el.href)}
                 class:selected-nav={$isActive(el.href)}
-                in:fly={{ x: -100, duration: 500, delay: 100 + (i * 500 / elements.length)}}
+                in:fly={{ x: -100, duration: 500, delay: 100 + (i * 500 / menu.childrens.length)}}
                 >{el.titulo}</a
               >
           {/each}

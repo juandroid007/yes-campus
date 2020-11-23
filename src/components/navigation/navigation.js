@@ -3,12 +3,12 @@ import { categorias } from '../pages/home/Categoria.svelte'
 export default [
   {
     titulo: 'Explora',
-    alt: 'Explora',
+    alt: 'Al máximo',
     childrens: [ ...categorias ],
   },
   {
     titulo: 'Comunidad',
-    alt: 'Comunidad',
+    alt: 'Que impulsa',
     childrens: [
       {
         titulo: 'YES Campus for Business',
