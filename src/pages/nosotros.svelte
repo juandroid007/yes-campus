@@ -70,14 +70,14 @@
     </div>
     <div class="w-full">
       <p class="text-2xl font-light font-title">
-      Ofrecer espacios de aprendizaje, networking y negocios para el fortalecimiento de competencias en emprendimiento, liderazgo e innovación al servicio de personas y organizaciones con deseos de impacto en el logro de sus propositos y el desarrollo sosenible.
+      Ofrecer espacios de aprendizaje, networking y negocios para el fortalecimiento de competencias en emprendimiento, liderazgo e innovación al servicio de personas y organizaciones con deseos de impacto en el logro de sus propósitos y el desarrollo sostenible.
       </p>
     </div>
   </div>
   <div class="py-32 content">
     <h2 class="mb-6 text-4xl font-bold font-title">¿Quiénes somos?</h2>
     <p class="mb-6 text-2xl font-light md:text-justify font-title">
-    Somos una comunidad de profesionales creativos que trabajamos bajo el concepto de ecosistema y te invitamos  a aprender y emprender junto a nosotros de manera agil, divertida, innovadora y con impacto.
+    Somos una comunidad de profesionales creativos que trabajamos bajo el concepto de ecosistema y te invitamos a aprender y emprender junto a nosotros de manera ágil, divertida, innovadora y con impacto.
     </p>
     <h3 class="text-2xl italic font-light md:text-right font-title">
       Aprendizaje Acelerado para personas y organizaciones emprendedoras
@@ -120,13 +120,13 @@
       <div class="py-32 content">
         <h2 class="mb-6 text-4xl font-bold font-title">El Manifiesto YES Campus</h2>
         <p class="mt-12 mb-6 text-2xl italic font-light md:text-justify font-title">
-        &ldquo;Pertenezco a una comunidad donde me reconozco y me reconocen, valoramos el compartir ameno y entretenido, donde la creatividad nos lleva a desafíos individuales y colectivos para lograr un mundo mas humano, participativo e igualitario.
+        &ldquo;Pertenezco a una comunidad donde me reconozco y me reconocen, valoramos el compartir ameno y entretenido, donde la creatividad nos lleva a desafíos individuales y colectivos para lograr un mundo más humano, participativo e igualitario.
         </p>
         <p class="mb-6 text-2xl italic font-light md:text-justify font-title">
-        Compartimos el espíritu emprendedor,  somos agentes de cambio que sirven desde la integridad, el respeto y la pluralidad, a personas, organizaciones y sociedades que buscan alcanzar su propósito, bienestar y promover el desarrollo sostenible.
+        Compartimos el espíritu emprendedor, somos agentes de cambio que sirven desde la integridad, el respeto y la pluralidad, a personas, organizaciones y sociedades que buscan alcanzar su propósito, bienestar y promover el desarrollo sostenible.
         </p>
         <p class="mb-6 text-2xl italic font-light md:text-justify font-title">
-        Recreamos el futuro desde nuestras acciones en el presente, creemos en el poder de la co creación y  las relaciones que agregan valor.&rdquo;
+        Recreamos el futuro desde nuestras acciones en el presente, creemos en el poder de la co-creación y las relaciones que agregan valor.&rdquo;
         </p>
         <h3 class="mt-12 text-xl font-bold text-center uppercase font-title">
           Innovación para emprendedores

@@ -84,13 +84,15 @@
           {/if}
         {/each}
         <div class="flex text-base">
-          <button
+          <a
             class="mx-2 btn-secondary"
-            >Iniciar sesión</button
+            href="https://yescampus.teachlr.com/#signin"
+            >Iniciar sesión</a
           >
-          <button
+          <a
             class="mx-2 btn-primary"
-            >Regístrate</button
+            href="https://yescampus.teachlr.com/#register"
+            >Regístrate</a
           >
         </div>
         <div class="h-4 mx-2 border-l border-yes-gray-500 dark:border-yes-gray-300 dark:border-white duration-800"></div>

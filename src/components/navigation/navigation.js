@@ -4,7 +4,13 @@ export default [
   {
     titulo: 'Explora',
     alt: 'Al máximo',
-    childrens: [ ...categorias ],
+    childrens: [
+      ...categorias,
+      {
+        titulo: 'Todas las categorías',
+        href: ' https://yescampus.teachlr.com/#courses-online/',
+      }
+    ],
   },
   {
     titulo: 'Comunidad',

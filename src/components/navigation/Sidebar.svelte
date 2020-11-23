@@ -84,13 +84,15 @@
             class="flex my-4 text-base"
             in:fly={{ x: 100, duration: 500, delay: 100 + ((elements.length + 1) * 500 / elements.length)}}
           >
-            <button
+            <a
               class="mx-2 btn-secondary-gray"
-              >Iniciar sesión</button
+              href="https://yescampus.teachlr.com/#signin"
+              >Iniciar sesión</a
             >
-            <button
+            <a
               class="mx-2 btn-primary-gray"
-              >Regístrate</button
+              href="https://yescampus.teachlr.com/#register"
+              >Regístrate</a
             >
           </div>
         </div>
