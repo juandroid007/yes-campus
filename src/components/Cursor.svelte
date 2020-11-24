@@ -18,13 +18,17 @@
     damping: 1
   })
 
-  const hovering = writable({
+  const hoveringInitial = {
     status: false,
     primary: false,
     sticky: false,
     node: null,
-    mul: 4
-  })
+    mul: 4,
+    text: null,
+    color: null,
+  }
+
+  const hovering = writable(hoveringInitial)
 
   const expand = (mul = 4) => {
     size.set(origSize * mul)
@@ -51,7 +55,7 @@
 
   const mouseLeave = () => {
     normalize()
-    hovering.set({status: false, primary: false, node: false, sticky: false, mul: 4})
+    hovering.set(hoveringInitial)
   }
 
   export const hoverable = (node, options = { primary: false, mul: 4, sticky: false }) => {
@@ -62,6 +66,7 @@
 
 <script>
   import { onMount } from 'svelte'
+  import { fade } from 'svelte/transition'
   import { styles } from '../lib/styles'
   let coordsAbs = {
     x: 50,
@@ -91,7 +96,11 @@
 
   const mouseDown = () => {
     touches = null
-    trigger({primary: $hovering.primary, mul: 2})
+    let mul = 2
+    if ($hovering.text) {
+      mul = 3
+    }
+    trigger({primary: $hovering.primary, mul})
   }
 
   const mouseUp = () => {
@@ -117,6 +126,27 @@
       hidden = true
     })
   })
+
+  function hexToRGB (h, a) {
+    let r = 0, g = 0, b = 0
+
+    // 3 digits
+    if (h.length == 4) {
+      r = '0x' + h[1] + h[1]
+      g = '0x' + h[2] + h[2]
+      b = '0x' + h[3] + h[3]
+
+      // 6 digits
+    } else if (h.length == 7) {
+      r = '0x' + h[1] + h[2]
+      g = '0x' + h[3] + h[4]
+      b = '0x' + h[5] + h[6]
+    }
+
+    return 'rgba('+ +r + ',' + +g + ',' + +b + ','+ +a +')'
+  }
+
+  $: color = $hovering.color ? hexToRGB($hovering.color, 0.8) : 'white'
 </script>
 
 <style>
@@ -126,10 +156,14 @@
     width: var(--size);
     height: var(--size);
     transform: translate3d(var(--x), var(--y), 0);
-    background-color: white;
+    background-color: var(--color);
     backface-visibility: hidden;
     border-radius: 50%;
     z-index: 1000000;
+    transition: background-color 0.5s;
+  }
+
+  .blend {
     mix-blend-mode: difference;
   }
 </style>
@@ -142,19 +176,30 @@
 
 <div
   class:hidden
-  class="cursor-blend"
+  class="flex cursor-blend"
+  class:blend={!$hovering.color}
   use:styles={{
     x: ($coords.x  - $size / 2)+'px', y: ($coords.y  - $size / 2)+'px',
-    size: $size+'px'
+    size: $size+'px',
+    color,
   }}
 >
+{#if $hovering.text}
+  <p
+    in:fade={{duration: 200}}
+    class="m-auto text-sm font-bold text-white font-title"
+    >{$hovering.text}</p
+  >
+{/if}
 </div>
 <div
   class:hidden
   class="cursor-blend"
+  class:blend={!$hovering.color}
   use:styles={{
     x: (coordsAbs.x  - $size2 / 2)+'px', y: (coordsAbs.y  - $size2 / 2)+'px',
-    size: Math.floor($size2)+'px'
+    size: Math.floor($size2)+'px',
+    color,
   }}
 >
 </div>

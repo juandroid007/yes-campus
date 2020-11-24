@@ -5,9 +5,7 @@
   import { isActive } from '@roxi/routify/runtime'
 </script>
 
-<div style="z-index: 1000000">
-  <Cursor/>
-</div>
+<Cursor/>
 
 <div class="flex flex-col w-full min-h-screen blend duration-200">
   <div class="z-40">

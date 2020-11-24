@@ -51,6 +51,10 @@
     width: 12px;
     height: 12px;
   }
+
+  img {
+    isolation: isolate;
+  }
 </style>
 
 <div class="z-10 flex flex-col w-full h-full text-white content-lg">
@@ -61,7 +65,7 @@
     })
   }}>
     <div class="glide animate" use:mountGlide class:intersecting>
-      <div class="glide__track" data-glide-el="track" use:hoverable>
+      <div class="glide__track" data-glide-el="track" use:hoverable={{primary: true, text: 'Arrastra', color: '#0273E3'}}>
         <ul class="glide__slides">
           {#each profesores as p, i}
             <li class="glide__slide">
@@ -69,7 +73,7 @@
                 <div
                   class="flex w-full overflow-hidden bg-gray-700 shadow-2xl h-72 rounded-2xl"
                 >
-                  <img src="/images/{p.thumbnail}" alt={p.nombre} class="object-cover w-full h-full">
+                <img src="/images/{p.thumbnail}" alt={p.nombre} class="object-cover w-full h-full">
                 </div>
                 <p class="mt-6 text-2xl font-bold leading-none font-title">{p.nombre}</p>
                 <p class="mt-2 text-lg font-light leading-none font-title">{p.ocupacion}</p>

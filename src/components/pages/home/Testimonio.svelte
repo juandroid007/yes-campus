@@ -67,7 +67,7 @@
     })
   }}>
     <div class="m-auto glide" use:mountGlide>
-      <div class="glide__track" data-glide-el="track" use:hoverable>
+      <div class="glide__track" data-glide-el="track" use:hoverable={{primary: true, text: 'Arrastra', color: '#0273E3'}}>
         <ul class="glide__slides">
           {#each testimonios as t, i}
             <li class="glide__slide" class:py-12={image}>

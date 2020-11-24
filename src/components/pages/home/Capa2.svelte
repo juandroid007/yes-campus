@@ -5,7 +5,7 @@
     {
       icon: 'capacidad',
       titulo: 'Eleva tu</br>capacidad',
-      texto: 'El 90% de nuestra comunidad reporta haber superado sus limites para alcanzar el éxito.',
+      texto: 'El 90% de nuestra comunidad ha superado sus límites y aprendido nuevas habilidades para superar los retos de la actualidad.',
     },
     {
       icon: 'ritmo',
@@ -15,12 +15,12 @@
     {
       icon: 'creatividad',
       titulo: 'Explota tu</br>creatividad',
-      texto: 'Explora al maximo tus sentidos y aprende de manera experiencial',
+      texto: 'Explora al máximo tus sentidos y aprende de manera experiencial.',
     },
     {
       icon: 'ecosistema',
       titulo: 'Ecosistema</br>dinámico',
-      texto: 'Explora al maximo tus sentidos y aprende de manera experiencial',
+      texto: 'Forma parte de una comunidad de aprendizaje donde la colaboración es un código común.',
     },
   ]
 </script>

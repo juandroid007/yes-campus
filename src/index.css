@@ -52,13 +52,13 @@ button {
 	cursor: not-allowed;
 }
 
-.glide--swipeable * {
+.glide--swipeablee * {
   cursor: grab !important;
   cursor: -moz-grab !important;
   cursor: -webkit-grab !important;
 }
 
-.glide--dragging * {
+.glide--draggingg * {
   cursor: grabbing !important;
   cursor: -moz-grabbing !important;
   cursor: -webkit-grabbing !important;

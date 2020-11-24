@@ -47,6 +47,8 @@
   export let c
   import { hoverable } from '../../Cursor.svelte'
 
+  export let hover = true
+
   function hexToRGB (h, a) {
     let r = 0, g = 0, b = 0
 
@@ -66,6 +68,9 @@
     return 'rgba('+ +r + ',' + +g + ',' + +b + ','+ +a +')'
   }
 
+  const noHover = () => {}
+
+  const hovering = hover ? hoverable : noHover
 </script>
 
 <style>
@@ -158,7 +163,7 @@
   }
 </style>
 
-<div use:hoverable class="m-auto categoria" style="--wave-color: {c.waveColor}; --underline-color: {hexToRGB(c.waveColor, 0.4)}">
+<div use:hovering={{primary: true, text: 'Ver más', color: c.waveColor}} class="m-auto categoria" style="--wave-color: {c.waveColor}; --underline-color: {hexToRGB(c.waveColor, 0.4)}">
   <div class="img-wrapper">
     <div class="wave">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 166.12 135.01">

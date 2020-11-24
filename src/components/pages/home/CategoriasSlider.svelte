@@ -61,13 +61,13 @@
     })
   }}>
     <div class="m-auto glide animate" use:mountGlide class:intersecting>
-      <div use:hoverable class="glide__track" data-glide-el="track">
+      <div use:hoverable={{primary: true, text: 'Arrastra', color: '#0273E3'}} class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
           {#each categorias as c, i}
             <li class="glide__slide">
               <div class="flex w-full pt-24">
                 <div class="mx-auto">
-                  <Categoria c={c} />
+                  <Categoria c={c} hover={false} />
                 </div>
               </div>
             </li>
