@@ -47,7 +47,7 @@
         sintonía con la visión de desarrollo de la empresa y sus
         </p>
 
-        <a href="" class="mt-6 mr-auto font-light btn-fill">Descúbrelo</a>
+        <a href="/business" class="mt-6 mr-auto font-light btn-fill">Descúbrelo</a>
       </div>
     </V>
   </div>
