@@ -18,6 +18,12 @@
     background-size: cover;
     background-position: center;
   }
+
+  @screen md {
+    .valores {
+      height: 150vh;
+    }
+  }
 </style>
 
 <div class="w-full overflow-x-hidden" style="perspective: 4px">
@@ -87,29 +93,32 @@
     <h2 class="mb-6 text-4xl font-bold md:text-center font-title">
       Apostamos al trabajo colaborativo<br>y la búsqueda del bien común
     </h2>
-    <div class="flex flex-wrap py-16 -my-6 md:h-screen">
-      <div class="py-6 md:w-1/3">
-        <h2 class="mb-6 text-2xl font-bold md:text-center font-title">
+    <div class="flex flex-wrap py-16 -m-6 valores">
+      <div class="p-6 md:w-1/3">
+        <img src="/images/nosotros/innovacion.svg" class="mb-6 w-7/10" alt="">
+        <h2 class="mb-6 text-2xl font-bold font-title">
           Innovación
         </h2>
-        <p class="text-2xl font-light md:text-justify font-title">
+        <p class="text-2xl font-light font-title">
         Estimulamos la mejora continua y agregamos valor
         </p>
       </div>
-      <div class="self-center py-4 md:w-1/3 justify-self-center">
-        <h2 class="mb-6 text-2xl font-bold md:text-center font-title">
-          Multiculturalidad
-        </h2>
-        <p class="text-2xl font-light md:text-justify font-title">
-        Nos nutrimos de la diversidad y  co creamos de manera disruptiva y divertida
-        </p>
-      </div>
-      <div class="self-end py-4 md:w-1/3 justify-self-end">
-        <h2 class="mb-6 text-2xl font-bold md:text-center font-title">
+      <div class="self-center p-6 md:w-1/3 justify-self-center">
+        <img src="/images/nosotros/agilidad.svg" class="mb-6 w-7/10" alt="">
+        <h2 class="mb-6 text-2xl font-bold font-title">
           Agilidad
         </h2>
-        <p class="text-2xl font-light md:text-justify font-title">
+        <p class="text-2xl font-light font-title">
         Buscamos Soluciones agíles a problemas complejos
+        </p>
+      </div>
+      <div class="self-end p-6 md:w-1/3 justify-self-end">
+        <img src="/images/nosotros/multiculturalidad.svg" class="mb-6 w-7/10" alt="">
+        <h2 class="mb-6 text-2xl font-bold font-title">
+          Multiculturalidad
+        </h2>
+        <p class="text-2xl font-light font-title">
+        Nos nutrimos de la diversidad y  co creamos de manera disruptiva y divertida
         </p>
       </div>
     </div>
