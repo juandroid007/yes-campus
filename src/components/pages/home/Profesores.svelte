@@ -58,7 +58,7 @@
 </style>
 
 <div class="z-10 flex flex-col w-full h-full text-white content-lg">
-  <h2 class="mb-12 text-4xl font-bold leading-none font-title">Aprende con profesionales<br>disruptivos y de alto impacto</h2>
+  <h2 class="mb-12 text-4xl font-bold leading-none md:text-5xl font-title">Aprende con profesionales<br>disruptivos y de alto impacto</h2>
   <V class="my-auto" bind:intersecting on:top={() => {
     glide.update({
       autoplay: 2000,
@@ -71,12 +71,12 @@
             <li class="glide__slide">
               <div class="mx-auto w-60">
                 <div
-                  class="flex w-full overflow-hidden bg-gray-700 shadow-2xl h-72 rounded-2xl"
+                  class="flex w-full overflow-hidden bg-gray-700 shadow-2xl h-80 rounded-2xl"
                 >
                 <img src="/images/{p.thumbnail}" alt={p.nombre} class="object-cover w-full h-full">
                 </div>
-                <p class="mt-6 text-2xl font-bold leading-none font-title">{p.nombre}</p>
-                <p class="mt-2 text-lg font-light leading-none font-title">{p.ocupacion}</p>
+                <p class="mt-6 text-base font-bold leading-none font-title">{p.nombre}</p>
+                <p class="mt-2 text-sm font-light leading-none font-title">{p.ocupacion}</p>
                 {@debug p}
               </div>
             </li>

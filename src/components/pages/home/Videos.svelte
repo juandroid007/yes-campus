@@ -20,7 +20,7 @@
       </div>
     </div>
   </div>
-  <div class="flex flex-wrap my-24 lg:my-24 lg:w-9/10 lg:mx-auto">
+  <div class="flex flex-wrap my-24 lg:my-24 lg:w-9/10 lg:mx-auto lg:-mt-36">
     <div class="flex flex-col ml-auto w-9/10 lg:w-1/2 lg:ml-0 lg:pr-16 lg:mt-80">
       <img src="https://source.unsplash.com/random/480x600" alt="" class="mb-12 media rounded-tl-3xl rounded-bl-3xl lg:rounded-3xl">
       <div class="mr-6 lg:mr-0">
@@ -49,7 +49,7 @@
     </div>
   </div>
 
-  <div class="flex justify-end w-full">
+  <div class="flex justify-end w-full lg:-mt-60">
     <div class="flex flex-col w-9/10 lg:w-1/2">
       <img src="https://source.unsplash.com/random/600x480" alt="" class="w-full mb-12 ml-auto rounded-tl-3xl rounded-bl-3xl">
       <div class="mr-6 lg:mr-12">

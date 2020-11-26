@@ -9,7 +9,7 @@
     <div class="flex content-lg">
       <h2
         class:observing={intersecting}
-        class="px-4 mb-12 text-4xl font-bold leading-none leading-tight animation md:text-4xl font-title"
+        class="px-4 mb-12 text-4xl font-bold leading-none leading-tight animation md:text-5xl font-title"
         >Cursos y experiencias de aprendizaje <br>en las diferentes categorías</h2
       >
     </div>

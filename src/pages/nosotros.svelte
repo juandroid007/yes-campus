@@ -45,7 +45,7 @@
       class="flex w-full"
       style="height: 90vh"
       motion={false}
-      scaleFactor={5}
+      scaleFactor={8}
     >
       <div
         class="w-full h-full parallax"
@@ -56,26 +56,26 @@
   </PC>
   <div class="flex flex-col py-16 mt-24 md:flex-row content">
     <div class="w-full mb-6 md:w-1/2">
-      <h2 class="text-2xl font-bold font-title">Nuestra visión</h2>
+      <h2 class="text-4xl font-bold md:text-5xl font-title">Nuestra visión</h2>
     </div>
     <div class="w-full">
-      <p class="text-2xl font-light font-title">
+      <p class="text-xl font-light md:text-3xl font-title md:ml-12">
       Ser reconocidos como la red de aprendizaje e innovación para emprendendedores y líderes latinoamericanos de alto impacto.
       </p>
     </div>
   </div>
   <div class="flex flex-col py-16 md:flex-row-reverse content">
     <div class="w-full mb-6 md:w-1/2">
-      <h2 class="text-2xl font-bold font-title md:text-right">Nuestra misión</h2>
+      <h2 class="text-4xl font-bold md:text-5xl font-title md:text-right">Nuestra misión</h2>
     </div>
     <div class="w-full">
-      <p class="text-2xl font-light font-title">
+      <p class="text-xl font-light md:text-3xl font-title md:mr-12">
       Ofrecer espacios de aprendizaje, networking y negocios para el fortalecimiento de competencias en emprendimiento, liderazgo e innovación al servicio de personas y organizaciones con deseos de impacto en el logro de sus propósitos y el desarrollo sostenible.
       </p>
     </div>
   </div>
   <div class="py-32 content">
-    <h2 class="mb-6 text-4xl font-bold font-title">¿Quiénes somos?</h2>
+    <h2 class="mb-6 text-5xl font-bold font-title">¿Quiénes somos?</h2>
     <p class="mb-6 text-2xl font-light md:text-justify font-title">
     Somos una comunidad de profesionales creativos que trabajamos bajo el concepto de ecosistema y te invitamos a aprender y emprender junto a nosotros de manera ágil, divertida, innovadora y con impacto.
     </p>
@@ -118,7 +118,7 @@
   <V bind:intersecting={$inZone}>
     <div class="min-h-screen text-white bg-black">
       <div class="py-32 content">
-        <h2 class="mb-6 text-4xl font-bold font-title">El Manifiesto YES Campus</h2>
+        <h2 class="mb-6 text-5xl font-bold font-title">El Manifiesto YES Campus</h2>
         <p class="mt-12 mb-6 text-2xl italic font-light md:text-justify font-title">
         &ldquo;Pertenezco a una comunidad donde me reconozco y me reconocen, valoramos el compartir ameno y entretenido, donde la creatividad nos lleva a desafíos individuales y colectivos para lograr un mundo más humano, participativo e igualitario.
         </p>

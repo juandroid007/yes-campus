@@ -36,7 +36,7 @@ export default [
   },
   {
     titulo: 'Nosotros',
-    alt: 'Acerca de YES Campus',
+    alt: '¿Quiénes somos?',
     href: '/nosotros',
   }
 ]
