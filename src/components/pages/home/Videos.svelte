@@ -21,7 +21,7 @@
     </div>
   </div>
   <div class="flex flex-wrap my-24 lg:my-24 lg:w-9/10 lg:mx-auto lg:-mt-36">
-    <div class="flex flex-col ml-auto w-9/10 lg:w-1/2 lg:ml-0 lg:pr-16 lg:mt-80">
+    <div class="flex flex-col ml-auto w-9/10 lg:w-1/2 lg:ml-0 lg:pr-16 lg:mt-96">
       <img src="https://source.unsplash.com/random/480x600" alt="" class="mb-12 media rounded-tl-3xl rounded-bl-3xl lg:rounded-3xl">
       <div class="mr-6 lg:mr-0">
         <p class="text-2xl font-bold leading-none md:text-3xl font-title">

@@ -103,7 +103,7 @@
     trigger({primary: $hovering.primary, mul})
   }
 
-  const mouseUp = () => {
+  const mouseUp = e => {
     if ($hovering.status) {
         if ($hovering.primary) {
           trigger({primary: true, mul: $hovering.mul})

@@ -23,6 +23,8 @@
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: currentColor;
+    opacity: 0.5;
+    -webkit-font-smoothing: none;
   }
 
   pre {
@@ -61,40 +63,40 @@
       class="flex w-full"
       style="height: 90vh"
       motion={false}
-      scaleFactor={8}
+      scaleFactor={6}
     >
       <div
         class="w-full h-full parallax"
-        style="background-image: url(/images/bg.jpg), linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))"
+        style="background-image: url(/images/bg.webp), linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))"
         ></div
       >
     </P>
   </PC>
   <div class="flex flex-col py-16 mt-24 md:flex-row content">
     <div class="w-full mb-6 md:w-1/2">
-      <h2 class="text-4xl font-bold md:text-5xl font-title">Nuestra visión</h2>
+    <h2 class="text-4xl font-bold md:text-4xl font-title">Nuestra visión</h2>
     </div>
     <div class="w-full">
-      <p class="text-xl font-light md:text-3xl font-title md:ml-12">
+      <p class="text-xl font-light md:text-2xl font-title md:ml-12">
       Ser reconocidos como la red de aprendizaje e innovación para emprendendedores y líderes latinoamericanos de alto impacto.
       </p>
     </div>
   </div>
   <div class="flex flex-col py-16 md:flex-row-reverse content">
     <div class="w-full mb-6 md:w-1/2">
-      <h2 class="text-4xl font-bold md:text-5xl font-title md:text-right">Nuestra misión</h2>
+      <h2 class="text-4xl font-bold md:text-4xl font-title md:text-right">Nuestra misión</h2>
     </div>
     <div class="w-full">
-      <p class="text-xl font-light md:text-3xl font-title md:mr-12">
+      <p class="text-xl font-light md:text-2xl font-title md:mr-12">
       Ofrecer espacios de aprendizaje, networking y negocios para el fortalecimiento de competencias en emprendimiento, liderazgo e innovación al servicio de personas y organizaciones con deseos de impacto en el logro de sus propósitos y el desarrollo sostenible.
       </p>
     </div>
   </div>
 
-  <PC class="relative -mx-6 overflow-hidden text-xl sm:text-4xl sm:-mx-14 lg:-mx-24 lg:text-6xl" let:offset>
+  <PC class="relative -mx-6 overflow-hidden text-xl sm:text-4xl sm:-mx-14 lg:-mx-24 lg:text-5xl" let:offset>
     <div class="transform -translate-x-12">
       <P class="flex py-4" offset={offset} horizontal scaleFactor={8} negative>
-        <pre class="px-6 font-bold text-stroke sm:px-14 lg:px-24 font-title">Ecosistema</pre>
+        <pre class="px-6 font-sans font-bold text-stroke sm:px-14 lg:px-24">Ecosistema</pre>
         <pre class="px-6 font-bold sm:px-14 lg:px-24 font-title">Emprendimiento</pre>
         <pre class="px-6 font-bold sm:px-14 lg:px-24 text-stroke font-title">Financiamiento</pre>
         <pre class="px-6 font-bold sm:px-14 lg:px-24 font-title">Ecosistema</pre>
@@ -110,6 +112,12 @@
         <pre class="px-6 font-bold sm:px-14 lg:px-24 font-title">Ecosistema</pre>
         <pre class="px-6 font-bold sm:px-14 lg:px-24 text-stroke font-title">Emprendimiento</pre>
         <pre class="px-6 font-bold sm:px-14 lg:px-24 font-title">Financiamiento</pre>
+      </P>
+      <P class="flex py-4" offset={offset} horizontal scaleFactor={3} negative>
+        <pre class="px-6 font-bold sm:px-14 lg:px-24 font-title">Aprendizaje</pre>
+        <pre class="px-6 font-bold sm:px-14 lg:px-24 text-stroke font-title">Networking</pre>
+        <pre class="px-6 font-bold sm:px-14 lg:px-24 font-title">Networking</pre>
+        <pre class="px-6 font-bold sm:px-14 lg:px-24 text-stroke font-title">Aprendizaje</pre>
       </P>
     </div>
   </PC>
@@ -137,13 +145,13 @@
       <p class="mb-6 text-2xl font-light md:text-justify font-title">
       Somos una comunidad de profesionales creativos que trabajamos bajo el concepto de ecosistema y te invitamos a aprender y emprender junto a nosotros de manera ágil, divertida, innovadora y con impacto.
       </p>
-      <h3 class="text-2xl italic font-light md:text-right font-title">
+      <h3 class="text-lg italic font-light md:text-right font-title">
         Aprendizaje Acelerado para personas y organizaciones emprendedoras
       </h3>
     </div>
   </div>
 
-  <div class="py-16 content">
+  <div class="pb-16 content">
     <h2 class="mb-6 text-4xl font-bold md:text-center font-title">
       Apostamos al trabajo colaborativo<br>y la búsqueda del bien común
     </h2>
