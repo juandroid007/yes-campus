@@ -19,6 +19,16 @@
     background-position: center;
   }
 
+  .text-stroke {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: currentColor;
+  }
+
+  pre {
+    color: inherit;
+  }
+
   @screen md {
     .valores {
       height: 150vh;
@@ -80,15 +90,59 @@
       </p>
     </div>
   </div>
-  <div class="py-32 content">
-    <h2 class="mb-6 text-5xl font-bold font-title">¿Quiénes somos?</h2>
-    <p class="mb-6 text-2xl font-light md:text-justify font-title">
-    Somos una comunidad de profesionales creativos que trabajamos bajo el concepto de ecosistema y te invitamos a aprender y emprender junto a nosotros de manera ágil, divertida, innovadora y con impacto.
-    </p>
-    <h3 class="text-2xl italic font-light md:text-right font-title">
-      Aprendizaje Acelerado para personas y organizaciones emprendedoras
-    </h3>
+
+  <PC class="relative -mx-6 overflow-hidden text-xl sm:text-4xl sm:-mx-14 lg:-mx-24 lg:text-6xl" let:offset>
+    <div class="transform -translate-x-12">
+      <P class="flex py-4" offset={offset} horizontal scaleFactor={8} negative>
+        <pre class="px-6 font-bold text-stroke sm:px-14 lg:px-24 font-title">Ecosistema</pre>
+        <pre class="px-6 font-bold sm:px-14 lg:px-24 font-title">Emprendimiento</pre>
+        <pre class="px-6 font-bold sm:px-14 lg:px-24 text-stroke font-title">Financiamiento</pre>
+        <pre class="px-6 font-bold sm:px-14 lg:px-24 font-title">Ecosistema</pre>
+      </P>
+      <P class="flex py-4" offset={offset} horizontal scaleFactor={6} negative>
+        <pre class="px-6 font-bold sm:px-14 lg:px-24 font-title">Networking</pre>
+        <pre class="px-6 font-bold sm:px-14 lg:px-24 text-stroke font-title">Aprendizaje</pre>
+        <pre class="px-6 font-bold sm:px-14 lg:px-24 font-title">Aceleración</pre>
+        <pre class="px-6 font-bold sm:px-14 lg:px-24 text-stroke font-title">Networking</pre>
+      </P>
+      <P class="flex py-4" offset={offset} horizontal scaleFactor={4} negative>
+        <pre class="px-6 font-bold sm:px-14 lg:px-24 text-stroke font-title">Financiamiento</pre>
+        <pre class="px-6 font-bold sm:px-14 lg:px-24 font-title">Ecosistema</pre>
+        <pre class="px-6 font-bold sm:px-14 lg:px-24 text-stroke font-title">Emprendimiento</pre>
+        <pre class="px-6 font-bold sm:px-14 lg:px-24 font-title">Financiamiento</pre>
+      </P>
+    </div>
+  </PC>
+
+  <div class="flex flex-wrap items-center py-32 content">
+    <div class="relative hidden h-screen lg:flex lg:w-1/2">
+      <div class="absolute w-full h-2/10 bg-gradient-to-b from-white dark:from-yes-gray-900 to-transparent"></div>
+      <div class="absolute bottom-0 w-full h-2/10 bg-gradient-to-t from-white dark:from-yes-gray-900 to-transparent"></div>
+      <PC class="relative w-full h-full overflow-hidden -z-10" let:offset>
+        <P
+          class="absolute w-64 mt-16 ml-6 overflow-hidden bg-gray-500 shadow-xl h-80 rounded-xl"
+          offset={offset}
+        >
+        </P>
+        <P
+          class="absolute bottom-0 right-0 w-64 mb-16 mr-12 overflow-hidden bg-gray-500 shadow-xl h-80 rounded-xl"
+          offset={offset}
+          negative
+        >
+        </P>
+      </PC>
+    </div>
+    <div class="lg:w-1/2 lg:pl-6">
+      <h2 class="mb-6 text-5xl font-bold font-title">¿Quiénes somos?</h2>
+      <p class="mb-6 text-2xl font-light md:text-justify font-title">
+      Somos una comunidad de profesionales creativos que trabajamos bajo el concepto de ecosistema y te invitamos a aprender y emprender junto a nosotros de manera ágil, divertida, innovadora y con impacto.
+      </p>
+      <h3 class="text-2xl italic font-light md:text-right font-title">
+        Aprendizaje Acelerado para personas y organizaciones emprendedoras
+      </h3>
+    </div>
   </div>
+
   <div class="py-16 content">
     <h2 class="mb-6 text-4xl font-bold md:text-center font-title">
       Apostamos al trabajo colaborativo<br>y la búsqueda del bien común

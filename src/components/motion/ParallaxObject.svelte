@@ -25,12 +25,16 @@
   }
 
   export let motion = true
+  export let horizontal = false
 
   $: ensure = translate ? translate : 0
   $: finalFixed = negative ? ensure - (ensure * 2) : ensure
   $: yoffset.set(ensure)
   $: final = negative ? $yoffset - ($yoffset * 2) : $yoffset
-  $: css = { y:  ( motion ? final.toFixed(2) : finalFixed.toFixed(2) ) + 'px' }
+  $: css = {
+    x:  !horizontal ? '0px' : ( motion ? final.toFixed(2) : finalFixed.toFixed(2) ) + 'px',
+    y:  horizontal ? '0px' : ( motion ? final.toFixed(2) : finalFixed.toFixed(2) ) + 'px',
+  }
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -46,7 +50,7 @@
 <style>
   .parallax {
     will-change: transform;
-    transform: translate3d(0, var(--y), 0);
+    transform: translate3d(var(--x), var(--y), 0);
   }
 
   .all\:parallax{
