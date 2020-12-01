@@ -31,6 +31,35 @@
     color: inherit;
   }
 
+  :global(.tarjetas) {
+    height: 85vh;
+  }
+
+  :global(.quienes-somos) {
+    width: 100%;
+  }
+
+  @screen lg {
+    :global(.tarjetas) {
+      width: 50%;
+    }
+
+    :global(.quienes-somos) {
+      width: 50%;
+    }
+  }
+
+  @screen xxl {
+    :global(.tarjetas) {
+      width: 33.33%;
+      height: 60vh;
+    }
+
+    :global(.quienes-somos) {
+      width: 66.66%;
+    }
+  }
+
   @screen md {
     .valores {
       height: 150vh;
@@ -84,7 +113,7 @@
   </V>
   <V class="flex flex-col py-16 md:flex-row-reverse content animate" style="--animate-x: 3rem" oneWay>
     <div class="w-full mb-6 md:w-1/2">
-      <h2 class="text-4xl font-bold md:text-4xl font-title md:text-right">Nuestra misión</h2>
+      <h2 class="text-4xl font-bold md:text-4xl font-title md:text-right animate">Nuestra misión</h2>
     </div>
     <div class="w-full">
       <p class="text-xl font-light md:text-2xl font-title md:mr-12">
@@ -123,7 +152,7 @@
   </PC>
 
   <div class="flex flex-wrap items-center py-32 content">
-    <V class="relative hidden h-screen lg:flex lg:w-1/2 animate" style="--animate-x: -3rem; --animate-y: -3rem" oneWay>
+    <V class="relative hidden tarjetas lg:flex animate" style="--animate-x: -3rem; --animate-y: -3rem" oneWay>
       <div class="absolute w-full h-2/10 bg-gradient-to-b from-white dark:from-yes-gray-900 to-transparent"></div>
       <div class="absolute bottom-0 w-full h-2/10 bg-gradient-to-t from-white dark:from-yes-gray-900 to-transparent"></div>
       <PC class="relative w-full h-full overflow-hidden -z-10" let:offset>
@@ -131,17 +160,31 @@
           class="absolute w-64 mt-16 ml-6 overflow-hidden bg-gray-500 shadow-xl h-80 rounded-xl"
           offset={offset}
         >
+          <PC let:offset class="w-full h-full">
+            <P class="w-full" offset={offset} motion={false} style="height: 130%" scaleFactor={10}>
+              <div class="w-full h-full bg-top bg-cover" style="background-image: url(/images/uploads/juan-camilo.webp)">
+              </div>
+            </P>
+          </PC>
+        <!--img src="/images/uploads/juan-camilo.webp" alt="" class="object-cover object-top w-full h-full"-->
         </P>
         <P
           class="absolute bottom-0 right-0 w-64 mb-16 mr-12 overflow-hidden bg-gray-500 shadow-xl h-80 rounded-xl"
           offset={offset}
           negative
         >
+          <PC let:offset class="w-full h-full">
+            <P class="w-full" offset={offset} motion={false} style="height: 130%" scaleFactor={10}>
+              <div class="w-full h-full bg-right-top bg-cover" style="background-image: url(/images/desarrollo.jpg)">
+              </div>
+            </P>
+          </PC>
+        <!--img src="/images/desarrollo.jpg" alt="" class="object-cover object-right-top w-full h-full"-->
         </P>
       </PC>
     </V>
-    <V class="lg:w-1/2 lg:pl-6 animate" style="--animate-x: 3rem; --animate-y: -3rem" oneWay>
-      <h2 class="mb-6 text-5xl font-bold font-title">¿Quiénes somos?</h2>
+    <V class="quienes-somos lg:pl-6 animate" style="--animate-x: 3rem; --animate-y: -3rem" oneWay>
+      <h2 class="mb-6 text-5xl font-bold font-title animate">¿Quiénes somos?</h2>
       <p class="mb-6 text-2xl font-light md:text-justify font-title">
       Somos una comunidad de profesionales creativos que trabajamos bajo el concepto de ecosistema y te invitamos a aprender y emprender junto a nosotros de manera ágil, divertida, innovadora y con impacto.
       </p>
@@ -189,7 +232,7 @@
   </div>
   <Wave color="#000" time="15s"/>
   <V bind:intersecting={$inZone}>
-    <div class="min-h-screen text-white bg-black">
+    <div class="text-white bg-black">
       <V class="py-32 content animate" oneWay style="--animate-x: -2rem">
         <h2 class="mb-6 text-5xl font-bold font-title">El Manifiesto YES Campus</h2>
         <p class="mt-12 mb-6 text-2xl italic font-light md:text-justify font-title">
@@ -214,7 +257,7 @@
     <div class="w-full mb-6 md:w-1/2">
       <h2 class="text-2xl font-bold font-title">Testimonios</h2>
     </div>
-    <div class="w-full">
+    <div class="w-full animate">
       <Testimonios image={false} padded={false} />
     </div>
   </V>
@@ -231,7 +274,7 @@
       </p>
     </V>
     <V class="flex mt-32 mb-16 animate" oneWay style="--animate-s: 0.9">
-      <div class="flex flex-col w-full m-auto md:w-4/10 font-title">
+      <div class="flex flex-col w-full m-auto md:w-4/10 xxl:w-3/10 font-title">
         <h2 class="mb-6 text-2xl font-bold font-title">Formulario de contacto</h2>
         <div class="input-label">Nombre y apellido</div>
         <input type="text" class="mb-6 input" placeholder="Ej. Maria Rondón">
