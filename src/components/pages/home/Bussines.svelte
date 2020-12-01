@@ -41,10 +41,10 @@
       <div class="flex flex-col w-full animate2" class:intersecting>
         <h2 class="mb-6 text-4xl font-extrabold leading-none uppercase">Yes Campus<br>for Business</h2>
         <p>
-        Creamos soluciones empresariales a través del desarrollo de
-        competencias tanto del talento humano como de la
-        organización. Generamos programas de carrera a la medida en
-        sintonía con la visión de desarrollo de la empresa y sus
+        Creamos soluciones empresariales a través del desarrollo de competencias
+        tanto del talento humano como de la organización. Generamos programas de
+        carrera a la medida, en sintonía con la visión de desarrollo de la empresa
+        y sus desafíos.
         </p>
 
         <a href="/business" class="mt-6 mr-auto font-light btn-fill">Descúbrelo</a>

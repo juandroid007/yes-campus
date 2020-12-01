@@ -1,3 +1,7 @@
+<script>
+  import V from '../../IntersectingViewport.svelte'
+</script>
+
 <style>
   .media {
     object-fit: cover;
@@ -5,7 +9,7 @@
 </style>
 
 <div class="flex flex-col w-full py-12 overflow-hidden text-lg font-light text-white font-title">
-  <div class="flex w-full">
+  <V class="flex w-full animate" oneWay style="--animate-time: 1s">
     <div class="flex flex-col w-9/10 lg:w-1/2">
       <img src="https://source.unsplash.com/random/600x480" alt="" class="mb-12 media rounded-tr-3xl rounded-br-3xl">
       <div class="ml-6 md:ml-12">
@@ -19,9 +23,9 @@
         </p>
       </div>
     </div>
-  </div>
+  </V>
   <div class="flex flex-wrap my-24 lg:my-24 lg:w-9/10 lg:mx-auto lg:-mt-36">
-    <div class="flex flex-col ml-auto w-9/10 lg:w-1/2 lg:ml-0 lg:pr-16 lg:mt-96">
+    <V class="flex flex-col ml-auto w-9/10 lg:w-1/2 lg:ml-0 lg:pr-16 lg:mt-96 animate" oneWay style="--animate-time: 1s">
       <img src="https://source.unsplash.com/random/480x600" alt="" class="mb-12 media rounded-tl-3xl rounded-bl-3xl lg:rounded-3xl">
       <div class="mr-6 lg:mr-0">
         <p class="text-2xl font-bold leading-none md:text-3xl font-title">
@@ -33,9 +37,9 @@
         que impulsan la conexión como comunidad
         </p>
       </div>
-    </div>
+    </V>
 
-    <div class="flex flex-col mt-24 lg:mr-0 lg:ml-auto w-9/10 lg:w-1/2 lg:ml-0 lg:pl-16 lg:mt-0">
+    <V class="flex flex-col mt-24 lg:mr-0 lg:ml-auto w-9/10 lg:w-1/2 lg:ml-0 lg:pl-16 lg:mt-0 animate" oneWay style="--animate-time: 1s">
       <img src="https://source.unsplash.com/random/480x600" alt="" class="mb-12 media rounded-tr-3xl rounded-br-3xl lg:rounded-3xl">
       <div class="ml-6 lg:ml-0">
         <p class="text-2xl font-bold leading-none md:text-3xl font-title">
@@ -46,10 +50,10 @@
         disparar la creatividad y la innovación en tiempo real
         </p>
       </div>
-    </div>
+    </V>
   </div>
 
-  <div class="flex justify-end w-full lg:-mt-60">
+  <V class="flex justify-end w-full lg:-mt-60 animate" oneWay style="--animate-time: 1s">
     <div class="flex flex-col w-9/10 lg:w-1/2">
       <img src="https://source.unsplash.com/random/600x480" alt="" class="w-full mb-12 ml-auto rounded-tl-3xl rounded-bl-3xl">
       <div class="mr-6 lg:mr-12">
@@ -62,5 +66,5 @@
         </p>
       </div>
     </div>
-  </div>
+  </V>
 </div>
