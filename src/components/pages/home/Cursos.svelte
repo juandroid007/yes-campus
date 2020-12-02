@@ -33,10 +33,6 @@
     return promises
   }
 
-  $: async () => {
-    console.log(await getCursos())
-  }
-
   let cursos = new Promise(() => {})
 
   $: if (intersecting) {
