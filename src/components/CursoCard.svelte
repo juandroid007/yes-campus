@@ -6,6 +6,9 @@
   export let title
   export let price
   export let link
+  export let modulos
+  export let currency
+  export let instructor
 </script>
 
 <div
@@ -13,14 +16,20 @@
 >
   <img src={thumbnail} alt={title} class="object-cover w-full rounded-tl-2xl rounded-tr-2xl">
   <div class="flex flex-col w-full p-4">
-    <h2 title={title} class="h-32 text-2xl font-bold leading-none text-gray-700 dark:text-gray-500 font-title">{title}</h2>
+    <h2 title={title} class="h-24 text-2xl font-bold leading-none text-gray-700 dark:text-gray-500 font-title">{title}</h2>
+    <p class="flex items-center text-xl text-gray-700 dark:text-gray-500 font-title">
+      {modulos} {modulos > 1 ? 'módulos' : 'módulo'}
+    </p>
     <p class="flex items-center text-xl text-gray-700 dark:text-gray-500 font-title">
     <span class="mr-2 text-yes-blue-500 i mdi:cash"></span>
     {#if price == 0}
       <span>Gratis</span>
     {:else}
-      <span>${price}</span>
+      <span>{currency} {price}</span>
     {/if}
+    </p>
+    <p class="flex items-center mt-6 text-base text-gray-700 dark:text-gray-500 font-title">
+      Por {instructor}
     </p>
     <div class="flex mt-2 -mx-2 text-white">
       <a

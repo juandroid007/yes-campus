@@ -33,6 +33,10 @@
     return promises
   }
 
+  $: async () => {
+    console.log(await getCursos())
+  }
+
   let cursos = new Promise(() => {})
 
   $: if (intersecting) {
@@ -56,13 +60,22 @@
       {/each}
     </div>
   {:then cursos}
+    {@debug cursos}
     <div class="flex flex-wrap pt-12 pb-6 -m-4">
       {#each cursos as c, i}
         <div
           class="w-full p-4 lg:w-1/4 sm:w-1/2"
           in:fly={{y: -20, duration: 800, delay: 800 + ( 300 + i * 100 )}}
           >
-          <CursoCard title={c.title} thumbnail={c.cover.large} price={c.price} link={c.url} />
+          <CursoCard
+            title={c.title}
+            instructor={`${c.instructors[0].name} ${c.instructors[0].last_name}`}
+            thumbnail={c.cover.large}
+            currency={c.currency}
+            price={c.price}
+            link={c.url}
+            modulos={c.chapters.length}
+          />
         </div>
       {/each}
     </div>
