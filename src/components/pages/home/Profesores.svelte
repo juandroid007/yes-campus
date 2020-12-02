@@ -77,7 +77,6 @@
                 </div>
                 <p class="mt-6 text-base font-bold leading-none font-title">{p.nombre}</p>
                 <p class="mt-2 text-sm font-light leading-none font-title">{p.ocupacion}</p>
-                {@debug p}
               </div>
             </li>
           {/each}

@@ -69,7 +69,7 @@ module.exports = {
           ...defaultTheme.fontFamily.sans,
         ],
         sans: [
-          'Ubuntu',
+          'Oxygen',
           ...defaultTheme.fontFamily.sans,
         ],
         mono: [

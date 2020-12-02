@@ -8,6 +8,7 @@
   import CuartaCapa from '../components/pages/home/Capa4'
   import SextaCapa from '../components/pages/home/Capa6.svelte'
   import ZonaOscura, { inZoneMask } from '../components/pages/home/ZonaOscura.svelte'
+  import Cursos from '../components/pages/home/Cursos.svelte'
 
   import { height } from '../components/navigation/Navbar.svelte'
 
@@ -51,5 +52,7 @@
 
   <div style="z-index: 50">
     <ZonaOscura outOffset={outOffset?.offsetTop} />
+
+    <Cursos/>
   </div>
 </div>
