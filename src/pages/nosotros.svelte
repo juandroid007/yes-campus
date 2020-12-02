@@ -157,30 +157,47 @@
       <div class="absolute bottom-0 w-full h-2/10 bg-gradient-to-t from-white dark:from-yes-gray-900 to-transparent"></div>
       <PC class="relative w-full h-full overflow-hidden -z-10" let:offset>
         <P
-          class="absolute w-64 mt-16 ml-6 overflow-hidden bg-gray-500 shadow-xl h-80 rounded-xl"
+          class="absolute ml-6 overflow-hidden bg-gray-500 shadow-xl mt-28 w-52 h-80 rounded-xl"
           offset={offset}
+          scaleFactor={6}
         >
           <PC let:offset class="w-full h-full">
-            <P class="w-full" offset={offset} motion={false} style="height: 130%" scaleFactor={10}>
-              <div class="w-full h-full bg-top bg-cover" style="background-image: url(/images/uploads/juan-camilo.webp)">
+            <P class="w-full" offset={offset} motion={false} style="height: 130%" scaleFactor={8}>
+              <div class="w-full h-full bg-cover" style='background-image: url("/images/1_quienes somos.png")'>
               </div>
             </P>
           </PC>
         <!--img src="/images/uploads/juan-camilo.webp" alt="" class="object-cover object-top w-full h-full"-->
         </P>
         <P
-          class="absolute bottom-0 right-0 w-64 mb-16 mr-12 overflow-hidden bg-gray-500 shadow-xl h-80 rounded-xl"
+          class="absolute right-0 mt-16 mr-6 overflow-hidden bg-gray-500 shadow-xl w-52 h-80 rounded-xl"
           offset={offset}
-          negative
+          scaleFactor={3}
         >
           <PC let:offset class="w-full h-full">
-            <P class="w-full" offset={offset} motion={false} style="height: 130%" scaleFactor={10}>
-              <div class="w-full h-full bg-right-top bg-cover" style="background-image: url(/images/desarrollo.jpg)">
+            <P class="w-full" offset={offset} motion={false} style="height: 130%" scaleFactor={7}>
+              <div class="w-full h-full bg-cover" style='background-image: url("/images/2_quienes somos.png")'>
+              </div>
+            </P>
+          </PC>
+        <!--img src="/images/uploads/juan-camilo.webp" alt="" class="object-cover object-top w-full h-full"-->
+        </P>
+        <div class="absolute bottom-0 mb-16 mr-12 w-52 left-2/4 transform -translate-x-1/2">
+        <P
+          class="overflow-hidden bg-gray-500 shadow-xl w-52 h-80 rounded-xl"
+          offset={offset}
+          negative
+          scaleFactor={3}
+        >
+          <PC let:offset class="w-full h-full">
+            <P class="w-full" offset={offset} motion={false} style="height: 130%" scaleFactor={7}>
+              <div class="w-full h-full bg-cover" style='background-image: url("/images/3_quienes somos.png")'>
               </div>
             </P>
           </PC>
         <!--img src="/images/desarrollo.jpg" alt="" class="object-cover object-right-top w-full h-full"-->
         </P>
+        </div>
       </PC>
     </V>
     <V class="quienes-somos lg:pl-6 animate" style="--animate-x: 3rem; --animate-y: -3rem" oneWay>
