@@ -56,7 +56,6 @@
       {/each}
     </div>
   {:then cursos}
-    {@debug cursos}
     <div class="flex flex-wrap pt-12 pb-6 -m-4">
       {#each cursos as c, i}
         <div
