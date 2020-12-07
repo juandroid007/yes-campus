@@ -21,7 +21,8 @@
       <div
         in:scale={{ duration: 200, start: 0.95 }}
         out:scale={{ duration: 75, start: 0.95 }}
-        class="absolute right-0 w-56 py-2 -mt-2 bg-white border shadow-md rounded-xl origin-top-right dark:bg-yes-gray-800 dark:border-yes-gray-900"
+        style="min-width: 13rem"
+        class="absolute right-0 flex flex-col py-2 -mt-2 bg-white border shadow-md rounded-xl origin-top-right dark:bg-yes-gray-800 dark:border-yes-gray-900"
       >
         {#each links as l}
           <a

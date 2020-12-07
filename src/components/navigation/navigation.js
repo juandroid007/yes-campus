@@ -2,8 +2,8 @@ import { categorias } from '../pages/home/Categoria.svelte'
 
 export default [
   {
-    titulo: 'Explora',
-    alt: 'Al máximo',
+    titulo: 'Cursos',
+    alt: 'Categorías de nuestros cursos',
     childrens: [
       ...categorias,
       {
@@ -13,30 +13,70 @@ export default [
     ],
   },
   {
+    titulo: 'Servicios',
+    alt: '¿Qué ofrecemos?',
+    childrens: [
+      {
+        titulo: 'Asesorías',
+        href: '/asesorias',
+      },
+      {
+        titulo: 'Mentorías',
+        href: '/mentorias',
+      },
+      {
+        titulo: 'Financiamientos',
+        href: '/financiamientos',
+      },
+      {
+        titulo: 'Diseño de proyectos',
+        href: '/disenos-proyectos',
+      },
+    ],
+  },
+  {
+    titulo: 'Programas',
+    alt: 'Nuestros programas',
+    childrens: [
+      {
+        titulo: 'Young Entrepreneur',
+        href: '/young-entrepreneur',
+      },
+      {
+        titulo: 'Young Entrepreneur Full Inclusion',
+        href: '/full-inclusion',
+      },
+      {
+        titulo: 'Young Leaders',
+        href: '/leaders',
+      },
+    ],
+  },
+  {
     titulo: 'Comunidad',
     alt: 'Que impulsa',
     childrens: [
       {
-        titulo: 'YES Campus for Business',
-        href: '/business',
+        titulo: 'YES Talks',
+        href: '/talks',
       },
       {
-        titulo: 'Historias',
+        titulo: 'Comunidad YES',
         href: '/historias',
       },
       {
-        titulo: 'Membresías',
-        href: '/membresías',
+        titulo: 'Aliados',
+        href: '/aliados',
       },
       {
         titulo: 'Blog',
         href: '/blog',
       },
+      {
+        titulo: 'Nosotros',
+        alt: '¿Quiénes somos?',
+        href: '/nosotros',
+      },
     ],
   },
-  {
-    titulo: 'Nosotros',
-    alt: '¿Quiénes somos?',
-    href: '/nosotros',
-  }
 ]

@@ -51,7 +51,7 @@
           class="w-full p-4 lg:w-1/4 sm:w-1/2"
           in:fly={{y: -20, duration: 800, delay: 300 + i * 100}}
           >
-          <CursoCardBones />
+          <CursoCardBones delay={100 * i} />
         </div>
       {/each}
     </div>
