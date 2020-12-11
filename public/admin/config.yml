@@ -2,8 +2,10 @@ backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 
-media_folder: "public/images/uploads" # Media files will be stored in the repo under images/uploads
+media_folder: "/public/images/uploads" # Media files will be stored in the repo under images/uploads
 public_folder: "uploads"
+publish_mode: editorial_workflow
+local_backend: true
 
 slug:
   encoding: "ascii"
@@ -11,8 +13,29 @@ slug:
   sanitize_replacement: "_"
 
 collections:
+  - name: "categorias" # Used in routes, e.g., /admin/collections/blog
+    label: "Categorías" # Used in the UI
+    editor:
+      preview: false
+    folder: "src/content/categorias" # The path to the folder where the documents are stored
+    identifier_field: "titulo"
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    format: "json"
+    sortable_fields: ["order", "titulo"] # Default is title:asc
+    media_folder: "/public/images/uploads/categorias" # Media files will be stored in the repo under images/uploads
+    public_folder: "uploads/categorias"
+    fields: # The fields for each document, usually in front matter
+      - {label: "Nombre", name: "titulo", widget: "string"}
+      - {label: "Orden", name: "order", widget: "number"}
+      - {label: "Color (HEX)", name: "color", widget: "string", default: "#00a1e4"}
+      - {label: "Url", name: "url", widget: "string", required: false}
+      - {label: "Imagen", name: "img", widget: "image"}
+
   - name: "profesores" # Used in routes, e.g., /admin/collections/blog
     label: "Profesores" # Used in the UI
+    editor:
+      preview: false
     folder: "src/content/profesores" # The path to the folder where the documents are stored
     identifier_field: "nombre"
     create: true # Allow users to create new documents in this collection
@@ -25,6 +48,8 @@ collections:
 
   - name: "testimonios" # Used in routes, e.g., /admin/collections/blog
     label: "Testimonios" # Used in the UI
+    editor:
+      preview: false
     folder: "src/content/testimonios" # The path to the folder where the documents are stored
     identifier_field: "autor"
     create: true # Allow users to create new documents in this collection

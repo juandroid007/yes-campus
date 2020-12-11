@@ -1,5 +1,5 @@
 <script context="module">
-  export const categorias = [
+  export const categoriass = [
     {
       waveColor: '#fddc63',
       img: 'creatividad',
@@ -41,11 +41,16 @@
       titulo: 'Bienestar',
     },
   ]
+
+  import { getCollection } from '../../../collections'
+
+  export const categorias = getCollection('categorias', { field: 'order', order: 'cresc'}).elements
 </script>
 
 <script>
   export let c
   import { hoverable } from '../../Cursor.svelte'
+  import Img from '../../Image.svelte'
 
   export let hover = true
 
@@ -163,7 +168,7 @@
   }
 </style>
 
-<div use:hovering={{primary: true, text: 'Ver más', color: c.waveColor}} class="m-auto categoria" style="--wave-color: {c.waveColor}; --underline-color: {hexToRGB(c.waveColor, 0.4)}">
+<div use:hovering={{primary: true, text: 'Ver más', color: c.color}} class="m-auto categoria" style="--wave-color: {c.color}; --underline-color: {hexToRGB(c.color, 0.4)}">
   <div class="img-wrapper">
     <div class="wave">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 166.12 135.01">
@@ -182,7 +187,8 @@
       </svg>
     </div>
     <div class="img-box">
-      <img src="/images/categorias/{c.img}.jpg" alt={c.titulo} class="img">
+      <!--img src="/images/categorias/{c.img}.jpg" alt={c.titulo} class="img"-->
+      <Img src={c.img} alt={c.titulo} class="img"/>
     </div>
   </div>
   <div class="w-64 mt-2 mr-2 lg:h-24">

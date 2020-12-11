@@ -9,6 +9,10 @@
   },
   "collections": [
     {
+      "name": "categorias",
+      "path": "src/content/categorias"
+    },
+    {
       "name": "testimonios",
       "path": "src/content/testimonios"
     },
