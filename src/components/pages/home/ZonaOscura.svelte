@@ -82,7 +82,7 @@
             }) : null
           }
         >
-          <Profesores/>
+          <Bussines/>
         </Viewport>
         <div class="z-10">
           <Wave color="#000" time="12s"/>
@@ -98,7 +98,8 @@
   </div>
 </Viewport>
 
+<Profesores/>
+
 <Viewport class="animate" once style="--animate-x: -3rem; --animate-y: -3rem; --animate-r: -3deg; --animate-s: 0.9">
   <Testimonio/>
 </Viewport>
-<Bussines/>

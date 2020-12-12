@@ -50,6 +50,15 @@
   .glide__bullet {
     width: 12px;
     height: 12px;
+    background-color: rgba(96, 95, 95, 0.25);
+  }
+  .glide__bullet:hover, .glide__bullet:focus {
+    border: 2px solid #605F5F;
+    background-color: rgba(96, 95, 95, 0.25);
+  }
+
+  :global(.profesores-slider .glide__bullet--active) {
+    background-color: #605F5F;
   }
 
   img {
@@ -57,8 +66,8 @@
   }
 </style>
 
-<div class="z-10 flex flex-col w-full h-full text-white content-lg">
-  <h2 class="mb-12 text-4xl font-bold leading-none md:text-5xl font-title">Aprende con profesionales<br>disruptivos y de alto impacto</h2>
+<div class="z-10 flex flex-col w-full h-full content-lg profesores-slider">
+  <h2 class="mb-12 font-bold leading-none t-h1 font-title">Aprende con profesionales<br>disruptivos y de alto impacto</h2>
   <V class="my-auto" bind:intersecting on:top={() => {
     glide.update({
       autoplay: 2000,
@@ -71,12 +80,12 @@
             <li class="glide__slide">
               <div class="mx-auto w-60">
                 <div
-                  class="flex w-full overflow-hidden bg-gray-700 shadow-2xl h-80 rounded-2xl"
+                  class="w-full overflow-hidden bg-gray-700 shadow-lg h-80 rounded-2xl"
                 >
                 <img src="/images/{p.thumbnail}" alt={p.nombre} class="object-cover w-full h-full">
                 </div>
-                <p class="mt-6 text-base font-bold leading-none font-title">{p.nombre}</p>
-                <p class="mt-2 text-sm font-light leading-none font-title">{p.ocupacion}</p>
+                <p class="mt-6 leading-none t-h3 font-title">{p.nombre}</p>
+                <p class="mt-2 font-light leading-none t-p font-title">{p.ocupacion}</p>
               </div>
             </li>
           {/each}

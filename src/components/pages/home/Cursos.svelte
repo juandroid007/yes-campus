@@ -41,7 +41,7 @@
 </script>
 
 <V class="pt-16 content-lg" once bind:intersecting>
-  <h2 class="text-4xl font-bold lg:text-5xl">Mira nuestros cursos</h2>
+  <h2 class="font-bold t-h1">Mira nuestros cursos</h2>
   {#await cursos}
     <div class="flex flex-wrap pt-12 pb-6 -m-4"
       in:fly={{y: -20, duration: 800}}

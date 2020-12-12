@@ -103,20 +103,20 @@
   </PC>
   <V class="flex flex-col py-16 mt-24 md:flex-row content animate" style="--animate-x: -3rem" oneWay>
     <div class="w-full mb-6 md:w-1/2">
-    <h2 class="text-4xl font-bold animate md:text-4xl font-title">Nuestra visión</h2>
+    <h2 class="t-h3 animate font-title">Nuestra visión</h2>
     </div>
     <div class="w-full">
-      <p class="text-xl font-light md:text-2xl font-title md:ml-12">
+      <p class="font-light t-p font-title md:text-justify">
       Ser reconocidos como la red de aprendizaje e innovación para emprendendedores y líderes latinoamericanos de alto impacto.
       </p>
     </div>
   </V>
   <V class="flex flex-col py-16 md:flex-row-reverse content animate" style="--animate-x: 3rem" oneWay>
     <div class="w-full mb-6 md:w-1/2">
-      <h2 class="text-4xl font-bold md:text-4xl font-title md:text-right animate">Nuestra misión</h2>
+      <h2 class="t-h3 md:text-right animate">Nuestra misión</h2>
     </div>
     <div class="w-full">
-      <p class="text-xl font-light md:text-2xl font-title md:mr-12">
+      <p class="font-light t-p md:text-justify">
       Ofrecer espacios de aprendizaje, networking y negocios para el fortalecimiento de competencias en emprendimiento, liderazgo e innovación al servicio de personas y organizaciones con deseos de impacto en el logro de sus propósitos y el desarrollo sostenible.
       </p>
     </div>
@@ -201,11 +201,11 @@
       </PC>
     </V>
     <V class="quienes-somos lg:pl-6 animate" style="--animate-x: 3rem; --animate-y: -3rem" oneWay>
-      <h2 class="mb-6 text-5xl font-bold font-title animate">¿Quiénes somos?</h2>
-      <p class="mb-6 text-2xl font-light md:text-justify font-title">
+      <h2 class="mb-6 t-h2 animate">¿Quiénes somos?</h2>
+      <p class="mb-6 font-light t-p md:text-justify">
       Somos una comunidad de profesionales creativos que trabajamos bajo el concepto de ecosistema y te invitamos a aprender y emprender junto a nosotros de manera ágil, divertida, innovadora y con impacto.
       </p>
-      <h3 class="text-lg italic font-light md:text-right font-title">
+      <h3 class="text-sm italic font-light md:text-right md:pl-16">
         Aprendizaje Acelerado para personas y organizaciones emprendedoras
       </h3>
     </V>
@@ -213,66 +213,66 @@
 
   <div class="pb-16 content">
     <V oneWay style="--animate-y: -2rem">
-      <h2 class="mb-6 text-4xl font-bold md:text-center font-title animate">
+      <h2 class="mb-6 t-h2 md:text-center font-title animate">
         Apostamos al trabajo colaborativo<br>y la búsqueda del bien común
       </h2>
     </V>
     <div class="flex flex-wrap py-16 -m-6 valores">
       <V class="p-6 md:w-1/3 animate" style="--animate-x: -2rem" oneWay>
         <img src="/images/nosotros/innovacion.svg" class="mb-6 w-7/10" alt="">
-        <h2 class="mb-6 text-2xl font-bold font-title">
+        <h2 class="mb-4 t-h3">
           Innovación
         </h2>
-        <p class="text-2xl font-light font-title">
+        <p class="font-light t-p">
         Estimulamos la mejora continua y agregamos valor
         </p>
       </V>
       <V class="self-center p-6 md:w-1/3 justify-self-center animate" style="--animate-y: -2rem" oneWay>
         <img src="/images/nosotros/agilidad.svg" class="mb-6 w-7/10" alt="">
-        <h2 class="mb-6 text-2xl font-bold font-title">
+        <h2 class="mb-4 t-h3">
           Agilidad
         </h2>
-        <p class="text-2xl font-light font-title">
+        <p class="font-light t-p">
         Buscamos Soluciones agíles a problemas complejos
         </p>
       </V>
       <V class="self-end p-6 md:w-1/3 justify-self-end animate" style="--animate-x: 2rem" oneWay>
         <img src="/images/nosotros/multiculturalidad.svg" class="mb-6 w-7/10" alt="">
-        <h2 class="mb-6 text-2xl font-bold font-title">
+        <h2 class="mb-4 t-h3">
           Multiculturalidad
         </h2>
-        <p class="text-2xl font-light font-title">
+        <p class="font-light t-p">
         Nos nutrimos de la diversidad y  co creamos de manera disruptiva y divertida
         </p>
       </V>
     </div>
   </div>
-  <Wave color="#000" time="15s"/>
+  <Wave color="#0273E3" time="10s"/>
   <V bind:intersecting={$inZone}>
-    <div class="text-white bg-black">
-      <V class="py-32 content animate" oneWay style="--animate-x: -2rem">
-        <h2 class="mb-6 text-5xl font-bold font-title">El Manifiesto YES Campus</h2>
-        <p class="mt-12 mb-6 text-2xl italic font-light md:text-justify font-title">
+    <div class="text-white bg-yes-blue-500">
+      <V class="py-12 italic font-light content lg:w-5/10 animate t-p md:text-justify" oneWay style="--animate-x: -2rem">
+        <h2 class="mb-6 not-italic font-bold md:text-left t-h1 font-title">El Manifiesto YES Campus</h2>
+        <p class="mt-12 mb-4">
         &ldquo;Pertenezco a una comunidad donde me reconozco y me reconocen, valoramos el compartir ameno y entretenido, donde la creatividad nos lleva a desafíos individuales y colectivos para lograr un mundo más humano, participativo e igualitario.
         </p>
-        <p class="mb-6 text-2xl italic font-light md:text-justify font-title">
+        <p class="mb-4">
         Compartimos el espíritu emprendedor, somos agentes de cambio que sirven desde la integridad, el respeto y la pluralidad, a personas, organizaciones y sociedades que buscan alcanzar su propósito, bienestar y promover el desarrollo sostenible.
         </p>
-        <p class="mb-6 text-2xl italic font-light md:text-justify font-title">
+        <p class="mb-4">
         Recreamos el futuro desde nuestras acciones en el presente, creemos en el poder de la co-creación y las relaciones que agregan valor.&rdquo;
         </p>
-        <h3 class="mt-12 text-xl font-bold text-center uppercase font-title">
+        <h3 class="mt-12 not-italic text-center uppercase t-h3">
           Innovación para emprendedores
         </h3>
       </V>
     </div>
     <div class="rotate-180 transform">
-      <Wave color="#000" time="15s"/>
+      <Wave color="#0273E3" time="15s"/>
     </div>
   </V>
   <V class="flex flex-col py-16 md:flex-row content animate" oneWay style="--animate-x: 3rem; --animate-y: -3rem;">
     <div class="w-full mb-6 md:w-1/2">
-      <h2 class="text-2xl font-bold font-title">Testimonios</h2>
+      <h2 class="t-h3">Testimonios</h2>
     </div>
     <div class="w-full animate">
       <Testimonios image={false} padded={false} />
@@ -280,17 +280,17 @@
   </V>
   <div class="py-16 content">
     <V class="animate" oneWay style="--animate-y: -2rem; --animate-x: -3rem">
-      <h2 class="mb-24 text-4xl font-bold md:text-center font-title">
+      <h2 class="mb-12 font-bold t-h2 md:text-center font-title">
         Súmate a nosotros
       </h2>
-      <p class="mb-6 text-2xl font-light md:text-justify font-title">
+      <p class="mb-6 font-light t-p md:text-justify font-title">
       Sé parte del ecosistema Yes Campus ¡Trabaja con nosotros!
       </p>
-      <p class="mb-6 text-2xl font-light md:text-justify font-title">
+      <p class="font-light t-p md:text-justify font-title">
       Estamos en constante crecimiento y todos los días trabajamos para ofrecer la mejor experiencia de aprendizaje. ¡Únete a nuestro equipo y transformaremos la manera de aprender y emprender!
       </p>
     </V>
-    <V class="flex mt-32 mb-16 animate" oneWay style="--animate-s: 0.9">
+    <V class="flex mt-16 mb-16 animate" oneWay style="--animate-s: 0.9">
       <div class="flex flex-col w-full m-auto md:w-4/10 xxl:w-3/10 font-title">
         <h2 class="mb-6 text-2xl font-bold font-title">Formulario de contacto</h2>
         <div class="input-label">Nombre y apellido</div>

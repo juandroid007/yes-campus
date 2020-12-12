@@ -192,6 +192,6 @@
     </div>
   </div>
   <div class="w-64 mt-2 mr-2 lg:h-24">
-    <p class="text-2xl font-bold leading-tight font-title"><span class="title">{c.titulo}</span></p>
+    <p class="font-bold leading-tight t-h3 font-title"><span class="title">{c.titulo}</span></p>
   </div>
 </div>

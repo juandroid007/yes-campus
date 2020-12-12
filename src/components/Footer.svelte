@@ -36,9 +36,9 @@
       </div>
     {/each}
   </div>
-  <div class="flex justify-between mt-6 text-gray-500 dark:text-gray-400 content" style="mix-blend-mode: difference">
-    <p class="text-sm">Desarrollado por <strong>Marketing Shakers</strong> y <strong>Bisual Media</strong></p>
-    <p class="text-sm"><strong>YES CAMPUS</strong>© 2020. Todos los derechos reservados</p>
+  <div class="flex flex-wrap justify-between mt-6 text-gray-500 dark:text-gray-400 content" style="mix-blend-mode: difference">
+    <p class="w-full pb-6 text-sm md:pb-0 md:w-auto">Desarrollado por <strong>Marketing Shakers</strong> y <strong>Bisual Media</strong></p>
+    <p class="w-full text-sm md:w-auto"><strong>YES CAMPUS</strong>© 2020. Todos los derechos reservados</p>
   </div>
 </footer>
 

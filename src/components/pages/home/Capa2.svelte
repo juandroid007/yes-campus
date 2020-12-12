@@ -36,8 +36,8 @@
         >
           <div class="p-12 transform hover:-translate-y-4 duration-200 hover:scale-110">
             <img class="h-24 mb-4 mr-auto" src="/images/icons/{m.icon}.svg" alt="">
-            <h2 class="mb-6 text-3xl font-bold leading-none h-14 font-title">{@html m.titulo}</h2>
-            <p>{m.texto}</p>
+            <h2 class="h-8 mb-6 font-bold leading-none t-h3 font-title">{@html m.titulo}</h2>
+            <p class="t-p">{m.texto}</p>
           </div>
         </div>
       {/each}

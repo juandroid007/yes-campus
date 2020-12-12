@@ -73,19 +73,19 @@
         <ul class="glide__slides">
           {#each testimonios as t, i}
             <li class="glide__slide" class:py-12={image}>
-              <div class="flex flex-wrap-reverse items-center w-full mx-auto text-xl md:flex-wrap font-title" class:-m-12={image}>
-                <div class="w-full h-full { image ? 'p-12 lg:w-1/2' : '' }">
+              <div class="flex flex-wrap-reverse items-center w-full mx-auto md:flex-wrap font-title" class:-m-12={image}>
+                <div class="w-full h-full { image ? 'py-12 lg:px-12 lg:w-1/2' : '' }">
                   <blockquote class="flex flex-col w-full h-full">
-                    <p class="text-lg italic font-light">
+                    <p class="italic font-light t-p">
                     &ldquo;{t.cita}&rdquo;
                     </p>
-                    <cite class="mt-6 font-bold">
+                    <cite class="mt-6 font-bold t-p">
                     {t.autor}
                     </cite>
                   </blockquote>
                 </div>
                 {#if image}
-                  <div class="w-full px-12 lg:w-1/2">
+                  <div class="w-full lg:px-12 lg:w-1/2">
                     <PC let:offset class="w-full overflow-hidden bg-gray-500 shadow-xl md:my-12 h-96 rounded-3xl">
                       <P class="w-full" offset={offset} motion={false} style="height: 130%" scaleFactor={12}>
                         <Image src={t.imagen} alt={t.autor} class="object-cover w-full h-full"/>

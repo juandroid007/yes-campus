@@ -197,3 +197,23 @@ button {
 .dark .input:focus {
 	@apply border-white;
 }
+
+.t-p {
+	font-size:  1rem;
+}
+
+.t-h1, .t-h2, .t-h3 {
+	font-weight: bold;
+}
+
+.t-h1 {
+	font-size: 2.5rem;
+}
+
+.t-h2 {
+	font-size: 2rem;
+}
+
+.t-h3 {
+	font-size: 1.33rem;
+}
