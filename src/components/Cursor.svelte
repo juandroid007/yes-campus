@@ -7,7 +7,7 @@
     damping: 1,
   })
 
-  export const origSize = 30
+  export const origSize = 25
   export const origSize2 = origSize / 4
   export const size = spring(origSize, {
     stiffness: 0.12,

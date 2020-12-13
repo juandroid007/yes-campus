@@ -4,19 +4,20 @@
   import Slider from './CategoriasSlider.svelte'
 </script>
 
-<div class="my-12 overflow-hidden">
+<div class="my-12">
   <Viewport let:intersecting once={true}>
     <div class="flex content-lg">
       <h2
         class:observing={intersecting}
-        class="px-4 mb-12 font-bold leading-none leading-tight animation t-h1 font-title"
+        class="px-4 mb-12 font-bold leading-none leading-tight animate t-h1 font-title"
+        style="--animate-x: -1rem; --animate-y: -1rem"
         >Cursos y experiencias de aprendizaje <br>en las diferentes categorías</h2
       >
     </div>
   </Viewport>
   <Viewport let:intersecting once={true}>
     <div
-      class="flex w-full h-full xl:hidden"
+      class="flex w-full h-full overflow-hidden xl:hidden"
     >
       <Slider categorias={categorias} />
     </div>
@@ -46,13 +47,13 @@
 
   .animation:not(.observing) {
     opacity: 0;
-    transform: translateX(-5%);
+    transform: translateX(-2%);
   }
 
   @screen md {
     .animation:not(.observing) {
       opacity: 0;
-      transform: translateY(-10%) rotate(-5deg);
+      transform: translate(-1%, -5%) rotate(-3deg);
     }
   }
 </style>

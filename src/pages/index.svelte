@@ -2,6 +2,7 @@
   import svitsConfig from '../../svits.config'
   import { preferences } from '../stores/preferences'
   import { metatags } from '@roxi/routify'
+  import Servicios from '../components/pages/home/Servicios.svelte'
   import PrimeraCapa from '../components/pages/home/Capa1.svelte'
   import SegundaCapa from '../components/pages/home/Capa2.svelte'
   import TerceraCapa from '../components/pages/home/Capa3.svelte'
@@ -41,11 +42,12 @@
 
   <div class:opacity-0={$inZoneMask} class="duration-300">
     <PrimeraCapa/>
-    <SegundaCapa/>
+    <Servicios/>
     <TerceraCapa/>
 
     <div bind:this={outOffset} class="mb-16">
       <CuartaCapa/>
+      <SegundaCapa/>
     </div>
   </div>
 

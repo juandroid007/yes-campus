@@ -17,7 +17,7 @@
 
 <ParallaxContainer
   class="relative py-12 mt-6 overflow-hidden from-yes-orange-500 to-yes-orange-400 bg-gradient-to-b dark:to-yes-orange-700 dark:from-yes-orange-800"
-  style="bbackground: #FC643F; height: 65vh; border-top-left-radius: 3rem; border-radius: 3rem;"
+  style="background: linear-gradient(to bottom, #0033CC, #4372ff); height: 65vh; border-top-left-radius: 3rem; border-radius: 3rem;"
   let:offset
 >
   <Viewport let:intersecting class="absolute w-full h-full" once>
