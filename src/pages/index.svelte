@@ -46,8 +46,8 @@
     <TerceraCapa/>
 
     <div bind:this={outOffset} class="mb-16">
-      <CuartaCapa/>
       <SegundaCapa/>
+      <CuartaCapa/>
     </div>
   </div>
 
