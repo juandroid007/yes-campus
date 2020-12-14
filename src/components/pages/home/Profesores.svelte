@@ -35,7 +35,7 @@
 
   .animate:not(.intersecting) {
     opacity: 0;
-    transform: translateY(15%);
+    transform: translateY(5%);
   }
 
   .glide__bullets {

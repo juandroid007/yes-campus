@@ -25,17 +25,17 @@
   ]
 </script>
 
-<div class="my-12 overflow-hidden">
+<div class="flex my-12 overflow-hidden content-lg">
   <Viewport let:intersecting once={true}>
-    <div class="flex flex-wrap w-full m-auto lg:w-9/10">
+    <div class="flex flex-wrap w-full">
       {#each modulos as m, i}
         <div
           class="w-full sm:w-1/2 xl:w-1/4 animation"
           class:observing={intersecting}
           style="--delay: {i * 200}ms"
         >
-          <div class="p-12 transform hover:-translate-y-4 duration-200 hover:scale-110">
-            <img class="h-24 mb-4 mr-auto" src="/images/icons/{m.icon}.svg" alt="">
+          <div class="p-12 px-6 transform hover:-translate-y-4 duration-200 hover:scale-110">
+            <img class="mb-4 mr-auto w-6/10" src="/images/icons/{m.icon}.svg" alt="">
             <h2 class="h-8 mb-6 font-bold leading-none t-h3 font-title">{@html m.titulo}</h2>
             <p class="t-p">{m.texto}</p>
           </div>
@@ -59,7 +59,7 @@
   @screen md {
     .animation:not(.observing) {
       opacity: 0;
-      transform: translateY(-20%) scale(0.9, 0.9) rotate(5deg);
+      transform: translateY(-15%) scale(0.9, 0.9) rotate(5deg);
     }
   }
 </style>
