@@ -72,15 +72,17 @@
       {#if top && !sidebar}
         <div class="items-center hidden lg:flex" transition:fly|local={{ x: -50, duration: 400 }}>
         {#each navigation as n}
-          {#if n.childrens}
-            <Dropdown titulo={n.titulo} links={n.childrens} />
-          {:else}
-            <a
-              href={n.href}
-              use:$url
-              class="mx-4 nav-link"
-              class:selected-nav={$isActive(n.href)}>{n.titulo}</a
-            >
+          {#if n.header == undefined || n.header != false}
+            {#if n.childrens}
+              <Dropdown titulo={n.titulo} links={n.childrens} />
+            {:else}
+              <a
+                href={n.href}
+                use:$url
+                class="mx-4 nav-link"
+                class:selected-nav={$isActive(n.href)}>{n.titulo}</a
+              >
+            {/if}
           {/if}
         {/each}
         <div class="flex text-base">

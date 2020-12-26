@@ -36,6 +36,7 @@ export default [
   },
   {
     titulo: 'Programas',
+    header: false,
     alt: 'Nuestros programas',
     childrens: [
       {

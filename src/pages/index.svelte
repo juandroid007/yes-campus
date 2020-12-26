@@ -11,8 +11,6 @@
   import ZonaOscura, { inZoneMask } from '../components/pages/home/ZonaOscura.svelte'
   import Cursos from '../components/pages/home/Cursos.svelte'
 
-  import { height } from '../components/navigation/Navbar.svelte'
-
   import { fade } from 'svelte/transition'
 
   // import { getCollection } from '../collections'
@@ -34,7 +32,7 @@
   {#if $inZoneMask}
     <div
       class="fixed flex w-full h-screen darkMask"
-      style="margin-top: -{$height}px;"
+      style="margin-top: var(--navbarHeightNegative);"
       transition:fade|local={{duration: 400}}
     >
     </div>
