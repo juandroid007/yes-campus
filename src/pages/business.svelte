@@ -44,6 +44,17 @@
     'Ruta sustentable',
     'Financiamiento<br>e Inversión',
   ]
+
+  const inCompany = [
+    'Diagnóstico empresarial',
+    'Planificación estratégica y de negocio',
+    'Estudios y desarrollo de estrategias de Marketing',
+    'Gestión de procesos y desarrollo organizacional',
+    'Planes Financieros y de Invrsión',
+    'Asistencia Legal y Compliance',
+    'Branding y Rebranding',
+    'Creación de franquicias',
+  ]
 </script>
 
 <style>
@@ -151,10 +162,14 @@
       </div>
     </V>
     <PC class="relative overflow-hidden" let:offset scaleFactor={10}>
-      <P class="absolute w-full h-full" motion={false} offset={offset}>
-        <img src="/images/business/bg2.png" alt="" class="object-cover w-full" style="height: 120%">
+      <P
+        class="absolute w-full h-full bg-center bg-cover"
+        motion={false}
+        offset={offset}
+        style="background-image: url(/images/business/bg2.webp); height: 110%"
+      >
       </P>
-      <V class="z-20 flex flex-col py-12 pt-24 text-center content animate" oneWay style="--animate-s: 0.8">
+      <V class="z-20 flex flex-col py-16 pt-24 text-center content animate" oneWay style="--animate-s: 0.8">
         <p class="mb-6 transform t-h2 text-yes-blue-800">¿Qué abarca la formación?</p>
         <p class="mx-auto italic transform t-h1 text-yes-orange-500 lg:w-6/10">
         Diseño de programas,<br>certificaciones y sistemas de evaluación de competencias.
@@ -162,4 +177,31 @@
         <a href="" class="mx-auto mt-8 btn-primary">Empecemos</a>
       </V>
     </PC>
+
+    <div class="flex flex-col items-center py-16 -m-6 content-lg lg:flex-row">
+      <V class="w-full p-6 lg:w-1/3" oneWay>
+        <h2 class="mb-6 t-h2 animate" style="--animate-x: 3rem">Ruta sustentable</h2>
+        <p class="t-p animate" style="--animate-x: -3rem; transition-delay: 200ms">
+        Ponemos a tu disposición herramientas de evaluación para detectar las
+        áreas críticas de su negocio o empresa, complementando con <strong>asesorías y
+        mentorías personalizadas en:</strong>
+        </p>
+        <div class="mt-6 animate" style="--animate-x: -3rem; transition-delay: 400ms">
+          <a href="" class="btn-primary">Haz tu prueba gratis</a>
+        </div>
+      </V>
+      <V class="flex flex-wrap w-full p-6 -m-2 lg:w-1/3 lg:order-last" oneWay>
+        {#each inCompany as txt, i}
+          <div class="w-1/2 p-2 animate" style="transition-delay: {i * 100}ms; --animate-r-y: 64deg">
+            <img src="/images/business/Ico_RUTA_{i + 1}.svg" alt="" class="h-12 mx-auto">
+            <p class="mt-2 font-bold leading-none text-center">{@html txt}</p>
+          </div>
+        {/each}
+      </V>
+      <V class="w-full p-6 lg:w-1/3" oneWay>
+        <div class="relative overflow-hidden">
+          <img src="/images/business/ipad.webp" alt="" class="w-full animate" style="--animate-y: 100%; --animate-time: 1s">
+        </div>
+      </V>
+    </div>
 </div>
