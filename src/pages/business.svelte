@@ -8,6 +8,7 @@
   import Testimonios from '../components/pages/home/Testimonio.svelte'
   import PC from '../components/motion/ParallaxContainer.svelte'
   import P from '../components/motion/ParallaxObject.svelte'
+  import Tilt from '../components/Tilt.svelte'
   import { fly } from 'svelte/transition'
 
   metatags.title = 'YES Campus for Business | ' + svitsConfig.name
@@ -55,6 +56,22 @@
     'Branding y Rebranding',
     'Creación de franquicias',
   ]
+
+  const finInv = [
+    'Evaluación financiera',
+    'Desarrollo de proyectos',
+    'Preparación para la participación en rondas de Inversión',
+    'Protección legal y elaboración de documentación según el tipo de inversión demanda en rondas de inversión',
+  ]
+
+  const clientes = [
+    'agora',
+    'perla',
+    'frisur',
+    'faro',
+    'cevac',
+  ]
+
 </script>
 
 <style>
@@ -71,7 +88,7 @@
   }
 </style>
 <div class="w-full overflow-hidden">
-  <V class="relative w-full overflow-hidden seccion-1" once>
+  <V class="relative w-full overflow-hidden seccion-1">
     <div class="w-full lg:h-full lg:absolute">
       <div class="z-30 flex flex-wrap items-center h-full content">
         <div class="py-16 lg:w-1/2 animate" style="--animate-x: -3rem">
@@ -93,7 +110,20 @@
     >
   </V>
 
-  <div class="w-full h-32 my-6 bg-yes-blue-800"></div>
+    <div class="w-full my-6 bg-yes-blue-800">
+      <div class="py-12 content">
+        <V class="overflow-hidden" oneWay>
+          <h2 class="text-center text-white t-h2 animate" style="line-height: 1.5 !important; --animate-r: 3deg; --animate-y: 100%">Organizaciones que crecen con nosotros</h2>
+        </V>
+        <V class="flex flex-wrap items-center" oneWay>
+          {#each clientes as c, i}
+            <div class="flex w-full p-6 mt-2 animate sm:w-1/2 lg:w-1/5" style="transition-delay: {100 * i + 500}ms; --animate-r-y: -64deg">
+              <img src="/images/business/clientes/{c}.webp" alt="" class="w-auto m-auto" style="max-height: 6rem">
+            </div>
+          {/each}
+        </V>
+      </div>
+    </div>
 
   <V class="relative w-full min-h-screen overflow-hidden" oneWay>
     <div class="w-full lg:h-full lg:absolute">
@@ -157,7 +187,7 @@
           </p>
         </div>
         <div class="z-40 w-full mb-12 lg:w-1/2 -mt-36 lg:-mb-36 animate" style="--animate-x: 3rem">
-          <img src="/images/business/mac.png" alt="" class="w-full pointer-events-none select-none">
+          <img src="/images/business/mac.webp" alt="" class="w-full pointer-events-none select-none">
         </div>
       </div>
     </V>
@@ -202,6 +232,33 @@
         <div class="relative overflow-hidden">
           <img src="/images/business/ipad.webp" alt="" class="w-full animate" style="--animate-y: 100%; --animate-time: 1s">
         </div>
+      </V>
+    </div>
+    <div class="mt-12 content">
+      <div class="overflow-hidden">
+        <V style="--animate-y: 100%; --animate-r: 3deg" oneWay>
+          <div class="overflow-hidden">
+            <h2 class="sm:text-center animate text-yes-gray-400 t-h3">Financiamiento e Inversión</h2>
+          </div>
+          <div class="overflow-hidden">
+            <p class="mt-2 sm:text-center t-h2 text-yes-blue-500 animate" style="transition-delay: 100ms">
+            Te ayudamos a identificar oportunidades de<br>inversión y desarrollar proyectos financieros<br>para el acceso a capital
+            </p>
+          </div>
+        </V>
+      </div>
+      <V class="flex flex-wrap py-12 -mx-6" oneWay>
+        {#each finInv as t, i}
+          <div class="w-full p-6 animate sm:w-1/2 lg:w-1/4" style="transition-delay: {100 * i + 500}ms; --animate-y: 1rem">
+            <Tilt>
+              <img src="/images/business/fin_inv/{i + 1}.webp" alt="" class="w-48 mx-auto sm:w-full">
+              <p class="mt-4 font-bold text-center t-p">{t}</p>
+            </Tilt>
+          </div>
+        {/each}
+      </V>
+      <V class="flex w-full -mt-6 animate" oneWay style="--animate-s: 0.4">
+        <a href="" class="mx-auto text-center btn-primary">Empecemos</a>
       </V>
     </div>
 </div>
