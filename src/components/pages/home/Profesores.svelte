@@ -66,15 +66,15 @@
   }
 </style>
 
-<div class="z-10 flex flex-col w-full h-full content-lg profesores-slider">
+<div class="z-10 flex flex-col w-full h-full content-lg profesores-slider" id="mentores">
   <h2 class="mb-12 font-bold leading-none t-h1 font-title">Aprende con profesionales<br>disruptivos y de alto impacto</h2>
-  <V class="my-auto" bind:intersecting on:top={() => {
+  <V class="w-full my-auto" bind:intersecting oneWay on:top={() => {
     glide.update({
       autoplay: 2000,
     })
   }}>
     <div class="glide animate" use:mountGlide class:intersecting>
-      <div class="glide__track" data-glide-el="track" use:hoverable={{primary: true, text: 'Arrastra', color: '#0273E3'}}>
+      <div class="w-full glide__track" data-glide-el="track" use:hoverable={{primary: true, text: 'Arrastra', color: '#0273E3'}}>
         <ul class="glide__slides">
           {#each profesores as p, i}
             <li class="glide__slide">

@@ -4,7 +4,8 @@
 
   let _class = ''
   let _style = ''
-  export { _class as class, _style as style }
+  let _id = ''
+  export { _class as class, _style as style, _id as id }
 
   export let once = false
   export let oneWay = false
@@ -94,6 +95,7 @@
   class:intersecting-viewport={true}
   class:intersecting
   style="{_style}"
+  id="{_id}"
   bind:this={container}
 >
   <slot {intersecting}></slot>

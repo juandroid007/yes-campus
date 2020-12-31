@@ -86,7 +86,38 @@
       min-height: calc(100vh - var(--navbarHeight));
     }
   }
+
+  :global(.tarjetas) {
+    width: 100%;
+    height: 75vh;
+  }
+
+  :global(.mentores) {
+    width: 100%;
+  }
+
+  @screen lg {
+    :global(.tarjetas) {
+      width: 66.66%;
+    }
+
+    :global(.mentores) {
+      width: 33.33%;
+    }
+  }
+
+  @screen xxl {
+    :global(.tarjetas) {
+      width: 66.66%;
+      height: 60vh;
+    }
+
+    :global(.mentores) {
+      width: 33.33%;
+    }
+  }
 </style>
+
 <div class="w-full overflow-hidden">
   <V class="relative w-full overflow-hidden seccion-1">
     <div class="w-full lg:h-full lg:absolute">
@@ -97,7 +128,7 @@
           Incrementa las capacidades de tu equipo, obtén asistencia técnica presencial o remota sobre cómo consolidar tu empresa y acceder a financiamiento.
           </p>
           <div class="animate" style="--animate-x: -1rem; transition-delay: 200ms">
-            <a href="" class="btn-primary">Haz una consulta gratis</a>
+            <a href="#clientes" class="btn-primary">Haz una consulta gratis</a>
           </div>
         </div>
       </div>
@@ -110,22 +141,22 @@
     >
   </V>
 
-    <div class="w-full my-6 bg-yes-blue-800">
-      <div class="py-12 content">
-        <V class="overflow-hidden" oneWay>
-          <h2 class="text-center text-white t-h2 animate" style="line-height: 1.5 !important; --animate-r: 3deg; --animate-y: 100%">Organizaciones que crecen con nosotros</h2>
-        </V>
-        <V class="flex flex-wrap items-center" oneWay>
-          {#each clientes as c, i}
-            <div class="flex w-full p-6 mt-2 animate sm:w-1/2 lg:w-1/5" style="transition-delay: {100 * i + 500}ms; --animate-r-y: -64deg">
-              <img src="/images/business/clientes/{c}.webp" alt="" class="w-auto m-auto" style="max-height: 6rem">
-            </div>
-          {/each}
-        </V>
-      </div>
+  <div class="w-full my-6 bg-yes-blue-800" id="clientes">
+    <div class="py-12 content">
+      <V class="overflow-hidden" oneWay>
+        <h2 class="text-center text-white t-h2 animate" style="line-height: 1.5 !important; --animate-r: 3deg; --animate-y: 100%">Organizaciones que crecen con nosotros</h2>
+      </V>
+      <V class="flex flex-wrap items-center" oneWay>
+        {#each clientes as c, i}
+          <div class="flex w-full p-6 mt-2 animate sm:w-1/2 lg:w-1/5" style="transition-delay: {100 * i + 500}ms; --animate-r-y: -64deg">
+            <img src="/images/business/clientes/{c}.webp" alt="" class="w-auto m-auto" style="max-height: 6rem">
+          </div>
+        {/each}
+      </V>
     </div>
+  </div>
 
-  <V class="relative w-full min-h-screen overflow-hidden" oneWay>
+  <V class="relative w-full min-h-screen overflow-hidden" oneWay id="caracteristicas">
     <div class="w-full lg:h-full lg:absolute">
       <div class="z-30 flex flex-wrap items-center h-full content">
         <div class="py-16 lg:w-2/3 animate" style="--animate-x: -3rem; transition-delay: 200ms">
@@ -163,7 +194,7 @@
     </div>
   </V>
 
-    <div class="py-16 content">
+    <div class="py-16 content" id="servicios">
       <V class="w-full animate" style="--animate-r-y: 64deg; transition-delay: 200ms" oneWay>
         <div class="mb-2 text-center t-h1">¿Qué ofrecemos?</div>
         <div class="text-center t-h3" style="font-weight: normal">Servicios a la medida para resultados<br>más efectivos y eficientes</div>
@@ -171,14 +202,14 @@
       <V class="flex flex-col mt-16 -my-12 sm:flex-row sm:justify-between" oneWay>
         {#each servicios as s, i}
           <div class="py-12 md:w-1/3 animate" style="transition-delay: {100 * i + 400}ms; --animate-y: 1rem">
-            <img src="/images/business/Recurso {i + 1}.svg" alt="" class="mx-auto mb-4 w-6/10 md:w-auto md:h-5/10">
+            <img src="/images/business/servicios/{i + 1}.svg" alt="" class="mx-auto mb-4 w-6/10 md:w-auto md:h-5/10">
             <p class="text-center t-h3">{@html s}</p>
           </div>
         {/each}
       </V>
     </div>
 
-    <V class="py-16 mt-24 bg-yes-blue-800" oneWay>
+    <V class="py-16 mt-24 bg-yes-blue-800" oneWay id="formacion-in-company">
       <div class="flex flex-wrap-reverse items-center text-white content lg:flex-wrap">
         <div class="w-full lg:w-1/2 md:pr-12 animate" style="--animate-x: -3rem">
           <h2 class="mb-6 t-h1">Formación in Company</h2>
@@ -208,7 +239,7 @@
       </V>
     </PC>
 
-    <div class="flex flex-col items-center py-16 -m-6 content-lg lg:flex-row">
+    <div class="flex flex-col items-center py-16 -m-6 content-lg lg:flex-row" id="ruta-sustentable">
       <V class="w-full p-6 lg:w-1/3" oneWay>
         <h2 class="mb-6 t-h2 animate" style="--animate-x: 3rem">Ruta sustentable</h2>
         <p class="t-p animate" style="--animate-x: -3rem; transition-delay: 200ms">
@@ -234,14 +265,14 @@
         </div>
       </V>
     </div>
-    <div class="mt-12 content">
+    <div class="mt-12 content" id="financiamiento-e-inversion">
       <div class="overflow-hidden">
         <V style="--animate-y: 100%; --animate-r: 3deg" oneWay>
           <div class="overflow-hidden">
             <h2 class="sm:text-center animate text-yes-gray-400 t-h3">Financiamiento e Inversión</h2>
           </div>
           <div class="overflow-hidden">
-            <p class="mt-2 sm:text-center t-h2 text-yes-blue-500 animate" style="transition-delay: 100ms">
+            <p class="pb-2 mt-2 sm:text-center t-h2 text-yes-blue-500 animate" style="transition-delay: 100ms">
             Te ayudamos a identificar oportunidades de<br>inversión y desarrollar proyectos financieros<br>para el acceso a capital
             </p>
           </div>
@@ -261,4 +292,113 @@
         <a href="" class="mx-auto text-center btn-primary">Empecemos</a>
       </V>
     </div>
+
+  <div class="mt-12 bg-yes-blue-800">
+    <div class="content-lg">
+      <div class="flex flex-wrap items-center">
+        <V class="py-12 text-white mentores" oneWay>
+          <h2 class="mb-6 t-h2 animate" style="--animate-x: -3rem">Una red de mentores y especialistas de alto impacto</h2>
+          <p class="t-p animate" style="--animate-x: -3rem; transition-delay: 200ms">
+          Más de 30 mentores de prestigio que aportarán su experiencia para lograr el crecimiento que tu organización necesita.
+          </p>
+          <div class="mt-6 animate" style="--animate-x: -3rem; transition-delay: 400ms">
+            <a href="/#mentores" class="btn-primary">Ver todos</a>
+          </div>
+        </V>
+        <V class="relative hidden overflow-hidden sm:flex sm:pl-6 tarjetas" oneWay>
+          <div class="absolute z-20 w-full h-2/10 bg-gradient-to-b from-yes-blue-800 to-transparent"></div>
+          <div class="absolute bottom-0 z-20 w-full h-2/10 bg-gradient-to-t from-yes-blue-800 to-transparent"></div>
+          <PC class="relative w-full h-full overflow-hidden animate" let:offset>
+            <P
+              class="absolute ml-6 overflow-hidden bg-gray-500 shadow-xl mt-28 w-52 h-80 rounded-xl"
+              offset={offset}
+              scaleFactor={6}
+            >
+              <PC let:offset class="w-full h-full">
+                <P class="w-full" offset={offset} motion={false} style="height: 120%" scaleFactor={8}>
+                  <div class="w-full h-full bg-right bg-cover" style='background-image: url("/images/business/mentores/alberto.webp")'>
+                  </div>
+                </P>
+              </PC>
+            <!--img src="/images/uploads/juan-camilo.webp" alt="" class="object-cover object-top w-full h-full"-->
+            </P>
+            <P
+              class="absolute bottom-0 right-0 mb-16 mr-6 overflow-hidden bg-gray-500 shadow-xl w-52 h-80 rounded-xl"
+              offset={offset}
+              scaleFactor={3}
+              negative
+            >
+              <PC let:offset class="w-full h-full">
+                <P class="w-full" offset={offset} motion={false} style="height: 120%" scaleFactor={7}>
+                  <div class="w-full h-full bg-right bg-cover" style='background-image: url("/images/business/mentores/karla.webp")'>
+                  </div>
+                </P>
+              </PC>
+            <!--img src="/images/uploads/juan-camilo.webp" alt="" class="object-cover object-top w-full h-full"-->
+            </P>
+            <div class="absolute right-0 mb-16 ml-6 mr-12 w-52 -translate-x-3/4 transform mt-28">
+            <P
+              class="overflow-hidden bg-gray-500 shadow-xl w-52 h-80 rounded-xl"
+              offset={offset}
+              scaleFactor={5}
+            >
+              <PC let:offset class="w-full h-full">
+                <P class="w-full" offset={offset} motion={false} style="height: 120%" scaleFactor={8}>
+                  <div class="w-full h-full bg-cover" style='background-image: url("/images/business/mentores/monica.webp")'>
+                  </div>
+                </P>
+              </PC>
+            <!--img src="/images/uploads/juan-camilo.webp" alt="" class="object-cover object-top w-full h-full"-->
+            </P>
+            </div>
+            <div class="absolute bottom-0 mb-16 mr-12 w-52 left-2/4 transform -translate-x-9/10">
+            <P
+              class="overflow-hidden bg-gray-500 shadow-xl w-52 h-80 rounded-xl"
+              offset={offset}
+              negative
+              scaleFactor={4}
+            >
+              <PC let:offset class="w-full h-full">
+                <P class="w-full" offset={offset} motion={false} style="height: 115%" scaleFactor={7}>
+                  <div class="w-full h-full bg-cover" style='background-image: url("/images/business/mentores/juancarlos.webp")'>
+                  </div>
+                </P>
+              </PC>
+            <!--img src="/images/desarrollo.jpg" alt="" class="object-cover object-right-top w-full h-full"-->
+            </P>
+            </div>
+          </PC>
+        </V>
+      </div>
+    </div>
+  </div>
+
+  <div class="pt-16 content-lg">
+    <V style="--animate-y: 100%; --animate-r: 3deg" oneWay>
+      <div class="overflow-hidden">
+        <p class="pb-2 mb-2 sm:text-center t-h2 animate" style="transition-delay: 100ms">
+        Hemos apoyado a más de<br>50 organizaciones, entre empresas y ONGs
+        </p>
+      </div>
+      <div class="mb-12 overflow-hidden">
+        <h2 class="sm:text-center animate text-yes-gray-300 t-h3">Testimonios de nuestros clientes</h2>
+      </div>
+    </V>
+  </div>
+  <V class="mb-12 animate" oneWay style="--animate-r-y: -64deg">
+    <Testimonios padded={false} />
+  </V>
+
+  <div class="bg-yes-blue-800">
+    <V class="py-16 text-center text-white content animate" oneWay style="--animate-r: 3deg; --animate-s: 0.8">
+      <img src="/images/business/circulos.svg" alt="" class="w-32 mx-auto">
+      <h2 class="t-h1">Te ayudamos a acelerar el<br>crecimiento de tu organización</h2>
+      <p class="mt-4">
+      Rellena el formulario de contacto  para acceder a nuestros<br> servicios y obtener una consulta gratuita
+      </p>
+      <div class="flex w-full mt-4">
+        <a href="" class="mx-auto text-center btn-primary">Empieza ahora</a>
+      </div>
+    </V>
+  </div>
 </div>
