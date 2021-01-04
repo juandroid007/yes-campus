@@ -64,14 +64,7 @@
     'Protección legal y elaboración de documentación según el tipo de inversión demanda en rondas de inversión',
   ]
 
-  const clientes = [
-    'agora',
-    'perla',
-    'frisur',
-    'faro',
-    'cevac',
-  ]
-
+  import { clientes } from '../lib/business'
 </script>
 
 <style>
@@ -116,6 +109,18 @@
       width: 33.33%;
     }
   }
+
+  .grayscale {
+    --filter-gray: 100%;
+    filter: grayscale(var(--filter-gray)) drop-shadow(1px 1px 0 white)
+        drop-shadow(-1px 1px 0 white)
+        drop-shadow(1px -1px 0 white)
+        drop-shadow(-1px -1px 0 white);
+  }
+
+  .grayscale:hover {
+    --filter-gray: 0%;
+  }
 </style>
 
 <div class="w-full overflow-hidden">
@@ -149,7 +154,7 @@
       <V class="flex flex-wrap items-center" oneWay>
         {#each clientes as c, i}
           <div class="flex w-full p-6 mt-2 animate sm:w-1/2 lg:w-1/5" style="transition-delay: {100 * i + 500}ms; --animate-r-y: -64deg">
-            <img src="/images/business/clientes/{c}.webp" alt="" class="w-auto m-auto" style="max-height: 6rem">
+            <img src="/images/business/clientes/{c}.webp" alt="" class="w-auto m-auto grayscale duration-200 hover:scale-110 transform" style="max-height: 6rem">
           </div>
         {/each}
       </V>

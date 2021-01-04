@@ -100,6 +100,6 @@
 
 <Profesores/>
 
-<Viewport class="animate" once style="--animate-x: -3rem; --animate-y: -3rem; --animate-r: -3deg; --animate-s: 0.9">
+<Viewport class="animate" oneWay style="--animate-r-y: -64deg">
   <Testimonio/>
 </Viewport>

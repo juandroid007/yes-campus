@@ -61,8 +61,8 @@
         Gestionamos proyectos de aprendizaje grupal a la medida
         </p>
         <p class="mt-6 font-title">
-        Microlearning como recurso<br>de aprendizaje
-        Microlearning como recurso<br>de aprendizaje
+        Dispara el potencial de tus equipos gracias a través de nuestras capacitaciones
+        especializadas totalmente a la medida de tus necesidades
         </p>
       </div>
     </div>

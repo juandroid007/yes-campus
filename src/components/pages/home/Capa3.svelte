@@ -5,17 +5,16 @@
 </script>
 
 <div class="my-12">
-  <Viewport let:intersecting once={true}>
+  <Viewport let:intersecting oneWay>
     <div class="flex content-lg">
       <h2
-        class:observing={intersecting}
         class="px-4 mb-12 font-bold leading-none leading-tight animate t-h1 font-title"
         style="--animate-x: -1rem; --animate-y: -1rem"
         >Cursos y experiencias de aprendizaje <br>en las diferentes categorías</h2
       >
     </div>
   </Viewport>
-  <Viewport let:intersecting once={true}>
+  <Viewport oneWay>
     <div
       class="flex w-full h-full overflow-hidden xl:hidden"
     >
@@ -24,9 +23,8 @@
     <div class="flex-wrap hidden m-auto lg:w-9/10 content-lg xl:flex">
       {#each categorias as c, i}
         <div
-          class="p-4 m-auto md:w-1/2 lg:w-1/4 animation"
-          class:observing={intersecting}
-          style="--delay: {i * 100}ms"
+          class="p-4 m-auto md:w-1/2 lg:w-1/4 animation animate"
+          style="transition-delay: {i * 100}ms"
         >
           <Categoria c={c} />
         </div>
@@ -41,19 +39,14 @@
 
 <style>
   .animation {
-    transition: all 0.8s;
-    transition-delay: var(--delay);
-  }
-
-  .animation:not(.observing) {
-    opacity: 0;
-    transform: translateX(-2%);
+    --animate-x: -2%;
   }
 
   @screen md {
-    .animation:not(.observing) {
-      opacity: 0;
-      transform: translate(-1%, -5%) rotate(-3deg);
+    .animation {
+      --animate-x: -1%;
+      --animate-y: -5%;
+      --animate-r: -3deg;
     }
   }
 </style>

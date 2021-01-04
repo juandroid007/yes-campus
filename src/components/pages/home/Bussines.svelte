@@ -1,5 +1,6 @@
 <script>
   import V from '../../IntersectingViewport.svelte'
+  import { clientes } from '../../../lib/business'
 </script>
 
 <style>
@@ -9,36 +10,43 @@
     }
   }
 
-  .animate {
-    transition: 0.4s;
+  .animation {
+    --animate-time: 0.4s;
   }
 
-  .animate2 {
-    transition: 0.8s;
+  .animation {
+    --animate-y: -20%;
+    --animate-r: -3deg;
   }
 
-  .animate:not(.intersecting) {
-    opacity: 0;
-    transform: translateY(-20%) rotate(-3deg);
+  .animation2 {
+    --animate-x: 20%;
   }
 
-  .animate2:not(.intersecting) {
-    opacity: 0;
-    transform: translateX(20%);
+  .grayscale {
+    --filter-gray: 100%;
+    filter: grayscale(var(--filter-gray)) drop-shadow(1px 1px 0 white)
+        drop-shadow(-1px 1px 0 white)
+        drop-shadow(1px -1px 0 white)
+        drop-shadow(-1px -1px 0 white);
+  }
+
+  .grayscale:hover {
+    --filter-gray: 0%;
   }
 </style>
 
 <div class="overflow-hidden text-white">
   <div class="flex flex-wrap-reverse items-center w-full py-6 text-xl lg:flex-wrap main content-lg font-title">
-    <V class="flex flex-wrap items-center w-full px-12 m-auto lg:w-1/2" let:intersecting once>
-      {#each new Array(8) as _, i}
-        <div class="w-1/2 p-2 p-6 m-auto sm:w-1/4 animate" class:intersecting style="transition-delay: {50 * i}ms">
-          <img src="/images/logo.svg" alt="" class="m-auto hover:scale-110 transform duration-200 hover:-rotate-6">
+    <V class="flex flex-wrap items-center w-full px-12 m-auto lg:w-1/2" oneWay>
+      {#each clientes as c, i}
+        <div class="w-1/2 p-2 p-6 m-auto sm:w-1/3 animate animation grayscale" style="transition-delay: {50 * i}ms">
+          <img src="/images/business/clientes/{c}.webp" alt="" class="m-auto hover:scale-110 transform duration-200">
         </div>
       {/each}
     </V>
-    <V class="z-10 w-full py-12 t-p lg:w-1/2" let:intersecting once>
-      <div class="flex flex-col w-full animate2" class:intersecting>
+    <V class="z-10 w-full py-12 t-p lg:w-1/2" oneWay>
+      <div class="flex flex-col w-full animate animation2">
         <h2 class="mb-6 font-extrabold leading-none uppercase t-h2">Yes Campus<br>for Business</h2>
         <p>
         Creamos soluciones empresariales a través del desarrollo de competencias
