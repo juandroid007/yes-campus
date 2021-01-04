@@ -27,7 +27,7 @@
   <div class="flex flex-wrap justify-between my-24 lg:justify-center lg:my-24 lg:w-9/10 lg:mx-auto lg:-mt-64">
     <V class="flex flex-col ml-auto w-9/10 lg:w-4/10 lg:ml-0 lg:mt-96 animate" oneWay style="--animate-time: 1s">
       <div class="mb-12 overflow-hidden media rounded-tl-3xl rounded-bl-3xl lg:rounded-3xl lg:h-8/10">
-        <video src="/images/video.mp4" autoplay loop muted class="w-full h-full media"></video>
+        <video src="/images/video.webm" autoplay loop muted class="w-full h-full media"></video>
       </div>
       <img src="https://source.unsplash.com/random/480x600" alt="" class="hidden mb-12 media rounded-tl-3xl rounded-bl-3xl lg:rounded-3xl">
       <div class="mr-6 lg:mr-0">
