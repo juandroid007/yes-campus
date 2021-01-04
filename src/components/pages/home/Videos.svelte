@@ -13,21 +13,6 @@
     <div class="flex flex-col w-9/10 lg:w-4/10">
       <img src="https://source.unsplash.com/random/600x480" alt="" class="mb-12 media rounded-tr-3xl rounded-br-3xl">
       <div class="ml-6 md:ml-12">
-        <p class="leading-none t-h2 font-title">
-        Microlearning como recurso<br>de aprendizaje
-        </p>
-        <p class="mt-6 font-light font-title">
-        Obtén los conocimientos y herramientas
-        necesarios para superar los retos del día a día
-        a través de videos corta duración
-        </p>
-      </div>
-    </div>
-  </V>
-  <div class="flex flex-wrap justify-between my-24 lg:justify-center lg:my-24 lg:w-9/10 lg:mx-auto lg:-mt-64">
-    <V class="flex flex-col ml-auto w-9/10 lg:w-4/10 lg:ml-0 lg:mt-96 animate" oneWay style="--animate-time: 1s">
-      <img src="https://source.unsplash.com/random/480x600" alt="" class="mb-12 media rounded-tl-3xl rounded-bl-3xl lg:rounded-3xl">
-      <div class="mr-6 lg:mr-0">
         <p class="font-bold leading-none t-h2 font-title">
         Aprendemos en redes y a través del trabajo colaborativo
         </p>
@@ -35,6 +20,24 @@
         Contamos con espacios de co-creación para
         Vivir experiencias de aprendizaje colaborativo
         que impulsan la conexión como comunidad
+        </p>
+      </div>
+    </div>
+  </V>
+  <div class="flex flex-wrap justify-between my-24 lg:justify-center lg:my-24 lg:w-9/10 lg:mx-auto lg:-mt-64">
+    <V class="flex flex-col ml-auto w-9/10 lg:w-4/10 lg:ml-0 lg:mt-96 animate" oneWay style="--animate-time: 1s">
+      <div class="mb-12 overflow-hidden media rounded-tl-3xl rounded-bl-3xl lg:rounded-3xl lg:h-8/10">
+        <video src="/images/video.mp4" autoplay loop muted class="w-full h-full media"></video>
+      </div>
+      <img src="https://source.unsplash.com/random/480x600" alt="" class="hidden mb-12 media rounded-tl-3xl rounded-bl-3xl lg:rounded-3xl">
+      <div class="mr-6 lg:mr-0">
+        <p class="leading-none t-h2 font-title">
+        Microlearning como recurso<br>de aprendizaje
+        </p>
+        <p class="mt-6 font-light font-title">
+        Obtén los conocimientos y herramientas
+        necesarios para superar los retos del día a día
+        a través de videos corta duración
         </p>
       </div>
     </V>
