@@ -99,8 +99,8 @@
       out:fly={{x: -20, duration: speed}}>
       <div class="flex flex-wrap-reverse items-center w-full h-full sm:flex-wrap">
         <div class="flex items-end w-full mt-auto sm:h-full sm:w-1/2">
-          <img src="/images/programas/{el}/personajes.png" alt="" class="hidden w-full px-6 sm:block">
-          <img src="/images/programas/{el}/personajes-sm.png" alt="" class="w-full px-6 sm:hidden">
+          <img src="/images/programas/{el}/personajes.webp" alt="" class="hidden w-full px-6 sm:block">
+          <img src="/images/programas/{el}/personajes-sm.webp" alt="" class="w-full px-6 sm:hidden">
         </div>
         <div class="w-full p-6 sm:w-1/2">
           <div class="flex justify-end w-full mb-12 sm:hidden">
