@@ -9,6 +9,7 @@
   import CuartaCapa from '../components/pages/home/Capa4'
   import SextaCapa from '../components/pages/home/Capa6.svelte'
   import ZonaOscura, { inZoneMask } from '../components/pages/home/ZonaOscura.svelte'
+  import Programas from '../components/pages/home/Programas.svelte'
   import Cursos from '../components/pages/home/Cursos.svelte'
 
   import { fade } from 'svelte/transition'
@@ -46,6 +47,7 @@
     <div bind:this={outOffset} class="mb-16">
       <SegundaCapa/>
       <CuartaCapa/>
+      <Programas/>
     </div>
   </div>
 
