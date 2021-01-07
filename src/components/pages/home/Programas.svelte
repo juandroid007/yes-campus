@@ -90,7 +90,7 @@
       in:superFly={{ x: width, duration: speed }}
       out:superFly={{ delay: speed, duration: speed, none: true }}
       class="bg"
-      style="--bg: url(/images/programas/{el}/fondo.svg)">
+      style="--bg: url(/images/programas/{el}/fondo.webp)">
       </div
     >
     <div
