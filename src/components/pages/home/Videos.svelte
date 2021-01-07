@@ -3,8 +3,19 @@
 </script>
 
 <style>
-  .media {
+  .media-1\:2, .media-2\:1 {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+  }
+
+  @screen lg {
+    .media-2\:1 {
+      height: 320;
+    }
+    .media-1\:2 {
+      height: 600px;
+    }
   }
 </style>
 
@@ -12,7 +23,7 @@
   <V class="flex w-full animate" oneWay style="--animate-time: 1s">
     <div class="flex flex-col w-9/10 lg:w-4/10">
       <div class="mb-12 overflow-hidden media rounded-tr-3xl rounded-br-3xl">
-        <video src="/images/video2.webm" autoplay loop muted class="w-full h-full media"></video>
+        <video src="/images/video2.webm" autoplay loop muted class="w-full media-2:1"></video>
       </div>
       <div class="ml-6 md:ml-12">
         <p class="font-bold leading-none t-h2 font-title">
@@ -27,11 +38,10 @@
     </div>
   </V>
   <div class="flex flex-wrap justify-between my-24 lg:justify-center lg:my-24 lg:w-9/10 lg:mx-auto lg:-mt-64">
-    <V class="flex flex-col ml-auto w-9/10 lg:w-4/10 lg:ml-0 lg:mt-96 animate" oneWay style="--animate-time: 1s">
+    <V class="flex flex-col ml-auto w-9/10 lg:w-4/10 lg:ml-0 lg:mt-96 animate lg:pr-12" oneWay style="--animate-time: 1s">
       <div class="mb-12 overflow-hidden media rounded-tl-3xl rounded-bl-3xl lg:rounded-3xl">
-        <video src="/images/video.webm" autoplay loop muted class="w-full h-full media"></video>
+        <video src="/images/video.webm" autoplay loop muted class="object-left-top w-full media-1:2"></video>
       </div>
-      <img src="https://source.unsplash.com/random/480x600" alt="" class="hidden mb-12 media rounded-tl-3xl rounded-bl-3xl lg:rounded-3xl">
       <div class="mr-6 lg:mr-0">
         <p class="leading-none t-h2 font-title">
         Microlearning como recurso<br>de aprendizaje
@@ -44,8 +54,10 @@
       </div>
     </V>
 
-    <V class="flex flex-col mt-24 lg:mr-0 lg:ml-0 w-9/10 lg:w-4/10 lg:pl-16 lg:mt-0 animate" oneWay style="--animate-time: 1s">
-      <img src="https://source.unsplash.com/random/480x600" alt="" class="mb-12 media rounded-tr-3xl rounded-br-3xl lg:rounded-3xl">
+    <V class="flex flex-col mt-24 lg:mr-0 lg:ml-0 w-9/10 lg:w-4/10 lg:pl-12 lg:mt-0 animate" oneWay style="--animate-time: 1s">
+      <div class="mb-12 overflow-hidden media rounded-tr-3xl rounded-br-3xl lg:rounded-3xl">
+        <video src="/images/video.webm" autoplay loop muted class="object-left-top w-full media-1:2"></video>
+      </div>
       <div class="ml-6 lg:ml-0">
         <p class="font-bold leading-none t-h2 font-title">
         Dispara tu potencial gracias a una atención centrada en la experiencia
@@ -60,7 +72,9 @@
 
   <V class="flex justify-end w-full lg:-mt-96 animate" oneWay style="--animate-time: 1s">
     <div class="flex flex-col w-9/10 lg:w-4/10">
-      <img src="/images/desarrollo.jpg" alt="" class="w-full mb-12 ml-auto rounded-tl-3xl rounded-bl-3xl">
+      <div class="mb-12 ml-auto overflow-hidden media rounded-tl-3xl rounded-bl-3xl">
+        <img src="/images/desarrollo.jpg" alt="" class="w-full media-2:1">
+      </div>
       <div class="mr-6 lg:mr-12">
         <p class="font-bold leading-none t-h2 font-title">
         Gestionamos proyectos de aprendizaje grupal a la medida
