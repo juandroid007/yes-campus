@@ -44,8 +44,8 @@
     <Servicios/>
     <TerceraCapa/>
 
+    <SegundaCapa/>
     <div bind:this={outOffset} class="mb-16">
-      <SegundaCapa/>
       <CuartaCapa/>
       <Programas/>
     </div>

@@ -40,8 +40,8 @@
   <div class="flex flex-wrap-reverse items-center w-full py-6 text-xl lg:flex-wrap main content-lg font-title">
     <V class="flex flex-wrap items-center w-full px-12 m-auto lg:w-1/2" oneWay>
       {#each clientes as c, i}
-        <div class="w-1/2 p-2 p-6 m-auto sm:w-1/3 animate animation grayscale" style="transition-delay: {50 * i}ms">
-          <img src="/images/business/clientes/{c}.webp" alt="" class="m-auto hover:scale-110 transform duration-200">
+        <div class="w-1/2 p-2 p-6 m-auto sm:w-1/3 animate animation" style="transition-delay: {50 * i}ms">
+          <img src="/images/business/clientes/{c}.webp" alt="" class="m-auto hover:scale-110 transform duration-200 grayscale">
         </div>
       {/each}
     </V>

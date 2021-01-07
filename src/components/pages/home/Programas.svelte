@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte'
+  import V from '../../IntersectingViewport.svelte'
   import {
     quintOut
   } from 'svelte/easing'
@@ -80,40 +81,42 @@
   }
 </style>
 
-<div
-  class="z-10 mb-6 wrapper"
-  style="border-bottom-left-radius: 3rem; border-bottom-right-radius: 3rem;"
-  bind:clientWidth={width}
-  >
-  {#each [elements[index]] as el (index)}
-    <div
-      in:superFly={{ x: width, duration: speed }}
-      out:superFly={{ delay: speed, duration: speed, none: true }}
-      class="bg"
-      style="--bg: url(/images/programas/{el}/fondo.webp)">
-      </div
+<V oneWay>
+  <div
+    class="z-10 mb-6 wrapper"
+    style="border-bottom-left-radius: 3rem; border-bottom-right-radius: 3rem;"
+    bind:clientWidth={width}
     >
-    <div
-      class="z-10 text-4xl text-white element"
-      in:fly={{x: 20, duration: speed, delay: speed / 2}}
-      out:fly={{x: -20, duration: speed}}>
-      <div class="flex flex-wrap-reverse items-center w-full h-full sm:flex-wrap">
-        <div class="flex items-end w-full mt-auto sm:h-full sm:w-1/2">
-          <img src="/images/programas/{el}/personajes.webp" alt="" class="hidden w-full px-6 sm:block">
-          <img src="/images/programas/{el}/personajes-sm.webp" alt="" class="w-full px-6 sm:hidden">
-        </div>
-        <div class="w-full p-6 sm:w-1/2">
-          <div class="flex justify-end w-full mb-12 sm:hidden">
-            <img src="/images/programas/{el}/simbolo.svg" alt="" class="w-3/10">
+    {#each [elements[index]] as el (index)}
+      <div
+        in:superFly={{ x: width, duration: speed }}
+        out:superFly={{ delay: speed, duration: speed, none: true }}
+        class="bg"
+        style="--bg: url(/images/programas/{el}/fondo.webp)">
+        </div
+      >
+      <div
+        class="z-10 text-4xl text-white element"
+        in:fly={{x: 20, duration: speed, delay: speed / 2}}
+        out:fly={{x: -20, duration: speed}}>
+        <div class="flex flex-wrap-reverse items-center w-full h-full sm:flex-wrap animate" style="--animate-y: 2rem">
+          <div class="flex items-end w-full mt-auto sm:h-full sm:w-1/2">
+            <img src="/images/programas/{el}/personajes.webp" alt="" class="hidden w-full px-6 sm:block">
+            <img src="/images/programas/{el}/personajes-sm.webp" alt="" class="w-full px-6 sm:hidden">
           </div>
-          <img src="/images/programas/{el}/titulo.svg" alt="" class="w-full sm:w-8/10">
-          <div class="mt-6 ml-auto sm:ml-0 w-5/10 transform hover:scale-105 duration-200">
-            <a href="" title="Conoce más">
-              <img src="/images/programas/{el}/boton.svg" alt="Conoce más" class="w-full">
-            </a>
+          <div class="w-full p-6 sm:w-1/2">
+            <div class="flex justify-end w-full mb-12 sm:hidden">
+              <img src="/images/programas/{el}/simbolo.svg" alt="" class="w-3/10">
+            </div>
+            <img src="/images/programas/{el}/titulo.svg" alt="" class="w-full sm:w-8/10">
+            <div class="mt-6 ml-auto sm:ml-0 w-5/10 lg:w-3/10 transform hover:scale-105 duration-200">
+              <a href="" title="Conoce más">
+                <img src="/images/programas/{el}/boton.svg" alt="Conoce más" class="w-full">
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  {/each}
-</div>
+    {/each}
+  </div>
+</V>

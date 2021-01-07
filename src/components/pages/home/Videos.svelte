@@ -11,10 +11,18 @@
 
   @screen lg {
     .media-2\:1 {
-      height: 320;
+      height: 320px;
     }
     .media-1\:2 {
       height: 600px;
+    }
+  }
+  @screen xxl {
+    .media-2\:1 {
+      height: 420px;
+    }
+    .media-1\:2 {
+      height: 800px;
     }
   }
 </style>
@@ -56,7 +64,7 @@
 
     <V class="flex flex-col mt-24 lg:mr-0 lg:ml-0 w-9/10 lg:w-4/10 lg:pl-12 lg:mt-0 animate" oneWay style="--animate-time: 1s">
       <div class="mb-12 overflow-hidden media rounded-tr-3xl rounded-br-3xl lg:rounded-3xl">
-        <video src="/images/video.webm" autoplay loop muted class="object-left-top w-full media-1:2"></video>
+        <img src="https://source.unsplash.com/random/480x600" alt="" class="media-1:2">
       </div>
       <div class="ml-6 lg:ml-0">
         <p class="font-bold leading-none t-h2 font-title">
