@@ -79,7 +79,7 @@
 <div class="w-full overflow-x-hidden">
   <V class="relative w-full overflow-hidden bg-leaders-sky">
     <div class="absolute bottom-0 right-0 hidden animate lg:block w-4/10" style="--animate-y: 40%">
-      <img src="/images/leaders/bg1.png" alt="" class="w-full transform translate-y-6">
+      <img src="/images/leaders/bg1.webp" alt="" class="w-full transform translate-y-6">
     </div>
     <div class="flex flex-wrap py-16 pb-0 text-white lg:py-16 content">
       <div class="w-full lg:w-1/2 animate" style="--animate-x: -3rem">
@@ -90,7 +90,7 @@
         </div>
       </div>
     </div>
-    <img src="/images/leaders/bg1.png" alt="" class="w-full lg:hidden transform translate-y-6 animate">
+    <img src="/images/leaders/bg1.webp" alt="" class="w-full lg:hidden transform translate-y-6 animate">
   </V>
   <div class="py-16 content">
     <h2 class="mb-4 text-center t-h1 text-leaders-yellow">Creemos y apostamos en jóvenes líderes como tú.</h2>
@@ -134,7 +134,7 @@
 
   <V class="flex flex-wrap-reverse items-center pb-16 content" oneWay>
     <div class="w-full lg:w-1/2 animate" style="--animate-x: 3rem">
-      <img src="/images/leaders/king.png" alt="" class="w-full pt-16 lg:pt-0 w-9/10">
+      <img src="/images/leaders/king.webp" alt="" class="w-full pt-16 lg:pt-0 w-9/10">
     </div>
     <div class="w-full lg:w-1/2 animate" style="--animate-x: 3rem">
       <h2 class="w-full pb-2 mb-4 border-b-4 rounded t-h2 text-leaders-yellow border-leaders-yellow">Este programa es para tí, si</h2>
