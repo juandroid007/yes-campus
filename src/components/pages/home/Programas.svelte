@@ -89,16 +89,16 @@
     >
     {#each [elements[index]] as el (index)}
       <div
-        in:superFly={{ x: width, duration: speed }}
-        out:superFly={{ delay: speed, duration: speed, none: true }}
+        in:superFly|local={{ x: width, duration: speed }}
+        out:superFly|local={{ delay: speed, duration: speed, none: true }}
         class="bg"
         style="--bg: url(/images/programas/{el}/fondo.webp)">
         </div
       >
       <div
         class="z-10 text-4xl text-white element"
-        in:fly={{x: 20, duration: speed, delay: speed / 2}}
-        out:fly={{x: -20, duration: speed}}>
+        in:fly|local={{x: 20, duration: speed, delay: speed / 2}}
+        out:fly|local={{x: -20, duration: speed}}>
         <div class="flex flex-wrap-reverse items-center w-full h-full sm:flex-wrap animate" style="--animate-y: 2rem">
           <div class="flex items-end w-full mt-auto sm:h-full sm:w-1/2">
             <img src="/images/programas/{el}/personajes.webp" alt="" class="hidden w-full px-6 sm:block">

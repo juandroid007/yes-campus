@@ -67,7 +67,7 @@
   }
 </style>
 
-<div class="w-full overflow-x-hidden" style="perspective: 4px">
+<div class="w-full overflow-x-hidden">
   <div
     class="flex py-16 content-lg"
     style="min-height: calc(70vh - {$height}px)"

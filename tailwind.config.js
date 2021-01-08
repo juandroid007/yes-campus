@@ -102,6 +102,15 @@ module.exports = {
       },
 
       colors: {
+        'leaders-yellow': {
+          default: '#F9B717',
+        },
+        'leaders-sky': {
+          default: '#008e92',
+        },
+        'leaders-blue': {
+          default: '#275584',
+        },
         'yes-blue': {
           50: '#F2F8FE',
           100: '#E6F1FC',

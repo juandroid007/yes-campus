@@ -40,7 +40,7 @@ export default [
   },
   {
     titulo: 'Programas',
-    header: false,
+    header: true,
     alt: 'Nuestros programas',
     childrens: [
       {
