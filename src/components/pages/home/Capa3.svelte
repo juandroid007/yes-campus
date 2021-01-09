@@ -31,7 +31,7 @@
       {/each}
 
     </div>
-    <a href=" https://yescampus.teachlr.com/#courses-online/" class="flex items-center justify-center m-auto text-2xl text-center">
+    <a href="https://yescampus.teachlr.com/#courses-online/" class="flex items-center justify-center m-auto text-2xl text-center">
       <span class="mr-4 cursor-pointer hover:underline">Ver todas las categorías</span> <span class="i jam:chevron-right"></span>
     </a>
   </Viewport>

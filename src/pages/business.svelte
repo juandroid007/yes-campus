@@ -181,7 +181,7 @@
                 </p>
               {/each}
             </div>
-          <a href="" class="mx-auto mt-6 btn-primary">Conoce qué ofrecemos</a>
+          <a href="/#" class="mx-auto mt-6 btn-primary">Conoce qué ofrecemos</a>
           </div>
         </div>
       </div>
@@ -240,7 +240,7 @@
         <p class="mx-auto italic transform t-h1 text-yes-orange-500 lg:w-6/10">
         Diseño de programas,<br>certificaciones y sistemas de evaluación de competencias.
         </p>
-        <a href="" class="mx-auto mt-8 btn-primary">Empecemos</a>
+        <a href="/#" class="mx-auto mt-8 btn-primary">Empecemos</a>
       </V>
     </PC>
 
@@ -253,7 +253,7 @@
         mentorías personalizadas en:</strong>
         </p>
         <div class="mt-6 animate" style="--animate-x: -3rem; transition-delay: 400ms">
-          <a href="" class="btn-primary">Haz tu prueba gratis</a>
+          <a href="/#" class="btn-primary">Haz tu prueba gratis</a>
         </div>
       </V>
       <V class="flex flex-wrap w-full p-6 -m-2 lg:w-1/3 lg:order-last" oneWay>
@@ -294,7 +294,7 @@
         {/each}
       </V>
       <V class="flex w-full -mt-6 animate" oneWay style="--animate-s: 0.4">
-        <a href="" class="mx-auto text-center btn-primary">Empecemos</a>
+        <a href="/#" class="mx-auto text-center btn-primary">Empecemos</a>
       </V>
     </div>
 
@@ -402,7 +402,7 @@
       Rellena el formulario de contacto  para acceder a nuestros<br> servicios y obtener una consulta gratuita
       </p>
       <div class="flex w-full mt-4">
-        <a href="" class="mx-auto text-center btn-primary">Empieza ahora</a>
+        <a href="/#" class="mx-auto text-center btn-primary">Empieza ahora</a>
       </div>
     </V>
   </div>

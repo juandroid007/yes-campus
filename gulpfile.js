@@ -73,7 +73,7 @@ exports.clean = clean
 const generateWebps = (path) => {
   return gulp.src(`${path}/**/*`)
     .pipe(webp({
-      quality: 80,
+      quality: 70,
     }))
     .pipe(gulp.dest(path))
 }

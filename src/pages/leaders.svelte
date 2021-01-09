@@ -92,7 +92,7 @@
         <img src="/images/leaders/titulo.svg" alt="" class="w-full mb-6 lg:-ml-3 w-8/10">
         <p class="mb-8 t-p">{description}</p>
         <div class="transform hover:-translate-y-px duration-200">
-          <a href="" class="px-8 py-4 font-bold text-white rounded-full shadow duration-200 hover:shadow-md bg-leaders-yellow">Quiero postularme</a>
+          <a href="/#" class="px-8 py-4 font-bold text-white rounded-full shadow duration-200 hover:shadow-md bg-leaders-yellow">Quiero postularme</a>
         </div>
       </div>
     </div>
@@ -116,7 +116,7 @@
       </p>
       <div class="transform hover:-translate-y-px duration-200">
         <a
-          href=""
+          href="/#"
           class="px-8 py-4 font-bold text-white rounded-full shadow duration-200 hover:shadow-md bg-leaders-yellow"
           >Conoce los detalles</a
         >
@@ -183,7 +183,7 @@
     <div class="w-full lg:w-1/2 animate" style="--animate-x: 2rem; --animate-y: -2rem; --animate-r: 1deg">
       <div class="w-full my-6 overflow-hidden modulos1-wrapper lg:w-8/10 lg:ml-auto">
         {#each [modulos[modulos1]] as _, i (modulos1)}
-          <div class="modulos1-img" in:fly={{x: 100}} out:fly={{x: -100, opacity: 0.8}}>
+          <div class="modulos1-img" in:fly|local={{x: 100}} out:fly|local={{x: -100, opacity: 0.8}}>
             <img src="/images/leaders/modulos1/{modulos1 + 1}.webp" alt="" class="w-full">
           </div>
         {/each}
@@ -229,7 +229,7 @@
       </p>
       <div class="transform hover:-translate-y-px duration-200">
         <a
-          href=""
+          href="/#"
           class="px-8 py-4 font-bold text-white rounded-full shadow duration-200 hover:shadow-md bg-leaders-sky"
           >Postúlate aquí</a
         >

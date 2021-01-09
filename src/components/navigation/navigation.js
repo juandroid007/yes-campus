@@ -5,10 +5,13 @@ export default [
     titulo: 'Cursos',
     alt: 'Categorías de nuestros cursos',
     childrens: [
-      ...categorias,
+      ...categorias.map(c => {
+        c.href = 'https://yescampus.teachlr.com/#courses-online/'
+        return c
+      }),
       {
         titulo: 'Todas las categorías',
-        href: ' https://yescampus.teachlr.com/#courses-online/',
+        href: 'https://yescampus.teachlr.com/#courses-online/',
       }
     ],
   },
@@ -64,6 +67,10 @@ export default [
       {
         titulo: 'YES Talks',
         href: '/talks',
+      },
+      {
+        titulo: 'Evolution',
+        href: '/evolution',
       },
       {
         titulo: 'Comunidad YES',

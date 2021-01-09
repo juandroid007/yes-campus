@@ -44,7 +44,12 @@
 
   import { getCollection } from '../../../collections'
 
-  export const categorias = getCollection('categorias', { field: 'order', order: 'cresc'}).elements
+  export const categorias = getCollection('categorias', { field: 'order', order: 'cresc'})
+    .elements
+    .map(c => {
+      c.href = '/#'
+      return c
+    })
 </script>
 
 <script>
@@ -168,30 +173,36 @@
   }
 </style>
 
-<div use:hovering={{primary: true, text: 'Ver más', color: c.color}} class="m-auto categoria" style="--wave-color: {c.color}; --underline-color: {hexToRGB(c.color, 0.4)}">
-  <div class="img-wrapper">
-    <div class="wave">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 166.12 135.01">
-        <defs>
-          <style>.cls-1{fill: var(--wave-color);}</style>
-        </defs>
-        <path xmlns="http://www.w3.org/2000/svg" class="cls-1" d="M64.28,112.36c5.68-.75,8.36-3.92,7.84-6.65s-3.32-5.24-5-7.87C58.67,84.45,80.15,70,72.45,56.5c-3.38-5.93-12.26-11.26-12.06-17.39C60.56,34,67,29.48,70.25,24.62c4.12-6.18,2.7-13.34-5.74-18.48S40.12-1.55,27.32,1C12.6,3.94,6.35,12,3.58,19.32-4.14,39.8,2.85,60.58,4,81.16c.39,7-13.44,40,14.45,39.08,9.73-.31,13.28-4.27,20.19-6.63C48.23,110.33,54.36,113.68,64.28,112.36Z"/>
-      </svg>
+<div
+      use:hovering={{primary: true, text: 'Ver más', color: c.color}}
+      class="m-auto categoria"
+      style="--wave-color: {c.color}; --underline-color: {hexToRGB(c.color, 0.4)}"
+>
+  <a href={c.href} target="_blank">
+    <div class="img-wrapper">
+      <div class="wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 166.12 135.01">
+          <defs>
+            <style>.cls-1{fill: var(--wave-color);}</style>
+          </defs>
+          <path xmlns="http://www.w3.org/2000/svg" class="cls-1" d="M64.28,112.36c5.68-.75,8.36-3.92,7.84-6.65s-3.32-5.24-5-7.87C58.67,84.45,80.15,70,72.45,56.5c-3.38-5.93-12.26-11.26-12.06-17.39C60.56,34,67,29.48,70.25,24.62c4.12-6.18,2.7-13.34-5.74-18.48S40.12-1.55,27.32,1C12.6,3.94,6.35,12,3.58,19.32-4.14,39.8,2.85,60.58,4,81.16c.39,7-13.44,40,14.45,39.08,9.73-.31,13.28-4.27,20.19-6.63C48.23,110.33,54.36,113.68,64.28,112.36Z"/>
+        </svg>
+      </div>
+      <div class="wave2">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 166.12 135.01">
+          <defs>
+            <style>.cls-1{fill:var(--wave-color);}</style>
+          </defs><title>Category_8_down</title>
+          <path xmlns="http://www.w3.org/2000/svg" class="cls-1" d="M64.28,112.36c5.68-.75,8.36-3.92,7.84-6.65s-3.32-5.24-5-7.87C58.67,84.45,80.15,70,72.45,56.5c-3.38-5.93-12.26-11.26-12.06-17.39C60.56,34,67,29.48,70.25,24.62c4.12-6.18,2.7-13.34-5.74-18.48S40.12-1.55,27.32,1C12.6,3.94,6.35,12,3.58,19.32-4.14,39.8,2.85,60.58,4,81.16c.39,7-13.44,40,14.45,39.08,9.73-.31,13.28-4.27,20.19-6.63C48.23,110.33,54.36,113.68,64.28,112.36Z"/>
+        </svg>
+      </div>
+      <div class="img-box">
+        <!--img src="/images/categorias/{c.img}.jpg" alt={c.titulo} class="img"-->
+        <Img src={c.img} alt={c.titulo} class="img"/>
+      </div>
     </div>
-    <div class="wave2">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 166.12 135.01">
-        <defs>
-          <style>.cls-1{fill:var(--wave-color);}</style>
-        </defs><title>Category_8_down</title>
-        <path xmlns="http://www.w3.org/2000/svg" class="cls-1" d="M64.28,112.36c5.68-.75,8.36-3.92,7.84-6.65s-3.32-5.24-5-7.87C58.67,84.45,80.15,70,72.45,56.5c-3.38-5.93-12.26-11.26-12.06-17.39C60.56,34,67,29.48,70.25,24.62c4.12-6.18,2.7-13.34-5.74-18.48S40.12-1.55,27.32,1C12.6,3.94,6.35,12,3.58,19.32-4.14,39.8,2.85,60.58,4,81.16c.39,7-13.44,40,14.45,39.08,9.73-.31,13.28-4.27,20.19-6.63C48.23,110.33,54.36,113.68,64.28,112.36Z"/>
-      </svg>
+    <div class="w-64 mt-2 mr-2 lg:h-24">
+      <p class="font-bold leading-tight t-h3 font-title"><span class="title">{c.titulo}</span></p>
     </div>
-    <div class="img-box">
-      <!--img src="/images/categorias/{c.img}.jpg" alt={c.titulo} class="img"-->
-      <Img src={c.img} alt={c.titulo} class="img"/>
-    </div>
-  </div>
-  <div class="w-64 mt-2 mr-2 lg:h-24">
-    <p class="font-bold leading-tight t-h3 font-title"><span class="title">{c.titulo}</span></p>
-  </div>
+  </a>
 </div>
