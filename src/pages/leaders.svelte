@@ -3,10 +3,9 @@
   import svitsConfig from '../../svits.config.json'
   import List from '../components/pages/leaders/List.svelte'
   import V from '../components/IntersectingViewport.svelte'
-  import Testimonios from '../components/pages/home/Testimonio.svelte'
   import PC from '../components/motion/ParallaxContainer.svelte'
   import P from '../components/motion/ParallaxObject.svelte'
-  import { fly, fade } from 'svelte/transition'
+  import { fly } from 'svelte/transition'
 
   const description = 'Bootcamp para el desarrollo de competencias de liderazgo juvenil en función de la defensa de la democracia y el fortalecimiento institucional de las organizaciones lideradas por jóvenes.'
 
