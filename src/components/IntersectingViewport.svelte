@@ -49,6 +49,10 @@
         )
       }
 
+      if (intersecting) {
+        distpatch('intersect', { offset: container.offsetTop })
+      }
+
       if (intersecting && once) {
         window.removeEventListener('scroll', handler)
       }

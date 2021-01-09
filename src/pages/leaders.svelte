@@ -1,13 +1,12 @@
 <script>
   import { metatags } from '@roxi/routify'
   import svitsConfig from '../../svits.config.json'
-  import Wave from '../components/motion/Wave.svelte'
-  import { inZone } from '../components/pages/home/ZonaOscura.svelte'
+  import List from '../components/pages/leaders/List.svelte'
   import V from '../components/IntersectingViewport.svelte'
   import Testimonios from '../components/pages/home/Testimonio.svelte'
   import PC from '../components/motion/ParallaxContainer.svelte'
   import P from '../components/motion/ParallaxObject.svelte'
-  import { fly } from 'svelte/transition'
+  import { fly, fade } from 'svelte/transition'
 
   const description = 'Bootcamp para el desarrollo de competencias de liderazgo juvenil en función de la defensa de la democracia y el fortalecimiento institucional de las organizaciones lideradas por jóvenes.'
 
@@ -20,59 +19,66 @@
     '1 workshop "Liderazgo Trascendental"',
     'Capital semilla para 10 micro proyectos',
   ]
+
+  const modulos = [
+    {
+      title: 'Rol de la juventud y la democracia',
+      description: 'y su participación ciudadana',
+    },
+    {
+      title: 'El poder de una visión y la construcción de cambios',
+      description: 'y su participación ciudadana asdnasdnasdn asd nad ansd ansd',
+    },
+    {
+      title: 'Herramientas para el desarrollo de habilidades ágiles',
+      description: 'y su participación ciudadana',
+    },
+    {
+      title: 'Activismo social, participación política y ciudadana',
+      description: 'y su participación ciudadana',
+    },
+    {
+      title: 'Cambio sistémico y participación ciudadana',
+      description: 'y su participación ciudadana',
+    },
+  ]
+
+  const modulos2 = [
+    {
+      title: 'Agilismo para líderes transformadores',
+      description: 'y su participación ciudadana',
+    },
+    {
+      title: 'Construcción de mapa de mapa de incidencia',
+      description: 'y tablero de control',
+    },
+    {
+      title: 'Herramientas para el desarrollo de habilidades ágiles',
+      description: 'y su participación ciudadana',
+    },
+    {
+      title: 'Sostenibilidad y estrategias para la autogestión',
+      description: 'y su participación ciudadana',
+    },
+    {
+      title: 'Articulación y comunicación de impacto',
+      description: 'y su participación ciudadana',
+    },
+  ]
+
+  let modulos1
 </script>
 
 <style>
-  .parallax {
-    background-size: cover;
-    background-position: center;
+  .modulos1-wrapper {
+    overflow: hidden;
+    display: grid;
+    align-items: start;
   }
 
-  .text-stroke {
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: currentColor;
-    opacity: 0.5;
-    -webkit-font-smoothing: none;
-  }
-
-  pre {
-    color: inherit;
-  }
-
-  :global(.tarjetas) {
-    height: 85vh;
-  }
-
-  :global(.quienes-somos) {
-    width: 100%;
-  }
-
-  @screen lg {
-    :global(.tarjetas) {
-      width: 50%;
-    }
-
-    :global(.quienes-somos) {
-      width: 50%;
-    }
-  }
-
-  @screen xxl {
-    :global(.tarjetas) {
-      width: 33.33%;
-      height: 60vh;
-    }
-
-    :global(.quienes-somos) {
-      width: 66.66%;
-    }
-  }
-
-  @screen md {
-    .valores {
-      height: 150vh;
-    }
+  .modulos1-img {
+    grid-column: 1/2;
+    grid-row: 1/2 relative;
   }
 </style>
 
@@ -165,4 +171,76 @@
       </div>
     </V>
   </div>
+
+  <V class="flex flex-wrap items-center py-16 content" oneWay>
+    <div class="w-full lg:w-1/2 animate" style="--animate-x: -2rem">
+      <div class="flex items-center mb-8">
+        <div class="w-24 mr-4 bg-yes-gray-500 dark:bg-gray-300" style="height: 1px"></div>
+        <h2 class="font-light t-p" style="line-height: 0">6 módulos formativos</h2>
+      </div>
+      <List elements={modulos} bind:index={modulos1} />
+    </div>
+    <div class="w-full lg:w-1/2 animate" style="--animate-x: 2rem; --animate-y: -2rem; --animate-r: 1deg">
+      <div class="w-full my-6 overflow-hidden modulos1-wrapper lg:w-8/10 lg:ml-auto rounded-3xl">
+        {#each [modulos[modulos1]] as _, i (modulos1)}
+          <div class="modulos1-img" in:fly={{x: 100}} out:fly={{x: -100, opacity: 0.8}}>
+            <img src="/images/leaders/modulos1/{modulos1 + 1}.webp" alt="" class="w-full">
+          </div>
+        {/each}
+      </div>
+    </div>
+  </V>
+
+  <PC class="relative overflow-hidden" let:offset scaleFactor={10}>
+    <P
+      class="absolute w-full h-full bg-center bg-cover"
+      motion={false}
+      offset={offset}
+      style="background-image: url(/images/leaders/challenge.webp); height: 110%"
+    >
+    </P>
+    <V class="z-20 flex flex-col py-16 pt-24 text-center content animate" oneWay style="--animate-s: 0.8">
+      <img src="/images/leaders/challenge-titulo.svg" alt="#Challenge" class="h-16 mb-4 transform">
+      <p class="mx-auto mb-6 text-6xl font-black leading-none text-white uppercase transform">
+      Ideas por el cambio
+      </p>
+      <p class="mx-auto text-center text-white transform t-p lg:w-8/10">
+      <strong>IDEAS POR EL CAMBIO</strong>, es un #challenge donde los 200 participantes iniciales, construyen y postulan
+      iniciativas para la promoción de la democracia, construcción de una visión de cambio y promueven
+      la articulación, el activismo y la incidencia pública basada en innovación social, del challenge son
+      seleccionados 10 micro proyectos, los cuales son financiados con un capital semilla para la
+      implementación de dichas iniciativas, que buscan elevar el nivel de participación e interés de los
+      jóvenes venezolanos en los temas gobernabilidad, desarrollo, articulación social y cambio sistémico
+      </p>
+    </V>
+  </PC>
+
+  <V class="flex flex-wrap items-center py-16 content" oneWay>
+    <div class="w-full lg:w-1/2 animate" style="--animate-x: -2rem">
+      <h2 class="w-full pb-2 mb-4 border-b-4 rounded t-h2 text-leaders-sky border-leaders-sky">Liderazgo Trascendental</h2>
+      <p class="pb-2 mb-4 t-h3 text-leaders-sky" style="font-weight: 300">Workshop</p>
+      <p class="mb-8 t-p">
+      El workshop tiene como objetivo fortalecer las
+      herramientas de trabajo colaborativo y gestión de
+      proyectos en los grupos o proyectos que resulten
+      ganadores del challenge, pudiendo participar un
+      máximo de 3 participantes por iniciativa para un
+      total de 30 participantes.
+      </p>
+      <div class="transform hover:-translate-y-px duration-200">
+        <a
+          href=""
+          class="px-8 py-4 font-bold text-white rounded-full shadow duration-200 hover:shadow-md bg-leaders-sky"
+          >Postúlate aquí</a
+        >
+      </div>
+    </div>
+    <div class="w-full pt-16 lg:pt-0 lg:w-1/2 animate lg:pl-12" style="--animate-x: 2rem">
+      <div class="flex items-center mb-8">
+        <div class="w-24 mr-4 bg-yes-gray-500 dark:bg-gray-300" style="height: 1px"></div>
+        <h2 class="font-light t-p" style="line-height: 0">5 módulos formativos</h2>
+      </div>
+      <List elements={modulos2} />
+    </div>
+  </V>
 </div>

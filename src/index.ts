@@ -9,7 +9,7 @@ import wf from 'webfontloader'
 
 wf.load({
   google: {
-    families: ['Oxygen:300,400', 'Ubuntu', 'Inconsolata']
+    families: ['Oxygen:300,400,800,900', 'Ubuntu', 'Inconsolata']
   }
 })
 
