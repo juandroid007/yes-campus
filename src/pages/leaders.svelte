@@ -27,7 +27,7 @@
     },
     {
       title: 'El poder de una visión y la construcción de cambios',
-      description: 'y su participación ciudadana asdnasdnasdn asd nad ansd ansd',
+      description: 'y su participación ciudadana',
     },
     {
       title: 'Herramientas para el desarrollo de habilidades ágiles',
@@ -87,9 +87,9 @@
     <div class="absolute bottom-0 right-0 hidden animate lg:block w-4/10" style="--animate-y: 40%">
       <img src="/images/leaders/bg1.webp" alt="" class="w-full transform translate-y-6">
     </div>
-    <div class="flex flex-wrap py-16 pb-0 text-white lg:py-16 content">
+    <div class="flex flex-wrap py-16 pb-0 text-white lg:py-12 content">
       <div class="w-full lg:w-1/2 animate" style="--animate-x: -3rem">
-        <img src="/images/leaders/titulo.svg" alt="" class="w-full mb-6 lg:-ml-4">
+        <img src="/images/leaders/titulo.svg" alt="" class="w-full mb-6 lg:-ml-3 w-8/10">
         <p class="mb-8 t-p">{description}</p>
         <div class="transform hover:-translate-y-px duration-200">
           <a href="" class="px-8 py-4 font-bold text-white rounded-full shadow duration-200 hover:shadow-md bg-leaders-yellow">Quiero postularme</a>
@@ -130,9 +130,9 @@
   <div class="mb-16 content">
     <V class="flex flex-col w-full px-6 overflow-hidden shadow-lg sm:flex-row sm:justify-between bg-leaders-blue animate" style="border-radius: 3rem; --animate-r-y: 64deg" oneWay>
       {#each iconografia as s, i}
-        <div class="w-full py-12 text-white md:w-1/4 animate" style="transition-delay: {100 * i + 400}ms; --animate-y: 0.5rem; --animate-r-y: 0deg; --animate-r-x: -64deg">
-          <img src="/images/leaders/iconografia/{i + 1}.svg" alt="" class="w-full mx-auto mb-4 w-6/10 sm:w-5/10">
-          <p class="text-center t-h3">{@html s}</p>
+        <div class="w-full py-4 text-white md:w-1/4 animate" style="transition-delay: {100 * i + 400}ms; --animate-y: 0.5rem; --animate-r-y: 0deg; --animate-r-x: -64deg">
+          <img src="/images/leaders/iconografia/{i + 1}.svg" alt="" class="w-full mx-auto mb-4 w-6/10 sm:w-7/10">
+          <p class="text-lg font-bold text-center">{@html s}</p>
         </div>
       {/each}
     </V>
@@ -140,9 +140,9 @@
 
   <V class="flex flex-wrap-reverse items-center pb-16 content" oneWay>
     <div class="w-full lg:w-1/2 animate" style="--animate-x: 3rem">
-      <img src="/images/leaders/king.webp" alt="" class="w-full pt-16 lg:pt-0 w-9/10">
+      <img src="/images/leaders/king.webp" alt="" class="w-full pt-16 lg:pt-0">
     </div>
-    <div class="w-full lg:w-1/2 animate" style="--animate-x: 3rem">
+    <div class="w-full lg:w-1/2 animate lg:pl-24" style="--animate-x: 3rem">
       <h2 class="w-full pb-2 mb-4 border-b-4 rounded t-h2 text-leaders-yellow border-leaders-yellow">Este programa es para tí, si</h2>
       <ul class="pl-12 list-disc t-p">
         <li>Eres venezolano(a).</li>
@@ -235,7 +235,7 @@
         >
       </div>
     </div>
-    <div class="w-full pt-16 lg:pt-0 lg:w-1/2 animate lg:pl-12" style="--animate-x: 2rem">
+    <div class="w-full pt-16 lg:pt-0 lg:w-1/2 animate lg:pl-16" style="--animate-x: 2rem">
       <div class="flex items-center mb-8">
         <div class="w-24 mr-4 bg-yes-gray-500 dark:bg-gray-300" style="height: 1px"></div>
         <h2 class="font-light t-p" style="line-height: 0">5 módulos formativos</h2>

@@ -36,7 +36,7 @@
       <li class:active={index == i} on:click={() => { resetInterval(); index = i; }} class="cursor-pointer">
         <div class="flex flex-col pointer-events-none">
           <h2 class="t-h3 duration-200" class:text-leaders-sky={index == i}>{el.title}</h2>
-          <p class="font-bold t-p duration-200 transform" class:-translate-x-4={index != i} class:opacity-0={index != i}>{el.description}</p>
+          <p class="font-light t-p duration-200 transform" class:-translate-x-4={index != i} class:opacity-0={index != i}>{el.description}</p>
         </div>
       </li>
     {/each}
