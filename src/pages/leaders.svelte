@@ -181,7 +181,7 @@
       <List elements={modulos} bind:index={modulos1} />
     </div>
     <div class="w-full lg:w-1/2 animate" style="--animate-x: 2rem; --animate-y: -2rem; --animate-r: 1deg">
-      <div class="w-full my-6 overflow-hidden modulos1-wrapper lg:w-8/10 lg:ml-auto rounded-3xl">
+      <div class="w-full my-6 overflow-hidden modulos1-wrapper lg:w-8/10 lg:ml-auto">
         {#each [modulos[modulos1]] as _, i (modulos1)}
           <div class="modulos1-img" in:fly={{x: 100}} out:fly={{x: -100, opacity: 0.8}}>
             <img src="/images/leaders/modulos1/{modulos1 + 1}.webp" alt="" class="w-full">
