@@ -123,7 +123,7 @@
       </div>
     </div>
     <div class="w-full lg:w-1/2 animate" style="--animate-x: -3rem">
-      <img src="/images/leaders/logo.svg" alt="" class="pt-16 ml-auto lg:pt-0 w-5/10">
+      <img src="/images/leaders/logo.svg" alt="" class="pt-16 mx-auto ml-auto lg:mr-0 lg:pt-0 w-7/10 lg:w-5/10">
     </div>
   </V>
 
@@ -201,11 +201,11 @@
     </P>
     <V class="z-20 flex flex-col py-16 pt-24 text-center content animate" oneWay style="--animate-s: 0.8">
       <img src="/images/leaders/challenge-titulo.svg" alt="#Challenge" class="h-16 mb-4 transform">
-      <p class="mx-auto mb-6 text-6xl font-black leading-none text-white uppercase transform">
+      <p class="mx-auto mb-6 text-4xl font-black leading-none text-white uppercase lg:text-6xl transform">
       Ideas por el cambio
       </p>
       <p class="mx-auto text-center text-white transform t-p lg:w-8/10">
-      <strong>IDEAS POR EL CAMBIO</strong>, es un #challenge donde los 200 participantes iniciales, construyen y postulan
+      <strong>IDEAS POR EL CAMBIO</strong>, es un <strong>#challenge</strong> donde los 200 participantes iniciales, construyen y postulan
       iniciativas para la promoción de la democracia, construcción de una visión de cambio y promueven
       la articulación, el activismo y la incidencia pública basada en innovación social, del challenge son
       seleccionados 10 micro proyectos, los cuales son financiados con un capital semilla para la

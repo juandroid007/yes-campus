@@ -64,7 +64,7 @@
 
     <V class="flex flex-col mt-24 lg:mr-0 lg:ml-0 w-9/10 lg:w-4/10 lg:pl-12 lg:mt-0 animate" oneWay style="--animate-time: 1s">
       <div class="mb-12 overflow-hidden media rounded-tr-3xl rounded-br-3xl lg:rounded-3xl">
-        <img src="https://source.unsplash.com/random/480x600" alt="" class="media-1:2">
+        <video src="/images/video3.webm" autoplay loop muted class="w-full media-1:2"></video>
       </div>
       <div class="ml-6 lg:ml-0">
         <p class="font-bold leading-none t-h2 font-title">
