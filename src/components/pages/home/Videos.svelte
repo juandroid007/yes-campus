@@ -81,7 +81,7 @@
   <V class="flex justify-end w-full lg:-mt-96 animate" oneWay style="--animate-time: 1s">
     <div class="flex flex-col w-9/10 lg:w-4/10">
       <div class="mb-12 ml-auto overflow-hidden media rounded-tl-3xl rounded-bl-3xl">
-        <img src="/images/desarrollo.jpg" alt="" class="w-full media-2:1">
+        <img src="/images/desarrollo.webp" alt="" class="w-full media-2:1">
       </div>
       <div class="mr-6 lg:mr-12">
         <p class="font-bold leading-none t-h2 font-title">

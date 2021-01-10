@@ -2,6 +2,7 @@
   import { hoverable } from '../../Cursor.svelte'
   import Glide from '@glidejs/glide'
   import V from '../../IntersectingViewport.svelte'
+  import Image from '../../Image.svelte'
 
   import { getCollection } from '../../../collections'
 
@@ -60,10 +61,6 @@
   :global(.profesores-slider .glide__bullet--active) {
     background-color: #605F5F;
   }
-
-  img {
-    isolation: isolate;
-  }
 </style>
 
 <div class="z-10 flex flex-col w-full h-full content-lg profesores-slider" id="mentores">
@@ -82,7 +79,7 @@
                 <div
                   class="w-full overflow-hidden bg-gray-700 shadow-lg h-80 rounded-2xl"
                 >
-                <img src="/images/{p.thumbnail}" alt={p.nombre} class="object-cover w-full h-full">
+                <Image src="/images/{p.thumbnail}" alt={p.nombre} class="object-cover w-full h-full"/>
                 </div>
                 <p class="mt-6 leading-none t-h3 font-title">{p.nombre}</p>
                 <p class="mt-2 font-light leading-none t-p font-title">{p.ocupacion}</p>

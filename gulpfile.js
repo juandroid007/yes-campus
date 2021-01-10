@@ -73,7 +73,7 @@ exports.clean = clean
 const generateWebps = (path) => {
   return gulp.src(`${path}/**/*`)
     .pipe(webp({
-      quality: 70,
+      quality: 65,
     }))
     .pipe(gulp.dest(path))
 }
@@ -108,9 +108,24 @@ const injectMetadata = () => {
 }
 exports.injectMetadata = injectMetadata
 
+
+const replacePreload = () => {
+  const { readFileSync } = fs
+  const html = readFileSync('./dist/index.html', 'utf-8')
+  const script = html.match(/src="\/(_assets\/index.\w+.js)"/)[1]
+  const dest = `<link rel="modulepreload" href="/${script}" />`
+  return gulp.src('dist/index.html')
+    .pipe(replace('<!-- inject:preload -->', dest))
+    .pipe(gulp.dest('dist'))
+}
+exports.replacePreload = replacePreload
+
 const replaceRobotsTXT = () => {
-  return gulp.src('dist/robots.txt')
-    .pipe(replace('{{host}}', svitsConfig.hostname))
+  const { readFileSync } = fs
+  const html = readFileSync('./dist/index.html', 'utf-8')
+  const script = html.match(/src="\/(_assets\/index.\w+.js)"/)[1]
+  return gulp.src('dist/index.html')
+    .pipe(replace('{{host}}', script))
     .pipe(gulp.dest('dist'))
 }
 exports.replaceRobotsTXT = replaceRobotsTXT
@@ -175,6 +190,7 @@ const prod = gulp.series(
   updateServiceWorker,
   generateSitemapXML,
   replaceRobotsTXT,
+  replacePreload,
 )
 exports.prod = prod
 
