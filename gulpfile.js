@@ -113,7 +113,12 @@ const replacePreload = () => {
   const { readFileSync } = fs
   const html = readFileSync('./dist/index.html', 'utf-8')
   const script = html.match(/src="\/(_assets\/index.\w+.js)"/)[1]
-  const dest = `<link rel="modulepreload" href="/${script}" />`
+  const scriptBuff = readFileSync('./dist/'+script, 'utf-8')
+  console.log(scriptBuff)
+  const folder = scriptBuff.match(/(_folder.\w+.js)/)[1]
+  console.log(folder)
+  const dest = `<link rel="modulepreload" href="/${script}" />
+<link rel="modulepreload" href="/_assets/${folder}" />`
   return gulp.src('dist/index.html')
     .pipe(replace('<!-- inject:preload -->', dest))
     .pipe(gulp.dest('dist'))
