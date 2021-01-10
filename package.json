@@ -8,7 +8,7 @@
   },
   "version": "0.0.0",
   "scripts": {
-    "gulp:clean": "gulp clean",
+    "clean": "gulp clean",
     "gulp:dev": "gulp",
     "gulp:prod": "gulp prod",
     "validate": "svelte-check && tsc --noEmit",

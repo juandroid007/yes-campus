@@ -153,9 +153,9 @@
 
   <div class="flex flex-wrap items-center py-32 content">
     <V class="relative hidden tarjetas lg:flex animate" style="--animate-x: -3rem; --animate-y: -3rem" oneWay>
-      <div class="absolute w-full h-2/10 bg-gradient-to-b from-white dark:from-yes-gray-900 to-transparent"></div>
-      <div class="absolute bottom-0 w-full h-2/10 bg-gradient-to-t from-white dark:from-yes-gray-900 to-transparent"></div>
-      <PC class="relative w-full h-full overflow-hidden -z-10" let:offset>
+      <div class="absolute w-full h-2/10 bg-gradient-to-b from-white dark:from-yes-gray-900 to-transparent transform"></div>
+      <div class="absolute bottom-0 w-full h-2/10 bg-gradient-to-t from-white dark:from-yes-gray-900 to-transparent transform"></div>
+      <PC class="relative w-full h-full overflow-hidden -z-10 transform" let:offset>
         <P
           class="absolute ml-6 overflow-hidden bg-gray-500 shadow-xl mt-28 w-52 h-80 rounded-xl"
           offset={offset}

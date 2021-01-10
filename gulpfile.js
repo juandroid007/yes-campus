@@ -121,11 +121,8 @@ const replacePreload = () => {
 exports.replacePreload = replacePreload
 
 const replaceRobotsTXT = () => {
-  const { readFileSync } = fs
-  const html = readFileSync('./dist/index.html', 'utf-8')
-  const script = html.match(/src="\/(_assets\/index.\w+.js)"/)[1]
-  return gulp.src('dist/index.html')
-    .pipe(replace('{{host}}', script))
+  return gulp.src('dist/robots.txt')
+    .pipe(replace('{{host}}', svitsConfig.host))
     .pipe(gulp.dest('dist'))
 }
 exports.replaceRobotsTXT = replaceRobotsTXT
