@@ -73,7 +73,7 @@ exports.clean = clean
 const generateWebps = (path) => {
   return gulp.src(`${path}/**/*`)
     .pipe(webp({
-      quality: 65,
+      quality: 60,
     }))
     .pipe(gulp.dest(path))
 }
@@ -127,7 +127,7 @@ exports.replacePreload = replacePreload
 
 const replaceRobotsTXT = () => {
   return gulp.src('dist/robots.txt')
-    .pipe(replace('{{host}}', svitsConfig.host))
+    .pipe(replace('{{host}}', svitsConfig.hostname))
     .pipe(gulp.dest('dist'))
 }
 exports.replaceRobotsTXT = replaceRobotsTXT

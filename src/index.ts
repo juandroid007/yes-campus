@@ -13,6 +13,15 @@ wf.load({
   }
 })
 
+const element = document.getElementById('app')
+
+if (element.hasChildNodes()) {
+  element.removeAttribute('class')
+  while (element.firstChild) {
+    element.firstChild.remove()
+  }
+}
+
 const app = new App({
   target: document.getElementById('app'),
 })
