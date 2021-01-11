@@ -24,28 +24,28 @@
       const bcr = container.getBoundingClientRect()
 
       if (
-        (bcr.top - top) < window.innerHeight &&
-        (bcr.bottom + bottom) > window.innerHeight &&
+        (bcr.top + top) < window.innerHeight &&
+        (bcr.bottom - bottom) > window.innerHeight &&
         !intersecting
       ) {
         distpatch('top', { offset: container.offsetTop })
       }
 
       if (
-        (bcr.top - top) > window.innerHeight &&
+        (bcr.top + top) > window.innerHeight &&
         intersecting
       ) {
         distpatch('out', { offset: container.offsetTop })
       }
 
       if (oneWay) {
-        intersecting = (bcr.top - top) < window.innerHeight
+        intersecting = (bcr.top + top) < window.innerHeight
       } else {
         intersecting = (
-          (bcr.bottom + bottom) > 0 &&
-          (bcr.right + right) > 0 &&
-          (bcr.top - top) < window.innerHeight &&
-          (bcr.left - left) < window.innerWidth
+          (bcr.bottom - bottom) > 0 &&
+          (bcr.right - right) > 0 &&
+          (bcr.top + top) < window.innerHeight &&
+          (bcr.left + left) < window.innerWidth
         )
       }
 
@@ -83,7 +83,7 @@
 
   :global(.intersecting-viewport:not(.intersecting) .animate),
   :global(.intersecting-viewport:not(.intersecting).animate) {
-    transition: transform 0s 0s, opacity 0s 0s !important;
+    transition: transform var(--animate-time) 0s, opacity var(--animate-time) 0s;
     opacity: 0;
     transform:
       scale3d(var(--animate-s-x), var(--animate-s-y), 0)
@@ -91,6 +91,11 @@
       rotateX(var(--animate-r-x))
       rotateY(var(--animate-r-y))
       rotateZ(var(--animate-r));
+  }
+
+  :global(.intersecting-viewport:not(.intersecting) .animate:not(.animateOut)),
+  :global(.intersecting-viewport:not(.intersecting).animate:not(.animateOut)) {
+    transition: transform 0s 0s, opacity 0s 0s !important;
   }
 </style>
 

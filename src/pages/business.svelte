@@ -214,15 +214,15 @@
       </V>
     </div>
 
-    <V class="py-16 mt-24 bg-yes-blue-800" oneWay id="formacion-in-company">
+    <V class="py-16 mt-24 bg-yes-blue-800" top={100} oneWay id="formacion-in-company">
       <div class="flex flex-wrap-reverse items-center text-white content lg:flex-wrap">
-        <div class="w-full lg:w-1/2 md:pr-12 animate" style="--animate-x: -3rem">
+        <div class="w-full lg:w-1/2 md:pr-12 animate animateOut" style="--animate-x: -3rem">
           <h2 class="mb-6 t-h1">Formación in Company</h2>
           <p class="t-p animate" style="transition-delay: 200ms; --animate-x: -1rem">
           Desarrollamos programas de formación y capacitación adaptadas a las necesidades de tu organización, con oportunidades de certificación y bajo las modalidades presencial o en línea. 
           </p>
         </div>
-        <div class="z-40 w-full mb-12 lg:w-1/2 -mt-36 lg:-mb-36 animate" style="--animate-x: 3rem">
+        <div class="z-10 w-full mb-12 lg:w-1/2 -mt-36 lg:-mb-36 animate animateOut" style="--animate-x: 3rem">
           <img src="/images/business/mac.webp" alt="" class="w-full pointer-events-none select-none">
         </div>
       </div>
