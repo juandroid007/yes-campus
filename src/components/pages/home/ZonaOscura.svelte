@@ -100,6 +100,6 @@
 
 <Profesores/>
 
-<Viewport class="animate" oneWay style="--animate-r-y: -64deg">
+<Viewport class="animate animateOut" oneWay style="--animate-r-y: -64deg" top={220}>
   <Testimonio/>
 </Viewport>

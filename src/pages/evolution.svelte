@@ -148,10 +148,10 @@
     <img src="/images/evolution/detalles/logo.webp" alt="" class="absolute top-0 hidden h-full py-16 right-4 xl:block animate" style="--animate-x: 70%; --animate-r-x: 0deg; transition-delay: 200ms">
     <div class="content">
       <img src="/images/evolution/detalles/titulo.webp" alt="" class="mx-auto mb-12 animate" style="transition-delay: 400ms">
-      <div class="flex flex-wrap w-full -my-6">
+      <div class="flex flex-wrap w-full -my-6 lg:-my-12">
         {#each detalles as t, i}
-          <div class="w-full py-6 sm:w-1/3 animate" style="transition-delay: {100 * i + 800}ms">
-            <img src="/images/evolution/detalles/{i + 1}.webp" alt="" class="h-12 mx-auto">
+          <div class="w-full py-6 lg:py-12 sm:w-1/3 animate" style="transition-delay: {100 * i + 800}ms">
+            <img src="/images/evolution/detalles/{i + 1}.webp" alt="" class="h-12 mx-auto lg:h-16">
             <p class="mx-auto mt-6 font-bold text-center t-p lg:w-6/10">{t}</p>
           </div>
         {/each}
