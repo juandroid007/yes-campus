@@ -132,7 +132,7 @@
         style="transition-delay: 400ms"
       >
         <div class="w-full p-8">
-          <div class="mb-6 text-black t-h2 dark:text-white">Este programa es<br class="hidden lg:block">para ti si</div>
+          <div class="mb-6 text-black t-h2 dark:text-white">Este programa es <br class="hidden lg:block">para ti si</div>
           <ul class="t-p">
             <li>Poseer una empresa o emprendimiento.</li>
             <li>Eres un emprendedor o empresario que desea que su negocio crezca, se expanda o se replique.</li>
