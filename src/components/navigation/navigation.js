@@ -58,6 +58,10 @@ export default [
         titulo: 'Young Leaders',
         href: '/leaders',
       },
+      {
+        titulo: 'Evolution',
+        href: '/evolution',
+      },
     ],
   },
   {
@@ -67,10 +71,6 @@ export default [
       {
         titulo: 'YES Talks',
         href: '/talks',
-      },
-      {
-        titulo: 'Evolution',
-        href: '/evolution',
       },
       {
         titulo: 'Comunidad YES',
