@@ -49,7 +49,7 @@
   li::after {
     content: '';
     position: absolute;
-    background-image: url(/images/evolution/detalles/flecha.webp);
+    background-image: url("/images/evolution/detalles/flecha.png");
     background-repeat: no-repeat;
     background-size: contain;
     left: 0;
