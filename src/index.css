@@ -25,7 +25,7 @@ pre, code {
 	@apply text-gray-400;
 }
 
-img {
+img, video {
 	aspect-ratio: attr(width) / attr(height);
 }
 

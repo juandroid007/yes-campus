@@ -19,6 +19,14 @@
     'Capital semilla para 10 micro proyectos',
   ]
 
+  const fases = [
+    'Convocatoria y selección',
+    'Ciclo de Webinars',
+    '#Challenge "Ideas por el Cambio"',
+    'Workshop "Liderazgo Trascendental"',
+    'Selección de los ganadores del capital semilla',
+  ]
+
   const modulos = [
     {
       title: 'Rol de la juventud y la democracia',
@@ -157,13 +165,26 @@
     </div>
   </V>
 
-  <div class="hidden mb-16 content">
+  <div class="mb-16 content">
     <V class="flex flex-col w-full px-6 shadow-lg bg-leaders-yellow animate" style="border-radius: 3rem; --animate-r-y: 64deg" oneWay>
-      <h2 class="my-6 text-center text-leaders-sky t-h2">Fases del programa</h2>
-      <div class="flex flex-col w-full px-6 sm:flex-row sm:justify-between">
-        {#each iconografia as s, i}
-          <div class="w-full py-12 text-leaders-sky md:w-1/4 animate" style="transition-delay: {100 * i + 400}ms; --animate-y: 0.5rem; --animate-r-y: 0deg; --animate-r-x: -64deg">
-            <img src="/images/leaders/iconografia/{i + 1}.svg" alt="" class="w-full mx-auto mb-4 w-6/10 sm:w-5/10">
+      <h2 class="my-4 text-center text-leaders-sky t-h2">Fases del programa</h2>
+      <div class="flex hidden w-full px-6 sm:flex sm:flex-row sm:justify-center">
+        <div class="py-4 animate" style="transition-delay: {100 * 0 + 400}ms; --animate-y: 0.5rem; --animate-r-y: 0deg; --animate-r-x: -64deg">
+          <img src="/images/leaders/fases/fase1.png" alt="" class="px-4 mx-auto mb-4 h-36 lg:h-48 xxl:h-56">
+        </div>
+        <div class="py-4 animate" style="transition-delay: {100 * 1 + 400}ms; --animate-y: 0.5rem; --animate-r-y: 0deg; --animate-r-x: -64deg">
+          <img src="/images/leaders/fases/fase2.png" alt="" class="h-40 px-4 mx-auto mb-4 lg:h-52 xxl:h-60">
+        </div>
+      </div>
+      <div class="flex flex-col w-full px-6 pt-4 sm:hidden sm:flex-row sm:justify-between">
+        {#each fases as s, i}
+          {#if i == 0}
+            <p class="font-bold text-center text-white t-h3 animate">Fase 1</p>
+          {:else if i == 2}
+            <p class="font-bold text-center text-white t-h3 animate">Fase 2</p>
+          {/if}
+          <div class="w-full py-6 text-leaders-sky md:w-1/4 animate" style="transition-delay: {100 * i + 400}ms; --animate-y: 0.5rem; --animate-r-y: 0deg; --animate-r-x: -64deg">
+            <img src="/images/leaders/fases/{i + 1}.svg" alt="" class="w-full mx-auto mb-4 w-6/10 sm:w-5/10">
             <p class="text-center t-h3">{@html s}</p>
           </div>
         {/each}
