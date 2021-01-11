@@ -25,6 +25,10 @@ pre, code {
 	@apply text-gray-400;
 }
 
+img {
+	aspect-ratio: attr(width) / attr(height);
+}
+
 div {
 	cursor:  none;
 }
@@ -54,15 +58,15 @@ button {
 }
 
 .glide--swipeablee * {
-  cursor: grab !important;
-  cursor: -moz-grab !important;
-  cursor: -webkit-grab !important;
+	cursor: grab !important;
+	cursor: -moz-grab !important;
+	cursor: -webkit-grab !important;
 }
 
 .glide--draggingg * {
-  cursor: grabbing !important;
-  cursor: -moz-grabbing !important;
-  cursor: -webkit-grabbing !important;
+	cursor: grabbing !important;
+	cursor: -moz-grabbing !important;
+	cursor: -webkit-grabbing !important;
 }
 
 .content {
