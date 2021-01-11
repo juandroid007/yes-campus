@@ -51,7 +51,7 @@
     'Planificación estratégica y de negocio',
     'Estudios y desarrollo de estrategias de Marketing',
     'Gestión de procesos y desarrollo organizacional',
-    'Planes Financieros y de Invrsión',
+    'Planes Financieros y de Inversión',
     'Asistencia Legal y Compliance',
     'Branding y Rebranding',
     'Creación de franquicias',

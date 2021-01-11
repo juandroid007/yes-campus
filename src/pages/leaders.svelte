@@ -34,26 +34,26 @@
     },
     {
       title: 'El poder de una visión y la construcción de cambios',
-      description: 'y su participación ciudadana',
+      description: 'a partir de la búsqueda de soluciones a problemas locales',
     },
     {
       title: 'Herramientas para el desarrollo de habilidades ágiles',
-      description: 'y su participación ciudadana',
+      description: 'en los líderes jóvenes ante situaciones complejas',
     },
     {
       title: 'Activismo social, participación política y ciudadana',
-      description: 'y su participación ciudadana',
+      description: 'a través de los medios digitales',
     },
     {
       title: 'Cambio sistémico y participación ciudadana',
-      description: 'y su participación ciudadana',
+      description: 'en atención a los ODS 2030',
     },
   ]
 
   const modulos2 = [
     {
-      title: 'Agilismo para líderes transformadores',
-      description: 'y su participación ciudadana',
+      title: 'Agilismo',
+      description: 'para líderes transformadores',
     },
     {
       title: 'Construcción de mapa de mapa de incidencia',

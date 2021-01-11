@@ -112,7 +112,7 @@
   <div class="relative flex flex-col items-center h-full transform lg:flex-row content">
     <div class="my-auto lg:w-1/2" in:fly={{x: -100, duration: 800}}>
       <p class="text-4xl font-bold leading-none md:text-6xl font-title">
-      Tu ecosistema de emprendimiento
+      Somos tu ecosistema de emprendimiento
       </p>
       <p class="mt-4 text-xl">
       Desarrolla habilidades y despréndete de tus límites gracias a nuestros cursos y programas especializados
