@@ -56,12 +56,12 @@
 
 <style>
   .animation {
-    --animate-x: -10%;
+    --animate-x: -1rem;
   }
 
   @screen md {
     .animation {
-      --animate-y: -10%;
+      --animate-y: -1rem;
       --animate-s: 0.9;
       --animate-r: 3deg;
     }

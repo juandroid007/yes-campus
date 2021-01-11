@@ -11,13 +11,13 @@
   let:offset
 >
   <Viewport let:intersecting class="absolute w-full h-full" oneWay>
-    <div class="absolute w-full h-full animate" style="--animate-y: 40%">
+    <div class="absolute w-full h-full animate" style="--animate-y: 1rem">
       <Parallaxes offset={offset} />
     </div>
   </Viewport>
   <div class="z-20 flex items-center w-screen h-full transform content">
     <Viewport class="flex m-auto" oneWay>
-      <div class="m-auto text-center md:w-6/10 animate" style="--animate-y: 40%; transition-delay: 0.2s">
+      <div class="m-auto text-center md:w-6/10 animate" style="--animate-y: 3rem; transition-delay: 0.2s">
         <p class="text-3xl font-bold leading-none text-center text-white md:text-4xl font-title">
         Conoce y forma parte de nuestros campamentos especializados
         </p>

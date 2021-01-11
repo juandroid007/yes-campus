@@ -39,14 +39,14 @@
 
 <style>
   .animation {
-    --animate-x: -2%;
+    --animate-x: -1rem;
   }
 
   @screen md {
     .animation {
-      --animate-x: -1%;
-      --animate-y: -5%;
-      --animate-r: -3deg;
+      --animate-x: -1rem;
+      --animate-y: -1rem;
+      --animate-r: -2deg;
     }
   }
 </style>
