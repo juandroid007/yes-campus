@@ -4,8 +4,6 @@
   import { hoverable } from '../../Cursor.svelte'
   import Image from '../../Image.svelte'
   import { getCollection } from '../../../collections'
-  import PC from '../../motion/ParallaxContainer.svelte'
-  import P from '../../motion/ParallaxObject.svelte'
 
   $: testimonios = getCollection('testimonios').elements
 
@@ -86,13 +84,9 @@
                 </div>
                 {#if image}
                   <div class="w-full lg:px-12 lg:w-1/2">
-                    <PC let:offset class="w-full overflow-hidden bg-gray-500 shadow-xl md:my-12 h-96 rounded-3xl">
-                      <P class="w-full" offset={offset} motion={false} style="height: 130%" scaleFactor={12}>
-                        <Image src={t.imagen} alt={t.autor} class="object-cover w-full h-full"/>
-                        <!--div class="w-full h-full bg-right-top bg-cover" style="background-image: url(/images/desarrollo.jpg)">
-                        </div-->
-                      </P>
-                    </PC>
+                    <div class="w-full overflow-hidden bg-gray-500 shadow-xl md:my-12 h-96 rounded-3xl">
+                      <Image src={t.imagen} alt={t.autor} class="object-cover w-full h-full"/>
+                    </div>
                   </div>
                 {/if}
               </div>

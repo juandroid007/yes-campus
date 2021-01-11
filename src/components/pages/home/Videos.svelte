@@ -33,7 +33,7 @@
       <div class="mb-12 overflow-hidden media rounded-tr-3xl rounded-br-3xl">
         <video src="/images/video2.webm" autoplay loop muted class="w-full media-2:1"></video>
       </div>
-      <div class="ml-6 md:ml-12">
+      <div class="ml-6 md:ml-16 xxl:ml-24">
         <p class="font-bold leading-none t-h2 font-title">
         Aprendemos en redes y a través del trabajo colaborativo
         </p>
@@ -45,8 +45,8 @@
       </div>
     </div>
   </V>
-  <div class="flex flex-wrap justify-between my-24 lg:justify-center lg:my-24 lg:w-9/10 lg:mx-auto lg:-mt-64">
-    <V class="flex flex-col ml-auto w-9/10 lg:w-4/10 lg:ml-0 lg:mt-96 animate lg:pr-12" oneWay style="--animate-time: 1s">
+  <div class="flex flex-wrap justify-between my-24 lg:justify-between lg:my-28 lg:w-9/10 lg:mx-auto lg:-mt-64">
+    <V class="flex flex-col ml-auto w-9/10 lg:w-4/10 lg:ml-0 lg:mt-96 animate lg:pr-4" oneWay style="--animate-time: 1s">
       <div class="mb-12 overflow-hidden media rounded-tl-3xl rounded-bl-3xl lg:rounded-3xl">
         <video src="/images/video.webm" autoplay loop muted class="object-left-top w-full media-1:2"></video>
       </div>
@@ -62,7 +62,7 @@
       </div>
     </V>
 
-    <V class="flex flex-col mt-24 lg:mr-0 lg:ml-0 w-9/10 lg:w-4/10 lg:pl-12 lg:mt-0 animate" oneWay style="--animate-time: 1s">
+    <V class="flex flex-col mt-24 lg:mr-0 lg:ml-0 w-9/10 lg:w-4/10 lg:pl-4 lg:mt-0 animate" oneWay style="--animate-time: 1s">
       <div class="mb-12 overflow-hidden media rounded-tr-3xl rounded-br-3xl lg:rounded-3xl">
         <video src="/images/video3.webm" autoplay loop muted class="w-full media-1:2"></video>
       </div>
@@ -78,12 +78,12 @@
     </V>
   </div>
 
-  <V class="flex justify-end w-full lg:-mt-96 animate" oneWay style="--animate-time: 1s">
+  <V class="flex justify-end w-full lg:-mt-80 animate" oneWay style="--animate-time: 1s">
     <div class="flex flex-col w-9/10 lg:w-4/10">
       <div class="mb-12 ml-auto overflow-hidden media rounded-tl-3xl rounded-bl-3xl">
         <img src="/images/desarrollo.webp" alt="" class="w-full media-2:1">
       </div>
-      <div class="mr-6 lg:mr-12">
+      <div class="mr-6 lg:mr-16 xxl:mr-24">
         <p class="font-bold leading-none t-h2 font-title">
         Gestionamos proyectos de aprendizaje grupal a la medida
         </p>
