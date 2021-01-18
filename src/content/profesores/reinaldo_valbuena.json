@@ -1,5 +1,8 @@
 {
   "nombre": "Karla Hernández",
   "ocupacion": "Especialista en Finanzas y Estrategias de Negocio",
-  "thumbnail": "uploads/karla_mary_hernandez.png"
+  "thumbnail": "uploads/karla_mary_hernandez.png",
+  "programas": {
+    "general": true
+  }
 }

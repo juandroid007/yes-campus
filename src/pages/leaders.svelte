@@ -5,6 +5,7 @@
   import V from '../components/IntersectingViewport.svelte'
   import PC from '../components/motion/ParallaxContainer.svelte'
   import P from '../components/motion/ParallaxObject.svelte'
+  import Especialistas from '../components/pages/home/Profesores.svelte'
   import { fly } from 'svelte/transition'
 
   const description = 'Bootcamp para el desarrollo de competencias de liderazgo juvenil en función de la defensa de la democracia y el fortalecimiento institucional de las organizaciones lideradas por jóvenes.'
@@ -89,7 +90,7 @@
   }
 </style>
 
-<div class="w-full overflow-x-hidden">
+<div class="w-full overflow-hidden">
   <V class="relative w-full overflow-hidden bg-leaders-sky">
     <div class="absolute bottom-0 right-0 hidden animate lg:block w-4/10" style="--animate-y: 40%">
       <img src="/images/leaders/bg1.webp" alt="" class="w-full transform translate-y-6">
@@ -263,4 +264,9 @@
       <List elements={modulos2} />
     </div>
   </V>
+
+  <div class="w-full">
+    <h2 class="mb-12 text-center t-h2 text-leaders-sky">Estos son nuestros especialistas</h2>
+    <Especialistas titulo={false}  />
+  </div>
 </div>

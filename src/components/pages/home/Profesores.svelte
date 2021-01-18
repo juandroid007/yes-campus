@@ -6,7 +6,12 @@
 
   import { getCollection } from '../../../collections'
 
-  $: profesores = getCollection('profesores').elements
+  export let programa = 'general'
+  export let titulo = true
+
+  $: profesores = getCollection('profesores')
+    .filter(e => e.programas[programa])
+    .elements
 
   let glide
   let intersecting
@@ -63,38 +68,42 @@
   }
 </style>
 
-<div class="z-10 flex flex-col w-full h-full content-lg profesores-slider" id="mentores">
-  <h2 class="mb-12 font-bold leading-none t-h1 font-title">Aprende con profesionales<br>disruptivos y de alto impacto</h2>
-  <V class="w-full my-auto" bind:intersecting oneWay on:top={() => {
-    glide.update({
-      autoplay: 2000,
-    })
-  }}>
-    <div class="glide animate" use:mountGlide class:intersecting>
-      <div class="w-full glide__track" data-glide-el="track" use:hoverable={{primary: true, text: 'Arrastra', color: '#0273E3'}}>
-        <ul class="glide__slides">
-          {#each profesores as p, i}
-            <li class="glide__slide">
-              <div class="mx-auto w-60">
-                <div
-                  class="w-full overflow-hidden bg-gray-700 shadow-lg h-80 rounded-2xl"
-                >
-                <Image src="{p.thumbnail}" alt={p.nombre} class="object-cover w-full h-full"/>
+{#if profesores.length}
+  <div class="z-10 flex flex-col w-full h-full content-lg profesores-slider" id="mentores">
+    {#if titulo}
+      <h2 class="mb-12 font-bold leading-none t-h1 font-title">Aprende con profesionales<br>disruptivos y de alto impacto</h2>
+    {/if}
+    <V class="w-full my-auto" bind:intersecting oneWay on:top={() => {
+      glide.update({
+        autoplay: 2000,
+      })
+    }}>
+      <div class="glide animate" use:mountGlide class:intersecting>
+        <div class="w-full glide__track" data-glide-el="track" use:hoverable={{primary: true, text: 'Arrastra', color: '#0273E3'}}>
+          <ul class="glide__slides">
+            {#each profesores as p, i}
+              <li class="glide__slide">
+                <div class="mx-auto w-60">
+                  <div
+                    class="w-full overflow-hidden bg-gray-700 shadow-lg h-80 rounded-2xl"
+                  >
+                  <Image src="{p.thumbnail}" alt={p.nombre} class="object-cover w-full h-full"/>
+                  </div>
+                  <p class="mt-6 leading-none t-h3 font-title">{p.nombre}</p>
+                  <p class="mt-2 font-light leading-none t-p font-title">{p.ocupacion}</p>
                 </div>
-                <p class="mt-6 leading-none t-h3 font-title">{p.nombre}</p>
-                <p class="mt-2 font-light leading-none t-p font-title">{p.ocupacion}</p>
-              </div>
-            </li>
-          {/each}
-        </ul>
-      </div>
-      <div class="flex w-full">
-        <div class="mx-auto glide__bullets" data-glide-el="controls[nav]">
-          {#each profesores as _, i}
-            <button class="glide__bullet" data-glide-dir="={i}" use:hoverable></button>
-          {/each}
+              </li>
+            {/each}
+          </ul>
+        </div>
+        <div class="flex w-full">
+          <div class="mx-auto glide__bullets" data-glide-el="controls[nav]">
+            {#each profesores as _, i}
+              <button class="glide__bullet" data-glide-dir="={i}" use:hoverable></button>
+            {/each}
+          </div>
         </div>
       </div>
-    </div>
-  </V>
-</div>
+    </V>
+  </div>
+{/if}

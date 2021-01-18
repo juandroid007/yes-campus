@@ -45,6 +45,16 @@ collections:
       - {label: "Nombre", name: "nombre", widget: "string"}
       - {label: "Ocupación", name: "ocupacion", widget: "string"}
       - {label: "Imagen", name: "thumbnail", widget: "image"}
+      - label: "Programas"
+        name: "programas"
+        widget: "object"
+        collapsed: false
+        fields:
+          - {label: "General", name: "general", widget: "boolean", default: true, required: false}
+          - {label: "Young Entrepeneur", name: "young-entrepeneur", widget: "boolean", default: false, required: false}
+          - {label: "Full Inclusion", name: "full-inclusion", widget: "boolean", default: false, required: false}
+          - {label: "Young Leaders", name: "young-leaders", widget: "boolean", default: false, required: false}
+          - {label: "Evolution", name: "evolution", widget: "boolean", default: false, required: false}
 
   - name: "testimonios" # Used in routes, e.g., /admin/collections/blog
     label: "Testimonios" # Used in the UI
