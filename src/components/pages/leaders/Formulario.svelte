@@ -33,7 +33,7 @@
         <input type="text" class="mb-6 input" placeholder="Ej. +584123456789">
 
         <div class="input-label">Correo</div>
-        <input type="text" class="mb-6 input" placeholder="Ej. +584123456789">
+        <input type="text" class="mb-6 input" placeholder="Ej. mariarondon@gmail.com">
 
         <div class="input-label">Estado de residencia</div>
         <input type="text" class="input">

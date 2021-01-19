@@ -16,6 +16,17 @@
   metatags.title = 'Young Leaders | ' + svitsConfig.name
   metatags.description = description
 
+  const aliados = [
+    'aye',
+    'yes',
+    '1001',
+    'ashoka',
+    'vayalo',
+    'esperanza',
+    'kala',
+    'compromiso',
+  ]
+
   const iconografia = [
     '200 Jóvenes Líderes',
     '6 webinars dictados por especialistas',
@@ -91,6 +102,18 @@
     grid-column: 1/2;
     grid-row: 1/2 relative;
   }
+
+  .grayscale {
+    --filter-gray: 100%;
+    filter: grayscale(var(--filter-gray)) drop-shadow(1px 1px 0 white)
+        drop-shadow(-1px 1px 0 white)
+        drop-shadow(1px -1px 0 white)
+        drop-shadow(-1px -1px 0 white);
+  }
+
+  .grayscale:hover {
+    --filter-gray: 0%;
+  }
 </style>
 
 <Formulario bind:open={openForm} />
@@ -129,7 +152,7 @@
       </p>
       <div class="transform hover:-translate-y-px duration-200">
         <a
-          href="/#"
+          href="#detalles"
           class="px-8 py-4 font-bold text-white rounded-full shadow duration-200 hover:shadow-md bg-leaders-yellow"
           >Conoce los detalles</a
         >
@@ -140,7 +163,7 @@
     </div>
   </V>
 
-  <div class="mb-16 content">
+  <div class="mb-16 content" id="detalles">
     <V class="flex flex-col w-full px-6 overflow-hidden shadow-lg sm:flex-row sm:justify-between bg-leaders-blue animate" style="border-radius: 3rem; --animate-r-y: 64deg" oneWay>
       {#each iconografia as s, i}
         <div class="w-full py-4 text-white md:w-1/4 animate" style="transition-delay: {100 * i + 400}ms; --animate-y: 0.5rem; --animate-r-y: 0deg; --animate-r-x: -64deg">
@@ -270,7 +293,23 @@
   </V>
 
   <div class="w-full">
-    <h2 class="mb-12 text-center t-h2 text-leaders-sky">Estos son nuestros especialistas</h2>
-    <Especialistas titulo={false}  />
+    <h2 class="mb-12 text-center t-h2 text-leaders-sky">Facilitadores del Bootcamp</h2>
+    <Especialistas titulo={false} programa="young-leaders" />
+  </div>
+
+  <div class="w-full mt-12 text-leaders-sky" id="aliados">
+    <div class="py-12 content">
+      <V class="overflow-hidden" oneWay>
+        <h2 class="text-center t-h2 animate" style="line-height: 1.5 !important; --animate-r: 3deg; --animate-y: 100%">Organizaciones que hacen posible el Bootcamp</h2>
+        <p class="pb-2 text-center t-h3 animate" style="transition-delay: 200ms; --animate-r: 3deg; --animate-y: 100%">Young Leaders es posible gracias a</p>
+      </V>
+      <V class="flex flex-wrap items-center" oneWay>
+        {#each aliados as c, i}
+          <div class="flex w-1/2 p-6 mx-auto mt-2 animate lg:w-1/4" style="transition-delay: {50 * i + 500}ms">
+            <img src="/images/leaders/aliados/{c}.webp" alt="" class="w-auto m-auto grayscale duration-200 hover:scale-110 transform" style="max-height: 6rem">
+          </div>
+        {/each}
+      </V>
+    </div>
   </div>
 </div>
