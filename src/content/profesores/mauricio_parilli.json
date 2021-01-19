@@ -1,0 +1,12 @@
+{
+  "programas": {
+    "general": false,
+    "young-entrepeneur": false,
+    "full-inclusion": false,
+    "young-leaders": true,
+    "evolution": false
+  },
+  "nombre": "Mauricio Parilli",
+  "ocupacion": "Emprendedor social, Director de Aprendo y Emprendo",
+  "thumbnail": "uploads/mauricio.jpg"
+}
