@@ -6,18 +6,21 @@
   import PC from '../components/motion/ParallaxContainer.svelte'
   import P from '../components/motion/ParallaxObject.svelte'
   import Especialistas from '../components/pages/home/Profesores.svelte'
+  import Formulario from '../components/pages/leaders/Formulario.svelte'
   import { fly } from 'svelte/transition'
 
   const description = 'Bootcamp para el desarrollo de competencias de liderazgo juvenil en función de la defensa de la democracia y el fortalecimiento institucional de las organizaciones lideradas por jóvenes.'
+
+  let openForm
 
   metatags.title = 'Young Leaders | ' + svitsConfig.name
   metatags.description = description
 
   const iconografia = [
     '200 Jóvenes Líderes',
-    '6 módulos informativos Online',
+    '6 webinars dictados por especialistas',
     '1 workshop "Liderazgo Trascendental"',
-    'Capital semilla para 10 micro proyectos',
+    'Acceso a fondos para 10 micro-proyectos',
   ]
 
   const fases = [
@@ -61,16 +64,16 @@
       description: 'y tablero de control',
     },
     {
-      title: 'Herramientas para el desarrollo de habilidades ágiles',
-      description: 'y su participación ciudadana',
+      title: 'Gestión de proyectos y gobernanzas',
+      description: '',
     },
     {
       title: 'Sostenibilidad y estrategias para la autogestión',
-      description: 'y su participación ciudadana',
+      description: '',
     },
     {
       title: 'Articulación y comunicación de impacto',
-      description: 'y su participación ciudadana',
+      description: '',
     },
   ]
 
@@ -90,6 +93,8 @@
   }
 </style>
 
+<Formulario bind:open={openForm} />
+
 <div class="w-full overflow-hidden">
   <V class="relative w-full overflow-hidden bg-leaders-sky">
     <div class="absolute bottom-0 right-0 hidden animate lg:block w-4/10" style="--animate-y: 40%">
@@ -100,7 +105,7 @@
         <img src="/images/leaders/titulo.svg" alt="" class="w-full mb-6 lg:-ml-3 w-8/10">
         <p class="mb-8 t-p">{description}</p>
         <div class="transform hover:-translate-y-px duration-200">
-          <a href="/#" class="px-8 py-4 font-bold text-white rounded-full shadow duration-200 hover:shadow-md bg-leaders-yellow">Quiero postularme</a>
+          <button on:click={openForm} class="px-8 py-4 font-bold text-white rounded-full shadow duration-200 hover:shadow-md bg-leaders-yellow">Quiero postularme</button>
         </div>
       </div>
     </div>
@@ -158,9 +163,8 @@
         <li>Eres estudiante o emprendedor social.</li>
         <li>Te interesan temas como gobernabilidad,
           participación ciudadana, activismo social,
-          politica, innovación social.</li>
-        <li>Deseas obtener capital semilla para mate-
-          rializar tu proyecto, particiando en nuestro
+          política, innovación social.</li>
+        <li>Deseas obtener fondos para materializar tu proyecto, participando en nuestro
           <strong>#Challenge “Ideas para el cambio”</strong>.</li>
       </ul>
     </div>
@@ -249,10 +253,10 @@
       total de 30 participantes.
       </p>
       <div class="transform hover:-translate-y-px duration-200">
-        <a
-          href="/#"
+        <button
+          on:click={openForm}
           class="px-8 py-4 font-bold text-white rounded-full shadow duration-200 hover:shadow-md bg-leaders-sky"
-          >Postúlate aquí</a
+          >Postúlate aquí</button
         >
       </div>
     </div>

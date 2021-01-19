@@ -53,6 +53,8 @@
   }
 </script>
 
+<div id="modals"></div>
+
 <OfflineBanner/>
 <BannerUpdate/>
 <Router {routes} config={{ ...svitsConfig?.routifyRuntimeConfig }} />
