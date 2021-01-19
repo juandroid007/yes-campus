@@ -1,0 +1,12 @@
+{
+  "programas": {
+    "general": false,
+    "young-entrepeneur": false,
+    "full-inclusion": false,
+    "young-leaders": true,
+    "evolution": false
+  },
+  "nombre": "Luis Alvarado Bruzual",
+  "ocupacion": "Activista social, Presidente de la Fundación Váyalo",
+  "thumbnail": "uploads/luis_alvarado.png"
+}
