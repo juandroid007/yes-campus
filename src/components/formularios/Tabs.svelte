@@ -3,12 +3,14 @@
   export let page = 1
   export let validate = () => true
 
-  function changePage(toGo) {
+  export function changePage(toGo) {
     if (toGo < 1 || toGo > pages) {
       return
     }
     if (validate()) {
       page = toGo
+    } else {
+      alert('No puede dejar campos vacíos')
     }
   }
 </script>
