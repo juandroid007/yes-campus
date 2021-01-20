@@ -110,18 +110,45 @@
         <input type="text" class="mb-6 input" placeholder="Ej. mariarondon@gmail.com" bind:value={$form[0].email}>
 
         <div class="input-label">Estado de residencia</div>
-        <input type="text" class="input" bind:value={$form[0].residencia}>
+        <Select
+          bind:value={$form[0].residencia}
+          options={[
+            'Amazonas',
+            'Anzoátegui',
+            'Apure',
+            'Aragua',
+            'Barinas',
+            'Bolívar',
+            'Carabobo',
+            'Cojedes',
+            'Delta Amacuro',
+            'Distrito Capital',
+            'Falcón',
+            'Guárico',
+            'La Guaira',
+            'Lara',
+            'Mérida',
+            'Miranda',
+            'Monagas',
+            'Nueva Esparta',
+            'Portuguesa',
+            'Sucre',
+            'Táchira',
+            'Trujillo',
+            'Yaracuy',
+            'Zulia',
+          ]}
+        />
       {:else if page == 2}
         <div class="input-label">Soy un...</div>
-          <Select
-            bind:value={$form[1].ocupacion}
-            options={[
-              'Estudiante',
-              'Líder socio-político',
-              'Emprendedor social',
-            ]}
-          />
-
+        <Select
+          bind:value={$form[1].ocupacion}
+          options={[
+            'Estudiante',
+            'Líder socio-político',
+            'Emprendedor social',
+          ]}
+        />
 
         <div class="mt-6 input-label">Organización donde activa o participa</div>
         <input type="text" class="input" bind:value={$form[1].organizacion}>
