@@ -1,5 +1,13 @@
-<script context="module">
-  const initialForm = [
+<script>
+  import Modal from '../../Modal.svelte'
+  import Tabs from '../../formularios/Tabs.svelte'
+  import Select from '../../formularios/Select.svelte'
+  import { writable } from 'svelte/store'
+  export let open
+  let page
+  let closeModal
+
+  const initialForm = () => [
     {
       nombres: '',
       cedula: '',
@@ -10,41 +18,22 @@
     },
     {
       ocupacion: '',
-      experiencia: '',
       organizacion: '',
+      ods: '',
+      experiencia: '',
       participacionProyecto: '',
     },
   ]
-</script>
 
-<script>
-  import Modal from '../../Modal.svelte'
-  import Tabs from '../../formularios/Tabs.svelte'
-  import Select from '../../formularios/Select.svelte'
-  import { writable } from 'svelte/store'
-  export let open
-  let page
-  let closeModal
+  let valid
+  $: if ($form) {
+    valid = validate()
+  }
 
-  const form = writable(initialForm)
+  const form = writable(initialForm())
 
   const reset = () => {
-    $form = [
-      {
-        nombres: '',
-        cedula: '',
-        instagram: '',
-        telefono: '',
-        email: '',
-        residencia: '',
-      },
-      {
-        ocupacion: '',
-        experiencia: '',
-        organizacion: '',
-        participacionProyecto: '',
-      },
-    ]
+    form.set(initialForm())
     page = 1
   }
 
@@ -55,14 +44,14 @@
   function validate() {
     let valid = true
     const i = page - 1
-    Object.keys($form[i]).forEach(val => {
-      const value = String($form[i][val])
-      console.log(value, isEmpty(value))
-      valid = !isEmpty(value)
-      if (!valid) {
-        return
-      }
-    })
+    if ($form && $form[i]) {
+      Object.keys($form[i]).every(val => {
+        const value = String($form[i][val])
+        valid = !isEmpty(value)
+        console.log(value, valid)
+        return valid
+      })
+    }
     return valid
   }
 
@@ -93,6 +82,7 @@
   </div>
   <div slot="content">
     <div class="flex flex-col w-full font-title">
+      <div class="input-label">{valid}</div>
       {#if page == 1}
         <div class="input-label">Nombre y apellido</div>
         <input type="text" class="mb-6 input" placeholder="Ej. Maria Rondón" bind:value={$form[0].nombres}>
@@ -152,6 +142,30 @@
 
         <div class="mt-6 input-label">Organización donde activa o participa</div>
         <input type="text" class="input" bind:value={$form[1].organizacion}>
+
+        <div class="mt-6 input-label">¿A qué ODS inciden?</div>
+        <Select
+          bind:value={$form[1].ods}
+          options={[
+            '1. Fin de la Pobreza',
+            '2. Hambre Cero',
+            '3. Salud y Bienestar',
+            '4. Educación de Calidad',
+            '5. Igualdad de Género',
+            '6. Agua Limpia y Saneamiento',
+            '7. Energía Asequible y no Contaminante',
+            '8. Trabajo Decente y Crecimiento Económico',
+            '9. Industria, Innovación e Infraestructura',
+            '10. Reducción de las Desigualdades',
+            '11. Ciudades y Comunidades Sostenibles',
+            '12. Producción y Consumo Responsables',
+            '13. Acción por el Clima',
+            '14. Vida Submarina',
+            '15. Vida de Ecosistemas Terrestres',
+            '16. Paz, Justicia e Instituciones Sólidas',
+            '17. Alianzas para Lograr los Objetivos',
+          ]}
+        />
 
         <div class="mt-6 input-label">Experiencia en proyectos sociales</div>
         <input type="text" class="input" bind:value={$form[1].experiencia}>
