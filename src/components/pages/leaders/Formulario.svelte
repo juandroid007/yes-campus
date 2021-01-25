@@ -25,11 +25,6 @@
     },
   ]
 
-  let valid
-  $: if ($form) {
-    valid = validate()
-  }
-
   const form = writable(initialForm())
 
   const reset = () => {
@@ -82,7 +77,6 @@
   </div>
   <div slot="content">
     <div class="flex flex-col w-full font-title">
-      <div class="input-label">{valid}</div>
       {#if page == 1}
         <div class="input-label">Nombre y apellido</div>
         <input type="text" class="mb-6 input" placeholder="Ej. Maria Rondón" bind:value={$form[0].nombres}>
