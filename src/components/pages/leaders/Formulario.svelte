@@ -6,6 +6,7 @@
   export let open
   let page
   let closeModal
+  let sending
 
   const initialForm = () => [
     {
@@ -29,6 +30,7 @@
 
   const reset = () => {
     form.set(initialForm())
+    descripcionParticipacion = ''
     page = 1
   }
 
@@ -57,6 +59,8 @@
         if (isEmpty(descripcionParticipacion)) {
           alert('No puede dejar campos vacíos')
           return
+        } else {
+          data.participacionProyecto = descripcionParticipacion
         }
       }
     } else {
@@ -64,18 +68,36 @@
       return
     }
 
-    alert('Formulario enviado')
-    closeModal()
+    sending = true
+    fetch('https://api.yescampus.io/formularios/leaders', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+      .then(res => { return res.json(); })
+      .then(data => {
+        console.log(data)
+        alert('Formulario enviado')
+        closeModal()
+      })
+      .catch(err => {
+        console.log(err)
+        alert('Hubo un error enviando el formulario, intente más tarde')
+      })
+      .finally(() => (sending = false))
   }
 
   let descripcionParticipacion = ''
 </script>
 
 <Modal bind:open bind:close={closeModal} onClose={reset}>
-  <div slot="header">
+  <div slot="header" class:opacity-25={sending} class="duration-200" class:pointer-events-none={sending}>
     <Tabs pages={$form.length} bind:page={page} validate={validate} bind:changePage />
   </div>
-  <div slot="content">
+  <div slot="content" class:opacity-25={sending} class="duration-200" class:pointer-events-none={sending}>
     <div class="flex flex-col w-full font-title">
       {#if page == 1}
         <div class="input-label">Nombre y apellido</div>
@@ -180,7 +202,7 @@
       {/if}
     </div>
   </div>
-  <div slot="footer">
+  <div slot="footer" class:opacity-25={sending} class="duration-200" class:pointer-events-none={sending}>
     <div class="flex justify-end -mx-2">
       {#if page < 2}
         <button class="mx-2 btn-primary" on:click={() => changePage(page + 1)}>Siguiente</button>
