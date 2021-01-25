@@ -34,9 +34,9 @@ module.exports = {
       ...iconsProps,
       offset: 10
     },
-    coast: {
-      ...iconsProps,
-    },
+    // coast: {
+    //   ...iconsProps,
+    // },
     favicons: {
       ...iconsProps,
     },
@@ -48,8 +48,8 @@ module.exports = {
     windows: {
       ...iconsProps,
     },
-    yandex: {
-      ...iconsProps,
-    }
+    // yandex: {
+    //   ...iconsProps,
+    // }
   }
 }

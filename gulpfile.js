@@ -58,7 +58,7 @@ const generateFavicons = () => {
 
   return gulp.src('./favicon.*')
     .pipe(favicons.stream(faviconsConfig))
-    .pipe(gulp.dest(`dist${faviconsConfig.path}`))
+    .pipe(gulp.dest(`public${faviconsConfig.path}`))
 }
 exports.generateFavicons = generateFavicons
 
@@ -185,7 +185,7 @@ exports.dev = dev
 const prod = gulp.series(
   //optimizeImages,
   generateWebpsDist,
-  generateFavicons,
+  // generateFavicons,
   injectFavicons,
   injectMetadata,
   cleanFaviconsHTML,
