@@ -21,9 +21,9 @@
       "path": "src/content/profesores"
     },
     {
-      "name": "posts",
-      "path": "src/pages/blog",
-      "url": "/blog",
+      "name": "talks",
+      "path": "src/pages/talks",
+      "url": "/talks",
       "markdown": true
     }
   ],

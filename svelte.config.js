@@ -8,7 +8,10 @@ module.exports = {
     postcss(),
     mdsvex({
       extensions: ['.svx', '.md'],
-      layout: path.join(__dirname, 'src', 'layouts', 'MarkdownLayout.svelte'),
+      layout: {
+        blog: path.join(__dirname, 'src', 'layouts', 'MarkdownLayout.svelte'),
+        talks: path.join(__dirname, 'src', 'layouts', 'TalksLayout.svelte'),
+      },
     }),
   ],
 };
