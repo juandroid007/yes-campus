@@ -4,7 +4,7 @@
   import svitsConfig from '../../../svits.config.json'
   import V from '../../components/IntersectingViewport.svelte'
   import Masonry from '../../components/Masonry.svelte'
-  import { getCollection } from '../../collections'
+  import { getCollection, toCollection } from '../../collections'
   import { metatags } from '@roxi/routify'
   import { calendar } from '../../lib/dayjs'
 
@@ -14,12 +14,9 @@
   let page = 1
   let search = ''
 
-  const data = new Array(20).fill().map(() => ({
-    bg: faker.image.imageUrl(),
-    title: faker.name.title()
-  }))
-
-  const collection = () => getCollection('talks')
+  const collection = () => toCollection(new Array(100)
+    .fill()
+    .map(() => getCollection('talks').elements[0]))
 
   const total = collection().elements.length
 

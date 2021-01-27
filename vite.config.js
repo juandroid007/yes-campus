@@ -18,7 +18,7 @@ let config = {
   optimizeDeps: {
     include: ['paper/dist/paper-core'],
     exclude: ['@roxi/routify'],
-    include: ['dayjs/esm'],
+    include: ['dayjs/esm', 'dayjs/esm/plugin/calendar'],
   },
 }
 
