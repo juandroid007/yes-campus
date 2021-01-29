@@ -7,23 +7,7 @@
   import { metatags } from '@roxi/routify'
   import svitsConfig from '../../svits.config.json'
   import { fly } from 'svelte/transition'
-  import PC from '../components/motion/ParallaxContainer.svelte'
-  import P from '../components/motion/ParallaxObject.svelte'
-  import V from '../components/IntersectingViewport.svelte'
-  import { preferences } from '../stores/preferences'
   import { calendar } from '../lib/dayjs'
-
-  $: dark = $preferences.darkMode
-
-  const getImg = (src) => {
-    const validateExternalSrc = (str) =>
-      str.indexOf("http://") == 0 || str.indexOf("https://") == 0
-    const isExternal = validateExternalSrc(src)
-    const path = isExternal ? src : '/images/' + src
-    const extension = path.split('.').pop()
-    const pathWithoutExtension = path.substr(0, path.length - extension.length)
-    return isExternal ? path : pathWithoutExtension + 'webp'
-  }
 
   export let title
   export let description
@@ -57,14 +41,7 @@
       <div class="flex flex-col content-lg lg:flex-row lg:space-x-8 space-y-8">
         <div class="flex flex-col w-full lg:w-1/2 lg:flex-grow">
           <div class="top-0 w-full pt-8 lg:sticky">
-            <div class="absolute hidden mb-4 -ml-16 fill-current lg:block lg:-ml-24 animate-pulse" style="width: 30%;">
-              {#await fetch('/images/mic.svg') then res}
-                {#await res.text() then svg}
-                  {@html svg}
-                {/await}
-              {/await}
-            </div>
-            <div class="relative w-full lg:mt-8 transform" style="height: 0; padding-bottom: 56.25%;">
+            <div class="relative w-full transform" style="height: 0; padding-bottom: 56.25%;">
               <iframe
                 title={title}
                 src="https://www.youtube.com/embed/{getId(video)}"

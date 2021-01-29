@@ -4,14 +4,15 @@
   import svitsConfig from '../../../svits.config.json'
   import V from '../../components/IntersectingViewport.svelte'
   import Masonry from '../../components/Masonry.svelte'
+  import { getImg } from '../../components/Image.svelte'
   import { getCollection } from '../../collections'
-  import { metatags } from '@roxi/routify'
+  import { metatags, params } from '@roxi/routify'
   import { calendar } from '../../lib/dayjs'
 
   metatags.title = 'YES Talks | ' + svitsConfig.name
 
   const PAGESIZE = 4
-  let page = 1
+  let page = Number($params.page) || 1
   let search = ''
 
   const collection = () => getCollection('talks')
@@ -127,7 +128,7 @@
               href={i.url}
               class="relative rounded cursor-pointer talk"
               class:search={search.trim().length}
-              style="--talk-image: url({i.thumbnail})"
+              style="--talk-image: url({getImg(i.thumbnail)})"
               in:fade|local={{ duration: 400 }}
               >
               <div class="absolute pointer-events-none talk-bg"></div>
