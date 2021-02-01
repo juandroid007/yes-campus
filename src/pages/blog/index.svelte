@@ -2,12 +2,12 @@
   import { fly, fade } from 'svelte/transition'
   import faker from 'faker'
   import svitsConfig from '../../../svits.config.json'
-  import V from '../../components/IntersectingViewport.svelte'
-  import Masonry from '../../components/Masonry.svelte'
-  import { getImg } from '../../components/Image.svelte'
+  import V from '/$components/IntersectingViewport.svelte'
+  import Masonry from '/$components/Masonry.svelte'
+  import { getImg } from '/$components/Image.svelte'
   import { getCollection } from '../../collections'
   import { metatags, params } from '@roxi/routify'
-  import { calendar } from '../../lib/dayjs'
+  import { calendar } from '/$lib/dayjs'
 
   metatags.title = 'YES Talks | ' + svitsConfig.name
 

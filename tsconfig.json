@@ -2,7 +2,14 @@
   "extends": "@tsconfig/svelte/tsconfig.json",
   "compilerOptions": {
     "esModuleInterop": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "/$/*": ["./src/*"],
+      "/$components/*": ["./src/components/*"],
+      "/$collections": ["./src/collections/index.ts"],
+      "/$lib/*": ["./src/lib/*"]
+    }
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules/*", "public/*"]

@@ -1,12 +1,12 @@
 <script>
   import { metatags } from '@roxi/routify'
   import svitsConfig from '../../svits.config.json'
-  import List from '../components/pages/leaders/List.svelte'
-  import V from '../components/IntersectingViewport.svelte'
-  import PC from '../components/motion/ParallaxContainer.svelte'
-  import P from '../components/motion/ParallaxObject.svelte'
-  import Especialistas from '../components/pages/home/Profesores.svelte'
-  import Formulario from '../components/pages/leaders/Formulario.svelte'
+  import List from '/$components/pages/leaders/List.svelte'
+  import V from '/$components/IntersectingViewport.svelte'
+  import PC from '/$components/motion/ParallaxContainer.svelte'
+  import P from '/$components/motion/ParallaxObject.svelte'
+  import Especialistas from '/$components/pages/home/Profesores.svelte'
+  import Formulario from '/$components/pages/leaders/Formulario.svelte'
   import { fly } from 'svelte/transition'
 
   const description = 'Bootcamp para el desarrollo de competencias de liderazgo juvenil en función de la defensa de la democracia y el fortalecimiento institucional de las organizaciones lideradas por jóvenes.'

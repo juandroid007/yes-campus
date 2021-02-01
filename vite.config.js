@@ -8,9 +8,10 @@ import path from 'path'
 
 let config = {
   alias: {
-    '~/': path.resolve(__dirname, './src'),
-    '~collections/': path.resolve(__dirname, './src/collections'),
-    '~components/': path.resolve(__dirname, './src/components'),
+    '/$/': path.resolve(__dirname, './src'),
+    '/$collections': path.resolve(__dirname, './src/collections'),
+    '/$components/': path.resolve(__dirname, './src/components'),
+    '/$lib/': path.resolve(__dirname, './src/lib'),
   },
   // plugins: [
   //   svite(sviteConfig),

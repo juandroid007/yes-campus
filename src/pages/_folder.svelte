@@ -1,8 +1,8 @@
 <script>
-  import Navbar, { height } from '../components/navigation/Navbar.svelte'
-  import Cursor from '../components/Cursor.svelte'
-  import Footer from '../components/Footer.svelte'
-  import { styles } from '../lib/styles'
+  import Navbar, { height } from '/$components/navigation/Navbar.svelte'
+  import Cursor from '/$components/Cursor.svelte'
+  import Footer from '/$components/Footer.svelte'
+  import { styles } from '/$lib/styles'
 
   $: cssGlobals = {
     navbarHeight: `${$height}px`,
