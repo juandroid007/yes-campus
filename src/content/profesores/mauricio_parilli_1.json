@@ -1,0 +1,12 @@
+{
+  "programas": {
+    "general": true,
+    "young-entrepeneur": false,
+    "full-inclusion": false,
+    "young-leaders": false,
+    "evolution": false
+  },
+  "nombre": "Mauricio Parilli",
+  "ocupacion": "Especialista en Cooperación Internacional",
+  "thumbnail": "https://i.postimg.cc/YCYXmc3L/Mauricio-Parilli.jpg"
+}
