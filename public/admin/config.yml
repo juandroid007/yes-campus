@@ -90,6 +90,39 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime", date_format: "DD/MM/YYYY", time_format: "HH:mm", picker_utc: true}
       - {label: "Sinopsis", name: "body", widget: "markdown"}
 
+  - name: "packs" # Used in routes, e.g., /admin/collections/blog
+    editor:
+      preview: false
+    label: "YES Packs" # Used in the UI
+    folder: "src/content/packs" # The path to the folder where the documents are stored
+    identifier_field: "mes"
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    preview_path: "packs"
+    format: "json"
+    media_folder: "/public/images/uploads/packs/{{slug}}" # Media files will be stored in the repo under images/uploads
+    public_folder: "uploads/packs/{{slug}}"
+    sort: "date:desc" # Default is title:asc
+    summary: "{{mes}} - {{title}}"
+    fields: # The fields for each document, usually in front matter
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Portada", name: "thumbnail", widget: "image"}
+      - {label: "Fecha de publicación", name: "date", widget: "datetime", date_format: "DD/MM/YYYY", time_format: "HH:mm", picker_utc: true}
+      - label: "Mes"
+        name: "mes"
+        widget: "select"
+        options: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+      - label: "Cursos"
+        name: "cursos"
+        widget: "list"
+        min: 1
+        fields:
+          - {label: 'Slug del curso', name: slug, widget: string}
+          - {label: Nombre, name: title, widget: string}
+          - {label: Thumbnail, name: thumbnail, widget: image}
+          - {label: Instructor, name: instructor, widget: string}
+          - {label: 'Número de modulos', name: number, widget: string}
+
 #  - name: "blog" # Used in routes, e.g., /admin/collections/blog
 #    label: "Posts" # Used in the UI
 #    folder: "src/pages/blog" # The path to the folder where the documents are stored

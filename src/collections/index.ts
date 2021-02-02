@@ -50,23 +50,26 @@ export const toCollection = (
 export class Collection<T> {
   elements: T[]
 
-  paginate(page_size: number, page_number: number): this {
-    this.elements = this.elements.slice((page_number - 1) * page_size, page_number * page_size)
-    return this
+  paginate(page_size: number, page_number: number): Collection<T> {
+    const c = new Collection<T>()
+    c.elements = this.elements.slice((page_number - 1) * page_size, page_number * page_size)
+    return c
   }
 
-  filter(callback: any): this {
-    this.elements = this.elements.filter(callback)
-    return this
+  filter(callback: any): Collection<T> {
+    const c = new Collection<T>()
+    c.elements = this.elements.filter(callback)
+    return c
   }
 
-  search(test: string | string[], fields?: string[]): this {
+  search(test: string | string[], fields?: string[]): Collection<T> {
+    const c = new Collection<T>()
     if (test == undefined || test == null) {
-      return this
+      return c
     }
     if (typeof test == 'string') {
       const regex = new RegExp("\\b" + test, 'i')
-      this.elements = this.filter(matcher(regex, fields)).elements
+      c.elements = this.filter(matcher(regex, fields)).elements
     } else {
       let found = []
       test.forEach(t => {
@@ -74,11 +77,12 @@ export class Collection<T> {
         found = [...found, ...this.filter(matcher(regex, fields)).elements]
       })
     }
-    return this
+    return c
   }
 
-  sort(orderOptions: OrderOptions): this {
-    this.elements = this.elements.sort((a: any, b: any) => {
+  sort(orderOptions: OrderOptions): Collection<T> {
+    const c = new Collection<T>()
+    c.elements = this.elements.sort((a: any, b: any) => {
       let aa: any = a[orderOptions.field]
       let bb: any = b[orderOptions.field]
       if (orderOptions.isDate) {
@@ -97,7 +101,6 @@ export class Collection<T> {
         }
       }
     })
-    return this
+    return c
   }
 }
-

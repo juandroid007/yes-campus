@@ -25,6 +25,11 @@
       "path": "src/pages/talks",
       "url": "/talks",
       "markdown": true
+    },
+    {
+      "name": "packs",
+      "path": "src/content/packs",
+      "url": "/packs"
     }
   ],
   "hostname": "https://yescampus.io",

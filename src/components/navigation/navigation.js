@@ -73,13 +73,17 @@ export default [
         href: '/talks',
       },
       {
-        titulo: 'Comunidad YES',
-        href: '/historias',
+        titulo: 'YES Packs',
+        href: '/packs',
       },
-      {
-        titulo: 'Aliados',
-        href: '/aliados',
-      },
+      // {
+      //   titulo: 'Comunidad YES',
+      //   href: '/historias',
+      // },
+      // {
+      //   titulo: 'Aliados',
+      //   href: '/aliados',
+      // },
       {
         titulo: 'Blog',
         href: '/blog',

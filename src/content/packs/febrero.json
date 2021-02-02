@@ -1,0 +1,15 @@
+{
+  "date": "2021-02-02T02:42:11.573Z",
+  "title": "Pack de Enero",
+  "mes": "Febrero",
+  "thumbnail": "https://i.ytimg.com/an_webp/CusX1XOUKdg/mqdefault_6s.webp?du=3000&sqp=CKjo4oAG&rs=AOn4CLBhUvcHvfYXBuwr9P9ueLOGyXaZOQ",
+  "cursos": [
+    {
+      "slug": "enero",
+      "title": "Curso 1",
+      "thumbnail": "https://i.ytimg.com/an_webp/CusX1XOUKdg/mqdefault_6s.webp?du=3000&sqp=CKjo4oAG&rs=AOn4CLBhUvcHvfYXBuwr9P9ueLOGyXaZOQ",
+      "instructor": "Jesús Bauza",
+      "number": "1"
+    }
+  ]
+}
