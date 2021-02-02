@@ -1,0 +1,12 @@
+{
+  "programas": {
+    "general": true,
+    "young-entrepeneur": false,
+    "full-inclusion": false,
+    "young-leaders": false,
+    "evolution": false
+  },
+  "nombre": "Delia Rivas",
+  "thumbnail": "https://i.postimg.cc/2jGsqGgz/Delia.jpg",
+  "ocupacion": "Coach & Facilitadora en Derechos Humanos"
+}
