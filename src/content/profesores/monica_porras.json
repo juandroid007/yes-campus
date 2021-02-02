@@ -1,0 +1,12 @@
+{
+  "programas": {
+    "general": true,
+    "young-entrepeneur": false,
+    "full-inclusion": false,
+    "young-leaders": false,
+    "evolution": false
+  },
+  "nombre": "Mónica Porras",
+  "thumbnail": "https://i.postimg.cc/023HmBnq/Monica-Porras.jpg",
+  "ocupacion": "Especialista en Mercadeo y Gestión Estratégica"
+}
