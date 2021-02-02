@@ -1,0 +1,12 @@
+{
+  "programas": {
+    "general": true,
+    "young-entrepeneur": false,
+    "full-inclusion": false,
+    "young-leaders": false,
+    "evolution": false
+  },
+  "nombre": "Richard Tovar",
+  "ocupacion": "Especialista en aprendizaje y emprendimiento",
+  "thumbnail": "https://i.postimg.cc/zfWmVrYM/richard-tovar.jpg"
+}
