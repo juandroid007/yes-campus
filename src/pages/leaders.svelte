@@ -312,4 +312,14 @@
       </V>
     </div>
   </div>
+  <V class="bg-yes-gray-100" oneWay>
+    <div class="flex flex-col-reverse items-center py-16 italic lg:flex-row content t-p">
+      <p class="w-full lg:w-1/2 animate" style="--animate-x: -3rem">
+      <strong>Aprendo y Emprendo - Yes Campus</strong>, como organización cuidan el equilibrio en la conformación de sus equipos de trabajo y participantes en sus actividades, por lo tanto se asegura la participación equitativa entre hombres y mujeres en cada una de las fases del programa Young Leaders, tanto en la selección de speaker, facilitadores y participantes beneficiarios del programa.
+      </p>
+      <div class="flex justify-center w-full pb-16 lg:w-1/2 lg:pb-0 lg:pl-16 animate" style="--animate-x: 3rem">
+        <img src="/images/logo.svg" alt="" class="w-72">
+      </div>
+    </div>
+  </V>
 </div>
