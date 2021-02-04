@@ -121,7 +121,7 @@ collections:
           - {label: Nombre, name: title, widget: string}
           - {label: Thumbnail, name: thumbnail, widget: image}
           - {label: Instructor, name: instructor, widget: string}
-          - {label: 'Número de modulos', name: number, widget: string}
+          - {label: 'Número de modulos', name: modulos, widget: number}
 
 #  - name: "blog" # Used in routes, e.g., /admin/collections/blog
 #    label: "Posts" # Used in the UI

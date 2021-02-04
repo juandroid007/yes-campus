@@ -1,5 +1,5 @@
 <script>
-  import { fly, fade } from 'svelte/transition'
+  import { fade } from 'svelte/transition'
   import svitsConfig from '../../../svits.config.json'
   import { getImg } from '/$components/Image.svelte'
   import { getCollection } from '../../collections'
@@ -10,6 +10,59 @@
   metatags.title = `Pack de ${$params.mes} - YES Packs | ` + svitsConfig.name
 
   const pack = getCollection('packs').filter(e => $params.mes.toLowerCase() === e.mes.toLowerCase()).elements[0]
+
+  let nombre = ''
+  let email = ''
+  let suscritos
+
+  const isEmpty = str => !str.trim().length
+  const getSuscritos = () => fetch('https://api.yescampus.io/yespacks/suscritos/'+$params.mes, {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+    },
+  })
+    .then(async res => res.json())
+    .then(res => (suscritos = res.suscritos))
+  $: getSuscritos()
+
+  let post = () => fetch('https://api.yescampus.io/yespacks', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      mes: $params.mes,
+      nombre,
+      email,
+      cursos: pack.cursos.map(c => c.slug)
+    })
+  })
+
+  let enviando = false
+
+  const send = () => {
+    if (isEmpty(nombre) || isEmpty(email)) {
+      alert('Los campos no pueden estar vacíos')
+      return
+    }
+    enviando = true
+    post()
+      .then(() => getSuscritos())
+      .then(() => {
+        alert('¡Has sido suscrito exitosamente! Atento a tu bandeja de entrada')
+      })
+      .catch(err => {
+        console.log(err)
+        if (err.status == 418) {
+          alert('Se han acabado los cupos')
+        } else {
+          alert('Ha ocurrido un error, inténtelo nuevamente más tarde')
+        }
+      })
+      .finally(() => (enviando = false))
+  }
 </script>
 
 <style>
@@ -80,6 +133,7 @@
             title={c.title}
             instructor={c.instructor}
             thumbnail={getImg(c.thumbnail)}
+            modulos={c.modulos}
             link={'https://yescampus.teachlr.com/#courses-online/'+c.slug}
           />
         </div>
@@ -90,12 +144,23 @@
   <div class="w-full py-6 bg-yes-blue-500">
     <div class="flex w-full px-6 mx-auto lg:w-4/10">
       <div class="flex flex-col w-full p-6 bg-white border shadow rounded-2xl dark:bg-yes-gray-800 dark:border-gray-700">
-        <p class="t-h2">Obtén el pack<br>y quédate atento a tu correo</p>
-        <p class="mt-8 font-bold">Nombre completo</p>
-        <input type="text" class="input" placeholder="Ej. Juan Pérez">
-        <p class="mt-6 font-bold">Correo electrónico</p>
-        <input type="text" class="input" placeholder="Ej. juanperez@gmail.com">
-        <div class="mx-auto mt-6 btn-primary-gray">Enviar formulario</div>
+        <div class="flex flex-col" class:animate-pulse={enviando || suscritos == null} class:pointer-events-none={enviando}>
+          {#if suscritos != null}
+            {#if 20 - suscritos > 0}
+              <p class="t-h2">Obtén el pack</p>
+              <p class="mt-2 font-bold t-p">Quedan {20 - suscritos} cupos</p>
+              <p class="mt-8 font-bold">Nombre completo</p>
+              <input type="text" class="input" placeholder="Ej. Juan Pérez" bind:value={nombre}>
+              <p class="mt-6 font-bold">Correo electrónico</p>
+              <input type="text" class="input" placeholder="Ej. juanperez@gmail.com" bind:value={email}>
+              <button class="mx-auto mt-6 btn-primary-gray" on:click={send}>Enviar formulario</button>
+            {:else}
+              <p class="text-center t-h3">Ya no quedan cupos disponibles</p>
+            {/if}
+          {:else}
+            <p class="text-center t-h3">Obteniendo cupos...</p>
+          {/if}
+        </div>
       </div>
     </div>
   </div>

@@ -1,14 +1,21 @@
 {
   "date": "2021-02-02T02:42:11.573Z",
-  "title": "Pack de Enero",
+  "title": "Pack de Febrero",
   "mes": "Febrero",
-  "thumbnail": "https://i.ytimg.com/an_webp/CusX1XOUKdg/mqdefault_6s.webp?du=3000&sqp=CKjo4oAG&rs=AOn4CLBhUvcHvfYXBuwr9P9ueLOGyXaZOQ",
+  "thumbnail": "https://storage.teachlr.com/yescampus/courses/17137/covers/1601294136-506x285.jpg",
   "cursos": [
     {
-      "slug": "enero",
+      "slug": "abc-del-sexo-17137",
       "title": "Curso 1",
-      "thumbnail": "https://i.ytimg.com/an_webp/CusX1XOUKdg/mqdefault_6s.webp?du=3000&sqp=CKjo4oAG&rs=AOn4CLBhUvcHvfYXBuwr9P9ueLOGyXaZOQ",
+      "thumbnail": "https://storage.teachlr.com/yescampus/courses/17137/covers/1601294136-506x285.jpg",
       "instructor": "Jesús Bauza",
+      "number": "1"
+    },
+    {
+      "thumbnail": "https://storage.teachlr.com/factory_library/courses/874/covers/1547039943-506x285.jpg",
+      "slug": "como-crear-una-web-desde-cero-para-wordpress",
+      "title": "Wordpress",
+      "instructor": "Jesus Bauza1",
       "number": "1"
     }
   ]
