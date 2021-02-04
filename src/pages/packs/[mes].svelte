@@ -153,7 +153,8 @@
               <input type="text" class="input" placeholder="Ej. Juan Pérez" bind:value={nombre}>
               <p class="mt-6 font-bold">Correo electrónico</p>
               <input type="text" class="input" placeholder="Ej. juanperez@gmail.com" bind:value={email}>
-              <button class="mx-auto mt-6 btn-primary-gray" on:click={send}>Enviar formulario</button>
+              <button class="mx-auto mt-6 btn-primary-gray" on:click={send}>{ !enviando ? 'Enviar formulario' : 'Enviando...'}</button>
+              <p class="mt-6">Nota: el envío del formulario puede demorar algunos minutos, sea paciente</p>
             {:else}
               <p class="text-center t-h3">Ya no quedan cupos disponibles</p>
             {/if}
