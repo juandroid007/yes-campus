@@ -27,7 +27,7 @@
 
   const packs = {}
   meses.map(m => {
-    packs[m] = [...getCollection('packs').filter(e => e.mes === m).elements.slice(0, 1)]
+    packs[m] = [...getCollection('packs').filter(e => e.mes.toLowerCase() === m.toLowerCase()).elements.slice(0, 1)]
   })
   $: console.log(packs)
 </script>
@@ -83,7 +83,7 @@
       {#if packs[mes].length}
         {#each packs[mes] as i}
           <a
-            href={i.url}
+            href={'/packs/'+mes.toLowerCase()}
             class="relative mb-8 rounded cursor-pointer pack"
             style="--pack-image: url({getImg(i.thumbnail)})"
             in:fade|local={{ duration: 400 }}

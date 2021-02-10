@@ -8,6 +8,8 @@
 
   export let programa = 'general'
   export let titulo = true
+  export let square = false
+  export let noShadow = false
 
   $: profesores = getCollection('profesores')
     .filter(e => e.programas[programa])
@@ -85,7 +87,9 @@
               <li class="glide__slide">
                 <div class="mx-auto w-60">
                   <div
-                    class="w-full overflow-hidden bg-gray-700 shadow-lg h-80 rounded-2xl"
+                    class="w-full overflow-hidden bg-gray-700 h-80"
+                    class:rounded-2xl={!square}
+                    class:shadow-lg={!noShadow}
                   >
                   <Image src="{p.thumbnail}" alt={p.nombre} class="object-cover w-full h-full"/>
                   </div>

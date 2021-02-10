@@ -9,18 +9,25 @@
 
   metatags.title = `Pack de ${$params.mes} - YES Packs | ` + svitsConfig.name
 
-  const pack = getCollection('packs').filter(e => $params.mes.toLowerCase() === e.mes.toLowerCase()).elements[0]
+  const currMes = $params.mes.toLowerCase()
+
+  const pack = getCollection('packs').filter(e => currMes === e.mes.toLowerCase()).elements[0]
 
   let nombre = ''
   let email = ''
   let suscritos
 
   const isEmpty = str => !str.trim().length
-  const getSuscritos = () => fetch('https://api.yescampus.io/yespacks/suscritos/'+$params.mes, {
-    method: 'GET',
+  const getSuscritos = () => fetch('https://api.yescampus.io/yespacks/suscritos', {
+    method: 'POST',
     headers: {
       'Accept': 'application/json',
+      'Content-Type': 'application/json'
     },
+    body: JSON.stringify({
+      mes: currMes,
+      pack: pack.slug
+    })
   })
     .then(async res => res.json())
     .then(res => (suscritos = res.suscritos))
@@ -33,10 +40,11 @@
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      mes: $params.mes,
+      mes: currMes,
       nombre,
       email,
-      cursos: pack.cursos.map(c => c.slug)
+      cursos: pack.cursos.map(c => c.slug),
+      pack: pack.slug,
     })
   })
 
@@ -107,7 +115,7 @@
     </div>
   </div-->
   <div class="pb-4 content-lg">
-    <h2 class="my-6 text-3xl font-bold lg:text-5xl">Pack de {$params.mes}</h2>
+    <h2 class="my-6 text-3xl font-bold lg:text-5xl">Pack de {currMes}</h2>
     <div
       class="relative mb-8 rounded pack"
       style="--pack-image: url({getImg(pack.thumbnail)})"
@@ -132,7 +140,7 @@
             fixedImg
             title={c.title}
             instructor={c.instructor}
-            thumbnail={getImg(c.thumbnail)}
+            thumbnail={c.thumbnail}
             modulos={c.modulos}
             link={'https://yescampus.teachlr.com/#courses-online/'+c.slug}
           />

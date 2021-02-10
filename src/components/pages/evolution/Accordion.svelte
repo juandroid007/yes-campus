@@ -1,14 +1,18 @@
 <script>
   export let title = 'Título'
+  export let body = 'Cuerpo'
   let open = false
 </script>
 
-<div class="overflow-hidden rounded-sm shadow-lg cursor-pointer accordion">
-  <div class="accordion__header" on:click={() => (open = !open)}>
+<div class="overflow-hidden rounded-sm shadow-lg accordion" class:open>
+  <div class="cursor-pointer accordion__header" on:click={() => (open = !open)}>
     <p class="font-bold t-p">{title}</p>
+    <div class="accordion__header--arrow"></div>
   </div>
-  <div class="accordion__body" class:open>
-    <div class="accordion__body--content"></div>
+  <div class="accordion__body">
+    <div class="accordion__body--content t-p">
+      {@html body}
+    </div>
   </div>
 </div>
 
@@ -22,6 +26,7 @@
 
   .accordion__header {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     color: white;
     background-color: black;
@@ -29,6 +34,21 @@
 
   .accordion__header, .accordion__body--content {
     padding: 1rem;
+  }
+
+  .accordion__header--arrow {
+    background-image: url("/images/evolution/detalles/flecha.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 12px;
+    height: 12px;
+    transition: transform 0.2s ease-in-out;
+    transform: rotate(90deg);
+  }
+
+  .open .accordion__header--arrow {
+    transform: rotate(-90deg);
   }
 
   .accordion__body {
@@ -43,7 +63,7 @@
     @apply rounded-br-sm;
   }
 
-  .accordion__body.open {
+  .open .accordion__body {
     max-height: 1000px;
   }
 </style>

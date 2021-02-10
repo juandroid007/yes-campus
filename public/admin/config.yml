@@ -95,7 +95,7 @@ collections:
       preview: false
     label: "YES Packs" # Used in the UI
     folder: "src/content/packs" # The path to the folder where the documents are stored
-    identifier_field: "mes"
+    identifier_field: "title"
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     preview_path: "packs"

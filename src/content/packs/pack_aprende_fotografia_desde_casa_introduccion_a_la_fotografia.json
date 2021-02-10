@@ -1,13 +1,13 @@
 {
-  "date": "2021-02-02T02:42:11.573Z",
+  "date": "2021-02-10T18:30:46.942Z",
   "title": "Pack: Aprende fotografía desde casa: introducción a la fotografía",
   "mes": "Febrero",
-  "thumbnail": "uploads/packs/febrero/aprende_fotografia_desde_casa.jpg",
+  "thumbnail": "uploads/packs/pack_aprende_fotografia_desde_casa_introduccion_a_la_fotografia/aprende_fotografia_desde_casa.jpg",
   "cursos": [
     {
       "slug": "adobe-photoshop-cc-2019-domina-el-diseno-digital",
       "title": "Adobe photoshop CC 2019. Domina el diseño digital",
-      "thumbnail": "uploads/packs/febrero/curso_1.png",
+      "thumbnail": "uploads/packs/pack_aprende_fotografia_desde_casa_introduccion_a_la_fotografia/curso_1.png",
       "modulos": 8,
       "instructor": "Johnny Mora"
     },
@@ -16,14 +16,14 @@
       "instructor": "Pau Rodrigo Millán",
       "modulos": 4,
       "title": "Aprende a Crear Vídeos Animados con Explaindio",
-      "thumbnail": "uploads/packs/febrero/curso_2.png"
+      "thumbnail": "uploads/packs/pack_aprende_fotografia_desde_casa_introduccion_a_la_fotografia/curso_2.png"
     },
     {
       "slug": "como-mejorar-tus-fotos-con-cualquier-camara",
       "title": "Como Mejorar Tus fotos con Cualquier Cámara",
       "instructor": "Valeria Regazzoli",
       "modulos": 17,
-      "thumbnail": "uploads/packs/febrero/curso_3.jpg"
+      "thumbnail": "uploads/packs/pack_aprende_fotografia_desde_casa_introduccion_a_la_fotografia/curso_3.jpg"
     },
     {
       "slug": "creacion-de-video-tutoriales-profesionales-con-camtasia",
@@ -37,7 +37,7 @@
       "instructor": "Alejandro Rost Gelabert",
       "title": "Curso Inicial de Fotografía Digital",
       "modulos": 2,
-      "thumbnail": "uploads/packs/febrero/2.png"
+      "thumbnail": "uploads/packs/pack_aprende_fotografia_desde_casa_introduccion_a_la_fotografia/2.png"
     },
     {
       "slug": "edicion-de-videos-para-emprendedores-camtasia-studio-2019",
@@ -51,7 +51,7 @@
       "title": "Manejo de planos fotográficos con Smartphone",
       "instructor": "Napoles Education",
       "modulos": 2,
-      "thumbnail": "uploads/packs/febrero/yespacks_promo.png"
+      "thumbnail": "uploads/packs/pack_aprende_fotografia_desde_casa_introduccion_a_la_fotografia/yespacks_promo.png"
     },
     {
       "slug": "que-camara-me-compro",
@@ -65,7 +65,7 @@
       "title": "Tutoriales de Photoshop",
       "instructor": "José María Estrade",
       "modulos": 1,
-      "thumbnail": "uploads/packs/febrero/curso_9.jpg"
+      "thumbnail": "uploads/packs/pack_aprende_fotografia_desde_casa_introduccion_a_la_fotografia/curso_9.jpg"
     }
   ]
 }

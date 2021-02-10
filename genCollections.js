@@ -52,6 +52,7 @@ const getUrls = (c, dir, md) => {
   const files = dir
     .filter(n => isFile(n, md))
     .map(d => ({
+      slug: d.split(ext).join(''),
       url: c.url ? path.join(c.url, d).split(ext).join('') : undefined,
       path: path.resolve(__dirname, c.path, d)
     }))
@@ -63,7 +64,7 @@ const getUrls = (c, dir, md) => {
         params[k] = data[c.params[k]]
       })
     }
-    urls.push({url: c.params ? parseUrl(f.url, params) : f.url, ...data})
+    urls.push({slug: f.slug, url: c.params ? parseUrl(f.url, params) : f.url, ...data})
   })
   return urls
 }
