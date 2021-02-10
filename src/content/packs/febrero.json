@@ -1,22 +1,71 @@
 {
   "date": "2021-02-02T02:42:11.573Z",
-  "title": "Pack de Febrero",
+  "title": "Pack: Aprende fotografía desde casa: introducción a la fotografía",
   "mes": "Febrero",
-  "thumbnail": "https://storage.teachlr.com/yescampus/courses/17137/covers/1601294136-506x285.jpg",
+  "thumbnail": "uploads/packs/febrero/aprende_fotografia_desde_casa.jpg",
   "cursos": [
     {
-      "slug": "abc-del-sexo-17137",
-      "title": "Curso 1",
-      "thumbnail": "https://storage.teachlr.com/yescampus/courses/17137/covers/1601294136-506x285.jpg",
-      "instructor": "Jesús Bauza",
-      "number": "1"
+      "slug": "adobe-photoshop-cc-2019-domina-el-diseno-digital",
+      "title": "Adobe photoshop CC 2019. Domina el diseño digital",
+      "thumbnail": "https://storage.teachlr.com/factory_library/courses/1024/covers/1560948429-222x125.jpg",
+      "modulos": 8,
+      "instructor": "Johnny Mora"
     },
     {
-      "thumbnail": "https://storage.teachlr.com/factory_library/courses/874/covers/1547039943-506x285.jpg",
-      "slug": "como-crear-una-web-desde-cero-para-wordpress",
-      "title": "Wordpress",
-      "instructor": "Jesus Bauza1",
-      "number": "1"
+      "slug": "aprende-a-crear-videos-animados-con-explaindio",
+      "instructor": "Pau Rodrigo Millán",
+      "modulos": 4,
+      "title": "Aprende a Crear Vídeos Animados con Explaindio",
+      "thumbnail": "https://storage.teachlr.com/factory_library/courses/253/covers/1501614886-222x125.jpg"
+    },
+    {
+      "slug": "como-mejorar-tus-fotos-con-cualquier-camara",
+      "title": "Como Mejorar Tus fotos con Cualquier Cámara",
+      "instructor": "Valeria Regazzoli",
+      "modulos": 17,
+      "thumbnail": "https://storage.teachlr.com/factory_library/courses/300/covers/1501786151-222x125.jpg"
+    },
+    {
+      "slug": "creacion-de-video-tutoriales-profesionales-con-camtasia",
+      "title": "Creación de Video Tutoriales Profesionales con Camtasia",
+      "instructor": "Jorge Tejero Green",
+      "modulos": 5,
+      "thumbnail": "https://storage.teachlr.com/factory_library/courses/307/covers/1501786190-222x125.jpg"
+    },
+    {
+      "slug": "curso-inicial-de-fotografia-digital",
+      "instructor": "Alejandro Rost Gelabert",
+      "title": "Curso Inicial de Fotografía Digital",
+      "modulos": 2,
+      "thumbnail": "https://storage.teachlr.com/factory_library/courses/677/covers/1527867121-222x125.jpg"
+    },
+    {
+      "slug": "edicion-de-videos-para-emprendedores-camtasia-studio-2019",
+      "title": "Edición de Videos para Emprendedores - Camtasia Studio 2019",
+      "instructor": "Marlon Cruz Blanco",
+      "modulos": 9,
+      "thumbnail": "https://storage.teachlr.com/factory_library/courses/1109/covers/1584729997-222x125.jpg"
+    },
+    {
+      "slug": "manejo-de-planos-fotograficos-con-smartphone",
+      "title": "Manejo de planos fotográficos con Smartphone",
+      "instructor": "Napoles Education",
+      "modulos": 2,
+      "thumbnail": "https://storage.teachlr.com/factory_library/courses/493/covers/1506609108-222x125.jpg"
+    },
+    {
+      "slug": "que-camara-me-compro",
+      "title": "¿Qué cámara me compro?",
+      "instructor": "Molinaripixel Molinari",
+      "modulos": 1,
+      "thumbnail": "https://storage.teachlr.com/factory_library/courses/453/covers/1506607964-222x125.jpg"
+    },
+    {
+      "slug": "tutoriales-de-photoshop",
+      "title": "Tutoriales de Photoshop",
+      "instructor": "José María Estrade",
+      "modulos": 1,
+      "thumbnail": "https://storage.teachlr.com/factory_library/courses/533/covers/1506610368-222x125.jpg"
     }
   ]
 }
