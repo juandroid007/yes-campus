@@ -5,6 +5,7 @@
   import PC from '../components/motion/ParallaxContainer.svelte'
   import P from '../components/motion/ParallaxObject.svelte'
   import V from '../components/IntersectingViewport.svelte'
+  import Accordion from '/$components/pages/evolution/Accordion.svelte'
 
   metatags.title = 'Evolution | ' + svitsConfig.name
   let y
@@ -162,4 +163,14 @@
       </div>
     </div>
   </V>
+
+  <div class="flex flex-wrap py-16 content">
+    <div class="w-full lg:w-1/2">
+      <h2 class="mb-4 t-h3" style="font-weight: normal">Contenido del programa</h2>
+      <h3 class="text-red-700 t-h1">¿Qué aprenderé en<br>este programa?</h3>
+      <div class="py-6">
+        <Accordion/>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,15 +1,17 @@
 <script>
   import './sw/sw'
-  import { isOffline, updateAvailable } from './sw/store'
+  import { isOffline } from './sw/store'
 
-  import { Router } from '@roxi/routify/runtime'
+  import { Router, isChangingPage } from '@roxi/routify'
   import { routes } from '../.routify/routes'
 
-  import { isChangingPage } from '@roxi/routify/runtime'
   import NProgress from 'nprogress'
 
+  import FacebookPixel from '/$components/FacebookPixel.svelte'
   import OfflineBanner from './components/OfflineBanner.svelte'
   import BannerUpdate from './components/BannerUpdate.svelte'
+
+  import { facebook } from './stores/trackers'
 
   import svitsConfig from '../svits.config.json'
 
@@ -55,6 +57,7 @@
 
 <div id="modals"></div>
 
+<FacebookPixel bind:this={$facebook} id={465266784484638} />
 <OfflineBanner/>
 <BannerUpdate/>
 <Router {routes} config={{ ...svitsConfig?.routifyRuntimeConfig }} />
