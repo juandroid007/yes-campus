@@ -7,7 +7,7 @@
     {
       "slug": "adobe-photoshop-cc-2019-domina-el-diseno-digital",
       "title": "Adobe photoshop CC 2019. Domina el diseño digital",
-      "thumbnail": "https://storage.teachlr.com/factory_library/courses/1024/covers/1560948429-222x125.jpg",
+      "thumbnail": "uploads/packs/febrero/curso_1.png",
       "modulos": 8,
       "instructor": "Johnny Mora"
     },
@@ -16,14 +16,14 @@
       "instructor": "Pau Rodrigo Millán",
       "modulos": 4,
       "title": "Aprende a Crear Vídeos Animados con Explaindio",
-      "thumbnail": "https://storage.teachlr.com/factory_library/courses/253/covers/1501614886-222x125.jpg"
+      "thumbnail": "uploads/packs/febrero/curso_2.png"
     },
     {
       "slug": "como-mejorar-tus-fotos-con-cualquier-camara",
       "title": "Como Mejorar Tus fotos con Cualquier Cámara",
       "instructor": "Valeria Regazzoli",
       "modulos": 17,
-      "thumbnail": "https://storage.teachlr.com/factory_library/courses/300/covers/1501786151-222x125.jpg"
+      "thumbnail": "uploads/packs/febrero/curso_3.jpg"
     },
     {
       "slug": "creacion-de-video-tutoriales-profesionales-con-camtasia",
@@ -65,7 +65,7 @@
       "title": "Tutoriales de Photoshop",
       "instructor": "José María Estrade",
       "modulos": 1,
-      "thumbnail": "https://storage.teachlr.com/factory_library/courses/533/covers/1506610368-222x125.jpg"
+      "thumbnail": "uploads/packs/febrero/curso_9.jpg"
     }
   ]
 }
