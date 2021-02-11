@@ -12,13 +12,6 @@
       "instructor": "Johnny Mora"
     },
     {
-      "slug": "aprende-a-crear-videos-animados-con-explaindio",
-      "instructor": "Pau Rodrigo Millán",
-      "modulos": 4,
-      "title": "Aprende a Crear Vídeos Animados con Explaindio",
-      "thumbnail": "uploads/packs/pack_aprende_fotografia_desde_casa_introduccion_a_la_fotografia/curso_2.png"
-    },
-    {
       "slug": "como-mejorar-tus-fotos-con-cualquier-camara",
       "title": "Como Mejorar Tus fotos con Cualquier Cámara",
       "instructor": "Valeria Regazzoli",
@@ -26,25 +19,11 @@
       "thumbnail": "uploads/packs/pack_aprende_fotografia_desde_casa_introduccion_a_la_fotografia/curso_3.jpg"
     },
     {
-      "slug": "creacion-de-video-tutoriales-profesionales-con-camtasia",
-      "title": "Creación de Video Tutoriales Profesionales con Camtasia",
-      "instructor": "Jorge Tejero Green",
-      "modulos": 5,
-      "thumbnail": "https://storage.teachlr.com/factory_library/courses/307/covers/1501786190-222x125.jpg"
-    },
-    {
       "slug": "curso-inicial-de-fotografia-digital",
       "instructor": "Alejandro Rost Gelabert",
       "title": "Curso Inicial de Fotografía Digital",
       "modulos": 2,
       "thumbnail": "uploads/packs/pack_aprende_fotografia_desde_casa_introduccion_a_la_fotografia/2.png"
-    },
-    {
-      "slug": "edicion-de-videos-para-emprendedores-camtasia-studio-2019",
-      "title": "Edición de Videos para Emprendedores - Camtasia Studio 2019",
-      "instructor": "Marlon Cruz Blanco",
-      "modulos": 9,
-      "thumbnail": "https://storage.teachlr.com/factory_library/courses/1109/covers/1584729997-222x125.jpg"
     },
     {
       "slug": "manejo-de-planos-fotograficos-con-smartphone",
@@ -58,7 +37,7 @@
       "title": "¿Qué cámara me compro?",
       "instructor": "Molinaripixel Molinari",
       "modulos": 1,
-      "thumbnail": "https://storage.teachlr.com/factory_library/courses/453/covers/1506607964-222x125.jpg"
+      "thumbnail": "uploads/packs/pack_aprende_fotografia_desde_casa_introduccion_a_la_fotografia/camara.png"
     },
     {
       "slug": "tutoriales-de-photoshop",
