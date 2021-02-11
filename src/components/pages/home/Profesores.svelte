@@ -94,7 +94,9 @@
                   <Image src="{p.thumbnail}" alt={p.nombre} class="object-cover w-full h-full"/>
                   </div>
                   <p class="mt-6 leading-none t-h3 font-title">{p.nombre}</p>
-                  <p class="mt-2 font-light leading-none t-p font-title">{p.ocupacion}</p>
+                  {#if p.ocupacion}
+                    <p class="mt-2 font-light leading-none t-p font-title">{p.ocupacion}</p>
+                  {/if}
                 </div>
               </li>
             {/each}

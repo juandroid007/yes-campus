@@ -16,15 +16,6 @@
 
   $: scrolled = y < $height / 3
 
-  const detalles = [
-    'Programa Online',
-    '4 meses de duración',
-    '18 sesiones de Mentoría',
-    '6 módulos formativos',
-    'Recursos descargables',
-    '9 especialistas internacionales',
-  ]
-
   const modulos = [
     {
       title: 'Introducción Corporativa',
@@ -52,6 +43,14 @@
     },
   ]
 
+  const detalles = [
+    'Programa Online',
+    '4 meses de duración',
+    '18 sesiones de Mentoría',
+    `${modulos.length} módulos formativos`,
+    'Recursos descargables',
+    '9 especialistas internacionales',
+  ]
 </script>
 
 <style>
@@ -255,7 +254,7 @@
       <div class="w-16 mx-auto my-4 bg-red-500" style="height: 4px"></div>
       <div class="text-black t-h2">9 mentores de primer<br>nivel a tu disposición</div>
     </div>
-    <Especialistas titulo={false} programa={'young-leaders'} square noShadow />
+    <Especialistas titulo={false} programa={'evolution'} square noShadow />
   </div>
   <div class="mt-24 bg-red-500">
     <div class="flex flex-col-reverse lg:flex-row content-lg">
@@ -266,20 +265,27 @@
           <img src="/images/evolution/venta.webp" class="w-full lg:w-4/10" alt="">
         </div>
       </div>
-      <div class="w-full lg:w-1/2">
+      <div class="z-20 w-full lg:w-1/2 transform">
         <img src="/images/evolution/surface.webp" alt="" class="-mt-24 lg:-my-24 lg:w-9/10 lg:ml-auto">
       </div>
     </div>
   </div>
 
-  <div class="w-full bg-black">
-    <div class="py-16 text-center content">
-      <img src="/images/evolution/logo-final.webp" alt="" class="w-full mx-auto mb-6 lg:w-auto">
-      <h2 class="t-h1" style="color: #5CB540">Enciende la evolución<br>de tu empresa</h2>
+  <PC class="relative overflow-hidden bg-black" let:offset scaleFactor={10}>
+    <P
+      class="absolute w-full h-full bg-black bg-center bg-no-repeat bg-cover"
+      motion={false}
+      offset={offset}
+      style="background-image: linear-gradient(0deg, rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(/images/evolution/bg-final.webp); background-size: 50%; height: 110%"
+    >
+    </P>
+    <V class="z-10 flex flex-col py-16 text-center content animate" oneWay style="--animate-s: 0.8">
+      <img src="/images/evolution/logo-final.webp" alt="" class="w-full mx-auto mb-6 lg:w-auto transform">
+      <h2 class="t-h1 transform" style="color: #5CB540">Enciende la evolución<br>de tu empresa</h2>
       <p class="mx-auto mt-6 text-center text-white transform t-p lg:w-8/10">
       Reserva ahora tu cupo para el programa de aceleración empresarial<br>y dale rienda suelta a la evolución.
       </p>
       <button on:click={openForm} class="px-6 py-4 mx-auto mt-6 font-bold text-white rounded-full transform hover:scale-95 duration-200" style="background-color: #5CB540">Apúntate ahora</button>
-    </div>
-  </div>
+    </V>
+  </PC>
 </div>
