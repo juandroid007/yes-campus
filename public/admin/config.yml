@@ -76,11 +76,11 @@ collections:
     label: "YES Talks" # Used in the UI
     folder: "src/pages/talks" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     preview_path: "talks/{{slug}}"
     format: "frontmatter"
-    media_folder: "/public/images/uploads/talks/{{year}}-{{month}}-{{day}}-{{slug}}" # Media files will be stored in the repo under images/uploads
-    public_folder: "uploads/talks/{{year}}-{{month}}-{{day}}-{{slug}}"
+    media_folder: "/public/images/uploads/talks/{{slug}}" # Media files will be stored in the repo under images/uploads
+    public_folder: "uploads/talks/{{slug}}"
     sort: "date:desc" # Default is title:asc
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "talks"}
@@ -123,16 +123,21 @@ collections:
           - {label: Instructor, name: instructor, widget: string}
           - {label: 'Número de modulos', name: modulos, widget: number}
 
-#  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-#    label: "Posts" # Used in the UI
-#    folder: "src/pages/blog" # The path to the folder where the documents are stored
-#    create: true # Allow users to create new documents in this collection
-#    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-#    format: "frontmatter"
-#    sort: "date:desc" # Default is title:asc
-#    fields: # The fields for each document, usually in front matter
-#      - {label: "Id", name: "id", widget: "hidden", default: "{{slug}}"}
-#      - {label: "Title", name: "title", widget: "string"}
-#      - {label: "Publish Date", name: "date", widget: "datetime", date_format: "DD/MM/YYYY", time_format: "HH:mm", picker_utc: true}
-#      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
-#      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    editor:
+      preview: false
+    label: "Posts" # Used in the UI
+    folder: "src/pages/blog" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    preview_path: "blog/{{slug}}"
+    format: "frontmatter"
+    media_folder: "/public/images/uploads/blog/{{slug}}" # Media files will be stored in the repo under images/uploads
+    public_folder: "uploads/blog/{{slug}}"
+    sort: "date:desc" # Default is title:asc
+    fields: # The fields for each document, usually in front matter
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Descripción", name: "description", widget: "text"}
+      - {label: "Fecha de publicación", name: "date", widget: "datetime", date_format: "DD/MM/YYYY", time_format: "HH:mm", picker_utc: true}
+      - {label: "Thumbnail", name: "thumbnail", widget: "image", required: false}
+      - {label: "Cuerpo", name: "body", widget: "markdown"}

@@ -2,7 +2,7 @@
 layout: talks
 title: "#YesTalks Ep. 001 - Emprendimiento Regenerativo"
 video: https://www.youtube.com/watch?v=aMXKmmjL73M
-thumbnail: uploads/talks/2021-01-28-yestalks_ep-_001_-_emprendimiento_regenerativo/miniatura.png
+thumbnail: uploads/talks/yestalks_ep-_001_-_emprendimiento_regenerativo/miniatura.png
 date: 2021-01-28T04:20:39.043Z
 ---
 **\#YesTalks Ep. 001 - Emprendimiento Regenerativo con Luis Martín Del Campo**

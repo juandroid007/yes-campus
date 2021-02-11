@@ -30,6 +30,11 @@
       "name": "packs",
       "path": "src/content/packs",
       "url": "/packs"
+    },
+    {
+      "name": "blog",
+      "path": "src/pages/blog",
+      "url": "/blog"
     }
   ],
   "hostname": "https://yescampus.io",
