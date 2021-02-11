@@ -15,7 +15,7 @@
   let page = Number($params.page) || 1
   let search = ''
 
-  const collection = () => getCollection('talks')
+  const collection = () => getCollection('blog')
 
   const total = collection().elements.length
 

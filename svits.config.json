@@ -34,7 +34,8 @@
     {
       "name": "blog",
       "path": "src/pages/blog",
-      "url": "/blog"
+      "url": "/blog",
+      "markdown": true
     }
   ],
   "hostname": "https://yescampus.io",

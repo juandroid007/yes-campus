@@ -9,7 +9,7 @@ module.exports = {
     mdsvex({
       extensions: ['.svx', '.md'],
       layout: {
-        blog: path.join(__dirname, 'src', 'layouts', 'MarkdownLayout.svelte'),
+        blog: path.join(__dirname, 'src', 'layouts', 'BlogLayout.svelte'),
         talks: path.join(__dirname, 'src', 'layouts', 'TalksLayout.svelte'),
       },
     }),
