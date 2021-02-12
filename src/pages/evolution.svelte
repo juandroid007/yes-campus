@@ -131,7 +131,7 @@
         <strong>Evolution</strong> es un programa de aceleración empresarial que tiene como objetivo fortalecer los conocimientos del emprendedor, en miras de profesionalización, análisis competitivo, ejecutivo, financiero y así exponencial el desarrollo y proyección de su empresa en miras de comercialización, exportación de servicios/productos, apertura de nuevas sucursales y/o aspirar a convertirse en franquicia. 
         </p>
         <div class="transform hover:-translate-y-px duration-200">
-          <a href="/#" class="flex">
+          <a href="#contenido" class="flex">
             <div class="px-8 py-4 font-bold text-center text-white bg-red-700 rounded-sm shadow duration-200 hover:shadow-lg">Conoce el contenido<br>del programa</div>
           </a>
         </div>
@@ -196,7 +196,7 @@
     </div>
   </V>
 
-  <PC class="flex flex-wrap items-center py-16 content" let:offset>
+  <PC class="flex flex-wrap items-center py-16 content" let:offset id="contenido">
     <div class="w-full lg:w-1/2">
       <h2 class="mb-4 t-h3" style="font-weight: normal">Contenido del programa</h2>
       <h3 class="text-red-700 t-h1">¿Qué aprenderé en<br>este programa?</h3>

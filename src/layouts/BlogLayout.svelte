@@ -46,7 +46,7 @@
         {calendar(date)}
       </div>
     </div>
-    <div class="flex flex-col w-full mx-auto layout lg:px-0 lg:w-5/10 space-y-8">
+    <div class="flex flex-col w-full mx-auto font-light layout lg:px-0 lg:w-5/10 space-y-8">
       <slot/>
     </div>
   </div>
