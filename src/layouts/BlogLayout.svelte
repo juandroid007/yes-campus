@@ -5,23 +5,10 @@
 </script>
 
 <script>
-  import { metatags } from '@roxi/routify'
   import svitsConfig from '../../svits.config.json'
+  import { metatags } from '@roxi/routify'
   import { fly } from 'svelte/transition'
-  import { preferences } from '../stores/preferences'
   import { calendar } from '../lib/dayjs'
-
-  $: dark = $preferences.darkMode
-
-  const getImg = (src) => {
-    const validateExternalSrc = (str) =>
-      str.indexOf("http://") == 0 || str.indexOf("https://") == 0
-    const isExternal = validateExternalSrc(src)
-    const path = isExternal ? src : '/images/' + src
-    const extension = path.split('.').pop()
-    const pathWithoutExtension = path.substr(0, path.length - extension.length)
-    return isExternal ? path : pathWithoutExtension + 'webp'
-  }
 
   export let title
   export let description
