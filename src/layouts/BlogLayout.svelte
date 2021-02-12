@@ -8,9 +8,6 @@
   import { metatags } from '@roxi/routify'
   import svitsConfig from '../../svits.config.json'
   import { fly } from 'svelte/transition'
-  import PC from '../components/motion/ParallaxContainer.svelte'
-  import P from '../components/motion/ParallaxObject.svelte'
-  import V from '../components/IntersectingViewport.svelte'
   import { preferences } from '../stores/preferences'
   import { calendar } from '../lib/dayjs'
 
@@ -45,7 +42,7 @@
         <div class="w-full pb-8">
           <a
             title="Ver todos los YES Talks"
-            href="/talks"
+            href="/blog"
             class="flex items-center justify-end w-full py-2 text-center t-h3 text-yes-gray-400"
             ><span class="mr-2 i jam:chevron-left"></span> <span class="cursor-pointer hover:underline">Ver todas las entradas</span></a
           >
