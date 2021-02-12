@@ -108,6 +108,9 @@ const onlineOnly = {
 }
 
 self.addEventListener('fetch', (event) => {
+  if (!event.request.url.match('^(http|https)://')) {
+    return
+  }
   event.respondWith(
     caches.match(event.request).then((cache) => {
       // The order matters !
