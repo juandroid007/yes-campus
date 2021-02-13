@@ -260,9 +260,9 @@
     <div class="flex flex-col-reverse lg:flex-row content-lg">
       <div class="flex flex-col w-full py-12 text-white lg:w-1/2">
         <h2 class="mx-auto text-center border-b-4 border-white t-h2">Precio del programa</h2>
-        <div class="flex flex-wrap justify-between mt-12 space-y-6 lg:space-y-0">
-          <img src="/images/evolution/preventa.webp" class="w-full lg:w-4/10" alt="">
-          <img src="/images/evolution/venta.webp" class="w-full lg:w-4/10" alt="">
+        <div class="flex flex-wrap justify-between mt-12 space-y-6 sm:space-y-0">
+          <img src="/images/evolution/preventa.webp" class="w-full sm:w-4/10" alt="">
+          <img src="/images/evolution/venta.webp" class="w-full sm:w-4/10" alt="">
         </div>
       </div>
       <div class="z-20 w-full lg:w-1/2 transform">
@@ -280,7 +280,7 @@
     >
     </P>
     <V class="z-10 flex flex-col py-16 text-center content animate" oneWay style="--animate-s: 0.8">
-      <img src="/images/evolution/logo-final.webp" alt="" class="w-full mx-auto mb-6 lg:w-auto transform">
+      <img src="/images/evolution/logo-final.webp" alt="" class="w-auto mx-auto mb-6 transform">
       <h2 class="t-h1 transform" style="color: #5CB540">Enciende la evolución<br>de tu empresa</h2>
       <p class="mx-auto mt-6 text-center text-white transform t-p lg:w-8/10">
       Reserva ahora tu cupo para el programa de aceleración empresarial<br>y dale rienda suelta a la evolución.

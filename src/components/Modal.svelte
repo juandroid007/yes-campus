@@ -113,6 +113,8 @@
 
   div.fullscreen {
     min-width: 100vw;
+    max-height: 100vh;
+    min-height: 100vh;
     width: 100vw !important;
     height: 100%;
     border-radius: 0;
