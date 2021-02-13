@@ -1,0 +1,12 @@
+{
+  "programas": {
+    "general": false,
+    "young-entrepeneur": false,
+    "full-inclusion": false,
+    "young-leaders": false,
+    "evolution": true
+  },
+  "nombre": "Lic. Pablo Escobedo",
+  "ocupacion": "Lic. en Tecnologías de la Información",
+  "thumbnail": "uploads/pablo_escobedo.png"
+}
