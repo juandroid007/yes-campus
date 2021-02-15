@@ -1,5 +1,5 @@
 ---
-title: " Caso del Grupo Ubii como inspiración para el diseño de productos exitosos."
+title: Caso del Grupo Ubii como inspiración para el diseño de productos exitosos.
 description: |-
   La capacidad de adaptarnos y que Venezuela siga siendo el plan A, B y Z.
 
@@ -7,8 +7,10 @@ description: |-
 
   IG: @ligisvelasquez
 date: 2021-02-12T00:29:54.738Z
-thumbnail: uploads/blog/la_capacidad_de_adaptarnos_y_que_venezuela_siga_siendo_el_plan_a_b_y_z/miniatura.png
+thumbnail: uploads/blog/caso_del_grupo_ubii_como_inspiracion_para_el_diseno_de_productos_exitosos-/miniatura.png
 ---
+## La capacidad de adaptarnos y que Venezuela siga siendo el plan A, B y Z.
+
 > *Pasé siete años entendiendo al país desde el punto de vista gastronómico y desde 2017, lo hago desde la tecnología, las finanzas y ahora el comercio electrónico así como el delivery.*
 
 La experiencia ha sido muy interesante: este es un país con infinidad de necesidades y una capacidad de adaptación cada vez más rápida, donde entendemos que nadie nos resolverá los problemas por lo que no hay tiempo que perder.
@@ -25,7 +27,7 @@ Aún así, el actual modelo de negocio no necesariamente se adapta a las necesid
 
 En el caso de los *delivery*, hay nuevos factores que afectan el día a día y este servicio se convierte en una solución. Nosotros desarrollamos este proyecto en 2019 y la pandemia la vimos como la oportunidad ideal para medirnos con la competencia y entender si el país lo necesitaba o no.
 
-### **Creemos en la tropicalización de los negocios y en la adaptación a la cultura para que puedan funcionar dentro de los aspectos legales necesarios.** 
+### **Creemos en la tropicalización de los negocios y en la adaptación a la cultura para que puedan funcionar dentro de los aspectos legales necesarios.**
 
 La respuesta en Caracas ha sido bastante rápida, efectiva y positiva: el comportamiento del consumidor cambió: el tiempo se dedica a las personas y momentos que lo valen, las compras, aunque no dejan de ser importantes, quedó demostrado que se pueden hacer en menos tiempo, con una experiencia de usuario sencilla, muchas opciones de pago en bolívares y divisas y en un tiempo de entrega de máximo 45 minutos. El mercado te lo llevamos a tu casa el mismo día, puedes resolver regalos sin salir de casa o la oficina, comer puede seguir siendo rico y el ubiitero, nuestro motorizado de confianza, te entregará tu pedido con la mejor disposición.
 
