@@ -1,5 +1,5 @@
 ---
-title: Caso del Grupo Ubii como inspiración para el diseño de productos exitosos.
+title: Caso del Grupo Ubii como inspiración para el diseño de productos exitosos
 description: |-
   La capacidad de adaptarnos y que Venezuela siga siendo el plan A, B y Z.
 
