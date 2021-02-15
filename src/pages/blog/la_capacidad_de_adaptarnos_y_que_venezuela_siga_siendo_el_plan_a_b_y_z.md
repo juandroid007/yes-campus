@@ -1,19 +1,21 @@
 ---
-title: La capacidad de adaptarnos y que Venezuela siga siendo el plan A, B y Z
+title: Caso del Grupo Ubii como inspiración para el diseño de productos exitosos.
 description: |-
-  Caso del Grupo Ubii como inspiración para el diseño de productos exitosos.
+  La capacidad de adaptarnos y que Venezuela siga siendo el plan A, B y Z.
 
   Escrito por: Ligia Velásquez, VP de comunicación y mercadeo en Grupo Ubii.
 
   IG: @ligisvelasquez
 date: 2021-02-12T00:29:54.738Z
-thumbnail: uploads/blog/la_capacidad_de_adaptarnos_y_que_venezuela_siga_siendo_el_plan_a_b_y_z/miniatura.png
+thumbnail: uploads/blog/caso_del_grupo_ubii_como_inspiracion_para_el_diseno_de_productos_exitosos-/miniatura.png
 ---
+## La capacidad de adaptarnos y que Venezuela siga siendo el plan A, B y Z.
+
 > *Pasé siete años entendiendo al país desde el punto de vista gastronómico y desde 2017, lo hago desde la tecnología, las finanzas y ahora el comercio electrónico así como el delivery.*
 
 La experiencia ha sido muy interesante: este es un país con infinidad de necesidades y una capacidad de adaptación cada vez más rápida, donde entendemos que nadie nos resolverá los problemas por lo que no hay tiempo que perder.
 
- La tecnología y el atrevimiento de muchas personas por probar, cambiar e implementar productos que funcionan en el extranjero, **han hecho que nazcan nuevas formas de pago así como de *delivery.***
+### La tecnología y el atrevimiento de muchas personas por probar, cambiar e implementar productos que funcionan en el extranjero, **han hecho que nazcan nuevas formas de pago así como de *delivery.***
 
 Cuando iniciamos operaciones, el país estaba en otra situación: año 2016, no había efecto y el punto de venta se convirtió en un producto de primera necesidad, a tal medida, que nuestro canal fueron los bancos aliados, quienes enviaron información a su base de datos donde informaban sobre una nueva empresa que vendía puntos de venta. Luego hicimos publicidad por Directv en los cuartos de final y lo demás es historia. ***Sí, fuimos los primeros en el mercado y hoy en día hay más de 20 empresas dedicadas a lo mismo.***
 
@@ -25,7 +27,9 @@ Aún así, el actual modelo de negocio no necesariamente se adapta a las necesid
 
 En el caso de los *delivery*, hay nuevos factores que afectan el día a día y este servicio se convierte en una solución. Nosotros desarrollamos este proyecto en 2019 y la pandemia la vimos como la oportunidad ideal para medirnos con la competencia y entender si el país lo necesitaba o no.
 
-**Creemos en la tropicalización de los negocios y en la adaptación a la cultura para que puedan funcionar dentro de los aspectos legales necesarios.** La respuesta en Caracas ha sido bastante rápida, efectiva y positiva: el comportamiento del consumidor cambió: el tiempo se dedica a las personas y momentos que lo valen, las compras, aunque no dejan de ser importantes, quedó demostrado que se pueden hacer en menos tiempo, con una experiencia de usuario sencilla, muchas opciones de pago en bolívares y divisas y en un tiempo de entrega de máximo 45 minutos. El mercado te lo llevamos a tu casa el mismo día, puedes resolver regalos sin salir de casa o la oficina, comer puede seguir siendo rico y el ubiitero, nuestro motorizado de confianza, te entregará tu pedido con la mejor disposición.
+### **Creemos en la tropicalización de los negocios y en la adaptación a la cultura para que puedan funcionar dentro de los aspectos legales necesarios.**
+
+La respuesta en Caracas ha sido bastante rápida, efectiva y positiva: el comportamiento del consumidor cambió: el tiempo se dedica a las personas y momentos que lo valen, las compras, aunque no dejan de ser importantes, quedó demostrado que se pueden hacer en menos tiempo, con una experiencia de usuario sencilla, muchas opciones de pago en bolívares y divisas y en un tiempo de entrega de máximo 45 minutos. El mercado te lo llevamos a tu casa el mismo día, puedes resolver regalos sin salir de casa o la oficina, comer puede seguir siendo rico y el ubiitero, nuestro motorizado de confianza, te entregará tu pedido con la mejor disposición.
 
 ![redes sociales](uploads/blog/la_capacidad_de_adaptarnos_y_que_venezuela_siga_siendo_el_plan_a_b_y_z/concepto-redes-sociales-telefono-inteligente_53876-7382.jpg "Marketing")
 
@@ -35,7 +39,7 @@ cuáles son las ventajas que proponemos así como generar confianza para que los
 
 *Otro reto era darle personalidad y estética a cada una de las marcas.* Con Ubii Go, somos los naranjas, los panas, los que siempre estamos. Contamos con nuestros propios héroes en moto que llamamos “ubiiteros”, quienes con una sonrisa, han salido desde el primer día, cumpliendo con todas las normas de seguridad para llegar a donde estés y entregarte tu pedido de forma rápida y correcta.
 
-**Y en el caso de Ubii pagos, el reto fue seguir generando confianza en las empresas consolidadas así como las nuevas, para entender que obtener su punto de venta no es complejo, es automatizado y posible.**
+#### **Y en el caso de Ubii pagos, el reto fue seguir generando confianza en las empresas consolidadas así como las nuevas, para entender que obtener su punto de venta no es complejo, es automatizado y posible.**
 
 ### Somos productos tecnológicos y llegamos a personas que requieren de la tecnología para conectarse con nosotros.
 
