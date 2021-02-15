@@ -1,7 +1,7 @@
 ---
-title: La capacidad de adaptarnos y que Venezuela siga siendo el plan A, B y Z
+title: " Caso del Grupo Ubii como inspiración para el diseño de productos exitosos."
 description: |-
-  Caso del Grupo Ubii como inspiración para el diseño de productos exitosos.
+  La capacidad de adaptarnos y que Venezuela siga siendo el plan A, B y Z.
 
   Escrito por: Ligia Velásquez, VP de comunicación y mercadeo en Grupo Ubii.
 
