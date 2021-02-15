@@ -15,7 +15,7 @@ thumbnail: uploads/blog/caso_del_grupo_ubii_como_inspiracion_para_el_diseno_de_p
 
 La experiencia ha sido muy interesante: este es un país con infinidad de necesidades y una capacidad de adaptación cada vez más rápida, donde entendemos que nadie nos resolverá los problemas por lo que no hay tiempo que perder.
 
-### La tecnología y el atrevimiento de muchas personas por probar, cambiar e implementar productos que funcionan en el extranjero, **han hecho que nazcan nuevas formas de pago así como de *delivery.***
+##### La tecnología y el atrevimiento de muchas personas por probar, cambiar e implementar productos que funcionan en el extranjero, **han hecho que nazcan nuevas formas de pago así como de *delivery.***
 
 Cuando iniciamos operaciones, el país estaba en otra situación: año 2016, no había efecto y el punto de venta se convirtió en un producto de primera necesidad, a tal medida, que nuestro canal fueron los bancos aliados, quienes enviaron información a su base de datos donde informaban sobre una nueva empresa que vendía puntos de venta. Luego hicimos publicidad por Directv en los cuartos de final y lo demás es historia. ***Sí, fuimos los primeros en el mercado y hoy en día hay más de 20 empresas dedicadas a lo mismo.***
 
