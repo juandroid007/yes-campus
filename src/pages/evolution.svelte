@@ -1,6 +1,6 @@
 <script>
   import { height } from '../components/navigation/Navbar.svelte'
-  import { metatags } from '@roxi/routify'
+  import { metatags, params } from '@roxi/routify'
   import svitsConfig from '../../svits.config.json'
   import PC from '../components/motion/ParallaxContainer.svelte'
   import P from '../components/motion/ParallaxObject.svelte'
@@ -8,6 +8,7 @@
   import Accordion from '/$components/pages/evolution/Accordion.svelte'
   import Especialistas from '/$components/pages/home/Profesores.svelte'
   import Formulario from '/$components/pages/evolution/Formulario.svelte'
+  import { onMount } from 'svelte'
 
   metatags.title = 'Evolution | ' + svitsConfig.name
   let y
@@ -15,6 +16,12 @@
   let openForm
 
   $: scrolled = y < $height / 3
+
+  onMount(() => {
+    if ($params.registro !== undefined) {
+      openForm()
+    }
+  })
 
   const modulos = [
     {
