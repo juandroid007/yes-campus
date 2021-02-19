@@ -6,6 +6,7 @@
 
   import { getCollection } from '../../../collections'
 
+  export let take = null
   export let programa = 'general'
   export let titulo = true
   export let square = false
@@ -13,6 +14,7 @@
 
   $: profesores = getCollection('profesores')
     .filter(e => e.programas[programa])
+    .paginate(take === null ? 100 : take, 1)
     .elements
 
   let glide

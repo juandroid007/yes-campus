@@ -98,7 +98,7 @@
   </div>
 </Viewport>
 
-<Profesores/>
+<Profesores take={10}/>
 
 <Viewport class="animate animateOut" oneWay style="--animate-r-y: -64deg" top={220}>
   <Testimonio/>
