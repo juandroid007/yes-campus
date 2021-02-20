@@ -59,6 +59,10 @@ export default [
         href: '/leaders',
       },
       {
+        titulo: 'Girl E',
+        href: '/girl-e',
+      },
+      {
         titulo: 'Evolution',
         href: '/evolution',
       },

@@ -29,6 +29,7 @@
     "@iconify/icons-jam": "^1.0.5",
     "@iconify/svelte": "^1.0.2",
     "@roxi/routify": "^2.7.4",
+    "aos": "^2.3.4",
     "dayjs": "^1.10.4",
     "faker": "^5.2.0",
     "nprogress": "^0.2.0",

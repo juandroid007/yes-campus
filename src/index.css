@@ -223,3 +223,101 @@ button {
 .t-h3 {
 	font-size: 1.33rem;
 }
+
+
+#girle.bkg, #girle .bkg {
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4d4d4' fill-opacity='0.3' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+#girle.bkg-primary, #girle .bkg-primary {
+  background-color: #275585;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2312263c' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+#girle .bkg2 {
+  background-image: url('/images/girle/fondo modulos.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#girle .img-shadow {
+  filter: drop-shadow(5px 5px 5px rgba(10, 10, 10, 0.2));
+}
+
+#girle * {
+  @apply transition;
+  @apply duration-200;
+  @apply ease-in-out;
+}
+
+#girle .modulo {
+  @apply transition;
+  @apply duration-200;
+  @apply ease-in-out;
+  @apply rounded-full;
+  @apply transform;
+}
+
+#girle .modulo:hover {
+  @apply bg-white;
+  @apply scale-105;
+  @apply shadow-xl;
+}
+
+#girle .btn {
+  @apply transition;
+  @apply duration-500;
+  @apply ease-in-out;
+
+  @apply transform;
+  @apply rounded-full;
+  @apply bg-girle-primary;
+  @apply text-white;
+  @apply font-bold;
+  @apply px-6;
+  @apply py-4;
+  @apply shadow-lg;
+}
+
+#girle .btn:hover {
+  @apply shadow-xl;
+  @apply bg-girle-primary-400;
+  @apply scale-105;
+}
+
+#girle .btn:disabled {
+  @apply opacity-75;
+  cursor: not-allowed;
+}
+
+#girle .btn:focus {
+  outline: 0;
+}
+
+#girle .input {
+  @apply bg-white;
+  @apply shadow;
+  @apply appearance-none;
+  @apply border;
+  @apply rounded;
+  @apply w-full;
+  @apply py-2;
+  @apply px-3;
+  @apply mb-6;
+  @apply text-gray-700;
+  @apply leading-tight;
+}
+
+#girle .input:focus {
+  @apply outline-none;
+  @apply shadow-outline;
+}
+
+#girle .input-label {
+  @apply block;
+  @apply text-gray-700;
+  @apply text-sm;
+  @apply font-bold;
+  @apply mb-2;
+}

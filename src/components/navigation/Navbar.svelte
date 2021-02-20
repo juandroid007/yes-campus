@@ -143,21 +143,13 @@
     border-bottom: 2px solid transparent;
   }
 
-  .selected-nav {
+  .selected-nav, .nav-link:hover {
     margin-bottom: -2px;
     border-bottom: 2px solid #0273E3;
   }
 
   .transparent.selected-nav {
     border-bottom: 2px solid white;
-  }
-
-  .nav-link:hover {
-    @extend .selected-nav;
-  }
-
-  .transparent.nav-link:hover {
-    @extend .transparent.selected-nav;
   }
 
   /*
