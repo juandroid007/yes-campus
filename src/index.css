@@ -236,7 +236,7 @@ button {
 }
 
 #girle .bkg2 {
-  background-image: url('/images/girle/fondo modulos.jpg');
+  background-image: var(--bkg2);
   background-size: cover;
   background-position: center;
 }

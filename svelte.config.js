@@ -1,10 +1,11 @@
 const path = require('path')
 const { mdsvex } = require('mdsvex')
-const autoPreprocess = require('svelte-preprocess')
+const { typescript, postcss } = require('svelte-preprocess')
 module.exports = {
   extensions: ['.svelte', '.svx', '.md'],
   preprocess: [
-    autoPreprocess(),
+    typescript(),
+    postcss(),
     mdsvex({
       extensions: ['.svx', '.md'],
       layout: {

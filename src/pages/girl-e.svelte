@@ -8,7 +8,7 @@
   import Profesores from '/$components/pages/girle/Profesores.svelte'
 </script>
 
-<div class="w-full overflow-hidden bkg" id="girle">
+<div class="w-full overflow-hidden bkg" id="girle" style="--bkg2: {'url("/images/girle/fondo modulos.webp")'}">
   <Hero />
   <Segundo />
   <Tercero />
