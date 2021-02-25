@@ -1,6 +1,6 @@
 ---
 title: El entorno digital y las marcas
-description: "Escrito por: Asesor y mentor de marcas. IG: @eduardomendez"
+description: "Escrito por: Eduardo Méndez, asesor y mentor de marcas. IG: @eduardomendez"
 date: 2021-02-25T17:17:55.155Z
 thumbnail: uploads/blog/el_entorno_digital_y_las_marcas/el_entorno_digital_y_las_marcas.jpg
 ---
