@@ -72,6 +72,10 @@ module.exports = {
           'Oxygen',
           ...defaultTheme.fontFamily.sans,
         ],
+        roboto: [
+          'Roboto',
+          ...defaultTheme.fontFamily.sans,
+        ],
         mono: [
           'Inconsolata',
           ...defaultTheme.fontFamily.mono,
