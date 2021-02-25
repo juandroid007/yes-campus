@@ -1,6 +1,6 @@
 ---
 title: El entorno digital y las marcas
-description: "Escrito por: Eduardo Méndez, asesor y mentor de marcas. IG: @eduardomendez"
+description: "Eduardo Méndez, Asesor y mentor de marcas. IG: @eduardomendez"
 date: 2021-02-25T17:17:55.155Z
 thumbnail: uploads/blog/el_entorno_digital_y_las_marcas/el_entorno_digital_y_las_marcas.jpg
 ---
@@ -37,3 +37,5 @@ Así, al publicar ya entenderás qué reacción tendrán y lograrás más alcanc
 Y al final, esa audiencia que estás captando, te verá como un referente en el tema, generarás confianza y como consecuencia... ventas, crecimiento en seguidores y tu engagement mejorará. Así se simple.
 
 *Chao*.
+
+Para profundizar más acerca del tema, puedes ir a ver nuestro #YesTalk Estrategias de marketing en Instagram en el Canal de Youtube o nuestra sección de la comunidad Yes Talks.
