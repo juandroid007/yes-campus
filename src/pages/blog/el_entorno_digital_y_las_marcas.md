@@ -37,5 +37,3 @@ Así, al publicar ya entenderás qué reacción tendrán y lograrás más alcanc
 Y al final, esa audiencia que estás captando, te verá como un referente en el tema, generarás confianza y como consecuencia... ventas, crecimiento en seguidores y tu engagement mejorará. Así se simple.
 
 *Chao*.
-
-Para profundizar más acerca del tema, puedes ir a ver nuestro #YesTalk Estrategias de marketing en Instagram en el Canal de Youtube o nuestra sección de la comunidad Yes Talks.
