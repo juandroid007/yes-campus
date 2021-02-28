@@ -51,10 +51,10 @@ self.addEventListener('activate', (event) => {
     caches.keys().then(async (cacheNames) => {
       return Promise.all(
         cacheNames.map((thisCacheName) => {
-          if (thisCacheName !== cacheName) {
-            console.info(`[Service Worker] Deleting: ${thisCacheName}`)
-            return caches.delete(thisCacheName)
-          }
+          // if (thisCacheName !== cacheName) {
+          //   console.info(`[Service Worker] Deleting: ${thisCacheName}`)
+          //   return caches.delete(thisCacheName)
+          // }
         })
       ).then(() => self.clients.claim())
     })
