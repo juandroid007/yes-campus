@@ -65,6 +65,46 @@
   ]
 
   import { clientes } from '../lib/business'
+
+  const isEmpty = str => !str.trim().length
+  let post = () => fetch('https://api.yescampus.io/business', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      mes: currMes,
+      nombre,
+      email,
+      cursos: pack.cursos.map(c => c.slug),
+      pack: pack.slug,
+    })
+  })
+
+  let enviando = false
+
+  const send = () => {
+    if (isEmpty(nombre) || isEmpty(email)) {
+      alert('Los campos no pueden estar vacíos')
+      return
+    }
+    enviando = true
+    post()
+      .then(() => getSuscritos())
+      .then(() => {
+        alert('¡Has sido suscrito exitosamente! Atento a tu bandeja de entrada')
+      })
+      .catch(err => {
+        console.log(err)
+        if (err.status == 418) {
+          alert('Se han acabado los cupos')
+        } else {
+          alert('Ha ocurrido un error, inténtelo nuevamente más tarde')
+        }
+      })
+      .finally(() => (enviando = false))
+  }
 </script>
 
 <style>

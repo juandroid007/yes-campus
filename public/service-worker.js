@@ -48,7 +48,7 @@ self.addEventListener('install', (event) => {
 self.addEventListener('activate', (event) => {
   console.info('[Service Worker] Activate')
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
+    caches.keys().then(async (cacheNames) => {
       return Promise.all(
         cacheNames.map((thisCacheName) => {
           if (thisCacheName !== cacheName) {
@@ -61,8 +61,8 @@ self.addEventListener('activate', (event) => {
   )
 })
 
-const update = (event, cache) => {
-  return fetch(event.request).then((response) => {
+const update = async (event, cache) => {
+  return fetch(event.request).then(async (response) => {
     return caches.open(cacheName).then((cache) => {
       if (event.request.method === 'GET') {
         cache.put(event.request, response.clone())

@@ -10,6 +10,8 @@
   }
 </script>
 
+<!-- routify:options preload="proximity" -->
+
 <Cursor/>
 
 <div class="flex flex-col w-full min-h-screen blend duration-200" use:styles={cssGlobals}>

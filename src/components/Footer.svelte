@@ -1,8 +1,16 @@
 <script>
   import navs from './navigation/navigation'
+  import { prefetch, url } from '@roxi/routify'
 
   $: isolated = navs.filter(e => !e.childrens)
   $: childrens = navs.filter(e => e.childrens)
+
+  $: isolated
+    .filter(node => node.href)
+    .forEach(node => prefetch(node.href))
+  $: childrens
+    .filter(node => node.href)
+    .forEach(node => prefetch(node.href))
 </script>
 
 <footer class="py-8">
@@ -37,7 +45,7 @@
           -->
         <div class="flex flex-col w-full mt-2">
           {#each n.childrens as c}
-            <a href={c.href} class="my-1 hover:underline link">{c.titulo}</a>
+            <a href={$url(c.href)} class="my-1 hover:underline link">{c.titulo}</a>
           {/each}
         </div>
       </div>

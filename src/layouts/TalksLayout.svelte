@@ -141,30 +141,4 @@
     @apply rounded-xl;
     @apply mb-6;
   }
-
-  .wave {
-    display: block;
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 94px;
-  }
-
-  @screen sm {
-    .wave {
-      height: 128px;
-    }
-  }
-
-  .wave path {
-    transition: fill .2s ease;
-  }
-
-  .white-path {
-    fill: #fff;
-  }
-
-  .dark-path {
-    fill: #222;
-  }
 </style>
