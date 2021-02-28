@@ -6,7 +6,7 @@ thumbnail: uploads/blog/el_entorno_digital_y_las_marcas/el_entorno_digital_y_las
 ---
 # ¿Qué está pasando hoy en día en el entorno digital de las marcas y personas?
 
-![Marketing en Instagram](https://unsplash.com/photos/71Qk8ODIBko "Estrategias de marketing en instagram")
+![Marketing en Instagram](uploads/blog/el_entorno_digital_y_las_marcas/solen-feyissa-kwza42a1kds-unsplash.jpg "Estrategias de marketing en instagram")
 
 *Todo cambia, todo fluye, todo irá migrando de lugar y de forma sin que muchas veces tú puedas evitarlo.* 
 
@@ -14,7 +14,7 @@ Tenemos que aprender a vivir con esas situaciones. No nos queda sino aprender a 
 
 Muchas personas no creían en el poder de tener criterio propio e ir creando una marca digital. Sin embargo, llegó esta situación y aceleró la adaptación tecnológica de todos. *Ahora, en un mundo cada día más digital, debemos cuidar lo que decimos, mostramos y escribimos. Tenemos que ser ejemplos de congruencia, realidad y opiniones sinceras.*
 
-![Marketing en redes sociales](uploads/blog/instagram-internet-keyboard-163141.jpg "Social media marketing")
+![Marketing en redes sociales](uploads/blog/el_entorno_digital_y_las_marcas/eaters-collective-i_xvfntqjwi-unsplash.jpg "Social media marketing")
 
 Apoyar a quienes aportan valor más allá de un baile de TikTok o una foto carne. Y no estoy diciendo que estén mal quienes lo hacen, porque el bailar en cámara, entretener o matarse para tener un cuerpo también requiere sacrificio, pero muchas veces dejamos a un lado otro contenido que también merece la atención de todos.
 
@@ -24,7 +24,7 @@ Hoy comparto estas palabras contigo para que seamos parte de una comunidad que a
 
 Y si eres de esas personas que todavía están en el lado del miedo y las dudas para empezar... Hazlo, empieza. El miedo y las dudas con el tiempo se irán transformando en experiencias, aprendizajes y superación personal.
 
-![](https://unsplash.com/photos/DL-lUF5i_sY)
+![](uploads/blog/el_entorno_digital_y_las_marcas/georgia-de-lotz--usjonxlano-unsplash.jpg)
 
 ### Seamos de las personas que suman y no de las que solo están flotando por la vida sin sentido.
 
