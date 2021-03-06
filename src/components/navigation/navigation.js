@@ -80,6 +80,10 @@ export default [
         titulo: 'YES Packs',
         href: '/packs',
       },
+      {
+        titulo: 'Especialistas',
+        href: '/especialistas',
+      },
       // {
       //   titulo: 'Comunidad YES',
       //   href: '/historias',

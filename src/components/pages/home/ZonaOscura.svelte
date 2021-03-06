@@ -7,6 +7,7 @@
 <script>
   import { onDestroy } from 'svelte'
   import { fade } from 'svelte/transition'
+  import { url } from '@roxi/routify'
   import Viewport from '../../IntersectingViewport.svelte'
   import Wave from '../../motion/Wave.svelte'
 
@@ -98,7 +99,18 @@
   </div>
 </Viewport>
 
-<Profesores take={10}/>
+<div class="flex flex-col items-center justify-center">
+  <Profesores take={10}/>
+  <Viewport class="animate" style="--animate-y: 2rem" oneWay>
+    <a
+      href={$url('/especialistas')}
+      class="flex items-center mx-auto mt-12 max-w-max-content btn-fill"
+      >
+      Todos los especialistas
+      <span class="ml-2 cursor-pointer i jam:chevron-right"></span>
+    </a>
+  </Viewport>
+</div>
 
 <Viewport class="animate animateOut" oneWay style="--animate-r-y: -64deg" top={220}>
   <Testimonio/>
