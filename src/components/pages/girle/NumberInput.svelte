@@ -14,11 +14,11 @@
 </script>
 
 <div
-  class="flex flex-row border h-10 w-40 rounded-lg border-gray-400 relative mb-6"
+  class="relative flex flex-row w-40 h-10 mb-6 border border-gray-400 rounded-lg"
 >
   <button
     on:click={_ => value == 0 ? null : value--}
-    class="font-semibold border-r bg-primary hover:bg-primary-400 text-white border-gray-400 h-full w-20 flex rounded-l focus:outline-none cursor-pointer"
+    class="flex w-20 h-full font-semibold text-white border-r border-gray-400 rounded-l cursor-pointer bg-girle-primary hover:bg-girle-primary-400 focus:outline-none"
   >
     <span class="m-auto">-</span>
   </button>
@@ -28,12 +28,12 @@
     on:keydown={input}
     type="number"
     min="0"
-    class="no-appearance bg-white w-24 text-xs md:text-base flex items-center justify-center cursor-default text-center"
+    class="flex items-center justify-center w-24 text-xs text-center bg-white cursor-default no-appearance md:text-base"
   >
 
   <button
     on:click={_ => value++}
-    class="font-semibold border-l bg-primary hover:bg-primary-400 text-white border-gray-400 h-full w-20 flex rounded-r focus:outline-none cursor-pointer"
+    class="flex w-20 h-full font-semibold text-white border-l border-gray-400 rounded-r cursor-pointer bg-girle-primary hover:bg-girle-primary-400 focus:outline-none"
   >
     <span class="m-auto">+</span>
   </button>

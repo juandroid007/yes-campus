@@ -18,19 +18,19 @@
 
 <div class="month-container">
   {#each visibleMonth.weeks as week (week.id) }
-    <Week 
-      days={week.days} 
-      {selected} 
-      {highlighted} 
-      {shouldShakeDate} 
+    <Week
+      days={week.days}
+      {selected}
+      {highlighted}
+      {shouldShakeDate}
       {direction}
-      on:dateSelected 
+      on:dateSelected
     />
   {/each}
 </div>
 
 <style>
-  .month-container { 
+  .month-container {
     width: 100%;
     display: -ms-grid;
     display: grid;

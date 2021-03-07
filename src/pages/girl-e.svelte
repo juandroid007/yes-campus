@@ -6,14 +6,19 @@
   import Requisitos from '/$components/pages/girle/Requisitos.svelte'
   import Modulos from '/$components/pages/girle/Modulos.svelte'
   import Profesores from '/$components/pages/girle/Profesores.svelte'
+  import Formulario from '/$components/pages/girle/Formulario.svelte'
+
+  let openForm
 </script>
 
+<Formulario bind:open={openForm} />
+
 <div class="w-full overflow-hidden bkg" id="girle" style="--bkg2: {'url("/images/girle/fondo modulos.webp")'}">
-  <Hero />
+  <Hero {openForm} />
   <Segundo />
-  <Tercero />
+  <Tercero {openForm} />
   <Requisitos />
   <Cuarto />
-  <Modulos />
+  <Modulos {openForm} />
   <Profesores />
 </div>

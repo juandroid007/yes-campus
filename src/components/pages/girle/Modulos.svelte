@@ -10,6 +10,7 @@
     'Prácticas de bienestar',
     'Hablemos de Negocios',
   ]
+  export let openForm
 </script>
 
 <div class="relative bkg2">
@@ -34,13 +35,11 @@
         {/each}
       </div>
     </div>
-  <a
-    href="formulario"
+  <button
+    on:click={openForm}
     class="mx-auto my-6 mb-6 text-center bg-white btn hover:bg-white text-girle-secondary hover:text-girle-secondary-400 xl:mb-0"
     data-aos="fade-up"
-    >¡Postúlate aquí!</a
+    >¡Postúlate aquí!</button
   >
   </div>
 </div>
-<img src="/images/girle/banner_movil.webp" class="w-full lg:hidden" alt="">
-<a href="formulario" class="hidden lg:block"><img src="/images/girle/banner.webp" class="w-full" alt=""></a>

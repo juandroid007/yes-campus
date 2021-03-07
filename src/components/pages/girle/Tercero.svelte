@@ -1,3 +1,7 @@
+<script>
+  export let openForm
+</script>
+
 <div class="relative flex flex-col items-center xl:flex-row-reverse xl:min-h-screen">
   <p
     class="inset-x-0 top-0 px-12 mt-6 text-lg italic font-light text-center text-girle-primary xl:text-3xl xl:absolute xl:px-0 xl:mx-auto xl:mt-2 xl:w-1/2"
@@ -16,10 +20,10 @@
     y desean explorar emprendimientos asociativos como medios de vida y lograr independencia
     económica. <strong>Girl-E es un programa creado por la asociación civil Aprendo y Emprendo</strong>.
     </p>
-    <a
-      href="formulario"
+    <button
+      on:click={openForm}
       class="mx-auto mb-6 text-center uppercase btn bg-girle-secondary hover:bg-girle-secondary-400 xl:mb-0"
-      >¡Quiero participar!</a
+      >¡Quiero participar!</button
     >
   </div>
    <img src="/images/girle/seccion3.webp" class="w-screen mt-auto xl:w-1/2" alt="" data-aos="fade-right">

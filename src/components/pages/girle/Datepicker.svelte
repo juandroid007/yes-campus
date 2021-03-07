@@ -45,7 +45,7 @@
   bind:selected={selectedDate}
 >
   <button
-    class='input'
+    class='w-full input'
   >
     {#if dateChosen} {formattedSelected} {:else} Selecciona una fecha {/if}
   </button>

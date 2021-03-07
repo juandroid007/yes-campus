@@ -1,3 +1,7 @@
+<script>
+  export let openForm
+</script>
+
 <div class="relative flex flex-col items-center lg:flex-row lg:min-h-screen">
   <img
     src="/images/girle/circulo.webp"
@@ -22,7 +26,7 @@
     4 semanas de formación 100% Online en emprendimiento diseñado para
     <strong>jóvenes madres de Venezuela</strong>
     </p>
-    <a href="formulario" class="text-center uppercase btn">Quiero postularme</a>
+    <button on:click={openForm} class="text-center uppercase btn">Quiero postularme</button>
   </div>
   <div class="relative">
     <img
