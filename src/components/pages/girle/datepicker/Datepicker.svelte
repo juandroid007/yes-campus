@@ -260,7 +260,7 @@
 </script>
 
 <div
-  class="datepicker w-full"
+  class="w-full datepicker"
   class:open="{isOpen}"
   class:closing="{isClosing}"
   style={wrapperStyle}
