@@ -1,6 +1,7 @@
 <script>
   import Contenido from '/$components/pages/yefi/Contenido.svelte'
   import Slide from '/$components/pages/yefi/Sliders.svelte'
+  import Formulario from '/$components/pages/yefi/Formulario.svelte'
   const facilitadores = [
     {
       title: 'Alberto González',
@@ -51,6 +52,8 @@
     ref.classList.toggle('pointer-events-none')
     body.classList.toggle('modal-active')
   }
+
+  let openForm
 </script>
 
 <style>
@@ -130,6 +133,8 @@
   }
 </style>
 
+<Formulario bind:open={openForm} />
+
 <div class="w-full">
   <div class="relative px-6 pb-32 overflow-hidden lg:min-h-screen bkg">
     <img alt="" src="/images/yefi/wheelchair.png" class="absolute top-0 left-0 w-24 pt-6 mt-24 ml-4 anim-invert lg:w-32 lg:hidden">
@@ -150,7 +155,7 @@
           <img src="/images/yefi/wheelchair.png" alt="" class="hidden w-24 -mb-6 lg:block anim-invert lg:w-32">
           <img src="/images/yefi/vive.png" alt="" class="hidden pb-4 lg:block">
           <h2 class="mb-4 text-lg font-bold text-justify lg:text-lg text-yefi-secondary-600 lg:mb-6">Desarrolla tus competencias de emprendimiento en nuestro bootcamp diseñado especialmente para jóvenes con discapacidad</h2>
-          <a href="/formulario" class="justify-center p-4 text-lg font-bold text-center uppercase rounded-full shadow-lg bg-yefi-primary lg:text-xl text-yefi-secondary hover:bg-yefi-primary-400 hover:text-yefi-secondary-400 hover:shadow-xl">¡Quiero postularme!</a>
+          <button on:click={openForm} class="justify-center p-4 text-lg font-bold text-center uppercase rounded-full shadow-lg bg-yefi-primary lg:text-xl text-yefi-secondary hover:bg-yefi-primary-400 hover:text-yefi-secondary-400 hover:shadow-xl">¡Quiero postularme!</button>
         </div>
         <div class="justify-end flex-1 hidden mt-16 ml-12 sm:mt-0 lg:flex">
           <img alt="" src="/images/yefi/logo.png">
@@ -170,7 +175,7 @@
           <!--span class="text-6xl text-yefi-primary">1</span-->
           <h4 class="my-2 text-2xl font-semibold text-yefi-secondary">Regístrate</h4>
           <p class="leading-relaxed text-center text-yefi-secondary-700">
-          Rellenar nuestro <a href="/formulario" class="underline text-yefi-primary-800 text-bold">formulario de registro</a> con tus datos
+          Rellenar nuestro <span on:click={openForm} class="underline text-yefi-primary-800 text-bold">formulario de registro</span> con tus datos
           </p>
         </div>
         <div class="flex flex-col items-center md:px-6 lg:px-12">
@@ -339,7 +344,7 @@
   <div class="relative py-24 bg-yefi-blue-100">
     <div class="container px-6 mx-auto">
       <h3 class="flex flex-col items-center pb-16 text-4xl font-bold text-center text-yefi-primary">"Únete a la red Young Entrepreneur y obtén las herramientas para desarrollar tu idea de negocio"</h3>
-      <a class="flex justify-center" href="/formulario"><button class="justify-center p-6 text-lg italic font-bold text-center uppercase rounded-full shadow-lg text-yefi-blue-100 bg-yefi-primary lg:text-2xl hover:shadow-xl">¡Quiero unirme!</button></a>
+      <div class="flex justify-center"><button on:click={openForm} class="justify-center p-6 text-lg italic font-bold text-center uppercase rounded-full shadow-lg text-yefi-blue-100 bg-yefi-primary lg:text-2xl hover:shadow-xl">¡Quiero unirme!</button></div>
     </div>
   </div>
 
