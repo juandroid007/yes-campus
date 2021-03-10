@@ -30,8 +30,8 @@
   ]
 </script>
 
-<div class="my-12 overflow-hidden content-lg">
-  <Viewport class="mb-6 text-center" once style="--animate-x: -1rem">
+<div class="py-12 overflow-hidden content-lg">
+  <Viewport class="mb-6 text-center text-white" once style="--animate-x: -1rem">
     <h2 class="mb-2 t-h2 animate">Un ecosistema virtual como ningún otro</h2>
     <p  class="animate" style="font-size: 1.33rem">Aprende. Conecta. Obtén financiamiento. Asesórate.</p>
   </Viewport>
@@ -41,7 +41,7 @@
         <div
           class="w-full sm:w-1/2 xl:w-1/4 animation animate"
           style="transition-delay: {300 + i * 200}ms"
-        >
+          >
           <div class="p-6 transform hover:-translate-y-4 duration-200 hover:scale-110">
             <img class="mb-4 mr-auto w-6/10" src="/images/icons/{m.id}.svg" alt="">
             <h2 class="mb-4 font-bold leading-none t-h3 font-title">{@html m.titulo}</h2>

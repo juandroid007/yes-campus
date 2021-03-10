@@ -8,7 +8,7 @@
 </script>
 
 <div
-  class="relative h-screen overflow-hidden lg:py-12 from-yes-blue-500 via-yes-blue-400 to-white bg-gradient-to-b dark:to-transparent dark:from-yes-blue-800"
+  class="relative h-screen overflow-hidden lg:py-12"
   style="height: calc(100vh - {$height}px); color: white;"
 >
   <div class="absolute hidden w-full h-full lg:block" in:fly={{x: 100, duration: 800}}>

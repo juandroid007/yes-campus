@@ -36,9 +36,11 @@
   {/if}
 
   <div class:opacity-0={$inZoneMask} class="duration-300">
-    <PrimeraCapa/>
-    <div id="servicios">
-      <Servicios/>
+    <div class="bg-gradient-to-b from-yes-blue-600 to-transparent dark:from-yes-blue-800">
+      <PrimeraCapa/>
+      <div id="servicios">
+        <Servicios/>
+      </div>
     </div>
     <TerceraCapa/>
 
