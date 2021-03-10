@@ -8,8 +8,8 @@
 </script>
 
 <div
-  class="relative h-screen overflow-hidden lg:py-12 from-yes-blue-200 to-white bg-gradient-to-b dark:to-transparent dark:from-yes-blue-800"
-  style="height: calc(100vh - {$height}px); color: #939BB4;"
+  class="relative h-screen overflow-hidden lg:py-12 from-yes-blue-500 via-yes-blue-400 to-white bg-gradient-to-b dark:to-transparent dark:from-yes-blue-800"
+  style="height: calc(100vh - {$height}px); color: white;"
 >
   <div class="absolute hidden w-full h-full lg:block" in:fly={{x: 100, duration: 800}}>
     <MouseParallax
@@ -110,18 +110,19 @@
   </C>
 
   <div class="relative flex flex-col items-center h-full transform lg:flex-row content">
-    <div class="my-auto lg:w-1/2" in:fly={{x: -100, duration: 800}}>
-      <p class="text-4xl font-bold leading-none md:text-6xl font-title">
+    <div class="flex flex-col my-auto lg:w-1/2" in:fly={{x: -100, duration: 800}}>
+      <p class="text-4xl font-bold leading-none md:text-6xl font-title" style="line-height: 0.9">
       Somos tu ecosistema de emprendimiento
       </p>
-      <p class="mt-4 text-xl">
+      <p class="mt-4 text-xl text-white dark:text-yes-gray-200">
       Desarrolla habilidades y despréndete de tus límites gracias a nuestros cursos y programas especializados
       </p>
-      <button
+      <a
         use:hoverable
-        class="flex mt-4 btn-primary"
+        href="#servicios"
+        class="mt-4 mr-auto btn-primary"
         in:fly={{x: -20, duration: 800, delay: 200}}
-        >Inicia el viaje con nosotros</button
+        >Inicia el viaje con nosotros</a
       >
     </div>
   </div>

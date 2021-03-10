@@ -37,7 +37,9 @@
 
   <div class:opacity-0={$inZoneMask} class="duration-300">
     <PrimeraCapa/>
-    <Servicios/>
+    <div id="servicios">
+      <Servicios/>
+    </div>
     <TerceraCapa/>
 
     <SegundaCapa/>
