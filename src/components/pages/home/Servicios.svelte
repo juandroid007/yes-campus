@@ -42,11 +42,11 @@
           class="w-full sm:w-1/2 xl:w-1/4 animation animate"
           style="transition-delay: {300 + i * 200}ms"
           >
-          <div class="p-6 transform hover:-translate-y-4 duration-200 hover:scale-110">
+          <div class="p-6 transform hover:-translate-y-4 duration-200 hover:scale-110 text-yes-blue-800 dark:text-white">
             <img class="mb-4 mr-auto w-6/10" src="/images/icons/{m.id}.svg" alt="">
             <h2 class="mb-4 font-bold leading-none t-h3 font-title">{@html m.titulo}</h2>
             <p class="mb-6 t-p desc" style="">{@html m.texto}</p>
-            <a href={$url('/'+m.href)} class="flex items-center max-w-max-content btn-fill">Más información <span class="ml-2 cursor-pointer i jam:chevron-right"></span></a>
+            <a href={$url('/'+m.href)} class="flex items-center bg-white dark:bg-gray-900 max-w-max-content btn-fill">Más información <span class="ml-2 cursor-pointer i jam:chevron-right"></span></a>
           </div>
         </div>
       {/each}
