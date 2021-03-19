@@ -110,7 +110,7 @@
             </div>
             <img src="/images/programas/{el}/titulo.svg" alt="" class="w-full sm:w-8/10">
             <div class="mt-6 ml-auto sm:ml-0 w-5/10 lg:w-3/10 transform hover:scale-105 duration-200">
-              <a href="/#" title="Conoce más">
+              <a href="/{el}" title="Conoce más">
                 <img src="/images/programas/{el}/boton.svg" alt="Conoce más" class="w-full">
               </a>
             </div>
