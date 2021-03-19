@@ -1,15 +1,11 @@
 <script>
-  import { height } from '../components/navigation/Navbar.svelte'
   import { metatags } from '@roxi/routify'
   import svitsConfig from '../../svits.config.json'
-  import Wave from '../components/motion/Wave.svelte'
-  import { inZone } from '../components/pages/home/ZonaOscura.svelte'
   import V from '../components/IntersectingViewport.svelte'
   import Testimonios from '../components/pages/home/Testimonio.svelte'
   import PC from '../components/motion/ParallaxContainer.svelte'
   import P from '../components/motion/ParallaxObject.svelte'
   import Tilt from '../components/Tilt.svelte'
-  import { fly } from 'svelte/transition'
 
   metatags.title = 'YES Campus for Business | ' + svitsConfig.name
 
@@ -66,45 +62,9 @@
 
   import { clientes } from '../lib/business'
 
-  const isEmpty = str => !str.trim().length
-  let post = () => fetch('https://api.yescampus.io/business', {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      mes: currMes,
-      nombre,
-      email,
-      cursos: pack.cursos.map(c => c.slug),
-      pack: pack.slug,
-    })
-  })
+  import Formulario from '/$/components/pages/business/Formulario.svelte'
 
-  let enviando = false
-
-  const send = () => {
-    if (isEmpty(nombre) || isEmpty(email)) {
-      alert('Los campos no pueden estar vacíos')
-      return
-    }
-    enviando = true
-    post()
-      .then(() => getSuscritos())
-      .then(() => {
-        alert('¡Has sido suscrito exitosamente! Atento a tu bandeja de entrada')
-      })
-      .catch(err => {
-        console.log(err)
-        if (err.status == 418) {
-          alert('Se han acabado los cupos')
-        } else {
-          alert('Ha ocurrido un error, inténtelo nuevamente más tarde')
-        }
-      })
-      .finally(() => (enviando = false))
-  }
+  let openForm
 </script>
 
 <style>
@@ -163,6 +123,8 @@
   }
 </style>
 
+<Formulario bind:open={openForm}/>
+
 <div class="w-full overflow-hidden">
   <V class="relative w-full overflow-hidden seccion-1">
     <div class="w-full lg:h-full lg:absolute">
@@ -173,7 +135,7 @@
           Incrementa las capacidades de tu equipo, obtén asistencia técnica presencial o remota sobre cómo consolidar tu empresa y acceder a financiamiento.
           </p>
           <div class="animate" style="--animate-x: -1rem; transition-delay: 200ms">
-            <a href="#clientes" class="btn-primary">Haz una consulta gratis</a>
+            <button on:click={openForm} class="btn-primary">Haz una consulta gratis</button>
           </div>
         </div>
       </div>
@@ -221,7 +183,7 @@
                 </p>
               {/each}
             </div>
-          <a href="/#" class="mx-auto mt-6 btn-primary">Conoce qué ofrecemos</a>
+          <a href="#servicios" class="mx-auto mt-6 btn-primary">Conoce qué ofrecemos</a>
           </div>
         </div>
       </div>
@@ -280,7 +242,7 @@
         <p class="mx-auto italic transform t-h1 text-yes-orange-500 lg:w-6/10">
         Diseño de programas,<br>certificaciones y sistemas de evaluación de competencias.
         </p>
-        <a href="/#" class="mx-auto mt-8 btn-primary">Empecemos</a>
+        <button on:click={openForm} class="mx-auto mt-8 btn-primary">Empecemos</button>
       </V>
     </PC>
 
@@ -293,7 +255,7 @@
         mentorías personalizadas en:</strong>
         </p>
         <div class="mt-6 animate" style="--animate-x: -3rem; transition-delay: 400ms">
-          <a href="/#" class="btn-primary">Haz tu prueba gratis</a>
+          <button on:click={openForm} class="btn-primary">Haz tu prueba gratis</button>
         </div>
       </V>
       <V class="flex flex-wrap w-full p-6 -m-2 lg:w-1/3 lg:order-last" oneWay>
@@ -334,7 +296,7 @@
         {/each}
       </V>
       <V class="flex w-full -mt-6 animate" oneWay style="--animate-s: 0.4">
-        <a href="/#" class="mx-auto text-center btn-primary">Empecemos</a>
+        <button on:click={openForm} class="mx-auto text-center btn-primary">Empecemos</button>
       </V>
     </div>
 
@@ -442,7 +404,7 @@
       Rellena el formulario de contacto  para acceder a nuestros<br> servicios y obtener una consulta gratuita
       </p>
       <div class="flex w-full mt-4">
-        <a href="/#" class="mx-auto text-center btn-primary">Empieza ahora</a>
+        <button on:click={openForm} class="mx-auto text-center btn-primary">Empieza ahora</button>
       </div>
     </V>
   </div>
