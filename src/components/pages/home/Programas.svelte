@@ -43,7 +43,7 @@
 
   const elements = [
     'yes-camp',
-    'young-entrepeneur',
+    'young-entrepreneur',
     'full-inclusion',
   ]
 

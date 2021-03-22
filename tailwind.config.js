@@ -115,6 +115,9 @@ module.exports = {
         'leaders-blue': {
           default: '#275584',
         },
+        'young-orange': {
+          default: '#FB9835',
+        },
         'yes-blue': {
           50: '#F2F8FE',
           100: '#E6F1FC',
