@@ -141,14 +141,16 @@
 
   <V class="flex flex-wrap items-center pb-16 content" oneWay>
     <div class="w-full lg:w-1/2 animate" style="--animate-x: -3rem">
-      <h2 class="w-full pb-2 mb-4 border-b-4 rounded t-h2 text-young-orange border-young-orange">Potencia tu liderazgo</h2>
+      <h2 class="w-full pb-2 mb-4 border-b-4 rounded t-h2 text-young-orange border-young-orange">Young Entrepreneur</h2>
       <p class="mb-8 t-p">
-      Young Leaders es un programa de desarrollo de competencias de
-      liderazgo juvenil en función de la defensa de la democracia y el fortalecimiento
-      institucional de las organizaciones lideradas por jóvenes emprendedores y
-      estudiantes, mediante la combinación de un programa de formación modular,
-      los cuales se realizan a través de webinars y un workshop que les permite
-      poner en práctica los conocimientos adquiridos para pasar a una segunda fase.
+      Es una inmersión en un mundo digital donde el participante se transforma en un expedicionista, evalúa su
+      fortaleza, rendimiento y traza, con la ayuda de un grupo de sherpas, una ruta para iniciar el camino
+      emprendedor, teniendo que alcanzar diversos niveles hasta llegar a la cima. En el camino conocerá a otros
+      expedicionistas con los cuales se divertirá, aprenderá y trabajará para superar los obstáculos y encontrar
+      su propio ritmo de llegar a la meta; en su andar, tendrá la oportunidad de conocer patrocinantes que
+      estén dispuestos a apoyar su próxima expedición y en todo momento se sentirá acompañado por los
+      mejores. Al llegar a la meta, su visión será otra y ya no estará solo, habrá encontrado que forma parte de
+      un mundo ahora mas grande.
       </p>
       <div class="transform hover:-translate-y-px duration-200">
         <a
