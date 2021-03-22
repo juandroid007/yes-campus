@@ -17,6 +17,20 @@
       "thumbnail": "uploads/packs/marketing_de_alto_impacto_para_emprender/pack_marketing.png",
       "instructor": "Yes Campus",
       "modulos": 12
+    },
+    {
+      "slug": "marketing-juridico",
+      "title": "Marketing juridico",
+      "thumbnail": "uploads/packs/marketing_de_alto_impacto_para_emprender/pack_marketing.png",
+      "instructor": "Yes Campus",
+      "modulos": 6
+    },
+    {
+      "slug": "redes-de-mercadeo-o-network-marketing",
+      "title": "Redes de mercadeo o network marketing",
+      "thumbnail": "uploads/packs/marketing_de_alto_impacto_para_emprender/pack_marketing.png",
+      "instructor": "Yes Campus",
+      "modulos": 4
     }
   ]
 }
