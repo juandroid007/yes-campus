@@ -1,7 +1,7 @@
 <script>
   import { metatags } from '@roxi/routify'
   import svitsConfig from '../../svits.config.json'
-  import List from '/$components/pages/leaders/List.svelte'
+  import List from '/$components/pages/young/List.svelte'
   import V from '/$components/IntersectingViewport.svelte'
   import PC from '/$components/motion/ParallaxContainer.svelte'
   import P from '/$components/motion/ParallaxObject.svelte'
@@ -132,7 +132,7 @@
         </div>
       </div>
     </div>
-    <img src="/images/leaders/bg1.webp" alt="" class="w-full lg:hidden transform translate-y-6 animate">
+    <img src="/images/programas/young-entrepreneur/personajes.webp" alt="" class="w-full lg:hidden transform translate-y-6 animate">
   </V>
   <div class="py-16 content">
     <h2 class="mb-4 font-black text-center text-black t-h1">Una expedición en el mundo digital</h2>
@@ -169,7 +169,7 @@
     <V class="flex flex-col w-full px-6 overflow-hidden shadow-lg sm:flex-row sm:justify-between bg-gradient-to-r from-gray-600 to-black animate" style="border-radius: 3rem; --animate-r-y: 64deg" oneWay>
       {#each iconografia as s, i}
         <div class="w-full py-4 text-white md:w-1/4 animate" style="transition-delay: {100 * i + 400}ms; --animate-y: 0.5rem; --animate-r-y: 0deg; --animate-r-x: -64deg">
-          <img src="/images/leaders/iconografia/{i + 1}.svg" alt="" class="w-full mx-auto mb-4 w-6/10 sm:w-7/10">
+          <img src="/images/young/iconografia/{i + 1}.svg" alt="" class="w-full mx-auto mb-4 w-6/10 sm:w-7/10">
           <p class="text-lg font-bold text-center">{@html s}</p>
         </div>
       {/each}
@@ -192,14 +192,14 @@
     </div>
   </V>
 
-  <div class="mb-16 content">
-    <V class="flex flex-col w-full px-6 text-white shadow-lg bg-gradient-to-r from-gray-600 to-black animate" style="border-radius: 3rem; --animate-r-y: 64deg" oneWay>
+  <!--div class="mb-16 content">
+    <V class="flex flex-col w-full px-6 text-white shadow-lg bg-gradient-to-r from-gray-600 to-black animate" style="border-radius: 3rem; - -animate-r-y: 64deg" oneWay>
       <h2 class="my-4 text-center t-h2">Fases del programa</h2>
       <div class="flex hidden w-full px-6 sm:flex sm:flex-row sm:justify-center">
-        <div class="py-4 animate" style="transition-delay: {100 * 0 + 400}ms; --animate-y: 0.5rem; --animate-r-y: 0deg; --animate-r-x: -64deg">
+        <div class="py-4 animate" style="transition-delay: {100 * 0 + 400}ms; - -animate-y: 0.5rem; - -animate-r-y: 0deg; - -animate-r-x: -64deg">
           <img src="/images/leaders/fases/fase1.png" alt="" class="px-4 mx-auto mb-4 h-36 lg:h-48 xxl:h-56">
         </div>
-        <div class="py-4 animate" style="transition-delay: {100 * 1 + 400}ms; --animate-y: 0.5rem; --animate-r-y: 0deg; --animate-r-x: -64deg">
+        <div class="py-4 animate" style="transition-delay: {100 * 1 + 400}ms; - -animate-y: 0.5rem; - -animate-r-y: 0deg; - -animate-r-x: -64deg">
           <img src="/images/leaders/fases/fase2.png" alt="" class="h-40 px-4 mx-auto mb-4 lg:h-52 xxl:h-60">
         </div>
       </div>
@@ -210,14 +210,14 @@
           {:else if i == 2}
             <p class="font-bold text-center text-white t-h3 animate">Fase 2</p>
           {/if}
-          <div class="w-full py-6 text-leaders-sky md:w-1/4 animate" style="transition-delay: {100 * i + 400}ms; --animate-y: 0.5rem; --animate-r-y: 0deg; --animate-r-x: -64deg">
+          <div class="w-full py-6 text-young-orange md:w-1/4 animate" style="transition-delay: {100 * i + 400}ms; - -animate-y: 0.5rem; --animate-r-y: 0deg; --animate-r-x: -64deg">
             <img src="/images/leaders/fases/{i + 1}.svg" alt="" class="w-full mx-auto mb-4 w-6/10 sm:w-5/10">
             <p class="text-center t-h3">{@html s}</p>
           </div>
         {/each}
       </div>
     </V>
-  </div>
+  </div-->
 
   <V class="flex flex-wrap items-center py-16 content" oneWay>
     <div class="w-full lg:w-1/2 animate" style="--animate-x: -2rem">
@@ -231,14 +231,14 @@
       <div class="w-full my-6 overflow-hidden modulos1-wrapper lg:w-8/10 lg:ml-auto">
         {#each [modulos[modulos1]] as _, i (modulos1)}
           <div class="modulos1-img" in:fly|local={{x: 100}} out:fly|local={{x: -100, opacity: 0.8}}>
-            <img src="/images/leaders/modulos1/{modulos1 + 1}.webp" alt="" class="w-full">
+            <img src="/images/young/modulos.svg" alt="" class="object-cover w-full h-full">
           </div>
         {/each}
       </div>
     </div>
   </V>
 
-  <PC class="relative overflow-hidden" let:offset scaleFactor={10}>
+  <!--PC class="relative overflow-hidden" let:offset scaleFactor={10}>
     <P
       class="absolute w-full h-full bg-center bg-cover"
       motion={false}
@@ -246,7 +246,7 @@
       style="background-image: url(/images/leaders/challenge.webp); height: 110%"
     >
     </P>
-    <V class="z-20 flex flex-col py-16 pt-24 text-center content animate" oneWay style="--animate-s: 0.8">
+    <V class="z-20 flex flex-col py-16 pt-24 text-center content animate" oneWay style="- -animate-s: 0.8">
       <img src="/images/leaders/challenge-titulo.svg" alt="#Challenge" class="h-16 mb-4 transform">
       <p class="mx-auto mb-6 text-4xl font-black leading-none text-white uppercase lg:text-6xl transform">
       Ideas por el cambio
@@ -260,12 +260,12 @@
       jóvenes venezolanos en los temas gobernabilidad, desarrollo, articulación social y cambio sistémico
       </p>
     </V>
-  </PC>
+  </PC-->
 
   <V class="flex flex-wrap items-center py-16 content" oneWay>
     <div class="w-full lg:w-1/2 animate" style="--animate-x: -2rem">
-      <h2 class="w-full pb-2 mb-4 border-b-4 rounded t-h2 text-leaders-sky border-leaders-sky">Liderazgo Trascendental</h2>
-      <p class="pb-2 mb-4 t-h3 text-leaders-sky" style="font-weight: 300">Workshop</p>
+      <h2 class="w-full pb-2 mb-4 border-b-4 rounded t-h2 text-young-orange border-young-orange">Liderazgo Trascendental</h2>
+      <p class="pb-2 mb-4 t-h3 text-young-orange" style="font-weight: 300">Workshop</p>
       <p class="mb-8 t-p">
       El workshop tiene como objetivo fortalecer las
       herramientas de trabajo colaborativo y gestión de
@@ -277,7 +277,7 @@
       <div class="transform hover:-translate-y-px duration-200">
         <button
           on:click={openForm}
-          class="px-8 py-4 font-bold text-white rounded-full shadow duration-200 hover:shadow-md bg-leaders-sky"
+          class="px-8 py-4 font-bold text-black rounded-full shadow duration-200 hover:shadow-md bg-young-orange"
           >Postúlate aquí</button
         >
       </div>
