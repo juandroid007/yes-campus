@@ -19,12 +19,6 @@
   const aliados = [
     'aye',
     'yes',
-    '1001',
-    'ashoka',
-    'vayalo',
-    'esperanza',
-    'kala',
-    'compromiso',
   ]
 
   const iconografia = [
@@ -67,23 +61,23 @@
 
   const modulos2 = [
     {
-      title: 'Agilismo',
-      description: 'para líderes transformadores',
-    },
-    {
-      title: 'Construcción de mapa de mapa de incidencia',
-      description: 'y tablero de control',
-    },
-    {
-      title: 'Gestión de proyectos y gobernanzas',
+      title: 'La dimensión creativa',
       description: '',
     },
     {
-      title: 'Sostenibilidad y estrategias para la autogestión',
+      title: 'El mundo de las Gemas',
       description: '',
     },
     {
-      title: 'Articulación y comunicación de impacto',
+      title: 'El Circo',
+      description: '',
+    },
+    {
+      title: 'Vamos al Cine',
+      description: '',
+    },
+    {
+      title: 'La Fiesta',
       description: '',
     },
   ]
@@ -143,14 +137,12 @@
     <div class="w-full lg:w-1/2 animate" style="--animate-x: -3rem">
       <h2 class="w-full pb-2 mb-4 border-b-4 rounded t-h2 text-young-orange border-young-orange">Young Entrepreneur</h2>
       <p class="mb-8 t-p">
-      Es una inmersión en un mundo digital donde el participante se transforma en un expedicionista, evalúa su
-      fortaleza, rendimiento y traza, con la ayuda de un grupo de sherpas, una ruta para iniciar el camino
-      emprendedor, teniendo que alcanzar diversos niveles hasta llegar a la cima. En el camino conocerá a otros
-      expedicionistas con los cuales se divertirá, aprenderá y trabajará para superar los obstáculos y encontrar
-      su propio ritmo de llegar a la meta; en su andar, tendrá la oportunidad de conocer patrocinantes que
-      estén dispuestos a apoyar su próxima expedición y en todo momento se sentirá acompañado por los
-      mejores. Al llegar a la meta, su visión será otra y ya no estará solo, habrá encontrado que forma parte de
-      un mundo ahora mas grande.
+        Es la inmersión en un mundo digital donde el participante se transforma en un expedicionista.
+        Evalúa su fortaleza, rendimiento, y traza, con la ayuda de un grupo de sherpas, la ruta para iniciar
+        el camino emprendedor, teniendo que alcanzar diversos niveles hasta llegar a la cima.
+        En su andar, tendrá la oportunidad de conocer patrocinadores que estén dispuestos a apoyar su
+        próxima expedición. Al llegar a la meta, su visión será otra y ya no estará solo, habrá encontrado
+        que forma parte de un mundo ahora, más grande.
       </p>
       <div class="transform hover:-translate-y-px duration-200">
         <a
@@ -264,15 +256,15 @@
 
   <V class="flex flex-wrap items-center py-16 content" oneWay>
     <div class="w-full lg:w-1/2 animate" style="--animate-x: -2rem">
-      <h2 class="w-full pb-2 mb-4 border-b-4 rounded t-h2 text-young-orange border-young-orange">Liderazgo Trascendental</h2>
-      <p class="pb-2 mb-4 t-h3 text-young-orange" style="font-weight: 300">Workshop</p>
+      <h2 class="w-full pb-2 mb-4 border-b-4 rounded t-h2 text-young-orange border-young-orange">Espacios de Networking</h2>
       <p class="mb-8 t-p">
-      El workshop tiene como objetivo fortalecer las
-      herramientas de trabajo colaborativo y gestión de
-      proyectos en los grupos o proyectos que resulten
-      ganadores del challenge, pudiendo participar un
-      máximo de 3 participantes por iniciativa para un
-      total de 30 participantes.
+        Bajo el ambiente de realidad virtual y como si estuviera
+        completando niveles de un videojuego, el participante
+        tendrá la oportunidad de incluir en su mochila de viaje
+        poderes adicionales que le permitirán desarrollar nuevas competencias
+        individuales y se enfrentará a retos en equipo, donde
+        además le permitirá co-crear de manera colaborativa
+        soluciones para llegar a un próximo nivel.
       </p>
       <div class="transform hover:-translate-y-px duration-200">
         <button
