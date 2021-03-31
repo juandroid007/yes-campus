@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: juanvillacortac/yes-campus
+  repo: marketingshakers/yes-campus
   branch: master # Branch to update (optional; defaults to master)
   base_url: https://netlify-cms.juanvillacortac.vercel.app
 
