@@ -37,7 +37,7 @@
   const modulos = [
     {
       title: 'El Descubrimiento',
-      description: 'Nivel 1',
+      description: 'Descubre la magia de los mundos y las ideas sencillas para comenzar la ruta',
     },
     {
       title: 'La brújula',
@@ -56,6 +56,10 @@
       description: 'Nivel 5',
     },
   ]
+
+  modulos.forEach((e, i) => {
+    e.title = `Nivel ${i + 1}: ${e.title}`
+  })
 
   const modulos2 = [
     {
