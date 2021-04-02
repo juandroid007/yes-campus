@@ -3,8 +3,6 @@
   import svitsConfig from '../../svits.config.json'
   import List from '/$components/pages/young/List.svelte'
   import V from '/$components/IntersectingViewport.svelte'
-  import PC from '/$components/motion/ParallaxContainer.svelte'
-  import P from '/$components/motion/ParallaxObject.svelte'
   import Especialistas from '/$components/pages/home/Profesores.svelte'
   import Formulario from '/$components/pages/leaders/Formulario.svelte'
   import { fly } from 'svelte/transition'
@@ -38,24 +36,24 @@
 
   const modulos = [
     {
-      title: 'Rol de la juventud y la democracia',
-      description: 'y su participación ciudadana',
+      title: 'El Descubrimiento',
+      description: 'Nivel 1',
     },
     {
-      title: 'El poder de una visión y la construcción de cambios',
-      description: 'a partir de la búsqueda de soluciones a problemas locales',
+      title: 'La brújula',
+      description: 'Nivel 2',
     },
     {
-      title: 'Herramientas para el desarrollo de habilidades ágiles',
-      description: 'en los líderes jóvenes ante situaciones complejas',
+      title: 'El trazado de la ruta',
+      description: 'Nivel 3',
     },
     {
-      title: 'Activismo social, participación política y ciudadana',
-      description: 'a través de los medios digitales',
+      title: 'Encuentra el tesoro',
+      description: 'Nivel 4',
     },
     {
-      title: 'Cambio sistémico y participación ciudadana',
-      description: 'en atención a los ODS 2030',
+      title: 'Subiendo la cuesta',
+      description: 'Nivel 5',
     },
   ]
 
@@ -215,7 +213,7 @@
     <div class="w-full lg:w-1/2 animate" style="--animate-x: -2rem">
       <div class="flex items-center mb-8">
         <div class="w-24 mr-4 bg-yes-gray-500 dark:bg-gray-300" style="height: 1px"></div>
-        <h2 class="font-light t-p" style="line-height: 0">6 módulos formativos</h2>
+        <h2 class="font-light t-p" style="line-height: 0">5 niveles formativos</h2>
       </div>
       <List elements={modulos} bind:index={modulos1} />
     </div>
@@ -223,7 +221,7 @@
       <div class="w-full my-6 overflow-hidden modulos1-wrapper lg:w-8/10 lg:ml-auto">
         {#each [modulos[modulos1]] as _, i (modulos1)}
           <div class="modulos1-img" in:fly|local={{x: 100}} out:fly|local={{x: -100, opacity: 0.8}}>
-            <img src="/images/young/modulos.svg" alt="" class="object-cover w-full h-full">
+            <img src="/images/young/niveles/{modulos1 + 1}.svg" alt="" class="object-cover w-full h-full">
           </div>
         {/each}
       </div>
@@ -277,7 +275,7 @@
     <div class="w-full pt-16 lg:pt-0 lg:w-1/2 animate lg:pl-16" style="--animate-x: 2rem">
       <div class="flex items-center mb-8">
         <div class="w-24 mr-4 bg-yes-gray-500 dark:bg-gray-300" style="height: 1px"></div>
-        <h2 class="font-light t-p" style="line-height: 0">5 módulos formativos</h2>
+        <h2 class="font-light t-p" style="line-height: 0">5 espacios de networking</h2>
       </div>
       <List elements={modulos2} />
     </div>
@@ -306,7 +304,7 @@
   <V class="bg-yes-gray-100" oneWay>
     <div class="flex flex-col-reverse items-center py-16 italic lg:flex-row content t-p">
       <p class="w-full lg:w-1/2 animate" style="--animate-x: -3rem">
-      <strong>Aprendo y Emprendo - Yes Campus</strong>, como organización cuidan el equilibrio en la conformación de sus equipos de trabajo y participantes en sus actividades, por lo tanto se asegura la participación equitativa entre hombres y mujeres en cada una de las fases del programa Young Leaders, tanto en la selección de speaker, facilitadores y participantes beneficiarios del programa.
+      <strong>Aprendo y Emprendo - Yes Campus</strong>, como organización cuidan el equilibrio en la conformación de sus equipos de trabajo y participantes en sus actividades, por lo tanto se asegura la participación equitativa entre hombres y mujeres en cada una de las fases del programa Young Entrepreneur, tanto en la selección de speaker, facilitadores y participantes beneficiarios del programa.
       </p>
       <div class="flex justify-center w-full pb-16 lg:w-1/2 lg:pb-0 lg:pl-16 animate" style="--animate-x: 3rem">
         <img src="/images/logo.svg" alt="" class="w-72">
