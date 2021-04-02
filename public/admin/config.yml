@@ -1,7 +1,8 @@
 backend:
   name: github
-  repo: juanvillacortac/yes-campus
+  repo: marketingshakers/yes-campus
   branch: master # Branch to update (optional; defaults to master)
+  base_url: https://netlify-cms.juanvillacortac.vercel.app
 
 media_folder: "/public/images/uploads" # Media files will be stored in the repo under images/uploads
 public_folder: "uploads"
