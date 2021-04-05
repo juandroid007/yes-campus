@@ -53,7 +53,7 @@ collections:
         collapsed: false
         fields:
           - {label: "General", name: "general", widget: "boolean", default: true, required: false}
-          - {label: "Young Entrepeneur", name: "young-entrepeneur", widget: "boolean", default: false, required: false}
+          - {label: "Young Entrepreneur", name: "young-entrepeneur", widget: "boolean", default: false, required: false}
           - {label: "Full Inclusion", name: "full-inclusion", widget: "boolean", default: false, required: false}
           - {label: "Young Leaders", name: "young-leaders", widget: "boolean", default: false, required: false}
           - {label: "Evolution", name: "evolution", widget: "boolean", default: false, required: false}

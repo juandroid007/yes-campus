@@ -35,7 +35,7 @@
   }
 </style>
 
-<div class="flex flex-col items-center w-full leading-none" class:opacity-0={$inZoneMask}>
+<div class="flex flex-col leading-none w-full items-center" class:opacity-0={$inZoneMask}>
     <span class="text-6xl i jam:chevron-down animate-bounce"></span>
     <span class="-mt-12 text-6xl i jam:chevron-down animate-bounce"></span>
 </div>
@@ -44,7 +44,7 @@
   class="mt-48 mb-4"
 >
   <div
-    class="flex flex-col items-center w-full leading-none text-white cursor-pointer duration-300 transform rotate-180"
+    class="cursor-pointer flex flex-col text-white leading-none w-full transform rotate-180 duration-300 items-center"
     class:opacity-0={!$inZoneMask}
     on:click={
       () => outOffset ? window.scrollTo({
@@ -69,13 +69,13 @@
     <Viewport
       bind:intersecting={$inZoneMask}
     >
-      <div class="relative flex flex-col w-full h-full">
+      <div class="flex flex-col h-full w-full relative">
         {#if $inZone}
-          <div class="absolute w-full h-full bg-yes-gray-800" in:fade|local={{delay: 800, duration: 10}}>
+          <div class="h-full bg-yes-gray-800 w-full absolute" in:fade|local={{delay: 800, duration: 10}}>
           </div>
         {/if}
         <Viewport
-          class="flex w-full h-full animate inZone"
+          class="flex h-full w-full animate inZone"
           on:out={
             () => outOffset ? window.scrollTo({
               top: outOffset,
@@ -90,7 +90,7 @@
         </div>
       </div>
     </Viewport>
-    <div class="z-10 min-h-screen bg-black transform">
+    <div class="bg-black min-h-screen transform z-10">
       <Videos/>
     </div>
   </Viewport>
@@ -100,14 +100,14 @@
 </Viewport>
 
 <div class="flex flex-col items-center justify-center">
-  <Profesores take={10}/>
+  <Profesores take={10} color="#0273E3"/>
   <Viewport class="animate" style="--animate-y: 2rem" oneWay>
     <a
       href={$url('/especialistas')}
-      class="flex items-center mx-auto mt-12 max-w-max-content btn-fill"
+      class="flex mx-auto max-w-max-content mt-12 items-center btn-fill"
       >
       Todos los especialistas
-      <span class="ml-2 cursor-pointer i jam:chevron-right"></span>
+      <span class="cursor-pointer ml-2 i jam:chevron-right"></span>
     </a>
   </Viewport>
 </div>

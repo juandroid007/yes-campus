@@ -11,6 +11,7 @@
   export let titulo = true
   export let square = false
   export let noShadow = false
+  export let color = ''
 
   $: profesores = getCollection('profesores')
     .filter(e => e.programas[programa])
@@ -73,31 +74,37 @@
 </style>
 
 {#if profesores.length}
-  <div class="z-10 flex flex-col w-full h-full content-lg profesores-slider" id="mentores">
+  <div class="flex flex-col h-full w-full z-10 content-lg profesores-slider" id="mentores">
     {#if titulo}
-      <h2 class="mb-12 font-bold leading-none t-h1 font-title">Aprende con profesionales<br>disruptivos y de alto impacto</h2>
+      <h2 class="font-bold font-title mb-12 leading-none t-h1">Aprende con profesionales<br>disruptivos y de alto impacto</h2>
     {/if}
-    <V class="w-full my-auto" bind:intersecting oneWay on:top={() => {
+    <V class="my-auto w-full" bind:intersecting oneWay on:top={() => {
       glide.update({
         autoplay: 2000,
       })
     }}>
-      <div class="glide animate" use:mountGlide class:intersecting>
+      <div class="animate glide" use:mountGlide class:intersecting>
         <div class="w-full glide__track" data-glide-el="track" use:hoverable={{primary: true, text: 'Arrastra', color: '#0273E3'}}>
           <ul class="glide__slides">
             {#each profesores as p, i}
               <li class="glide__slide">
                 <div class="mx-auto w-60">
                   <div
-                    class="w-full overflow-hidden bg-gray-700 h-80"
+                    class="bg-gray-700 h-80 w-full overflow-hidden relative"
                     class:rounded-2xl={!square}
                     class:shadow-lg={!noShadow}
                   >
-                  <Image src="{p.thumbnail}" alt={p.nombre} class="object-cover w-full h-full"/>
+                  {#if color}
+                    <div
+                      class="h-full w-full opacity-50 absolute pointer-events-none"
+                      style="background-color: {color};"
+                     ></div>
+                  {/if}
+                  <Image src="{p.thumbnail}" alt={p.nombre} class="h-full object-cover w-full"/>
                   </div>
-                  <p class="mt-6 leading-none t-h3 font-title">{p.nombre}</p>
+                  <p class="font-title mt-6 leading-none t-h3">{p.nombre}</p>
                   {#if p.ocupacion}
-                    <p class="mt-2 font-light leading-none t-p font-title">{p.ocupacion}</p>
+                    <p class="font-light font-title mt-2 leading-none t-p">{p.ocupacion}</p>
                   {/if}
                 </div>
               </li>
