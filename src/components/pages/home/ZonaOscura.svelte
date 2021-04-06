@@ -118,5 +118,11 @@
 </Viewport>
 
 <Viewport class="flex my-8 content items-center justify-center" oneWay style="--animate-s: 0.8; --animate-time: 1.5s;">
-  <Image src="aliados.png" class="m-auto w-full animate sm:w-8/10" style="transition-delay: 0.3s"/>
+  <Image
+    src="aliados.png"
+    class="m-auto w-full animate sm:w-8/10"
+    style="transition-delay: 0.3s"
+    alt="Aliados de YES Campus"
+    title="Aliados de YES Campus"
+  />
 </Viewport>

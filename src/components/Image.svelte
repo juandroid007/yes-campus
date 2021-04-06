@@ -77,7 +77,8 @@
   export { _style as style }
 
   export let src
-  export let alt = 'Alt'
+  export let alt = ''
+  export let title = ''
   let path
 
   $: isExternal = validateExternalSrc(src)
@@ -88,13 +89,13 @@
 </script>
 
 {#if isExternal}
-  <img src={path} {alt} class="{_class}" style="{_style}">
+  <img src={path} {alt} {title} class="{_class}" style="{_style}">
 {:else}
   <picture>
     {#if isWebpAvailable(type)}
       <source srcset={webpPath} type="image/webp">
     {/if}
     <source srcset={path} {type}>
-    <img src={path} {alt} class="{_class}" style="{_style}">
+    <img src={path} {alt} {title} class="{_class}" style="{_style}">
   </picture>
 {/if}
