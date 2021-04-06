@@ -9,6 +9,8 @@
   import ZonaOscura, { inZoneMask } from '../components/pages/home/ZonaOscura.svelte'
   import Programas from '../components/pages/home/Programas.svelte'
   import Cursos from '../components/pages/home/Cursos.svelte'
+  import Image from '/$components/Image.svelte'
+  import Viewport from '/$components/IntersectingViewport.svelte'
 
   import { fade } from 'svelte/transition'
 
@@ -25,10 +27,10 @@
 
 <!-- routify:options preload=1 -->
 
-<div class="w-full min-h-screen">
+<div class="min-h-screen w-full">
   {#if $inZoneMask}
     <div
-      class="fixed flex w-full h-screen darkMask"
+      class="flex h-screen w-full fixed darkMask"
       style="margin-top: var(--navbarHeightNegative);"
       transition:fade|local={{duration: 400}}
     >
@@ -36,7 +38,7 @@
   {/if}
 
   <div class:opacity-0={$inZoneMask} class="duration-300">
-    <div class="bg-gradient-to-b from-yes-blue-600 to-transparent dark:from-yes-blue-800">
+    <div class="bg-gradient-to-b to-transparent from-yes-blue-600 dark:from-yes-blue-800">
       <PrimeraCapa/>
       <div id="servicios">
         <Servicios/>
@@ -55,5 +57,15 @@
     <ZonaOscura outOffset={outOffset?.offsetTop} />
 
     <Cursos/>
+
+    <Viewport class="flex my-8 content items-center justify-center" oneWay style="--animate-s: 0.8; --animate-time: 1.5s;">
+      <Image
+        src="aliados.png"
+        class="m-auto w-full animate sm:w-8/10"
+        style="transition-delay: 0.3s"
+        alt="Aliados de YES Campus"
+        title="Aliados de YES Campus"
+      />
+    </Viewport>
   </div>
 </div>
