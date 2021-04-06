@@ -58,7 +58,11 @@
 
     <Cursos/>
 
-    <Viewport class="flex my-8 content items-center justify-center" oneWay style="--animate-s: 0.8; --animate-time: 1.5s;">
+    <Viewport
+      class="flex my-8 content items-center justify-center"
+      style="--animate-s: 0.8; --animate-time: 1.5s;"
+      oneWay
+     >
       <Image
         src="aliados.png"
         class="m-auto w-full animate sm:w-8/10"
