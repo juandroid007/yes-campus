@@ -15,6 +15,7 @@
   import Videos from './Videos.svelte'
   import Testimonio from './Testimonio.svelte'
   import Bussines from './Bussines.svelte'
+  import Image from '/$components/Image.svelte'
   export let outOffset
 
   onDestroy(() => {
@@ -114,4 +115,8 @@
 
 <Viewport class="animate animateOut" oneWay style="--animate-r-y: -64deg" top={220}>
   <Testimonio/>
+</Viewport>
+
+<Viewport class="flex my-8 content items-center justify-center" oneWay style="--animate-s: 0.8; --animate-time: 1.5s;">
+  <Image src="aliados.png" class="m-auto w-full animate sm:w-8/10" style="transition-delay: 0.3s"/>
 </Viewport>

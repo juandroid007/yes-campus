@@ -72,7 +72,9 @@
 
 <script>
   let _class = ''
+  let _style = ''
   export { _class as class }
+  export { _style as style }
 
   export let src
   export let alt = 'Alt'
@@ -86,13 +88,13 @@
 </script>
 
 {#if isExternal}
-  <img src={path} {alt} class="{_class}">
+  <img src={path} {alt} class="{_class}" style="{_style}">
 {:else}
   <picture>
     {#if isWebpAvailable(type)}
       <source srcset={webpPath} type="image/webp">
     {/if}
     <source srcset={path} {type}>
-    <img src={path} {alt} class="{_class}">
+    <img src={path} {alt} class="{_class}" style="{_style}">
   </picture>
 {/if}
